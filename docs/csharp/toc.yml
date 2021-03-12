@@ -286,6 +286,8 @@ items:
             href: programming-guide/main-and-command-args/how-to-display-command-line-arguments.md
           - name: Main() 返回值
             href: programming-guide/main-and-command-args/main-return-values.md
+          - name: 顶级语句
+            href: programming-guide/main-and-command-args/top-level-statements.md
       - name: 编程概念
         items:
           - name: 概述
@@ -982,7 +984,7 @@ items:
                     href: language-reference/keywords/private.md
                   - name: protected
                     href: language-reference/keywords/protected.md
-                  - name: 公共
+                  - name: public
                     href: language-reference/keywords/public.md
                   - name: 受保护的内部
                     href: language-reference/keywords/protected-internal.md
@@ -1133,6 +1135,8 @@ items:
                 href: language-reference/keywords/add.md
               - name: get
                 href: language-reference/keywords/get.md
+              - name: init
+                href: language-reference/keywords/init.md
               - name: partial（类型）
                 href: language-reference/keywords/partial-type.md
               - name: partial（方法）
