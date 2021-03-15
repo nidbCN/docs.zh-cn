@@ -172,7 +172,7 @@ items:
       - name: 概述
         displayName: 'diagnostics,tools,tooling,productivity,instrumentation'
         href: tools-and-productivity.md
-      - name: .NET Core SDK
+      - name: .NET SDK
         items:
           - name: 概述
             displayName: '.net sdk,software development kit,software dev kit,tool'
@@ -2288,46 +2288,38 @@ items:
                 href: ../standard/design-guidelines/dependency-properties.md
   - name: 迁移指南
     items:
+      - name: 概述
+        href: ../core/porting/index.md
+      - name: .NET 升级助手工具
+        items:
+          - name: 概述
+            href: ../core/porting/upgrade-assistant-overview.md
+          - name: Windows Presentation Foundation
+            href: ../core/porting/upgrade-assistant-wpf-framework.md
+          - name: Windows 窗体
+            href: ../core/porting/upgrade-assistant-winforms-framework.md
+          - name: ASP.NET Core
+            href: ../core/porting/upgrade-assistant-aspnetmvc.md
       - name: 中断性变更
         displayName: app compatibility
         href: ../core/compatibility/
-      - name: 迁移
-        items:
-          - name: .NET Core 2.0 - 2.1
-            href: ../core/migration/20-21.md
-          - name: 将 AssemblyInfo 特性映射到属性
-            href: ../core/migration/assembly-info.md
-      - name: 从 .NET Framework 移植
-        items:
-          - name: 概述
-            href: ../core/porting/index.md
-          - name: .NET 升级助手工具
-            items:
-              - name: 概述
-                href: ../core/porting/upgrade-assistant-overview.md
-              - name: Windows Presentation Foundation
-                href: ../core/porting/upgrade-assistant-wpf-framework.md
-              - name: Windows 窗体
-                href: ../core/porting/upgrade-assistant-winforms-framework.md
-              - name: ASP.NET
-                href: ../core/porting/upgrade-assistant-aspnetmvc.md
-          - name: 分析第三方依赖项
-            href: ../core/porting/third-party-deps.md
-          - name: 移植库
-            href: ../core/porting/libraries.md
-          - name: 整理 .NET 的项目
-            href: ../core/porting/project-structure.md
-          - name: 不可用的技术
-            href: ../core/porting/net-framework-tech-unavailable.md?toc=/dotnet/fundamentals/toc.json&bc=/dotnet/breadcrumb/toc.json
-          - name: 工具
-            href: ../core/porting/tools.md
-          - name: 使用 Windows 兼容包
-            href: ../core/porting/windows-compat-pack.md
-          - name: 移植 Windows 窗体项目
-            href: /dotnet/desktop/winforms/migration/?view=netdesktop-5.0
-          - name: 移植 WPF 项目
-            href: /dotnet/desktop/wpf/migration/convert-project-from-net-framework
-          - name: 端口 C++/CLI 项目
-            href: ../core/porting/cpp-cli.md
+      - name: 将项目 AssemblyInfo 特性映射到属性
+        href: ../core/migration/assembly-info.md
+      - name: 分析第三方依赖项
+        href: ../core/porting/third-party-deps.md
+      - name: 移植库
+        href: ../core/porting/libraries.md
+      - name: 整理 .NET 的项目
+        href: ../core/porting/project-structure.md
+      - name: 不可用的技术
+        href: ../core/porting/net-framework-tech-unavailable.md?toc=/dotnet/fundamentals/toc.json&bc=/dotnet/breadcrumb/toc.json
+      - name: 使用 Windows 兼容包
+        href: ../core/porting/windows-compat-pack.md
+      - name: 移植 Windows 窗体项目
+        href: /dotnet/desktop/winforms/migration/?view=netdesktop-5.0
+      - name: 移植 WPF 项目
+        href: /dotnet/desktop/wpf/migration/convert-project-from-net-framework?view=netdesktop-5.0
+      - name: 端口 C++/CLI 项目
+        href: ../core/porting/cpp-cli.md
       - name: 为服务器应用选择 .NET 5 或 .NET Framework
         href: ../standard/choosing-core-framework-server.md
