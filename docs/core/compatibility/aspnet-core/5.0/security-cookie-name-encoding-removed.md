@@ -4,50 +4,50 @@ description: 了解 ASP.NET Core 5.0 中的以下中断性变更：安全性：C
 author: scottaddie
 ms.author: scaddie
 ms.date: 10/01/2020
-ms.openlocfilehash: 3cd40d2b04d0cdf0863e3a3fb6d790c2b35692bc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 00764493fb2d8d300612f2bd9dc6e512b10be25f
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759296"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190055"
 ---
-# <a name="security-cookie-name-encoding-removed"></a><span data-ttu-id="e64f6-103">安全性：Cookie 名称编码已删除</span><span class="sxs-lookup"><span data-stu-id="e64f6-103">Security: Cookie name encoding removed</span></span>
+# <a name="security-cookie-name-encoding-removed"></a><span data-ttu-id="b74ee-103">安全性：Cookie 名称编码已删除</span><span class="sxs-lookup"><span data-stu-id="b74ee-103">Security: Cookie name encoding removed</span></span>
 
-<span data-ttu-id="e64f6-104">[HTTP Cookie 标准](https://tools.ietf.org/html/rfc6265#section-4.1.1) 仅允许在 Cookie 名称和值中使用特定字符。</span><span class="sxs-lookup"><span data-stu-id="e64f6-104">The [HTTP cookie standard](https://tools.ietf.org/html/rfc6265#section-4.1.1) allows only specific characters in cookie names and values.</span></span> <span data-ttu-id="e64f6-105">为了支持不允许的字符，ASP.NET Core：</span><span class="sxs-lookup"><span data-stu-id="e64f6-105">To support disallowed characters, ASP.NET Core:</span></span>
+<span data-ttu-id="b74ee-104">[HTTP Cookie 标准](https://tools.ietf.org/html/rfc6265#section-4.1.1) 仅允许在 Cookie 名称和值中使用特定字符。</span><span class="sxs-lookup"><span data-stu-id="b74ee-104">The [HTTP cookie standard](https://tools.ietf.org/html/rfc6265#section-4.1.1) allows only specific characters in cookie names and values.</span></span> <span data-ttu-id="b74ee-105">为了支持不允许的字符，ASP.NET Core：</span><span class="sxs-lookup"><span data-stu-id="b74ee-105">To support disallowed characters, ASP.NET Core:</span></span>
 
-* <span data-ttu-id="e64f6-106">在创建响应 Cookie 时进行编码。</span><span class="sxs-lookup"><span data-stu-id="e64f6-106">Encodes when creating a response cookie.</span></span>
-* <span data-ttu-id="e64f6-107">在读取请求 Cookie 时进行解码。</span><span class="sxs-lookup"><span data-stu-id="e64f6-107">Decodes when reading a request cookie.</span></span>
+* <span data-ttu-id="b74ee-106">在创建响应 Cookie 时进行编码。</span><span class="sxs-lookup"><span data-stu-id="b74ee-106">Encodes when creating a response cookie.</span></span>
+* <span data-ttu-id="b74ee-107">在读取请求 Cookie 时进行解码。</span><span class="sxs-lookup"><span data-stu-id="b74ee-107">Decodes when reading a request cookie.</span></span>
 
-<span data-ttu-id="e64f6-108">在 ASP.NET Core 5.0 中，此编码行为因安全问题发生了更改。</span><span class="sxs-lookup"><span data-stu-id="e64f6-108">In ASP.NET Core 5.0, this encoding behavior changed in response to a security concern.</span></span>
+<span data-ttu-id="b74ee-108">在 ASP.NET Core 5.0 中，此编码行为因安全问题发生了更改。</span><span class="sxs-lookup"><span data-stu-id="b74ee-108">In ASP.NET Core 5.0, this encoding behavior changed in response to a security concern.</span></span>
 
-<span data-ttu-id="e64f6-109">有关讨论，请参阅 GitHub 问题 [dotnet/aspnetcore#23578](https://github.com/dotnet/aspnetcore/issues/23578)。</span><span class="sxs-lookup"><span data-stu-id="e64f6-109">For discussion, see GitHub issue [dotnet/aspnetcore#23578](https://github.com/dotnet/aspnetcore/issues/23578).</span></span>
+<span data-ttu-id="b74ee-109">有关讨论，请参阅 GitHub 问题 [dotnet/aspnetcore#23578](https://github.com/dotnet/aspnetcore/issues/23578)。</span><span class="sxs-lookup"><span data-stu-id="b74ee-109">For discussion, see GitHub issue [dotnet/aspnetcore#23578](https://github.com/dotnet/aspnetcore/issues/23578).</span></span>
 
-## <a name="version-introduced"></a><span data-ttu-id="e64f6-110">引入的版本</span><span class="sxs-lookup"><span data-stu-id="e64f6-110">Version introduced</span></span>
+## <a name="version-introduced"></a><span data-ttu-id="b74ee-110">引入的版本</span><span class="sxs-lookup"><span data-stu-id="b74ee-110">Version introduced</span></span>
 
-<span data-ttu-id="e64f6-111">5.0 预览版 8</span><span class="sxs-lookup"><span data-stu-id="e64f6-111">5.0 Preview 8</span></span>
+<span data-ttu-id="b74ee-111">5.0 预览版 8</span><span class="sxs-lookup"><span data-stu-id="b74ee-111">5.0 Preview 8</span></span>
 
-## <a name="old-behavior"></a><span data-ttu-id="e64f6-112">旧行为</span><span class="sxs-lookup"><span data-stu-id="e64f6-112">Old behavior</span></span>
+## <a name="old-behavior"></a><span data-ttu-id="b74ee-112">旧行为</span><span class="sxs-lookup"><span data-stu-id="b74ee-112">Old behavior</span></span>
 
-<span data-ttu-id="e64f6-113">对响应 Cookie 名称进行编码。</span><span class="sxs-lookup"><span data-stu-id="e64f6-113">Response cookie names are encoded.</span></span> <span data-ttu-id="e64f6-114">对请求 Cookie 名称进行解码。</span><span class="sxs-lookup"><span data-stu-id="e64f6-114">Request cookie names are decoded.</span></span>
+<span data-ttu-id="b74ee-113">对响应 Cookie 名称进行编码。</span><span class="sxs-lookup"><span data-stu-id="b74ee-113">Response cookie names are encoded.</span></span> <span data-ttu-id="b74ee-114">对请求 Cookie 名称进行解码。</span><span class="sxs-lookup"><span data-stu-id="b74ee-114">Request cookie names are decoded.</span></span>
 
-## <a name="new-behavior"></a><span data-ttu-id="e64f6-115">新行为</span><span class="sxs-lookup"><span data-stu-id="e64f6-115">New behavior</span></span>
+## <a name="new-behavior"></a><span data-ttu-id="b74ee-115">新行为</span><span class="sxs-lookup"><span data-stu-id="b74ee-115">New behavior</span></span>
 
-<span data-ttu-id="e64f6-116">删除了 Cookie 名称的编码和解码。</span><span class="sxs-lookup"><span data-stu-id="e64f6-116">Encoding and decoding of cookie names was removed.</span></span> <span data-ttu-id="e64f6-117">对于先前[受支持的 ASP.NET Core 版本](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)，团队计划就地缓解解码问题。</span><span class="sxs-lookup"><span data-stu-id="e64f6-117">For prior [supported versions](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) of ASP.NET Core, the team plans to mitigate the decoding issue in-place.</span></span> <span data-ttu-id="e64f6-118">此外，使用无效的 Cookie 名称调用 <xref:Microsoft.AspNetCore.Http.IResponseCookies.Append%2A?displayProperty=nameWithType> 将引发 <xref:System.ArgumentException> 类型的异常。</span><span class="sxs-lookup"><span data-stu-id="e64f6-118">Additionally, calling <xref:Microsoft.AspNetCore.Http.IResponseCookies.Append%2A?displayProperty=nameWithType> with an invalid cookie name throws an exception of type <xref:System.ArgumentException>.</span></span> <span data-ttu-id="e64f6-119">Cookie 值的编码和解码保持不变。</span><span class="sxs-lookup"><span data-stu-id="e64f6-119">Encoding and decoding of cookie values remains unchanged.</span></span>
+<span data-ttu-id="b74ee-116">删除了 Cookie 名称的编码和解码。</span><span class="sxs-lookup"><span data-stu-id="b74ee-116">Encoding and decoding of cookie names was removed.</span></span> <span data-ttu-id="b74ee-117">对于先前[受支持的 ASP.NET Core 版本](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)，团队计划就地缓解解码问题。</span><span class="sxs-lookup"><span data-stu-id="b74ee-117">For prior [supported versions](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) of ASP.NET Core, the team plans to mitigate the decoding issue in-place.</span></span> <span data-ttu-id="b74ee-118">此外，使用无效的 Cookie 名称调用 <xref:Microsoft.AspNetCore.Http.IResponseCookies.Append%2A?displayProperty=nameWithType> 将引发 <xref:System.ArgumentException> 类型的异常。</span><span class="sxs-lookup"><span data-stu-id="b74ee-118">Additionally, calling <xref:Microsoft.AspNetCore.Http.IResponseCookies.Append%2A?displayProperty=nameWithType> with an invalid cookie name throws an exception of type <xref:System.ArgumentException>.</span></span> <span data-ttu-id="b74ee-119">Cookie 值的编码和解码保持不变。</span><span class="sxs-lookup"><span data-stu-id="b74ee-119">Encoding and decoding of cookie values remains unchanged.</span></span>
 
-## <a name="reason-for-change"></a><span data-ttu-id="e64f6-120">更改原因</span><span class="sxs-lookup"><span data-stu-id="e64f6-120">Reason for change</span></span>
+## <a name="reason-for-change"></a><span data-ttu-id="b74ee-120">更改原因</span><span class="sxs-lookup"><span data-stu-id="b74ee-120">Reason for change</span></span>
 
-<span data-ttu-id="e64f6-121">在[多个 Web 框架](https://github.com/advisories/GHSA-j6w9-fv6q-3q52)中发现了问题。</span><span class="sxs-lookup"><span data-stu-id="e64f6-121">An issue was discovered in [multiple web frameworks](https://github.com/advisories/GHSA-j6w9-fv6q-3q52).</span></span> <span data-ttu-id="e64f6-122">编码和解码可以使攻击者使用诸如 `__%48ost-` 的编码值来假冒 `__Host-` 之类的保留前缀，从而绕过称为 [Cookie 前缀](https://tools.ietf.org/html/draft-ietf-httpbis-cookie-prefixes-00)的安全功能。</span><span class="sxs-lookup"><span data-stu-id="e64f6-122">The encoding and decoding could allow an attacker to bypass a security feature called [cookie prefixes](https://tools.ietf.org/html/draft-ietf-httpbis-cookie-prefixes-00) by spoofing reserved prefixes like `__Host-` with encoded values like `__%48ost-`.</span></span> <span data-ttu-id="e64f6-123">此攻击需要利用辅助攻击（例如跨站点脚本 (XSS) 漏洞）在网站中注入欺诈性 Cookie。</span><span class="sxs-lookup"><span data-stu-id="e64f6-123">The attack requires a secondary exploit to inject the spoofed cookies, such as a cross-site scripting (XSS) vulnerability, in the website.</span></span> <span data-ttu-id="e64f6-124">默认情况下，ASP.NET Core 或者 `Microsoft.Owin` 库或模板中不使用这些前缀。</span><span class="sxs-lookup"><span data-stu-id="e64f6-124">These prefixes aren't used by default in ASP.NET Core or `Microsoft.Owin` libraries or templates.</span></span>
+<span data-ttu-id="b74ee-121">在[多个 Web 框架](https://github.com/advisories/GHSA-j6w9-fv6q-3q52)中发现了问题。</span><span class="sxs-lookup"><span data-stu-id="b74ee-121">An issue was discovered in [multiple web frameworks](https://github.com/advisories/GHSA-j6w9-fv6q-3q52).</span></span> <span data-ttu-id="b74ee-122">编码和解码可以使攻击者使用诸如 `__%48ost-` 的编码值来假冒 `__Host-` 之类的保留前缀，从而绕过称为 [Cookie 前缀](https://tools.ietf.org/html/draft-ietf-httpbis-cookie-prefixes-00)的安全功能。</span><span class="sxs-lookup"><span data-stu-id="b74ee-122">The encoding and decoding could allow an attacker to bypass a security feature called [cookie prefixes](https://tools.ietf.org/html/draft-ietf-httpbis-cookie-prefixes-00) by spoofing reserved prefixes like `__Host-` with encoded values like `__%48ost-`.</span></span> <span data-ttu-id="b74ee-123">此攻击需要利用辅助攻击（例如跨站点脚本 (XSS) 漏洞）在网站中注入欺诈性 Cookie。</span><span class="sxs-lookup"><span data-stu-id="b74ee-123">The attack requires a secondary exploit to inject the spoofed cookies, such as a cross-site scripting (XSS) vulnerability, in the website.</span></span> <span data-ttu-id="b74ee-124">默认情况下，ASP.NET Core 或者 `Microsoft.Owin` 库或模板中不使用这些前缀。</span><span class="sxs-lookup"><span data-stu-id="b74ee-124">These prefixes aren't used by default in ASP.NET Core or `Microsoft.Owin` libraries or templates.</span></span>
 
-## <a name="recommended-action"></a><span data-ttu-id="e64f6-125">建议操作</span><span class="sxs-lookup"><span data-stu-id="e64f6-125">Recommended action</span></span>
+## <a name="recommended-action"></a><span data-ttu-id="b74ee-125">建议操作</span><span class="sxs-lookup"><span data-stu-id="b74ee-125">Recommended action</span></span>
 
-<span data-ttu-id="e64f6-126">如果要将项目迁移到 ASP.NET Core 5.0 或更高版本，请确保其 Cookie 名称符合[令牌规范要求](https://tools.ietf.org/html/rfc2616#section-2.2)：ASCII 字符不包括控件和分隔符 `"(" | ")" | "<" | ">" | "@" | "," | ";" | ":" | "\" | <"> | "/" | "[" | "]" | "?" | "=" | "{" | "}" | SP | HT`。</span><span class="sxs-lookup"><span data-stu-id="e64f6-126">If you're moving projects to ASP.NET Core 5.0 or later, ensure that their cookie names conform to the [token specification requirements](https://tools.ietf.org/html/rfc2616#section-2.2): ASCII characters excluding controls and separators `"(" | ")" | "<" | ">" | "@" | "," | ";" | ":" | "\" | <"> | "/" | "[" | "]" | "?" | "=" | "{" | "}" | SP | HT`.</span></span> <span data-ttu-id="e64f6-127">如果在 Cookie 名称或其他 HTTP 标头中使用非 ASCII 字符，则可能导致服务器异常或客户端不正确地往返。</span><span class="sxs-lookup"><span data-stu-id="e64f6-127">The use of non-ASCII characters in cookie names or other HTTP headers may cause an exception from the server or be improperly round-tripped by the client.</span></span>
+<span data-ttu-id="b74ee-126">如果要将项目迁移到 ASP.NET Core 5.0 或更高版本，请确保其 Cookie 名称符合[令牌规范要求](https://tools.ietf.org/html/rfc2616#section-2.2)：ASCII 字符不包括控件和分隔符 `"(" | ")" | "<" | ">" | "@" | "," | ";" | ":" | "\" | <"> | "/" | "[" | "]" | "?" | "=" | "{" | "}" | SP | HT`。</span><span class="sxs-lookup"><span data-stu-id="b74ee-126">If you're moving projects to ASP.NET Core 5.0 or later, ensure that their cookie names conform to the [token specification requirements](https://tools.ietf.org/html/rfc2616#section-2.2): ASCII characters excluding controls and separators `"(" | ")" | "<" | ">" | "@" | "," | ";" | ":" | "\" | <"> | "/" | "[" | "]" | "?" | "=" | "{" | "}" | SP | HT`.</span></span> <span data-ttu-id="b74ee-127">如果在 Cookie 名称或其他 HTTP 标头中使用非 ASCII 字符，则可能导致服务器异常或客户端不正确地往返。</span><span class="sxs-lookup"><span data-stu-id="b74ee-127">The use of non-ASCII characters in cookie names or other HTTP headers may cause an exception from the server or be improperly round-tripped by the client.</span></span>
 
-## <a name="affected-apis"></a><span data-ttu-id="e64f6-128">受影响的 API</span><span class="sxs-lookup"><span data-stu-id="e64f6-128">Affected APIs</span></span>
+## <a name="affected-apis"></a><span data-ttu-id="b74ee-128">受影响的 API</span><span class="sxs-lookup"><span data-stu-id="b74ee-128">Affected APIs</span></span>
 
 - <xref:Microsoft.AspNetCore.Http.HttpRequest.Cookies%2A?displayProperty=nameWithType>
 - <xref:Microsoft.AspNetCore.Http.HttpResponse.Cookies%2A?displayProperty=nameWithType>
-- <xref:Microsoft.Owin.IOwinRequest.Cookies?displayProperty=nameWithType>
-- <xref:Microsoft.Owin.IOwinResponse.Cookies?displayProperty=nameWithType>
+- `Microsoft.Owin.IOwinRequest.Cookies`
+- `Microsoft.Owin.IOwinResponse.Cookies`
 
 <!--
 
