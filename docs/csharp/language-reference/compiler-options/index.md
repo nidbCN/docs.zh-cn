@@ -1,7 +1,7 @@
 ---
-description: C# 编译器选项
+description: C# 编译器选项。 了解控制 C# 编译器行为的选项。
 title: C# 编译器选项
-ms.date: 08/28/2020
+ms.date: 03/12/2021
 f1_keywords:
 - cs.build.options
 helpviewer_keywords:
@@ -11,35 +11,40 @@ helpviewer_keywords:
 - Visual C# compiler
 - Visual C#, compiler options
 ms.assetid: d3403556-1816-4546-a782-e8223a772e44
-ms.openlocfilehash: 502bd83ae52be9ae2f914847bb6bf7c7f2a0c411
-ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+ms.openlocfilehash: cbe4db51652e8bfd00c555b6ddd230e124a08360
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89271810"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103478479"
 ---
 # <a name="c-compiler-options"></a>C# 编译器选项
 
-编译器生成可执行 (.exe) 文件、动态链接库 (.dll) 或者代码模块 (.netmodule)。
+本节介绍 C# 编译器解释的选项。 可以通过两种不同的方法设置 .NET 项目中的编译器选项：
 
-每个编译器选项均有两种形式： **-option** 和 **/option**。 此文档仅介绍 **-option** 形式。
+- 在 \*.csproj 文件中指定选项：可以为 \*.csproj 文件中的任何编译器选项添加 XML 元素。 元素名称与编译器选项相同。 用 XML 元素的值设置编译器选项的值。 有关项目文件中设置选项的详细信息，请参阅[适用于 .NET SDK 项目的 MSBuild 属性](../../../core/project-sdk/msbuild-props.md)一文。
+- 使用 Visual Studio 属性页：Visual Studio 提供了属性页，可用于编辑生成属性。 若要了解有关详细信息，请参阅[管理项目和解决方案属性 - Windows](/visualstudio/ide/managing-project-and-solution-properties#c-visual-basic-and-f-projects) 或[管理项目和解决方案属性 - Mac](/visualstudio/mac/managing-solutions-and-project-properties)。
 
-在 Visual Studio 中，可在 web.config 文件中设置编译器选项。 有关详细信息，请参阅 [\<compiler> 元素](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)。
+## <a name="net-framework-projects"></a>.NET Framework 项目
 
-## <a name="in-this-section"></a>在本节中
+> [!IMPORTANT]
+> 本部分仅适用于 .NET Framework 项目。
 
-- [使用 csc.exe 的命令行生成](command-line-building-with-csc-exe.md) 有关从命令行生成 Visual C# 应用程序的信息。
+除上述机制以外，还可以使用两种附加方法为 .NET Framework 项目设置编译器选项：
 
-- [如何为 Visual Studio 命令行设置环境变量](how-to-set-environment-variables-for-the-visual-studio-command-line.md) 提供运行 VsDevCmd.bat 以启用命令行生成的步骤。
+- .NET Framework 项目的命令行参数：.NET Framework 项目使用 csc.exe 而不是 `dotnet build` 生成项目。 可以为 .NET Framework 项目指定 csc.exe 的命令行参数。
+- 已编译的 ASP.NET 页面：.NET Framework 项目使用 web.config 文件的一部分来编译页面。 对于新的生成系统和 ASP.NET Core 项目，将从项目文件中设置选项。
 
-- [按类别列出的 C# 编译器选项](listed-by-category.md) 编译器选项的分类列表。
+某些编译器选项的单词从 csc.exe 和 .NET Framework 项目更改为新的 MSBuild 系统。 本部分使用的是新语法。 每个页面顶部同时列出了这两个版本。 对于 csc.exe，所有参数都会在选项和冒号后列出。 例如，`-doc` 选项将为：
 
-- [按字母顺序列出的 C# 编译器选项](listed-alphabetically.md) 编译器选项按字母顺序列出的列表。
+```console
+-doc:DocFile.xml
+```
 
-## <a name="related-sections"></a>相关章节
+通过在命令提示符处键入 C# 编译器的可执行文件名称 (csc.exe)，可调用该编译器。
 
-- [生成页，项目设计器](/visualstudio/ide/reference/build-page-project-designer-csharp) 介绍了如何设置属性来控制项目的编译、生成和调试方式。 介绍了 Visual C# 项目的自定义生成步骤。
+对于 .NET Framework 项目，还可以从命令行运行 csc.exe。 每个编译器选项均有两种形式： **-option** 和 **/option**。 在 .NET Framework Web 项目中，在 web.config 文件中指定用于编译代码隐藏的选项。 有关详细信息，请参阅 [\<compiler> 元素](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)。
 
-- [默认和自定义生成](/visualstudio/ide/compiling-and-building-in-visual-studio) 有关生成类型和配置的信息。
+如果使用“Visual Studio 开发人员命令提示”窗口，系统将设置所有必需的环境变量。 有关如何访问此工具的信息，请参阅 [Visual Studio 开发人员命令提示](../../../framework/tools/developer-command-prompt-for-vs.md)。
 
-- [准备和管理生成](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio) 介绍了 Visual Studio 开发环境中的生成过程。
+csc.exe 可执行文件通常位于 Windows 目录下的 Microsoft.NET\Framework\\ *\<Version>* 文件夹中。 根据每台计算机上的具体配置，此位置可能有所不同。 如果计算机上安装了不止一个版本的 .NET Framework，你将发现此文件的多个版本。 有关此类安装的详细信息，请参阅[如何：确定安装的 .NET Framework 版本](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md)。

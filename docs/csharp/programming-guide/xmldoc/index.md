@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, XML code comments
 - XML documentation comments [C#]
 ms.assetid: 803b7f7b-7428-4725-b5db-9a6cff273199
-ms.openlocfilehash: fbdeb53331d9fc63d24a3322ea13863d7c0a3630
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: d784ec58096e44cf010edd279f682555df58a8ef
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381874"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103478396"
 ---
 # <a name="xml-documentation-comments-c-programming-guide"></a>XML 文档注释（C# 编程指南）
 
@@ -30,7 +30,7 @@ ms.locfileid: "87381874"
 public class MyClass {}
 ```
 
-使用 [-doc](../../language-reference/compiler-options/doc-compiler-option.md) 选项进行编译时，编译器会在源代码中搜索所有 XML 标记，并创建一个 XML 文档文件。 若要基于编译器生成的文件创建最终文档，可以创建一个自定义工具，也可以使用 [DocFX](https://dotnet.github.io/docfx/) 或 [Sandcastle](https://github.com/EWSoftware/SHFB) 等工具。
+使用 [DocumentationFile](../../language-reference/compiler-options/output.md#documentationfile) 选项进行编译时，编译器会在源代码中搜索所有 XML 标记，并创建一个 XML 文档文件。 若要基于编译器生成的文件创建最终文档，可以创建一个自定义工具，也可以使用 [DocFX](https://dotnet.github.io/docfx/) 或 [Sandcastle](https://github.com/EWSoftware/SHFB) 等工具。
 
 若要引用 XML 元素（例如，你的函数将处理你要在 XML 文档注释中描述的特定 XML 元素），你可使用标准引用机制（`<` 和 `>`）。  若要引用代码引用 (`cref`) 元素中的通用标识符，可使用转义字符（例如，`cref="List&lt;T&gt;"`）或大括号 (`cref="List{T}"`)。  作为特例，编译器会将大括号解析为尖括号以在引用通用标识符时使作者能够更轻松地进行文档注释。
 
@@ -51,7 +51,7 @@ public class MyClass {}
 
 有关详细信息，请参见:
 
-- [-doc （处理文档注释）](../../language-reference/compiler-options/doc-compiler-option.md)
+- [DocumentationFile（处理文档注释）](../../language-reference/compiler-options/output.md#documentationfile)
 
 ## <a name="c-language-specification"></a>C# 语言规范
 

@@ -12,18 +12,18 @@ helpviewer_keywords:
 - command line [C#], arguments
 - command-line arguments [C#], Main method
 ms.assetid: 73a17231-cf96-44ea-aa8a-54807c6fb1f4
-ms.openlocfilehash: 35117642f38885aab08a5c0249d1f65ec76c59f3
-ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
+ms.openlocfilehash: 05b2030133ca83cf87de7110f820eaad38fad756
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2021
-ms.locfileid: "103190198"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103480185"
 ---
 # <a name="main-and-command-line-arguments-c-programming-guide"></a>Main() 和命令行参数（C# 编程指南）
 
 `Main` 方法是 C# 应用程序的入口点。 （库和服务不要求使用 `Main` 方法作为入口点）。`Main` 方法是应用程序启动后调用的第一个方法。
 
-C# 程序中只能有一个入口点。 如果多个类包含 `Main` 方法，必须使用 `-main` 编译器选项来编译程序，以指定将哪个 `Main` 方法用作入口点。 有关详细信息，请参阅 [-main（C# 编译器选项）](../../language-reference/compiler-options/main-compiler-option.md)。
+C# 程序中只能有一个入口点。 如果多个类包含 `Main` 方法，必须使用 StartupObject 编译器选项来编译程序，以指定将哪个 `Main` 方法用作入口点。 有关详细信息，请参阅 [StartupObject（C# 编译器选项）](../../language-reference/compiler-options/advanced.md#mainentrypoint-or-startupobject)。
 
 [!code-csharp[csProgGuideMain#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#17)]
 
@@ -64,7 +64,6 @@ public static async Task<int> Main(string[] args) { }
 
 ## <a name="see-also"></a>请参阅
 
-- [在命令行上使用 csc.exe 生成](../../language-reference/compiler-options/command-line-building-with-csc-exe.md)
 - [C# 编程指南](../index.md)
 - [方法](../classes-and-structs/methods.md)
 - [在 C# 程序内部](../inside-a-program/index.md)

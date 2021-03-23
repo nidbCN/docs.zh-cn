@@ -3,12 +3,12 @@ title: 均分布有 Dapr
 description: Dapr 是什么、它的作用以及它的工作原理的简要概述。
 author: robvet
 ms.date: 02/17/2021
-ms.openlocfilehash: 9f23e9822fd0d4b5eda648d2fc1359cce14cf59d
-ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
+ms.openlocfilehash: 6e5d73f8c49ecb3eec518986e2af60c68195c0ab
+ms.sourcegitcommit: 5ce37699c2a51ed173171813be68ef7577b1aba5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2021
-ms.locfileid: "103624040"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104881076"
 ---
 # <a name="dapr-at-20000-feet"></a>均分布有 Dapr
 
@@ -210,7 +210,7 @@ gRPC 是一种新式的高性能框架， (RPC) 协议演变旧的 [远程过程
 - 同时发送客户端请求和服务器响应的双向全双工通信。
 - 内置流式处理可对大型数据集进行异步流式处理的请求和响应。
 
-若要了解详细信息，请参阅 Azure 电子书的[架构 Cloud-Native .Net 应用](https://docs.microsoft.com/dotnet/architecture/cloud-native/)中的[gRPC 概述](https://docs.microsoft.com/dotnet/architecture/cloud-native/grpc#what-is-grpc)。  
+若要了解详细信息，请参阅 Azure 电子书的[架构 Cloud-Native .Net 应用](../cloud-native/index.md)中的[gRPC 概述](../cloud-native/grpc.md#what-is-grpc)。  
 
 ## <a name="dapr-and-service-meshes"></a>Dapr 和服务网格
 
@@ -240,7 +240,7 @@ gRPC 是一种新式的高性能框架， (RPC) 协议演变旧的 [远程过程
 
 [Dapr 联机文档](https://docs.dapr.io/concepts/faq/#networking-and-service-meshes)介绍 Dapr 和服务网格集成。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本章介绍了 Dapr 的分布式应用程序运行时。
 

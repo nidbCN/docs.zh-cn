@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, pointers
 - pointers [C#], about pointers
 ms.assetid: b0fcca10-a92d-4f2a-835b-b0ccae6739ee
-ms.openlocfilehash: 4d624bdc8fc4a756f47d66c9dec6eba8c24a9d9a
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: b6f1bb878d44c1f3224edd93681c54598a6ae341
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99782385"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103478624"
 ---
 # <a name="unsafe-code-and-pointers-c-programming-guide"></a>不安全代码和指针（C# 编程指南）
 
@@ -37,7 +37,7 @@ ms.locfileid: "99782385"
 
 - 使用不安全代码将引发安全风险和稳定性风险。
 
-- 必须使用 [-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md) 编译器选项来编译包含不安全块的代码。
+- 必须使用 [AllowUnsafeBlocks](../../language-reference/compiler-options/language.md#allowunsafeblocks) 编译器选项来编译包含不安全块的代码。
   
 ## <a name="related-sections"></a>相关章节
 
