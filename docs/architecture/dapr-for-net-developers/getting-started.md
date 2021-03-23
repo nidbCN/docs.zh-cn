@@ -3,12 +3,12 @@ title: Dapr 入门
 description: 用于准备本地开发环境和使用 Dapr 构建你的第一个 .NET 应用程序的指南。
 author: amolenk
 ms.date: 02/25/2021
-ms.openlocfilehash: 1b6ecd2cc2bf077375262155f0866cfef2dab708
-ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
+ms.openlocfilehash: 1c60f731138911d7d22ff871c9a3849704d81dd6
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2021
-ms.locfileid: "103623806"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874376"
 ---
 # <a name="get-started-with-dapr"></a>Dapr 入门
 
@@ -244,7 +244,7 @@ spec:
     > [!NOTE]
     > 如果要以预发行版本为目标，则 `Dapr.AspNetCore` 需要指定 `-Prerelease` 标志。
 
-1. 在 `DaprFrontEnd` 项目中，打开 *Startup.cs* 文件，并将方法替换 `ConfigureServices` 为以下代码：
+1. 在 `DaprFrontEnd` 项目中，打开 *.cs* 文件，并将 `ConfigureServices` 方法替换为以下代码：
 
     ```csharp
     // This method gets called by the runtime. Use this method to add services to the container.
@@ -277,7 +277,7 @@ spec:
     }
     ```
 
-1. 打开 *Pages* 文件夹中的 *Index.cshtml.cs* 文件，并将其内容替换为以下代码：
+1. 打开 *Pages* 文件夹中 *的 ""，然后将其* 内容替换为以下代码：
 
     ```csharp
     using System;
@@ -462,7 +462,7 @@ spec:
 
     ```yaml
     version: '3.4'
-    
+
     services:
       daprfrontend:
         image: ${DOCKER_REGISTRY-}daprfrontend
@@ -509,7 +509,7 @@ spec:
 
     若要了解有关本演练中使用的 Dapr 服务调用构建基块的详细信息，请参阅 [第6章](service-invocation.md)。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 在本章中，你有机会 *测试驱动器* Dapr。 使用 Dapr .NET SDK，可以看到 Dapr 如何与 .NET 应用程序平台集成。
 

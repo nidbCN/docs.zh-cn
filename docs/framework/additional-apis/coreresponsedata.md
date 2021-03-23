@@ -11,12 +11,12 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: 8248cc20f6528a1c3bc64c9b9339a3a3000d03a0
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 0c787481a57abc755e6f61b1cc96d74b86458b62
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84989808"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873921"
 ---
 # <a name="coreresponsedata-class"></a>CoreResponseData 类
 
@@ -29,7 +29,7 @@ internal class CoreResponseData
 ```
 
 > [!WARNING]
-> 此 API 是内部的，不应在代码中直接使用。 相反，应使用 <xref:System.Diagnostics.DiagnosticSource> 挂钩网络代码。 请参阅[DiagnosticSource 用户指南](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md)。
+> 此 API 是内部的，不应在代码中直接使用。 相反，应使用 <xref:System.Diagnostics.DiagnosticSource> 挂钩网络代码。 请参阅 [DiagnosticSource 用户指南](https://github.com/dotnet/runtime/blob/main/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md)。
 >
 > 在任何情况下，Microsoft 不支持在生产应用程序中使用此类。
 
@@ -37,6 +37,6 @@ internal class CoreResponseData
 
 **命名空间：** <xref:System.Net>
 
-**程序集：** 系统（System.dll）
+**程序集：** System.dll 中的系统 () 
 
 **.NET Framework 版本：** 自2.0 起可用。

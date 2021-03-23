@@ -2,12 +2,12 @@
 title: 'F # 5.0 中的新增功能-F # 指南'
 description: '获取 F # 5.0 中提供的新功能的概述。'
 ms.date: 11/06/2020
-ms.openlocfilehash: 9b138e4801a3e599db650990acd53c0f956b78b8
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: c686bcf5df18d24ac35bbafb2b2d90f768ef7947
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98190723"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876703"
 ---
 # <a name="whats-new-in-f-50"></a>F# 5.0 中的新增功能
 
@@ -237,12 +237,14 @@ F # 5.0 为内置3D 和4D 数组类型中具有固定索引的切片提供支持
 为了说明这一点，请考虑下面的三维数组：
 
 *z = 0*
+
 | x\y   | 0 | 1 |
 |-------|---|---|
 | **0** | 0 | 1 |
 | **1** | 2 | 3 |
 
 *z = 1*
+
 | x\y   | 0 | 1 |
 |-------|---|---|
 | **0** | 4 | 5 |
@@ -366,7 +368,7 @@ iaString.Get() // "hello"
 
 ## <a name="default-interface-member-consumption"></a>默认接口成员消耗
 
-F # 5 允许使用 [具有默认实现的接口](../../csharp/tutorials/default-interface-methods-versions.md)。
+F # 5 允许使用 [具有默认实现的接口](../../csharp/whats-new/tutorials/default-interface-methods-versions.md)。
 
 请考虑 c # 中定义的接口，如下所示：
 

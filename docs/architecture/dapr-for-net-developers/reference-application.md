@@ -3,12 +3,12 @@ title: EShopOnDapr 参考应用程序简介
 description: EShopOnDapr 引用应用程序及其历史记录的概述。
 author: amolenk
 ms.date: 02/17/2021
-ms.openlocfilehash: 8fd0ccade45f4f6609046e00d22ffd5693c4a529
-ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
+ms.openlocfilehash: 47d99246eec8e3288738c911cccb23bb9cac8df3
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2021
-ms.locfileid: "103623884"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874558"
 ---
 # <a name="dapr-reference-application"></a>Dapr 引用应用程序
 
@@ -113,15 +113,15 @@ EShopOnDapr 基本代码比 eShopOnContainers 基本代码更简单。 Dapr 构�
 > [!NOTE]
 > 本书的第一版中未介绍执行组件构建基块。 1.1 更新中将包含有关执行组件构建块及其与 eShopOnDapr 的集成的详尽章节。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本章介绍了 eShopOnDapr 引用应用程序。 这是广泛流行的 eShopOnContainers 微服务 reference 应用程序的演变。 eShopOnDapr 使用 Dapr 构建基块和组件替换大量自定义功能，大大简化了生成微服务应用程序所需的复杂性。
 
 ### <a name="references"></a>参考
 
-- [eShopOnDapr](https://github.com/dotnet-architecture/eShopOnDapr)
+- [GitHub 上的 eShopOnDapr](https://github.com/dotnet-architecture/eShopOnDapr)
 
-- [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers)
+- [GitHub 上的 eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers)
 
 - [适用于容器化 .NET 应用程序的 .NET 微服务](https://dotnet.microsoft.com/download/e-book/microservices-architecture/pdf)
 

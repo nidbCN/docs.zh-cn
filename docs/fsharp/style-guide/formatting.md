@@ -2,12 +2,12 @@
 title: F# 代码格式设置准则
 description: '了解设置 F # 代码格式的准则。'
 ms.date: 08/31/2020
-ms.openlocfilehash: 74ab483a501dd5135ad5d98fd6dce988cf207ef8
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: 22020d69c13fbf8317cbf5e871073a290f8967b7
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102605446"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876352"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# 代码格式设置准则
 
@@ -306,6 +306,17 @@ let myFunBad (a: decimal) b c:decimal = a + b + c
 ```fsharp
 let f x = x + 1 // Increment by one.
 ```
+
+## <a name="formatting-string-literals-and-interpolated-strings"></a>格式化字符串文本和内插字符串
+
+无论行的长度如何，字符串文本和内插字符串都可以保留在单个行中。
+
+```fsharp
+let serviceStorageConnection =
+    $"DefaultEndpointsProtocol=https;AccountName=%s{serviceStorageAccount.Name};AccountKey=%s{serviceStorageAccountKey.Value}"
+```
+
+强烈建议不要采用多行内插表达式。 相反，将表达式结果绑定到值并将其用于内插字符串。
 
 ## <a name="naming-conventions"></a>命名约定
 
@@ -1144,6 +1155,50 @@ Option.traverse(
     create
     >> Result.setError [ invalidHeader "Content-Checksum" ]
 )
+```
+
+## <a name="formatting-generic-type-arguments-and-constraints"></a>设置泛型类型参数和约束的格式
+
+下面的准则适用于函数、成员和类型定义。
+
+如果泛型类型参数和约束不太长，请将它们保留在一行上：
+
+```fsharp
+let f<'a, 'b when 'a : equality and 'b : comparison> param =
+    // function body
+```
+
+如果泛型类型参数/约束和函数参数均不适用，但仅有类型参数/约束，请将参数放置在新行上：
+
+```fsharp
+let f<'a, 'b when 'a : equality and 'b : comparison>
+    param
+    =
+    // function body
+```
+
+如果类型参数或约束太长，请断开并对齐它们，如下所示。 将类型参数列表保留在函数所在的行上，而不考虑其长度。 对于约束，请将放 `when` 在第一行上，并在一行上保留每个约束，而不考虑其长度。 置于 `>` 最后一行的末尾。 将约束按一级缩进。
+
+```fsharp
+let inline f< ^a, ^b
+    when ^a : (static member Foo1: unit -> ^b)
+    and ^b : (member Foo2: unit -> int)
+    and ^b : (member Foo3: string -> ^a option)>
+    arg1
+    arg2
+    =
+    // function body
+```
+
+如果类型参数/约束被分解，但没有普通函数参数，请将置于 `=` 新行，而不考虑：
+
+```f#
+let inline f<^a, ^b
+    when ^a : (static member Foo1: unit -> ^b)
+    and ^b : (member Foo2: unit -> int)
+    and ^b : (member Foo3: string -> ^a option)>
+    =
+    // function body
 ```
 
 ## <a name="formatting-attributes"></a>格式设置特性

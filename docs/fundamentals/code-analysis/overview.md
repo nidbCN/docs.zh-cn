@@ -8,12 +8,12 @@ ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: 9fbeee7475b49a5b6514d4983142ae3be5a2f026
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: 1a0b31f7aca6415510ed0fcd08e9f9a0f8f39bf5
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102605290"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876599"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>.NET 源代码分析概述
 
@@ -53,7 +53,7 @@ ms.locfileid: "102605290"
 
 可更改这些规则的严重性，以禁用这些规则或将它们提升为错误。 也可[启用更多规则](#enable-additional-rules)。
 
-- 有关每个 .NET SDK 版本附带的规则的列表，请参阅[分析器版本](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md)。
+- 有关每个 .NET SDK 版本附带的规则的列表，请参阅[分析器版本](https://github.com/dotnet/roslyn-analyzers/blob/main/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md)。
 - 有关所有代码质量规则的列表，请参阅[代码质量规则](quality-rules/index.md)。
 
 ### <a name="enable-additional-rules"></a>启用其他规则
@@ -66,7 +66,7 @@ ms.locfileid: "102605290"
 | `AllEnabledByDefault` | 这是最激进的模式。 所有规则作为生成警告启用。 可选择性地[选择退出](configuration-options.md)各条规则以禁用它们。<br /><br />`<AnalysisMode>AllEnabledByDefault</AnalysisMode>` |
 | `Default` | 在默认模式下，少量规则作为警告启用、其他规则仅作为带有相应代码修补程序的 Visual Studio IDE 建议启用，而其余规则被完全禁用。 可选择性地[选择加入或退出](configuration-options.md)各条规则以禁用它们。<br /><br />`<AnalysisMode>Default</AnalysisMode>` |
 
-若要查找每个可用规则的默认严重性以及了解规则是否在默认分析模式下启用，请参阅[规则列表](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md)。
+若要查找每个可用规则的默认严重性以及了解规则是否在默认分析模式下启用，请参阅[规则列表](https://github.com/dotnet/roslyn-analyzers/blob/main/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md)。
 
 ### <a name="treat-warnings-as-errors"></a>视警告为错误
 
