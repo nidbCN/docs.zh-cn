@@ -72,13 +72,13 @@
     {
       "path_to_root": "_csharplang",
       "url": "https://github.com/dotnet/csharplang.zh-cn",
-      "branch": "live-sxs",
+      "branch": "main-sxs",
       "include_in_build": true
     },
     {
       "path_to_root": "_vblang",
       "url": "https://github.com/dotnet/vblang.zh-cn",
-      "branch": "live-sxs",
+      "branch": "main-sxs",
       "include_in_build": true
     },
     {
