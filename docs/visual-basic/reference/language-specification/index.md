@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, specifications
 - specifications, Visual Basic
 ms.assetid: 42c30017-19d0-442e-87a2-850b66ddc3df
-ms.openlocfilehash: 7f2a55a9859bd5a8811dec5dc933359f4662b7fe
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: d56dde4892039e2a4457404ecd9134aaf8737d67
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100433442"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876170"
 ---
 # <a name="visual-basic-language-specification"></a>Visual Basic 语言规范
 
@@ -20,7 +20,7 @@ Visual Basic 语言规范是解答有关 Visual Basic 语法和句法的所有�
   
 此规范可在 [Microsoft 下载中心](https://go.microsoft.com/fwlink/?LinkId=188623)下载使用。  
   
-此站点包含 [Visual Basic 11 规范](../../../../_vblang/spec/introduction.md)。 它基于 [dotnet/vblang GitHub 存储库](https://github.com/dotnet/vblang/blob/master/spec/README.md)中包含的 Markdown 文件构建而成。
+此站点包含 [Visual Basic 11 规范](../../../../_vblang/spec/introduction.md)。 它基于 [dotnet/vblang GitHub 存储库](https://github.com/dotnet/vblang/blob/main/spec/README.md)中包含的 Markdown 文件构建而成。
 
 应在 [dotnet/vblang](https://github.com/dotnet/vblang/issues) 存储库中创建规范的相关问题。 或者，如果有兴趣修复自己所发现的任何错误，则可向同一存储库提交[拉取请求](https://github.com/dotnet/vblang/pulls)。
 

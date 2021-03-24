@@ -4,12 +4,12 @@ description: 有关结合使用 F# 和 Azure 服务的指南
 author: sylvanc
 ms.date: 07/29/2020
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: 16599aa48776acee05edf8201cdd148a87507cdb
-ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
+ms.openlocfilehash: 406de0cdef67631ddaaa13f686c9b2093ba5d2ff
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "98899400"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873259"
 ---
 # <a name="using-f-on-azure"></a>在 Azure 上使用 F#
 
@@ -60,7 +60,7 @@ Azure 存储还可以通过声明性配置（而非显式 API 调用）与 Azure
 
 [Apache Spark for Azure HDInsight](/azure/hdinsight/spark/apache-spark-overview) 是一个开放源代码处理框架，用于运行大型数据分析应用程序。 [Azure Databricks](/azure/databricks/scenarios/what-is-azure-databricks) 是基于 Apache Spark 的分析平台，已针对 Microsoft Azure 云服务平台进行优化。 Azure 使 Apache Spark 的部署简单且经济实惠。 使用 [.NET for Apache Spark](../../spark/what-is-apache-spark-dotnet.md)（一组用于 Apache Spark 的 .NET 绑定）在 F# 中开发 Spark 应用程序。
 
-* [.NET for Apache Spark F# 示例](https://github.com/dotnet/spark/tree/master/examples/Microsoft.Spark.FSharp.Examples)
+* [.NET for Apache Spark F# 示例](https://github.com/dotnet/spark/tree/main/examples/Microsoft.Spark.FSharp.Examples)
 * [在 Azure HDInsight 中安装 .NET Interactive Jupyter 笔记本](../../spark/how-to-guides/hdinsight-notebook-installation.md)
 * [将 Apache Spark 作业提交到 Azure HDInsight](../../spark/how-to-guides/hdinsight-deploy-methods.md)
 * [将 Apache Spark 作业提交到 Azure Databricks](../../spark/how-to-guides/databricks-deploy-methods.md)

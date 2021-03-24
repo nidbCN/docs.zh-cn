@@ -11,12 +11,12 @@ helpviewer_keywords:
 - exceptions [.NET]
 - common language runtime, exceptions
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
-ms.openlocfilehash: c18482335947c8d24ba7ed6552bb78c70a0a054f
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 3b64b9121cc784db7d76ff5501aedfd125d0002c
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827992"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876469"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>在 .NET 中处理和引发异常
 
@@ -67,4 +67,4 @@ ms.locfileid: "94827992"
 - [如何：使用 Finally 块](how-to-use-finally-blocks.md)
 - [处理 COM 互操作异常](handling-com-interop-exceptions.md)
 - [与异常有关的最佳做法](best-practices-for-exceptions.md)
-- [每个开发人员都需要了解的有关运行时异常方面的内容](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/exceptions.md)
+- [每个开发人员都需要了解的有关运行时异常方面的内容](https://github.com/dotnet/runtime/blob/main/docs/design/coreclr/botr/exceptions.md)

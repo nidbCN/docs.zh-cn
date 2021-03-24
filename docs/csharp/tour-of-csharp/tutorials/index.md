@@ -3,12 +3,12 @@ title: C# 简介 - 交互式教程
 description: 通过浏览器了解 C#，并开始使用自己的开发环境
 ms.date: 02/02/2021
 ms.custom: mvc
-ms.openlocfilehash: 3b5da67458d665946b42bf49ceb3799473354567
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: ed869271cd6f4ec13f769f46d41aefae9e1dad8d
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100626003"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872413"
 ---
 # <a name="introduction-to-c"></a>C\# 简介
 
@@ -50,6 +50,6 @@ ms.locfileid: "100626003"
 
 该教程假定你已完成上面列出的课程。
 
-## <a name="101-linq-samples"></a>[101 Linq 示例](https://github.com/dotnet/try-samples/tree/master/101-linq-samples)
+## <a name="101-linq-samples"></a>[101 Linq 示例](https://github.com/dotnet/try-samples/tree/main/101-linq-samples)
 
 此示例需要 [dotnet-try](https://github.com/dotnet/try/blob/main/README.md#setup) 全局工具。 安装该工具并克隆 [try-samples](https://github.com/dotnet/try-samples) 存储库后，可以通过一组以交互方式运行的 101 示例来了解语言集成查询 (LINQ)。 你可以探索用于查询、浏览和转换数据序列的各种方法。

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual C# compiler
 - Visual C#, compiler options
 ms.assetid: d3403556-1816-4546-a782-e8223a772e44
-ms.openlocfilehash: cbe4db51652e8bfd00c555b6ddd230e124a08360
-ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
+ms.openlocfilehash: e9fc2fccdb48ab8646cdbf02db14b6ec1b9842df
+ms.sourcegitcommit: 5ce37699c2a51ed173171813be68ef7577b1aba5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103478479"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104881154"
 ---
 # <a name="c-compiler-options"></a>C# 编译器选项
 
@@ -45,6 +45,6 @@ ms.locfileid: "103478479"
 
 对于 .NET Framework 项目，还可以从命令行运行 csc.exe。 每个编译器选项均有两种形式： **-option** 和 **/option**。 在 .NET Framework Web 项目中，在 web.config 文件中指定用于编译代码隐藏的选项。 有关详细信息，请参阅 [\<compiler> 元素](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)。
 
-如果使用“Visual Studio 开发人员命令提示”窗口，系统将设置所有必需的环境变量。 有关如何访问此工具的信息，请参阅 [Visual Studio 开发人员命令提示](../../../framework/tools/developer-command-prompt-for-vs.md)。
+如果使用“Visual Studio 开发人员命令提示”窗口，系统将设置所有必需的环境变量。 有关如何访问此工具的信息，请参阅 [Visual Studio 开发人员命令提示](/visualstudio/ide/reference/command-prompt-powershell)。
 
 csc.exe 可执行文件通常位于 Windows 目录下的 Microsoft.NET\Framework\\ *\<Version>* 文件夹中。 根据每台计算机上的具体配置，此位置可能有所不同。 如果计算机上安装了不止一个版本的 .NET Framework，你将发现此文件的多个版本。 有关此类安装的详细信息，请参阅[如何：确定安装的 .NET Framework 版本](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md)。

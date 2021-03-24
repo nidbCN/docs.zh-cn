@@ -4,12 +4,12 @@ description: 有关可帮助了解 .NET 的 .NET Core、ASP.NET Core 和 C# 语�
 author: BillWagner
 ms.author: wiwagn
 ms.date: 02/01/2021
-ms.openlocfilehash: 35cc5e74e764148b072438eea994905df778c835
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 3ddc83fe0478b2b6bf8db3faf13a1a8edc156aa3
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102103564"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875559"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET 示例和教程
 
@@ -21,7 +21,7 @@ ms.locfileid: "102103564"
 
 **[在 .NET Core 中使用 dotnet 测试的单元测试](../core/testing/unit-testing-with-dotnet-test.md)**
 
-本指南演示如何创建 ASP.NET Core Web 应用和关联的单元测试。 首先创建一个简单的 Web 服务应用，然后添加测试。 然后继续创建更多测试来指导新功能的实现。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-using-dotnet-test)。
+本指南演示如何创建 ASP.NET Core Web 应用和关联的单元测试。 首先创建一个简单的 Web 服务应用，然后添加测试。 然后继续创建更多测试来指导新功能的实现。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/main/core/getting-started/unit-testing-using-dotnet-test)。
 
 ### <a name="tutorials"></a>教程
 
@@ -45,45 +45,45 @@ ms.locfileid: "102103564"
 
 **[迭代器](../csharp/iterators.md)**
 
-本示例演示用于创建和使用 C# 迭代器的语法和功能。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/csharp/iterators)。
+本示例演示用于创建和使用 C# 迭代器的语法和功能。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/main/csharp/iterators)。
 
 **[索引器](../csharp/indexers.md)**
 
-本示例演示用于 C# 索引器的语法和功能。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/csharp/indexers)。
+本示例演示用于 C# 索引器的语法和功能。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/main/csharp/indexers)。
 
 **[委托和事件](../csharp/delegates-overview.md)**
 
-本示例演示用于 C# 委托和事件的语法和功能。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/csharp/delegates-and-events)。 侧重于事件的[第二个示例](https://github.com/dotnet/samples/tree/master/csharp/events)也位于相同的存储库中。
+本示例演示用于 C# 委托和事件的语法和功能。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/main/csharp/delegates-and-events)。 侧重于事件的[第二个示例](https://github.com/dotnet/samples/tree/main/csharp/events)也位于相同的存储库中。
 
 **[表达式树](../csharp/expression-trees.md)**
 
-本示例演示可以使用表达式树解决的许多问题。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/csharp/expression-trees)。
+本示例演示可以使用表达式树解决的许多问题。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/main/csharp/expression-trees)。
 
 **LINQ 示例**
 
-这一系列示例将演示许多语言集成查询 (LINQ) 功能。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/core/linq/csharp)。
+这一系列示例将演示许多语言集成查询 (LINQ) 功能。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/main/core/linq/csharp)。
 
 **托管 COM 服务器示例**
 
-[COM 服务器](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo)示例展示了如何创建托管 COM 服务器，以及如何通过 RegFree COM 全局注册或使用它。
+[COM 服务器](https://github.com/dotnet/samples/tree/main/core/extensions/COMServerDemo)示例展示了如何创建托管 COM 服务器，以及如何通过 RegFree COM 全局注册或使用它。
 
 **Microsoft Office PIA 示例**
 
-[ExcelDemo](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo) 示例演示了 [Microsoft Office PIA](/visualstudio/vsto/office-primary-interop-assemblies) 在 .NET Core 中的使用情况。
+[ExcelDemo](https://github.com/dotnet/samples/tree/main/core/extensions/ExcelDemo) 示例演示了 [Microsoft Office PIA](/visualstudio/vsto/office-primary-interop-assemblies) 在 .NET Core 中的使用情况。
 
 ### <a name="tutorials"></a>教程
 
 **[控制台应用程序](../csharp/tutorials/console-teleprompter.md)**
 
-本教程演示控制台 I/O、控制台应用的结构以及基于任务的异步编程模型的基础。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-teleprompter)。
+本教程演示控制台 I/O、控制台应用的结构以及基于任务的异步编程模型的基础。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/main/csharp/getting-started/console-teleprompter)。
 
 **[REST 客户端](../csharp/tutorials/console-webapiclient.md)**
 
-本教程演示 Web 通信、JSON 序列化和 C# 语言中面向对象的特性。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient)。
+本教程演示 Web 通信、JSON 序列化和 C# 语言中面向对象的特性。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/main/csharp/getting-started/console-webapiclient)。
 
 **[使用 LINQ](../csharp/tutorials/working-with-linq.md)**
 
-本教程演示许多 LINQ 功能和支持 LINQ 的语言元素。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-linq)。
+本教程演示许多 LINQ 功能和支持 LINQ 的语言元素。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/main/csharp/getting-started/console-linq)。
 
 **[教程：使用 Visual Studio for Mac 创建 .NET 控制台应用程序](../core/tutorials/with-visual-studio-mac.md)**
 
@@ -95,7 +95,7 @@ ms.locfileid: "102103564"
 
 **[创建支持插件的 .NET Core 应用程序](../core/tutorials/creating-app-with-plugin-support.md)**
 
-本教程演示了如何在 .NET Core 上构建支持插件基础结构的简单应用程序。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin)。
+本教程演示了如何在 .NET Core 上构建支持插件基础结构的简单应用程序。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/main/core/extensions/AppWithPlugin)。
 
 ## <a name="deploy-to-containers"></a>部署到容器
 
@@ -109,7 +109,7 @@ ms.locfileid: "102103564"
 
 1. 执行以下过程之一，下载包含示例代码的存储库：
    * 将 ZIP 格式的存储库下载到本地系统。 解压缩压缩存档文件。
-   * [分叉](https://help.github.com/articles/fork-a-repo/)存储库并将分叉点[克隆](https://help.github.com/articles/cloning-a-repository/)到你的本地系统。 分叉和克隆允许通过对分叉点进行更改，然后为官方文档存储库创建提取请求的方式参与文档创作。 有关详细信息，请参阅 [.NET 文档参与指南](/contribute/dotnet/dotnet-contribute)和 [ 文档参与指南](https://github.com/dotnet/AspNetCore.Docs/blob/master/CONTRIBUTING.md)。
+   * [分叉](https://help.github.com/articles/fork-a-repo/)存储库并将分叉点[克隆](https://help.github.com/articles/cloning-a-repository/)到你的本地系统。 分叉和克隆允许通过对分叉点进行更改，然后为官方文档存储库创建提取请求的方式参与文档创作。 有关详细信息，请参阅 [.NET 文档参与指南](/contribute/dotnet/dotnet-contribute)和 [ 文档参与指南](https://github.com/dotnet/AspNetCore.Docs/blob/main/CONTRIBUTING.md)。
    * 以本地方式克隆存储库。 如果你将文档存储库直接克隆到本地系统，则无法直接提交到官方存储库，因此稍后将无法参与文档创作。 如果你希望保留以后参与文档创作的机会，请使用之前介绍的分叉和克隆过程。
 1. 在存储库的文件夹中导航到示例的位置。 当你点击示例链接时，示例位置的相对路径将显示在浏览器的地址栏中。
 1. 要运行示例，你有多个选择：

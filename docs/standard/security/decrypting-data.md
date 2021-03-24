@@ -1,7 +1,7 @@
 ---
 title: 解密数据
 description: 了解如何使用对称算法或非对称算法解密 .NET 中的数据。
-ms.date: 07/16/2020
+ms.date: 03/22/2021
 dev_langs:
 - csharp
 - vb
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - asymmetric decryption
 - decryption
 ms.assetid: 9b266b6c-a9b2-4d20-afd8-b3a0d8fd48a0
-ms.openlocfilehash: cf286eeca8a9372c6532c56701e4775d5e09d786
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 14d8b6185c1c5b3aaee4f2041f98c500f2d3c313
+ms.sourcegitcommit: 26721a2260deabb3318cc98af8619306711153cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831099"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "105027904"
 ---
 # <a name="decrypting-data"></a>解密数据
 
@@ -30,12 +30,14 @@ ms.locfileid: "94831099"
 
 ```vb
 Dim aes As Aes = Aes.Create()
-Dim cryptStream As New CryptoStream(myStream, aes.CreateDecryptor(key, iv), CryptoStreamMode.Read)
+Dim cryptStream As New CryptoStream(
+    myStream, aes.CreateDecryptor(key, iv), CryptoStreamMode.Read)
 ```
 
 ```csharp
 Aes aes = Aes.Create();
-CryptoStream cryptStream = new CryptoStream(myStream, aes.CreateDecryptor(key, iv), CryptoStreamMode.Read);
+CryptoStream cryptStream = new CryptoStream(
+    myStream, aes.CreateDecryptor(key, iv), CryptoStreamMode.Read);
 ```
 
 下面的示例显示创建流、解密流、从流中读取和关闭流的整个过程。 将创建一个文件流对象，该对象读取名为 *TestData.txt* 的文件。 然后，使用 **CryptoStream** 类和 **Aes** 类对文件流进行解密。 此示例指定在对称加密示例中用于 [加密数据](encrypting-data.md)的键值。 它不会显示加密和传输这些值所需的代码。
@@ -45,7 +47,7 @@ CryptoStream cryptStream = new CryptoStream(myStream, aes.CreateDecryptor(key, i
 
 前面的示例使用相同的密钥和对称加密示例中用于 [加密数据](encrypting-data.md)的算法。 它对该示例创建的 *TestData.txt* 文件进行解密，并在控制台上显示原始文本。
 
-## <a name="asymmetric-decryption"></a>不对称解密
+## <a name="asymmetric-decryption"></a>非对称解密
 
 通常，一方（A 方）同时生成公钥和私钥，并将其存储在内存或加密密钥容器中。 然后 A 方将公钥发送到另一方（B 方）。 使用公钥时，参与方 B 会对数据进行加密，然后将数据发送回 A 方。接收到数据后，A 方使用对应的私钥将其解密。 A 方只有使用与 B 方用于加密数据的公钥相对应的私钥，解密才能成功。
 
@@ -77,7 +79,7 @@ symmetricKey = rsa.Decrypt(encryptedSymmetricKey, RSAEncryptionPadding.Pkcs1);
 symmetricIV = rsa.Decrypt(encryptedSymmetricIV , RSAEncryptionPadding.Pkcs1);
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [生成加密和解密的密钥](generating-keys-for-encryption-and-decryption.md)
 - [加密数据](encrypting-data.md)

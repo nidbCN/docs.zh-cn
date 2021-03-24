@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 123c3768414ee9a577c49c218acfb7415d83572e
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: df96ce4cc2348637b262b7380832dde1e2ee3afb
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102605277"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876329"
 ---
 # <a name="interfaces-c-programming-guide"></a>接口（C# 编程指南）
 
@@ -51,7 +51,7 @@ ms.locfileid: "102605277"
 
 接口具有以下属性：
 
-- 接口通常类似于只有抽象成员的抽象基类。 实现接口的任何类或结构都必须实现其所有成员。 接口可以选择性地定义其部分或全部成员的默认实现。 有关详细信息，请参阅[默认接口方法](../../tutorials/default-interface-methods-versions.md)。
+- 接口通常类似于只有抽象成员的抽象基类。 实现接口的任何类或结构都必须实现其所有成员。 接口可以选择性地定义其部分或全部成员的默认实现。 有关详细信息，请参阅[默认接口方法](../../whats-new/tutorials/default-interface-methods-versions.md)。
 - 接口无法直接进行实例化。 其成员由实现接口的任何类或结构来实现。
 - 一个类或结构可以实现多个接口。 一个类可以继承一个基类，还可实现一个或多个接口。
 

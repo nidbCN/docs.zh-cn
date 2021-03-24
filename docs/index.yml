@@ -11,12 +11,12 @@ metadata:
   author: BillWagner
   ms.author: wiwagn
   ms.date: 03/11/2021
-  ms.openlocfilehash: ca8e6d7d817a324c72d95d39bf50b409d70a66aa
-  ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
+  ms.openlocfilehash: 1dd3988778fe7fe4a0f75c849554b7913309111d
+  ms.sourcegitcommit: 5ce37699c2a51ed173171813be68ef7577b1aba5
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 03/11/2021
-  ms.locfileid: "103190393"
+  ms.lasthandoff: 03/23/2021
+  ms.locfileid: "104881036"
 highlightedContent:
   items:
   - title: 下载 .NET
@@ -209,11 +209,11 @@ additionalContent:
       links:
       - url: azure/index.yml
         text: 面向 .NET 开发人员的 Azure
-      - url: /dotnet/azure/migration/app-service?view=azure-dotnet&preserve-view=true
+      - url: ./azure/migration/app-service.md?preserve-view=true&view=azure-dotnet
         text: 迁移本地 .NET Web 应用或服务
-      - url: /dotnet/azure/key-azure-services
+      - url: ./azure/key-azure-services.md
         text: 适用于 .NET 开发人员的 Azure 服务
-      - url: /dotnet/azure/sdk/azure-sdk-for-dotnet
+      - url: ./azure/sdk/azure-sdk-for-dotnet.md
         text: Azure .NET SDK
       - url: fsharp/using-fsharp-on-azure/index.md
         text: 在 Azure 上使用 F#
