@@ -2,12 +2,12 @@
 title: 应用程序发布
 description: 了解发布 .NET 应用程序的方式。 .NET 可以发布特定于平台或跨平台的应用。 你可以将应用发布为独立应用或依赖于框架的应用。 每个模式都会影响用户运行应用的方式。
 ms.date: 02/05/2021
-ms.openlocfilehash: 3f10aae139626bd2b09f71b32eaf2d680890e100
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: ca0fa4ff5e17a3fa4c636604ae81b63ffbbc99f6
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99699774"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874285"
 ---
 # <a name="net-application-publishing-overview"></a>.NET 应用程序发布概述
 
@@ -129,7 +129,7 @@ dotnet publish -r linux-x64 --self-contained false
 由于你的应用包含 .NET 运行时和所有应用依赖项，因此下载大小和所需硬盘空间比[依赖于框架的应用](#publish-framework-dependent)的版本要大。
 
   > [!TIP]
-  > 可以通过使用 .NET [全球化固定模式](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)在 Linux 系统上减少大约 28 MB 的部署大小。 这会强制应用像处理[固定区域性](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType)一样处理所有区域性。
+  > 可以通过使用 .NET [全球化固定模式](https://github.com/dotnet/runtime/blob/main/docs/design/features/globalization-invariant-mode.md)在 Linux 系统上减少大约 28 MB 的部署大小。 这会强制应用像处理[固定区域性](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType)一样处理所有区域性。
 
   > [!TIP]
   > 存在一项[预览剪裁功能](trim-self-contained.md)，它可进一步减小部署的大小。
