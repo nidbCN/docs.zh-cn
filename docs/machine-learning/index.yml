@@ -10,12 +10,12 @@ metadata:
   author: natke
   ms.author: nakersha
   ms.date: 10/30/2019
-  ms.openlocfilehash: da58d7b94ebb0d56e98d07055c6d2e9f42cc7830
-  ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
+  ms.openlocfilehash: 932dbcf1fd898409cce6ab7590e8ffed184763ea
+  ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 12/04/2020
-  ms.locfileid: "96599637"
+  ms.lasthandoff: 03/19/2021
+  ms.locfileid: "104653733"
 landingContent:
 - title: ML.NET 基础知识
   linkLists:
@@ -61,8 +61,8 @@ landingContent:
       url: tutorials/github-issue-classification.md
     - text: 使用图像分类 API (API) 分类图像
       url: tutorials/image-classification-api-transfer-learning.md
-    - text: 使用模型组合 (API) 分类图像
-      url: tutorials/image-classification.md
+    - text: 使用物体检测来识别交通标志（模型生成器）
+      url: tutorials/object-detection-model-builder.md
     - text: 检测图像中的对象 (API)
       url: tutorials/object-detection-onnx.md
     - text: 检测产品销售中的异常 (API)

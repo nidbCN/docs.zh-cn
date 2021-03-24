@@ -25,6 +25,8 @@
           href: tutorials/sentiment-analysis-model-builder.md
         - name: 对运行状况冲突分类（模型生成器和多类别分类）
           href: tutorials/health-violation-classification-model-builder.md
+        - name: 检测交通标志（模型生成器和物体检测）
+          href: tutorials/object-detection-model-builder.md
     - name: API
       items:
         - name: 概述
@@ -115,6 +117,8 @@
               href: how-to-guides/serve-model-web-api-ml-net.md
             - name: 使用 Azure 机器学习 ONNX 模型
               href: /azure/machine-learning/how-to-use-automl-onnx-model-dotnet?toc=/dotnet/machine-learning/how-to-guides/toc.json&bc=/dotnet/machine-learning/how-to-guides/toc.json
+            - name: 使用 .NET for Apache Spark 进行批量预测
+              href: ../spark/tutorials/ml-sentiment-analysis.md
 - name: 参考
   items:
     - name: ML.NET API 参考
