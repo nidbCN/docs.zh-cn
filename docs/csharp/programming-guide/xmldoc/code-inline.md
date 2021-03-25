@@ -11,12 +11,12 @@ helpviewer_keywords:
 - c C# XML tag
 - <c> C# XML tag
 ms.assetid: aad5b16e-a29e-445e-bd0d-eea0b138d7b2
-ms.openlocfilehash: 78e59e1df4b096782e0a97b6d12c21c843a1cb21
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: fc445c7245287c3835543e4bbe4b3b46ec46fd35
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87382017"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103478698"
 ---
 # <a name="c-c-programming-guide"></a>\<c>（C# 编程指南）
 
@@ -36,7 +36,7 @@ ms.locfileid: "87382017"
 
 使用 `<c>` 标记可以指示应将说明内的文本标记为代码。 使用 [\<code>](./code.md) 指示作为代码的多行文本。
 
-使用 [-doc](../../language-reference/compiler-options/doc-compiler-option.md) 进行编译以便将文档注释处理到文件中。
+使用 [DocumentationFile](../../language-reference/compiler-options/output.md#documentationfile) 进行编译可以将文档注释处理到文件中。
 
 ## <a name="example"></a>示例
 

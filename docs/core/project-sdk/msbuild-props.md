@@ -4,12 +4,12 @@ description: .NET SDK 可以理解的 MSBuild 属性和项的引用。
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: 9cd387a4a8ad7f5b31a797d4d019a53799d926ff
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 18f2be734fa10e2fd4977166ab4334332b120a91
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100432697"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604757"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>.NET SDK 项目的 MSBuild 引用
 
@@ -409,6 +409,9 @@ MSBuild 项上的 `CopyToPublishDirectory` 元数据控制何时将项复制到�
   <EnableNETAnalyzers>true</EnableNETAnalyzers>
 </PropertyGroup>
 ```
+
+> [!NOTE]
+> 此属性专门用于 .NET 5 及更高版本 SDK 中的内置分析器。 安装 NuGet 代码分析包时不应使用此属性。
 
 ### <a name="enforcecodestyleinbuild"></a>EnforceCodeStyleInBuild
 

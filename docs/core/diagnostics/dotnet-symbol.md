@@ -2,12 +2,12 @@
 title: dotnet-symbol 诊断工具 - .NET CLI
 description: 了解如何安装和使用 dotnet-symbol CLI 工具来下载调试 .NET 转储和小型转储所需的文件。
 ms.date: 11/17/2020
-ms.openlocfilehash: 5cc304a3917921a964ceb61bc2c58e942b0baa85
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 4543bd965c889d93d7dc0b89ff2d6f62c4343e5f
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102105318"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103189899"
 ---
 # <a name="symbol-downloader-dotnet-symbol"></a>符号下载器 (dotnet-symbol)
 
@@ -102,4 +102,4 @@ dotnet-symbol --host-only --debugging <dump file path>
 ## <a name="see-also"></a>另请参阅
 
 * [使用符号进行调试](/windows/win32/dxtecharts/debugging-with-symbols)
-* [可移植 PDB](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md)
+* [符号和可移植 PDB](./symbols.md)

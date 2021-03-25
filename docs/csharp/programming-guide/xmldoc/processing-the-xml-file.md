@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: 6f8a278ed842cd9c4176f3efff423ee048f7e9b9
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 5ce0f311ccc16b4eca8d499578c217d93cc93165
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381536"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477865"
 ---
 # <a name="process-the-xml-file-c-programming-guide"></a>处理 XML 文件（C# 编程指南）
 
@@ -88,5 +88,5 @@ XML 文件不是代码的层次结构表示形式。 它是一个简单列表，
 ## <a name="see-also"></a>请参阅
 
 - [C# 编程指南](../index.md)
-- [-doc（C# 编译器选项）](../../language-reference/compiler-options/doc-compiler-option.md)
+- [DocumentationFile（C# 编译器选项）](../../language-reference/compiler-options/output.md#documentationfile)
 - [XML 文档注释](./index.md)

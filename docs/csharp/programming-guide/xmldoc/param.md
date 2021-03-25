@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <param> C# XML tag
 - param C# XML tag
 ms.assetid: 46d329b1-5b84-4537-9e17-73ca97313e4e
-ms.openlocfilehash: a9e3b2e86528afcbe1330788e248f0143efb5c1b
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 1385365b2cdf18563686fdf4a5a1b17b89feafcd
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381549"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477998"
 ---
 # <a name="param-c-programming-guide"></a>\<param>（C# 编程指南）
 
@@ -40,7 +40,7 @@ ms.locfileid: "87381549"
 
 `<param>` 标记的文本显示在 IntelliSense、对象浏览器和代码注释 Web 报表中。
 
-使用 [-doc](../../language-reference/compiler-options/doc-compiler-option.md) 进行编译以便将文档注释处理到文件中。
+使用 [DocumentationFile](../../language-reference/compiler-options/output.md#documentationfile) 进行编译可以将文档注释处理到文件中。
 
 ## <a name="example"></a>示例
 

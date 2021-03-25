@@ -2,20 +2,20 @@
 title: 将 ASP.NET MVC 应用升级到 .NET 5
 description: 使用 .NET 升级助手将现有的 .NET Framework ASP.NET MVC 应用升级到 .NET 5。 .NET 升级助手是一种 CLI 工具，可帮助将应用从 .NET Framework 迁移到 .NET 5。
 author: ardalis
-ms.date: 02/25/2021
-ms.openlocfilehash: 0c9af9e12b78df7c4a2aaed18155f7ee9f02870d
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.date: 03/08/2021
+ms.openlocfilehash: 421d8ce16bc1800451ee39c20c4746ea321fafd0
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102108182"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604952"
 ---
 # <a name="upgrade-an-aspnet-mvc-app-to-net-5-with-the-net-upgrade-assistant"></a>使用 .NET 升级助手将 ASP.NET MVC 应用升级到 .NET 5
 
 [.NET 升级助手](upgrade-assistant-overview.md)是一种命令行工具，可帮助将 .NET Framework ASP.NET MVC 应用升级到 .NET 5。 本文提供以下内容：
 
-* 演示如何针对 .NET Framework ASP.NET MVC 应用运行该工具
-* 故障排除提示
+- 演示如何针对 .NET Framework ASP.NET MVC 应用运行该工具
+- 故障排除提示
 
 ## <a name="upgrade-net-framework-aspnet-mvc-apps"></a>升级 .NET Framework ASP.NET MVC 应用
 
@@ -63,7 +63,7 @@ upgrade-assistant .\AspNetMvcTest.csproj
 
 更新项目格式后，下一步是更新项目的 TFM。
 
-:::image type="content" source="media/upgrade-assistant-aspnetmvc/update-tfm.png" alt-text=".NET 升级助手将项目转换为 SDK 样式":::
+:::image type="content" source="media/upgrade-assistant-aspnetmvc/update-tfm.png" alt-text=".NET 升级助手更新 TFM":::
 
 接下来，该工具会更新项目的 NuGet 包。 多个包需要更新，且会添加一个新的分析器包。
 
@@ -86,7 +86,7 @@ ASP.NET Core 会使用这些文件来进行[应用启动](/aspnet/core/fundament
 
 该工具通过迁移 `system.web.webPages.razor/pages/namespaces` 来完成配置文件的迁移。
 
-:::image type="content" source="media/upgrade-assistant-aspnetmvc/migrate-config2.png" alt-text=".NET 升级助手迁移配置":::
+:::image type="content" source="media/upgrade-assistant-aspnetmvc/migrate-config2.png" alt-text=".NET 升级助手迁移配置已完成":::
 
 该工具会应用已知的修补程序来将 C# 引用迁移到其新的对应项。
 
@@ -113,7 +113,7 @@ ASP.NET Core 会使用这些文件来进行[应用启动](/aspnet/core/fundament
   </ItemGroup>
 ```
 
-该由 Web 服务器处理的静态文件应移动到名为 `wwwroot` 的根级别文件夹下适当的文件夹中。 有关详细信息，请查看 [ASP.NET Core 中的静态文件](/aspnet/core/fundamentals/static-files?view=aspnetcore-5.0) 。 移动文件后，可删除项目文件中与这些文件对应的 `<Content>` 元素。 事实上，可删除所有 `<Content>` 元素及其包含组。 此外，应删除指向客户端库（如 `bootstrap` 或 `jQuery`）的所有 `<PackageReference>`。
+该由 Web 服务器处理的静态文件应移动到名为 `wwwroot` 的根级别文件夹下适当的文件夹中。 有关详细信息，请查看 [ASP.NET Core 中的静态文件](/aspnet/core/fundamentals/static-files?view=aspnetcore-5.0&preserve-view=true) 。 移动文件后，可删除项目文件中与这些文件对应的 `<Content>` 元素。 事实上，可删除所有 `<Content>` 元素及其包含组。 此外，应删除指向客户端库（如 `bootstrap` 或 `jQuery`）的所有 `<PackageReference>`。
 
 默认情况下，项目将被转换为类库。 请将第一行的 `Sdk` 属性更改为 `Microsoft.NET.Sdk.Web`，并将 `<TargetFramework>` 设置为 `net5.0`。 编译该项目。 此时，错误数应当相当小。 在移植新的 ASP.NET 4.6.1 MVC 项目时，其余错误引用 `App_Start` 文件夹中的文件：
 
@@ -123,7 +123,7 @@ ASP.NET Core 会使用这些文件来进行[应用启动](/aspnet/core/fundament
 
 可删除这些文件和完整的 `App_Start` 文件夹。 同样，可删除 `Global.asax` 和 `Global.asax.cs` 文件。
 
-此时，只剩下与捆绑相关的错误。 可[通过多种方式在 SP.NET Core 中配置捆绑和缩减](/aspnet/core/migration/mvc?view=aspnetcore-5.0#configure-bundling-and-minification)。 选择最适合你的项目的任何内容。
+此时，只剩下与捆绑相关的错误。 可[通过多种方式在 SP.NET Core 中配置捆绑和缩减](/aspnet/core/migration/mvc?view=aspnetcore-5.0&preserve-view=true#configure-bundling-and-minification)。 选择最适合你的项目的任何内容。
 
 ## <a name="troubleshooting-tips"></a>故障排除提示
 

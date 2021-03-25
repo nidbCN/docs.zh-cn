@@ -4,12 +4,12 @@ description: 了解如何在 Azure HDInsight 的 Jupyter Notebook 中安装 .NET
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: ff6b3a64c01fb9148d3abe3d04579233d11a4f73
-ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
+ms.openlocfilehash: b84d61c29d2b2aa7a9fee20a8af9f3eee23f7e8b
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96599650"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605472"
 ---
 # <a name="install-net-for-apache-spark-on-jupyter-notebooks-on-azure-hdinsight-spark-clusters"></a>在 Azure HDInsight Spark 群集的 Jupyter Notebook 中安装 .NET for Apache Spark
 
@@ -38,20 +38,20 @@ Azure HDInsight 群集已附带 Jupyter Notebook，因此只需将 Jupyter Noteb
 
 1. 从门户选择“概览”，然后选择“Ambari 主页”。   出现提示时，请输入群集的登录凭据。
 
-   ![停止 Livy 服务器](./media/hdinsight-notebook-installation/select-ambari.png)
+   ![选择“群集”仪表板下的 Ambari 主页](./media/hdinsight-notebook-installation/select-ambari.png)
 
 2. 从左侧导航菜单选择“Spark2”，然后选择“用于 Spark2 的 Livy 服务器”。  
 
-   ![停止 Livy 服务器](./media/hdinsight-notebook-installation/select-livyserver.png)
+   ![选择用于 Spark2 的 Livy 服务器](./media/hdinsight-notebook-installation/select-livyserver.png)
 
 3. 选择“hn0... host”。 
 
-   ![停止 Livy 服务器](./media/hdinsight-notebook-installation/select-host.png)
+   ![显示已选中“hno...”的主机](./media/hdinsight-notebook-installation/select-host.png)
 
 4. 选择“用于 Spark2 的 Livy 服务器”旁边的省略号，然后选择“停止”。   出现提示时，选择“确定”以继续操作  。
 
    停止用于 Spark2 的 Livy 服务器。
-   ![停止 Livy 服务器](./media/hdinsight-notebook-installation/stop-server.png)
+   ![选择省略号，然后选择“停止”](./media/hdinsight-notebook-installation/stop-server.png)
 
 5. 对“hn1... host”重复前面的步骤  。
 
@@ -87,9 +87,9 @@ Azure HDInsight 群集已附带 Jupyter Notebook，因此只需将 Jupyter Noteb
 
 2. 依次选择“Spark2”和“配置”   。 然后选择“自定义 spark2 默认值”  。
 
-   ![设置配置](./media/hdinsight-notebook-installation/spark-configs.png)
+   ![Ambari 中的“配置”选项卡](./media/hdinsight-notebook-installation/spark-configs.png)
 
-3. 选择“添加属性...”，添加 Spark 默认设置。 
+3. 选择“添加属性”，添加 Spark 默认设置。
 
    ![添加属性](./media/hdinsight-notebook-installation/add-property.png)
 
@@ -109,7 +109,7 @@ Azure HDInsight 群集已附带 Jupyter Notebook，因此只需将 Jupyter Noteb
 
    例如，下图捕获了用于添加属性 1 的设置：
 
-   ![设置配置](./media/hdinsight-notebook-installation/add-sparkconfig.png)
+   ![添加文本属性](./media/hdinsight-notebook-installation/add-sparkconfig.png)
 
    添加这三个属性后，选择“保存”。  若看到配置建议警告屏幕，选择“仍然继续”  。
 
@@ -117,7 +117,7 @@ Azure HDInsight 群集已附带 Jupyter Notebook，因此只需将 Jupyter Noteb
 
    添加新属性后，需要重启受更改影响的组件。 在顶部选择“重启”，然后从下拉列表选择“重启所有受影响的组件”。  
 
-   ![设置配置](./media/hdinsight-notebook-installation/restart-affected.png)
+   ![突出显示“重启”>“重启所有受影响的组件”的“配置”选项卡](./media/hdinsight-notebook-installation/restart-affected.png)
 
    出现提示时，选择“确认全部重启”以继续，然后单击“确定”完成操作。  
 
@@ -142,7 +142,7 @@ Azure HDInsight 群集已附带 Jupyter Notebook，因此只需将 Jupyter Noteb
    df.Show();
    ```
 
-   ![提交 Spark 作业](./media/hdinsight-notebook-installation/create-df.png)
+   ![创建将显示命令执行的 DataFrame](./media/hdinsight-notebook-installation/create-df.png)
 
    使用下面的代码片段注册用户定义的函数 (UDF)，并将此 UDF 与 DataFrame 一起使用：
 
@@ -151,7 +151,7 @@ Azure HDInsight 群集已附带 Jupyter Notebook，因此只需将 Jupyter Noteb
    df.Select(myawesomeudf(df["id"])).Show();
    ```
 
-   ![提交 Spark 作业](./media/hdinsight-notebook-installation/run-udf.png)
+   ![注册 UDF 并使用它](./media/hdinsight-notebook-installation/run-udf.png)
 
 ## <a name="next-steps"></a>后续步骤
 

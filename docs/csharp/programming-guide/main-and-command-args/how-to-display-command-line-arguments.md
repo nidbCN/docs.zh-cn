@@ -1,20 +1,20 @@
 ---
 title: 如何显示命令行参数 - C# 编程指南
 description: 了解如何显示命令行参数。 查看代码示例和其他可用资源。
-ms.date: 07/20/2015
+ms.date: 03/08/2021
 helpviewer_keywords:
 - command-line arguments [C#], displaying
 ms.assetid: b8479f2d-9e05-4d38-82da-2e61246e5437
-ms.openlocfilehash: 717e27c23724e63c03a38b028ef99dc6530b4745
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 7c3e8d7f6ad2a599308057e996808509e70b7508
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91195475"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103480273"
 ---
 # <a name="how-to-display-command-line-arguments-c-programming-guide"></a>如何显示命令行参数（C# 编程指南）
 
-可通过 `Main` 的可选参数来访问在命令行处提供给可执行文件的参数。 参数以字符串数组的形式提供。 数组的每个元素都包含 1 个参数。 删除参数之间的空格。 例如，下面是对虚构可执行文件的命令行调用：  
+可通过[顶级语句](top-level-statements.md)或 `Main` 的可选参数来访问在命令行处提供给可执行文件的参数。 参数以字符串数组的形式提供。 数组的每个元素都包含 1 个参数。 删除参数之间的空格。 例如，下面是对虚构可执行文件的命令行调用：  
   
 |命令行上的输入|传递给 Main 的字符串数组|  
 |----------------------------|-------------------------------------|  
@@ -34,6 +34,5 @@ ms.locfileid: "91195475"
 ## <a name="see-also"></a>另请参阅
 
 - [C# 编程指南](../index.md)
-- [在命令行上使用 csc.exe 生成](../../language-reference/compiler-options/command-line-building-with-csc-exe.md)
 - [Main() 和命令行参数](./index.md)
 - [Main() 返回值](./main-return-values.md)

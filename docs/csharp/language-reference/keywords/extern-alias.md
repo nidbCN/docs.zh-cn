@@ -9,12 +9,12 @@ helpviewer_keywords:
 - aliases [C#], extern keyword
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
-ms.openlocfilehash: 5ecafa5a989bc183d7f52ac3d4b4d50a81b36014
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 230e9d7169e8924749f234af2fa411950f68ce78
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203340"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477466"
 ---
 # <a name="extern-alias-c-reference"></a>外部别名（C# 参考）
 
@@ -71,4 +71,4 @@ using Class1V2 = GridV2::Namespace.Class1;
 - [C# 编程指南](../../programming-guide/index.md)
 - [C# 关键字](./index.md)
 - [::运算符](../operators/namespace-alias-qualifier.md)
-- [-reference（C# 编译器选项）](../compiler-options/reference-compiler-option.md)
+- [引用（C# 编译器选项）](../compiler-options/inputs.md#references)

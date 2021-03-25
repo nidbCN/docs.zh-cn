@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <exception> C# XML tag
 - exception C# XML tag
 ms.assetid: dd73aac5-3c74-4fcf-9498-f11bff3a2f3c
-ms.openlocfilehash: 22a28f3fe6de5a0db9aea0f1fd7963d4e6fcee05
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 37d119e3cde115104d149d8f35b8937efddd70d4
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381731"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103479112"
 ---
 # <a name="exception-c-programming-guide"></a>\<exception>（C# 编程指南）
 
@@ -40,7 +40,7 @@ ms.locfileid: "87381731"
 
 `<exception>` 标记可用于指定可引发的异常。 此标记可应用于方法、属性、事件和索引器的定义。
 
-使用 [-doc](../../language-reference/compiler-options/doc-compiler-option.md) 进行编译以便将文档注释处理到文件中。
+使用 [DocumentationFile](../../language-reference/compiler-options/output.md#documentationfile) 进行编译可以将文档注释处理到文件中。
 
 有关异常处理的详细信息，请参阅[异常和异常处理](../exceptions/index.md)。
 

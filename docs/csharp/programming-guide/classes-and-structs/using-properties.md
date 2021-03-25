@@ -7,16 +7,16 @@ helpviewer_keywords:
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: 51ca0a37022c99bfbd9d61f2cc47f529d535e72a
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 16ff0f02db9640ad8cfe41fce9ce954cb75b4e08
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864652"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190328"
 ---
 # <a name="using-properties-c-programming-guide"></a>使用属性（C# 编程指南）
 
-属性结合了字段和方法的多个方面。 对于对象的用户来说，属性似乎是一个字段，访问属性需要相同的语法。 对于类的实现者来说，属性是一两个代码块，表示 [get](../../language-reference/keywords/get.md) 访问器和/或 [set](../../language-reference/keywords/set.md) 访问器。 读取属性时，执行 `get` 访问器的代码块；向属性赋予新值时，执行 `set` 访问器的代码块。 将不带 `set` 访问器的属性视为只读。 将不带 `get` 访问器的属性视为只写。 将具有以上两个访问器的属性视为读写。
+属性结合了字段和方法的多个方面。 对于对象的用户来说，属性似乎是一个字段，访问属性需要相同的语法。 对于类的实现者来说，属性是一两个代码块，表示 [get](../../language-reference/keywords/get.md) 访问器和/或 [set](../../language-reference/keywords/set.md) 访问器。 读取属性时，执行 `get` 访问器的代码块；向属性赋予新值时，执行 `set` 访问器的代码块。 将不带 `set` 访问器的属性视为只读。 将不带 `get` 访问器的属性视为只写。 将具有以上两个访问器的属性视为读写。 在 C# 9 及更高版本中，可以使用 `init` 访问器代替 `set` 访问器将属性设为只读。
 
 与字段不同，属性不会被归类为变量。 因此，不能将属性作为 [ref](../../language-reference/keywords/ref.md) 或 [out](../../language-reference/keywords/out-parameter-modifier.md) 参数传递。
 
@@ -64,6 +64,10 @@ ms.locfileid: "86864652"
 
 为 `set` 访问器中的本地变量声明使用隐式参数名 `value` 是错误的。
 
+## <a name="the-init-accessor"></a>init 访问器
+
+用于创建 `init` 访问器的代码与用于创建 `set` 访问器的代码相同，只不过前者使用的关键字是 `init` 而不是 `set`。 不同之处在于，`init` 访问器只能在构造函数中使用，或通过[对象初始值设定项](object-and-collection-initializers.md)使用。
+
 ## <a name="remarks"></a>备注
 
 可以将属性标记为 `public`、`private`、`protected`、`internal`、`protected internal` 或 `private protected`。 这些访问修饰符定义该类的用户访问该属性的方式。 相同属性的 `get` 和 `set` 访问器可以具有不同的访问修饰符。 例如，`get` 可能为 `public`允许从类型外部进行只读访问；而 `set` 可能为 `private` 或 `protected`。 有关详细信息，请参阅[访问修饰符](./access-modifiers.md)。
@@ -77,13 +81,13 @@ ms.locfileid: "86864652"
 > [!NOTE]
 > 在 [static](../../language-reference/keywords/static.md) 属性的访问器上使用 [virtual](../../language-reference/keywords/virtual.md)、[abstract](../../language-reference/keywords/abstract.md) 或 [override](../../language-reference/keywords/override.md) 修饰符是错误的。
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
 此示例演示实例、静态和只读属性。 它接收通过键盘键入的员工姓名，按 1 递增 `NumberOfEmployees`，并显示员工姓名和编号。
 
 [!code-csharp[csProgGuideProperties#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#2)]
 
-## <a name="example"></a>示例
+## <a name="hidden-property-example"></a>Hidden 属性示例
 
 此示例演示如何访问由派生类中同名的另一属性隐藏的基类中的属性：
 
@@ -101,7 +105,7 @@ ms.locfileid: "86864652"
 
      有关隐藏成员的详细信息，请参阅 [new 修饰符](../../language-reference/keywords/new-modifier.md)。
 
-## <a name="example"></a>示例
+## <a name="override-property-example"></a>Override 属性示例
 
 在此示例中，两个类（`Cube` 和 `Square`）实现抽象类 `Shape`，并重写其抽象 `Area` 属性。 请注意属性上的 [override](../../language-reference/keywords/override.md) 修饰符的使用。 程序接受将边长作为输入，计算正方形和立方体的面积。 它还接受将面积作为输入，计算正方形和立方体的相应边长。
 

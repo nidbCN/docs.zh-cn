@@ -1,17 +1,17 @@
 ---
-title: 使用 XML 注释来记录代码
+title: 使用 XML 注释记录 C# 代码
 description: 了解如何使用 XML 文档注释来记录代码和在编译时生成 XML 文档文件。
 ms.date: 01/21/2020
 ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 91de11c610ea17999dabff6d0552de9440f532e6
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: cdc3937ba3b641b90aed85a604ca05195ea34fe7
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465294"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103478483"
 ---
-# <a name="document-your-code-with-xml-comments"></a>使用 XML 注释记录代码
+# <a name="document-your-c-code-with-xml-comments"></a>使用 XML 注释记录 C# 代码
 
 XML 文档注释是一种特殊注释，添加在任何用户定义的类型或成员的定义上方。
 其特殊之处在于其可由编译器处理，由此在编译时生成 XML 文档文件。
@@ -35,7 +35,7 @@ XML 文档注释是一种特殊注释，添加在任何用户定义的类型或�
 
 - 如果使用 Visual Studio 开发应用程序，右键单击项目并选择“属性”  。 在属性对话框中，选择“生成”  选项卡，然后选中“XML 文档文件”  。 还可以更改编译器写入文件的位置。
 
-- 如果是从命令行编译 .NET 应用程序，编译时请添加 [-doc 编译器选项](language-reference/compiler-options/doc-compiler-option.md)。  
+- 如果是从命令行编译 .NET 应用程序，编译时请添加 [DocumentationFile 编译器选项](language-reference/compiler-options/output.md#documentationfile)。  
 
 XML 文档注释使用三个正斜杠 (`///`) 和 XML 格式的注释正文。 例如：
 
@@ -123,7 +123,7 @@ XML 文档注释使用三个正斜杠 (`///`) 和 XML 格式的注释正文。 �
 
 [!code-csharp[See Tag](~/samples/snippets/csharp/concepts/codedoc/see-tag.cs)]
 
-`cref` 是表示可从当前编译环境引用的类型或其成员的**必需**属性。
+`cref` 是表示可从当前编译环境引用的类型或其成员的 **必需** 属性。
 其类型可为项目中或引用的程序集中定义的任何类型。
 
 ## \<seealso>
@@ -137,7 +137,7 @@ XML 文档注释使用三个正斜杠 (`///`) 和 XML 格式的注释正文。 �
 
 ## \<param>
 
-使用 `<param>` 标记来描述方法的参数。 下面是关于双 `Add` 方法的示例：标记所描述的参数在**必需的 ** `name` 属性中指定。
+使用 `<param>` 标记来描述方法的参数。 下面是关于双 `Add` 方法的示例：标记所描述的参数在 **必需的** `name` 属性中指定。
 
 [!code-csharp[Param Tag](~/samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
 

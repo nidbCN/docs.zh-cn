@@ -3,12 +3,12 @@ title: 可为空引用类型
 description: 本文概述了在 C# 8.0 中添加的可为空引用类型。 你将了解该功能如何为新项目和现有项目提供针对空引用异常的安全性。
 ms.technology: csharp-null-safety
 ms.date: 04/21/2020
-ms.openlocfilehash: b4906987ee23f458c1da9754ed7b402621169f63
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: 36078031eebc1890edf04744475c330c2ba31f96
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95099331"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103480097"
 ---
 # <a name="nullable-reference-types"></a>可为空引用类型
 
@@ -218,4 +218,4 @@ public static class Program
 - [可为空引用类型规范草案](~/_csharplang/proposals/csharp-9.0/nullable-reference-types-specification.md)
 - [可为空引用教程简介](tutorials/nullable-reference-types.md)
 - [将现有代码库迁移到可为空引用](tutorials/upgrade-to-nullable-references.md)
-- [-nullable（C# 编译器选项）](language-reference/compiler-options/nullable-compiler-option.md)
+- [Nullable（C# 编译器选项）](language-reference/compiler-options/language.md#nullable)

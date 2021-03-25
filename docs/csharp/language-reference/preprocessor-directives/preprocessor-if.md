@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: dc3e235db49279691203a0db4d124239fb972c69
-ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
+ms.openlocfilehash: a3f72719ba4ce722aef33bbd5de338d3d06b2aa0
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90065224"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103480370"
 ---
 # <a name="if-c-reference"></a>#if（C# 参考）
 
@@ -34,7 +34,7 @@ ms.locfileid: "90065224"
 
 `#define` 允许你定义一个符号。 然后通过将该符号用作传递给 `#if` 指令的表达式，该表达式的计算结果为 `true`。
 
-还可以通过 [-define](../compiler-options/define-compiler-option.md) 编译器选项来定义符号。 可以通过 [#undef](preprocessor-undef.md) 取消定义符号。
+还可以通过 [DefineConstants](../compiler-options/language.md#defineconstants) 编译器选项来定义符号。 可以通过 [#undef](preprocessor-undef.md) 取消定义符号。
 
 使用 `-define` 或 `#define` 定义的符号与具有相同名称的变量不冲突。 也就是说，变量名称不应传递给预处理器指令，且符号仅能由预处理器指令评估。
 

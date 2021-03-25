@@ -3,12 +3,12 @@ title: 使用 ML.NET CLI 自动进行模型训练
 description: 了解如何使用 ML.NET CLI 工具通过命令行自动训练最佳模型。
 ms.date: 06/03/2020
 ms.custom: how-to, mlnet-tooling
-ms.openlocfilehash: d7c6102c2257be1daa613fde0edabce83d04b414
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0b230e4a517b6493abdb1ec975776fd286b654e3
+ms.sourcegitcommit: b27645cb378d4e8137a267e5467ff31409acf6c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84589652"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103231402"
 ---
 # <a name="automate-model-training-with-the-mlnet-cli"></a>使用 ML.NET CLI 自动进行模型训练
 
@@ -27,16 +27,16 @@ ML.NET CLI 是一个 [.NET Core 工具](../core/tools/global-tools.md)。 安装
 
 如下图所示，生成高质量的 ML.NET 模型（序列化模型 .zip 文件）以及用于运行该模型/对该模型评分的示例 C# 代码非常简单。 此外，还会生成用于创建/训练该模型的 C# 代码，以便可以研究和迭代用于该生成的“最佳模型”的算法和设置。
 
-![图像](media/automate-training-with-cli/cli-high-level-process.png "在 ML.NET CLI 内部工作的 AutoML 引擎")
+![在 ML.NET CLI 内部工作的 AutoML 引擎](media/automate-training-with-cli/cli-high-level-process.png)
 
 可以从自己的数据集生成这些资产而无需自行编码，因此，即使已经了解 ML.NET，它也可以提高工作效率。
 
 目前，ML.NET CLI 支持的 ML 任务包括：
 
-- 分类（二元分类和多类分类）
+- 分类
 - 回归
 - 建议
-- 未来：其他机器学习任务，例如图像分类、排名、异常检测、聚类分析
+- 图像分类
 
 使用情况示例（分类方案）：
 
@@ -44,7 +44,7 @@ ML.NET CLI 是一个 [.NET Core 工具](../core/tools/global-tools.md)。 安装
 mlnet classification --dataset "yelp_labelled.txt" --label-col 1 --has-header false --train-time 10
 ```
 
-![图像](media/automate-training-with-cli/mlnet-classification-powershell.gif)
+![从命令行执行 ML.NET 分类](media/automate-training-with-cli/mlnet-classification-powershell.gif)
 
 可以在 Windows PowerShell、macOS/Linux bash 或 Windows CMD 上以相同的方式运行它。   但是，表格自动填写（参数建议）不适用于 *Windows CMD*。
 
@@ -70,9 +70,9 @@ CLI 中的 ML 任务命令在输出文件夹中生成以下资产：
 
 ### <a name="metrics-for-classification-models"></a>分类模型的指标
 
-以下显示 CLI 找到的排名前五的模型的分类指标列表：
+下图显示 CLI 找到的排名前五的模型的分类指标列表：
 
-![图像](media/automate-training-with-cli/cli-multiclass-classification-metrics.png)
+![排名前五的模型的分类指标](media/automate-training-with-cli/cli-multiclass-classification-metrics.png)
 
  准确性是分类问题的常用指标，但准确性并不总是用于选择最佳模型的最佳指标，如下文参考中所述。 在某些情况下，需要使用其他指标评估模型的质量。
 
@@ -82,9 +82,9 @@ CLI 中的 ML 任务命令在输出文件夹中生成以下资产：
 
 如果观测值与模型预测值之间的差异很小且无偏差，则回归模型能够很好地拟合数据。 可以使用特定指标评估回归。
 
-将看到 CLI 找到的排名前五的最佳质量模型的类似指标列表。 在与回归 ML 任务相关的这一特定案例中：
+你将看到一个类似的列表，其中包含 CLI 找到的排名前五的质量模型的指标，但在这种情况下，排名前五的模型与回归 ML 任务相关：
 
-![图像](media/automate-training-with-cli/cli-regression-metrics.png)
+![排名前五的模型的回归指标](media/automate-training-with-cli/cli-regression-metrics.png)
 
 若要探索和了解 CLI 输出的指标，请参阅[回归评估指标](resources/metrics.md#evaluation-metrics-for-regression-and-recommendation)。
 

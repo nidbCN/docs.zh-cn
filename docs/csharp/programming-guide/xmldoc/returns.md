@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <returns> C# XML tag
 - returns C# XML tag
 ms.assetid: bb2d9958-62fc-47c7-9511-6311171f119f
-ms.openlocfilehash: e461d46df619a351048ae7942e59847d39e490f9
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 6a098208a51ca31fe2278b7c696deb15a13f8e1e
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381393"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477804"
 ---
 # <a name="returns-c-programming-guide"></a>\<returns>（C# 编程指南）
 
@@ -34,7 +34,7 @@ ms.locfileid: "87381393"
 
 在方法声明的注释中应使用 `<returns>` 标记来描述返回值。
 
-使用 [-doc](../../language-reference/compiler-options/doc-compiler-option.md) 进行编译以便将文档注释处理到文件中。
+使用 [DocumentationFile](../../language-reference/compiler-options/output.md#documentationfile) 进行编译可以将文档注释处理到文件中。
 
 ## <a name="example"></a>示例
 

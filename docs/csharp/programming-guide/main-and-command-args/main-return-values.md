@@ -1,28 +1,40 @@
 ---
 title: Main() 返回值 - C# 编程指南
 description: 了解 Main() 返回值。 查看代码示例、编译器生成的代码和其他可用资源。
-ms.date: 08/02/2017
+ms.date: 03/11/2021
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 2e1df125d677cd6b845b516173117ef0190a7580
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 6f4001ecd490d5627d3a1ec74ecf7d593451e104
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102104032"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190354"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main() 返回值（C# 编程指南）
 
-`Main` 方法可以返回 `void`：
+可以通过以下方式之一定义方法，以从 `Main` 方法返回 `int`：
 
- [!code-csharp[csProgGuideMain#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#12)]
+| `Main` 方法代码             | `Main` 签名                             |
+|--------------------------------|----------------------------------------------|
+| 不使用 `args` 或 `await`    | `static int Main()`                          |
+| 使用 `args`，不使用 `await` | `static int Main(string[] args)`             |
+| 不使用 `args`，使用 `await` | `static async Task<int> Main()`              |
+| 使用 `args` 和 `await`        | `static async Task<int> Main(string[] args)` |
 
-还可以返回 `int`：
+如果不使用 `Main` 的返回值，则返回 `void` 或 `Task` 可使代码变得略微简单。
 
- [!code-csharp[csProgGuideMain#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#13)]
+| `Main` 方法代码             | `Main` 签名                        |
+|--------------------------------|-----------------------------------------|
+| 不使用 `args` 或 `await`    | `static void Main()`                    |
+| 使用 `args`，不使用 `await` | `static void Main(string[] args)`       |
+| 不使用 `args`，使用 `await` | `static async Task Main()`              |
+| 使用 `args` 和 `await`        | `static async Task Main(string[] args)` |
 
-如果未使用 `Main` 的返回值，则返回 `void` 可以使代码变得略微简单。 但是，返回整数可使程序将状态信息传递给调用可执行文件的其他程序或脚本。 来自 `Main` 的返回值视为进程的退出代码。 如果从 `Main` 返回 `void`，则退出代码将为隐式 `0`。 以下示例演示了如何访问 `Main` 的返回值。
+但是，返回 `int` 或 `Task<int>` 可使程序将状态信息传递给调用可执行文件的其他程序或脚本。
+
+下面的示例演示了如何访问进程的退出代码。
 
 ## <a name="example"></a>示例
 

@@ -3,12 +3,12 @@ title: C# 语言版本控制 - C# 指南
 description: 了解如何根据项目确定 C# 语言版本，以及背后的原因。 了解如何手动重写默认值。
 ms.custom: updateeachrelease
 ms.date: 08/11/2020
-ms.openlocfilehash: ba6f453123668248b2c65ee6a431cb16dfe74c46
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: e1b5848f5cd589b0ea61518f0b19efb8fe801337
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102258398"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477460"
 ---
 # <a name="c-language-versioning"></a>C# 语言版本控制
 
@@ -50,7 +50,7 @@ C# 9.0 仅在 .NET 5 及更高版本上受支持。
 
 - 手动编辑[项目文件](#edit-the-project-file)。
 - 为[子目录中的多个项目](#configure-multiple-projects)设置语言版本。
-- 配置 [`-langversion` 编译器选项](compiler-options/langversion-compiler-option.md)。
+- 配置 [LangVersion 编译器选项](compiler-options/language.md#langversion)。
 
 > [!TIP]
 > 若要了解当前使用的语言版本，请在代码中添加 `#error version`（区分大小写）。 这样做可使编译器报告编译器错误 CS8304，并显示一条消息，其中包含正在使用的编译器版本和当前选择的语言版本。 有关详细信息，请参阅 [#error（C# 参考）](preprocessor-directives/preprocessor-error.md)。
@@ -94,7 +94,7 @@ C# 9.0 仅在 .NET 5 及更高版本上受支持。
 > csc -langversion:?
 > ```
 >
-> 查询此类 [-langversion](compiler-options/langversion-compiler-option.md) 编译选项时，会打印如下所示的内容：
+> 查询此类 [**LangVersion](compiler-options/language.md#langversion) 编译选项时，会打印如下所示的内容：
 >
 > ```CMD
 > Supported language versions:

@@ -2,12 +2,12 @@
 title: 使用 Visual Studio Code 测试 .NET 类库
 description: 了解如何使用 Visual Studio Code 和 .NET CLI 来针对 .NET 类库创建和运行单元测试项目。
 ms.date: 11/17/2020
-ms.openlocfilehash: 4528bd203ae03988a1d1d80a7e904e94e68c1d04
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.openlocfilehash: bc8741e11504f94e54ccc45a5ad93408a3fe9309
+ms.sourcegitcommit: 1d3af230ec30d8d061be7a887f6ba38a530c4ece
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94915851"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102511809"
 ---
 # <a name="tutorial-test-a-net-class-library-using-visual-studio-code"></a>教程：使用 Visual Studio Code 测试 .NET 类库
 
@@ -90,7 +90,7 @@ ms.locfileid: "94915851"
 
 测试 `StringLibrary.StartsWithUpper` 方法时，需要提供许多以大写字符开头的字符串。 在这种情况下，此方法应返回 `true`，以便可以调用 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue%2A?displayProperty=nameWithType> 方法。 同样，需要提供许多以非大写字符开头的字符串。 在这种情况下，此方法应返回 `false`，以便可以调用 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsFalse%2A?displayProperty=nameWithType> 方法。
 
-由于库方法可以处理字符串，因此还需要确保它能够成功处理 [空字符串 (`String.Empty`) ](xref:System.String.Empty) 和 `null` 字符串。 空字符串不包含任何字符，且 <xref:System.String.Length> 为 0。 `null` 字符串是尚未初始化的字符串。 可以直接将 `StartsWithUpper` 作为静态方法进行调用，并向其传递一个 <xref:System.String> 自变量。 或者，可以对分配给 `null` 的 `string` 变量将 `StartsWithUpper` 作为扩展方法进行调用。
+由于库方法可以处理字符串，因此还需要确保它能够成功处理[空字符串 (`String.Empty`)](xref:System.String.Empty) 和 `null` 字符串。 空字符串不包含任何字符，且 <xref:System.String.Length> 为 0。 `null` 字符串是尚未初始化的字符串。 可以直接将 `StartsWithUpper` 作为静态方法进行调用，并向其传递一个 <xref:System.String> 自变量。 或者，可以对分配给 `null` 的 `string` 变量将 `StartsWithUpper` 作为扩展方法进行调用。
 
 将定义三个方法，每个方法都会对字符串数组中的各个元素调用它的 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> 方法。 你将调用方法重载，以便指定在测试失败时要显示的错误消息。 消息标识导致失败的字符串。
 

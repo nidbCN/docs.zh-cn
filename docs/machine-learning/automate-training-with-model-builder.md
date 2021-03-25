@@ -3,12 +3,12 @@ title: 什么是模型生成器，它的工作原理是怎样的？
 description: 如何使用 ML.NET 模型生成器自动训练机器学习模型
 ms.date: 06/01/2020
 ms.custom: overview, mlnet-tooling
-ms.openlocfilehash: da6348fb5dde83827558b66b6115d681f08948db
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: d7566a03f83eb76999d995a39aaae408405db2e1
+ms.sourcegitcommit: b27645cb378d4e8137a267e5467ff31409acf6c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92161135"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103231415"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>什么是模型生成器，它的工作原理是怎样的？
 
@@ -34,6 +34,21 @@ ML.NET 模型生成器是一个直观的图形化 Visual Studio 扩展，用于�
 - 检测某项银行交易是否存在欺诈性
 - 将客户反馈问题传递至公司中合适的团队
 
+每个方案都映射到不同的机器学习任务，其中包括：
+
+- 二元分类
+- 多类分类
+- 回归
+- 群集
+- 异常检测
+- 排名
+- 建议
+- 预测
+
+例如，将情绪归类为正面或负面的方案属于二元分类任务。
+
+若要详细了解 ML.NET 支持的不同 ML 任务，请参阅 [ML.NET 中的机器学习任务](resources/tasks.md)。
+
 ### <a name="which-machine-learning-scenario-is-right-for-me"></a>哪个机器学习方案最适合我？
 
 在模型生成器中，你需要选择一个方案。 方案类型取决于尝试进行的预测类型。
@@ -48,7 +63,7 @@ ML.NET 模型生成器是一个直观的图形化 Visual Studio 扩展，用于�
 
 #### <a name="value-prediction"></a>值预测
 
-回归用于预测数字。
+值预测属于回归任务，用于预测数值。
 
 ![显示回归示例（如价格预测、销售预测和预测性维护）的图示](media/regression-examples.png)
 

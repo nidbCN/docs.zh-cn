@@ -3,12 +3,12 @@ title: C# 7.0 中的新增功能 - C# 指南
 description: 大致了解 C# 语言的版本 7.0 中的新增功能。
 ms.date: 10/02/2020
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: c238439b0f435e579d932b3b1eb13e9b0061fa5f
-ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
+ms.openlocfilehash: 897729022e45e96d0f54057ef4dad1a4fc0d6799
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97678234"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103480848"
 ---
 # <a name="whats-new-in-c-70-through-c-73"></a>C# 7.0 - C# 7.3 中的新增功能
 
@@ -522,17 +522,17 @@ Span<int> arr = stackalloc [] {1, 2, 3};
 
 ### <a name="reference-assembly-generation"></a>引用程序集生成
 
-有两个新编译器选项可生成仅引用程序集：[-refout](../language-reference/compiler-options/refout-compiler-option.md) 和 [-refonly](../language-reference/compiler-options/refonly-compiler-option.md)。
+有两种新的编译器选项可生成仅引用程序集：[ProduceReferenceAssembly](../language-reference/compiler-options/output.md#producereferenceassembly) 和 [ProduceOnlyReferenceAssembly](../language-reference/compiler-options/code-generation.md#produceonlyreferenceassembly)。
 链接的文章详细介绍了这些选项和引用程序集。
 
 ### <a name="public-or-open-source-signing"></a>公共或开放源代码签名
 
-`-publicsign` 编译器选项指示编译器使用公钥对程序集进行签名。 程序集被标记为已签名，但签名取自公钥。 此选项使你能够使用公钥在开放源代码项目中构建签名的程序集。
+PublicSign 编译器选项指示编译器使用公钥对程序集进行签名。 程序集被标记为已签名，但签名取自公钥。 此选项使你能够使用公钥在开放源代码项目中构建签名的程序集。
 
-有关详细信息，请参阅 [-publicsign 编译器选项](../language-reference/compiler-options/publicsign-compiler-option.md)一文。
+有关详细信息，请参阅 [PublicSign 编译器选项](../language-reference/compiler-options/security.md#publicsign)一文。
 
 ### <a name="pathmap"></a>pathmap
 
-`-pathmap` 编译器选项指示编译器将生成环境中的源路径替换为映射的源路径。 `-pathmap` 选项控制由编译器编写入 PDB 文件或为 <xref:System.Runtime.CompilerServices.CallerFilePathAttribute> 编写的源路径。
+PathMap 编译器选项指示编译器将生成环境中的源路径替换为映射的源路径。 PathMap 选项控制由编译器编写入 PDB 文件或为 <xref:System.Runtime.CompilerServices.CallerFilePathAttribute> 编写的源路径。
 
-有关详细信息，请参阅 [-pathmap 编译器选项](../language-reference/compiler-options/pathmap-compiler-option.md)一文。
+有关详细信息，请参阅 [PathMap 编译器选项](../language-reference/compiler-options/advanced.md#pathmap)一文。

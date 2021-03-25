@@ -1,16 +1,16 @@
 ---
 title: SDK 样式项目中的目标框架 - .NET
 description: 了解用于 .NET 应用和库的目标框架。
-ms.date: 11/06/2020
+ms.date: 03/03/2021
 ms.prod: dotnet
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 7a3dcd61c330607bacf0d05dbd775c62cfa15b37
-ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
+ms.openlocfilehash: 9e831726a87493b109578a3546a8f29b7b71cb6c
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97765054"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604601"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>SDK 样式项目中的目标框架
 
@@ -41,7 +41,7 @@ ms.locfileid: "97765054"
 
 | 目标 Framework           | TFM |
 | -------------------------- | --- |
-| .NET 5（和 .NET Core）     | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1<br>netcoreapp2.2<br>netcoreapp3.0<br>netcoreapp3.1<br>net5.0* |
+| .NET 5 及更高版本（和 .NET Core）    | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1<br>netcoreapp2.2<br>netcoreapp3.0<br>netcoreapp3.1<br>net5.0 *<br>net6.0* |
 | .NET Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0<br>netstandard2.1 |
 | .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471<br>net472<br>net48 |
 | Windows 应用商店              | netcore [netcore45]<br>netcore45 [win] [win8]<br>netcore451 [win81] |
@@ -50,50 +50,43 @@ ms.locfileid: "97765054"
 | Windows Phone              | wp [wp7]<br>wp7<br>wp75<br>wp8<br>wp81<br>wpa81 |
 | 通用 Windows 平台 | uap [uap10.0]<br>uap10.0 [win10] [netcore50] |
 
-\* .NET 5.0 及更高版本的 TFM 包含特定于操作系统的变体。 有关详细信息，请参阅下一节：[.NET 5 特定于 OS 的 TFM](#net-5-os-specific-tfms)。
+\* .NET 5 及更高版本的 TFM 包含一些特定于操作系统的变体。 有关详细信息，请参阅下一节：[.NET 5 及更高版本特定于 OS 的 TFM](#net-5-os-specific-tfms)。
 
-### <a name="net-5-os-specific-tfms"></a>.NET 5 特定于 OS 的 TFM
+### <a name="net-5-os-specific-tfms"></a>.NET 5 及更高版本特定于 OS 的 TFM
 
-对于每个 .NET 5.0 及更高版本的 TFM（例如 `net5.0`），都存在包含特定于 OS 的绑定的 TFM 变体。 下表中显示了这些变体。
+`net5.0` 和 `net6.0` TFM 包括可在不同平台中使用的技术。 指定特定于 OS 的 TFM 使特定于操作系统的 API 可供你的应用（例如 Windows 窗体或 iOS 绑定）使用。 特定于 OS 的 TFM 还会继承其基础 TFM（例如 `net5.0` TFM）可用的每个 API。
 
-| 特定于 OS 的格式 | 示例        |
-|--------------------|----------------|
-| \<base-tfm>-android | net5.0-android |
-| \<base-tfm>-ios     | net5.0-ios     |
-| \<base-tfm>-macos   | net5.0-macos   |
-| \<base-tfm>-tvos    | net5.0-tvos    |
-| \<base-tfm>-watchos | net5.0-watchos |
-| \<base-tfm>-windows | net5.0-windows |
+.NET 5 引入了 `net5.0-windows` 特定于 OS 的 TFM，其中包括适用于 WinForms、WPF 和 UWP API 的特定于 Windows 的绑定。 .NET 6 引入了更多特定于 OS 的 TFM。
 
-`net5.0` TFM 仅包括跨平台工作的技术。 指定特定于 OS 的 TFM 使特定于操作系统的 API 可供应用使用，例如 Windows 窗体或 iOS 绑定。 特定于 OS 的 TFM 还继承 `net5.0` TFM 可用的每个 API。
+下表说明了 .NET 5 及更高版本 TFM 的兼容性。
 
-若要使应用可跨不同平台移植，你可以定位多个特定于 OS 的 TFM，并使用 `#if` 预处理器指令围绕特定于 OS 的 API 调用添加平台保护。
+| TFM                | 可兼容对象                                                                                                         |
+|--------------------|-------------------------------------------------------------------------------------------------------------------------|
+| net5.0             | net1..4（带有 NU1701 警告）<br />netcoreapp1..3.1 （引用 WinForms 或 WPF 时出现警告）<br />netstandard1..2.1 |
+| net5.0-windows     | netcoreapp1..3.1（以及从 `net5.0` 继承的所有其他内容）                                                         |
+| net6.0             | （后续版本的 `net5.0`）                                                                                        |
+| net6.0-android     | `xamarin.android`（以及从 `net6.0` 继承的所有其他内容）                                                            |
+| net6.0-ios         | `xamarin.ios`（以及从 `net6.0` 继承的所有其他内容）                                                                |
+| net6.0-macos       | `xamarin.mac`（以及从 `net6.0` 继承的所有其他内容）                                                                |
+| net6.0-maccatalyst | `xamarin.ios`（以及从 `net6.0` 继承的所有其他内容）                                                                |
+| net6.0-tvos        | `xamarin.tvos`（以及从 `net6.0` 继承的所有其他内容）                                                               |
+| net6.0-windows     | （后续版本的 `net5.0-windows`）                                                                                |
 
-下表显示了 .NET 5 TFM 与旧 .NET 版本的 TFM 的兼容性。
-
-| TFM             | 可兼容对象                                            | 备注 |
-|-----------------|------------------------------------------------------------|-|
-| net5.0          | net1..4（带有 NU1701 警告）<br />netcoreapp1..3.1 （引用 WinForms 或 WPF 时出现警告）<br />netstandard1..2.1 | |
-| net5.0-android  | xamarin.android（以及从 `net5.0` 继承的所有其他内容） | |
-| net5.0-ios      | xamarin.ios（以及从 `net5.0` 继承的所有其他内容） | |
-| net5.0-macos    | xamarin.mac（以及从 `net5.0` 继承的所有其他内容） | |
-| net5.0-tvos     | xamarin.tvos（以及从 `net5.0` 继承的所有其他内容） | |
-| net5.0-watchos  | xamarin.watchos（以及从 `net5.0` 继承的所有其他内容） | |
-| net5.0-windows  | netcoreapp1..3.1（以及从 `net5.0` 继承的所有其他内容） | 包括 WinForms、WPF 和 UWP API。<br />有关信息，请参阅[在桌面应用中调用 Windows 运行时 API](/windows/apps/desktop/modernize/desktop-to-uwp-enhance)。 |
+若要使应用可跨不同平台移植，但仍有权访问特定于 OS 的 API，你可以定位多个特定于 OS 的 TFM，并使用 `#if` 预处理器指令围绕特定于 OS 的 API 调用增加平台防护。
 
 #### <a name="suggested-targets"></a>建议的目标
 
 使用以下准则确定在应用中使用哪种 TFM：
 
-- 可移植到多个平台的应用应面向 `net5.0`。 这包括大多数库，但也包含 ASP.NET Core 和实体框架。
+- 可移植到多个平台的应用应面向基础 TFM，例如 `net5.0`。 这包括大多数库，但也包含 ASP.NET Core 和实体框架。
 
-- 特定于平台的库应面向特定于平台的风格。 例如，WinForms 和 WPF 项目应面向 `net5.0-windows`。
+- 特定于平台的库应面向特定于平台的风格。 例如，WinForms 和 WPF 项目应面向 `net5.0-windows` 或 `net6.0-windows`。
 
-- 跨平台应用程序模型（Xamarin Forms、ASP.NET Core）和网桥包 (Xamarin Essentials) 应至少面向 `net5.0`，但也可以面向其他特定于平台的风格来支持更多的 API 或功能。
+- 跨平台应用模型（Xamarin Forms、ASP.NET Core）和网桥包 (Xamarin Essentials) 应至少面向基础 TFM（例如 `net6.0`），但也可以面向其他特定于平台的风格来支持更多的 API 或功能。
 
 #### <a name="os-version-in-tfms"></a>TFM 中的 OS 版本
 
-你还可以在 TFM 的末尾指定可选的 OS 版本，例如 `net5.0-ios13.0`，该版本指示应用可用的 API。 （.NET 5 SDK 将更新，以在发布时包含对较新 OS 版本的支持。）若要访问新发布的 API，请增加 TFM 中的 OS 版本。 通过将 `SupportedOSPlatformVersion` 元素添加到项目文件，仍可以使应用与旧 OS 版本兼容（并在调用更高版本的 API 时添加防护）。 `SupportedOSPlatformVersion` 元素指示运行应用所需的最低 OS 版本。
+你还可以在 TFM 的末尾指定可选的 OS 版本，例如 `net6.0-ios13.0`，该版本指示应用可用的 API。 （相应的 .NET SDK 将得到更新，以在发布时包含对较新 OS 版本的支持。）若要访问新发布的 API，请增加 TFM 中的 OS 版本。 通过将 `SupportedOSPlatformVersion` 元素添加到项目文件，仍可以使应用与旧 OS 版本兼容（并在调用更高版本的 API 时添加防护）。 `SupportedOSPlatformVersion` 元素指示运行应用所需的最低 OS 版本。
 
 例如，以下项目文件摘录指定 iOS 14 API 可用于应用，但它可以在 iOS 13 或更高版本的计算机上运行。
 
@@ -101,7 +94,7 @@ ms.locfileid: "97765054"
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0-ios14.0</TargetFramework>
+    <TargetFramework>net6.0-ios14.0</TargetFramework>
     <SupportedOSPlatformVersion>13.0</SupportedOSPlatformVersion> (minimum os platform version)
   </PropertyGroup>
 
@@ -192,6 +185,7 @@ public class MyClass
 ## <a name="see-also"></a>另请参阅
 
 - [.NET 5 中的目标框架名称](https://github.com/dotnet/designs/blob/master/accepted/2020/net5/net5.md)
+- [在桌面应用中调用 Windows 运行时 API](/windows/apps/desktop/modernize/desktop-to-uwp-enhance)
 - [使用跨平台工具开发库](../core/tutorials/libraries.md)
 - [.NET Standard](net-standard.md)
 - [.NET Core 版本控制](../core/versions/index.md)

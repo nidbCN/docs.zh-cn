@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: a3a27c1baaab135108ef475d77c35d607c45fa82
-ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
+ms.openlocfilehash: 3986ef4083b964799be33d2876570ac4cf2082b8
+ms.sourcegitcommit: 1d3af230ec30d8d061be7a887f6ba38a530c4ece
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98794789"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102511848"
 ---
 # <a name="tutorial-create-a-net-console-application-using-visual-studio"></a>教程：使用 Visual Studio 创建 .NET 控制台应用程序
 
@@ -46,7 +46,7 @@ ms.locfileid: "98794789"
    > [!TIP]
    > 如果看不到 .NET 模板，则可能缺少所需的工作负载。 在“找不到所需内容?”消息下，选择“安装更多工具和功能”链接。 Visual Studio 安装程序随即打开。 确保安装了“.NET Core 跨平台开发”工作负载。
 
-1. 在“配置新项目”对话框中，在“项目名称”框中输入“HelloWorld”。 然后选择“创建”。
+1. 在“配置新项目”对话框中，在“项目名称”框中输入“HelloWorld”。 然后选择“下一步”  。
 
    :::image type="content" source="./media/with-visual-studio/configure-new-project.png" alt-text="为新项目窗口配置“项目名称”、“位置”和“解决方案名称”字段":::
 
@@ -108,7 +108,7 @@ End Module
 
    此代码会在控制台窗口中显示一条提示，然后等待用户输入字符串并按 <kbd>Enter</kbd>。 它会将此字符串存储到名为 `name` 的变量中。 它还会检索 <xref:System.DateTime.Now?displayProperty=nameWithType> 属性的值（其中包含当前的本地时间），并将此值赋给 `date` 变量（Visual Basic 中为 `currentDate`）。 同时会在控制台窗口中显示这些值。 最后会在控制台窗口中显示一条提示，并调用 <xref:System.Console.ReadKey(System.Boolean)?displayProperty=nameWithType> 方法来等待用户输入。
 
-   `\n`（或 Visual Basic 代码中的 `vbCrLf`）表示换行符。
+   <xref:System.Environment.NewLine> 是一种独立于平台和语言的表示换行符的方式。 替代方法是在 C# 中使用 `\n` 和在 Visual Basic 中使用 `vbCrLf`。
 
    字符串前面的美元符号 (`$`) 使你可以将表达式（如变量名称）放入字符串中的大括号内。 表达式值将代替表达式插入到字符串中。 此语法称为[内插字符串](../../csharp/language-reference/tokens/interpolated.md)。
 

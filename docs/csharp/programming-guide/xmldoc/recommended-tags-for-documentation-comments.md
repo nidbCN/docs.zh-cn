@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML [C#], tags
 - XML documentation [C#], tags
 ms.assetid: 6e98f7a9-38f4-4d74-b644-1ff1b23320fd
-ms.openlocfilehash: 65bca6f979c5ffd91507b571a4f049377315192d
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 74fd18a09458c399aa135552e5f6f0bca359f09e
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381510"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477831"
 ---
 # <a name="recommended-tags-for-documentation-comments-c-programming-guide"></a>建议的文档注释标记（C# 编程指南）
 
@@ -48,5 +48,5 @@ C# 编译器处理代码中的文档注释，并在文件中将其设置为 XML 
 ## <a name="see-also"></a>请参阅
 
 - [C# 编程指南](../index.md)
-- [-doc（C# 编译器选项）](../../language-reference/compiler-options/doc-compiler-option.md)
+- [DocumentationFile（C# 编译器选项）](../../language-reference/compiler-options/output.md#documentationfile)
 - [XML 文档注释](./index.md)

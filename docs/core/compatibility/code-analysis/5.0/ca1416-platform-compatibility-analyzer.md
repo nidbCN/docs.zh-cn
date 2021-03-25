@@ -2,12 +2,12 @@
 title: 中断性变更：CA1416：平台兼容性
 description: 了解 .NET 5 中因启用代码分析规则 CA1416 而导致的中断性变更。
 ms.date: 09/29/2020
-ms.openlocfilehash: 0464e7bb5a494543c0201efa4630e82897b464c0
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: fa03e1f0bfa8438b3b2899aaf7c97f42533c7c02
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102257851"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477546"
 ---
 # <a name="warning-ca1416-platform-compatibility"></a>警告 CA1416：平台兼容性
 
@@ -94,7 +94,7 @@ public void PlayCMajor()
 
 如果不想修复所有调用站点，则可以选择以下某个选项以禁止显示警告：
 
-- 若要禁止显示规则 CA1416，可以使用 `#pragma` 或 [-nowarn](../../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) 编译器标志来实现此目的，也可以通过在 .editorconfig 文件中[设置规则的严重性](../../../../fundamentals/code-analysis/configuration-options.md#severity-level)，将值设置为 `none` 来实现此目的。
+- 若要禁止显示规则 CA1416，可以使用 `#pragma` 或 [DisabledWarnings](../../../../csharp/language-reference/compiler-options/errors-warnings.md#disabledwarnings) 编译器标志来实现此目的，也可以通过在 .editorconfig 文件中[设置规则的严重性](../../../../fundamentals/code-analysis/configuration-options.md#severity-level)，将值设置为 `none` 来实现此目的。
 
   ```csharp
   public void PlayCMajor()

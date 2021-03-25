@@ -2,12 +2,12 @@
 title: 使用 Visual Studio Code 创建 .NET 控制台应用程序
 description: 了解如何使用 Visual Studio Code 和 .NET CLI 创建 .NET 控制台应用程序。
 ms.date: 11/17/2020
-ms.openlocfilehash: dbbdf88b0c84089249eb7e446c25eddc11543c1a
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.openlocfilehash: 51e5a897985af7576de03659efdd8520cb8e58e6
+ms.sourcegitcommit: 1d3af230ec30d8d061be7a887f6ba38a530c4ece
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94915864"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102511861"
 ---
 # <a name="tutorial-create-a-net-console-application-using-visual-studio-code"></a>教程：使用 Visual Studio Code 创建 .NET 控制台应用程序
 
@@ -93,7 +93,7 @@ dotnet run
 
    此代码会在控制台窗口中显示一条提示，然后等待用户输入字符串并按 <kbd>Enter</kbd>。 它会将此字符串存储到名为 `name` 的变量中。 它还会检索 <xref:System.DateTime.Now?displayProperty=nameWithType> 属性的值（其中包含当前的本地时间），并将此值赋给 `date` 变量。 同时会在控制台窗口中显示这些值。 最后会在控制台窗口中显示一条提示，并调用 <xref:System.Console.ReadKey(System.Boolean)?displayProperty=nameWithType> 方法来等待用户输入。
 
-   `\n` 表示一个换行符。
+   <xref:System.Environment.NewLine> 是一种独立于平台和语言的表示换行符的方式。 替代方法是在 C# 中使用 `\n` 和在 Visual Basic 中使用 `vbCrLf`。
 
    字符串前面的美元符号 (`$`) 使你可以将表达式（如变量名称）放入字符串中的大括号内。 表达式值将代替表达式插入到字符串中。 此语法称为[内插字符串](../../csharp/language-reference/tokens/interpolated.md)。
 

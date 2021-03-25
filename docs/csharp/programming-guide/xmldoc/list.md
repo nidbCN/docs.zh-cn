@@ -13,12 +13,12 @@ helpviewer_keywords:
 - <item> C# XML tag
 - <list> C# XML tag
 ms.assetid: c9620b1b-c2e6-43f1-ab88-8ab47308ffec
-ms.openlocfilehash: 361c2e6f343554a9b8519c3b2e41219b209e682d
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 39674e3c07444e454dfeeceff6c99e65f34bb02f
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381861"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103478381"
 ---
 # <a name="list-c-programming-guide"></a>\<list>（C# 编程指南）
 
@@ -55,7 +55,7 @@ ms.locfileid: "87381861"
 
 列表或表可根据需要具有多个 `<item>` 块。
 
-使用 [-doc](../../language-reference/compiler-options/doc-compiler-option.md) 进行编译以便将文档注释处理到文件中。
+使用 [DocumentationFile](../../language-reference/compiler-options/output.md#documentationfile) 进行编译可以将文档注释处理到文件中。
 
 ## <a name="example"></a>示例
 

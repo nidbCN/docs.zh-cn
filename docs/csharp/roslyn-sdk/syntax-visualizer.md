@@ -3,12 +3,12 @@ title: 使用 Visual Studio 中的 Roslyn 语法可视化工具浏览代码
 description: 语法可视化工具提供了可视化工具，用于浏览 .NET Compiler Platform SDK 为代码生成的模型。
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: a911a99e78ad5a5f4c6771b91a3c541b1812d67c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 43c69bce93db490fccc3500784623f5736ed935d
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91167569"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605420"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>使用 Visual Studio 中的 Roslyn 语法可视化工具浏览代码
 
@@ -93,7 +93,7 @@ ms.locfileid: "91167569"
 
 可视化工具中的属性网格更新如下图所示：该表达式的符号是 SynthesizedIntrinsicOperatorSymbol  ，其中种类 = 方法  。
 
-![符号属性](media/syntax-visualizer/symbol-properties.png)
+![Syntax Visualizer 中的符号属性](media/syntax-visualizer/symbol-properties.png)
 
 针对同一个 AddExpression 节点，请尝试“查看 TypeSymbol (如果有)”   。 如下图所示，可视化工具中的属性网格已更新，指示所选表达式的类型为 `Int32`。
 
@@ -123,7 +123,7 @@ End Module
 
 此代码引入了映射到文件顶部的 `System.Console` 类型的 `C` 别名，并在 `Main()` 内使用此别名。 选择在 `Main()` 方法的 `C.WriteLine()` 中使用此别名 `C`。 可视化工具会选择对应的 IdentifierName 节点  。 右键单击此节点，并单击“查看符号(如果有)”  。 属性网格指示此标识符绑定至 `System.Console` 类型，如下图所示：
 
-![符号属性](media/syntax-visualizer/symbol-visual-basic.png)
+![Syntax Visualizer 中的符号“C”的属性](media/syntax-visualizer/symbol-visual-basic.png)
 
 针对同一 IdentifierName 节点，尝试“查看 AliasSymbol (如果有)”   。 属性网格指示该标识符为绑定至 `System.Console` 目标的别名 `C`。 换而言之，属性网格会提供对应于标识符 `C` 的 AliasSymbol 的相关信息  。
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - code XML tag
 - <code> C# XML tag
 ms.assetid: f235e3bc-a709-43cf-8a9f-bd57cabdf6da
-ms.openlocfilehash: f1f4cd930a876c8eca13de5f015e2b42b928d6f1
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: efc4314a634e3349fc5d7584b4c51130ff057e5b
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87382004"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103479142"
 ---
 # <a name="code-c-programming-guide"></a>\<code>（C# 编程指南）
 
@@ -34,7 +34,7 @@ ms.locfileid: "87382004"
 
 `<code>` 标记用于指示多行代码。 使用 [\<c>](./code-inline.md) 指示应将说明内的单行文本标记为代码。
 
-使用 [-doc](../../language-reference/compiler-options/doc-compiler-option.md) 进行编译以便将文档注释处理到文件中。
+使用 [DocumentationFile](../../language-reference/compiler-options/output.md#documentationfile) 进行编译可以将文档注释处理到文件中。
 
 ## <a name="example"></a>示例
 

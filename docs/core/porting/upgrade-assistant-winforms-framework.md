@@ -2,20 +2,20 @@
 title: 将 Windows 窗体应用升级到 .NET 5
 description: 使用 .NET 升级助手将现有的 .NET Framework Windows 窗体应用升级到 .NET 5。 .NET 升级助手是一种 CLI 工具，可帮助将应用从 .NET Framework 迁移到 .NET 5。
 author: ardalis
-ms.date: 02/25/2021
-ms.openlocfilehash: 376b74ae52b12056e7799278933eda0f39781f78
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.date: 03/08/2021
+ms.openlocfilehash: 1ba80964c52cb9b6960efdebbd8d4e8ef33d63e6
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102108167"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604822"
 ---
 # <a name="upgrade-a-windows-forms-app-to-net-5-with-the-net-upgrade-assistant"></a>使用 .NET 升级助手将 Windows 窗体应用升级到 .NET 5
 
 [.NET 升级助手](upgrade-assistant-overview.md)是一种命令行工具，可帮助将 .NET Framework Windows 窗体 (WinForms) 应用升级到 .NET 5。 本文提供以下内容：
 
-* 演示如何针对 .NET Framework Windows 窗体应用运行该工具
-* 故障排除提示
+- 演示如何针对 .NET Framework Windows 窗体应用运行该工具
+- 故障排除提示
 
 ## <a name="upgrade-net-framework-windows-forms-apps"></a>升级 .NET Framework Windows 窗体应用
 
@@ -59,7 +59,7 @@ upgrade-assistant .\WinformsTest.csproj
 
 更新项目格式后，下一步是更新项目的 TFM。
 
-:::image type="content" source="media/upgrade-assistant-winforms-framework/update-tfm.png" alt-text=".NET 升级助手将项目转换为 SDK 样式":::
+:::image type="content" source="media/upgrade-assistant-winforms-framework/update-tfm.png" alt-text=".NET 升级助手更新 TFM":::
 
 接下来，该工具会更新项目的 NuGet 包。
 

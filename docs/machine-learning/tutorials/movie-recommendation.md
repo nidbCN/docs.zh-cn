@@ -5,12 +5,12 @@ author: briacht
 ms.date: 06/30/2020
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 39c4aeef0b02a6bf47d78e6bf53cd42b4f592946
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 2df774110d3355bf75a14e211555984a12cf7fa4
+ms.sourcegitcommit: b27645cb378d4e8137a267e5467ff31409acf6c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86282094"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103231389"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorization-with-mlnet"></a>教程：使用矩阵因子分解和 ML.NET 生成影片推荐系统
 
@@ -48,7 +48,7 @@ ms.locfileid: "86282094"
 
 ### <a name="create-a-project"></a>创建项目
 
-1. 打开 Visual Studio 2017。 从菜单栏中选择“文件”   > “新建”   > “项目”  。 在“新项目”  对话框中，依次选择“Visual C#”  和“.NET Core”  节点。 然后，选择“控制台应用程序(.NET Core)”  项目模板。 在“名称”文本框中，键入“MovieRecommender”，然后选择“确定”按钮   。
+1. 打开 Visual Studio 2017。 从菜单栏中选择“文件” > “新建” > “项目”。 在“新项目”对话框中，依次选择“Visual C#”和“.NET Core”节点。 然后，选择“控制台应用程序(.NET Core)”  项目模板。 在“名称”文本框中，键入“MovieRecommender”，然后选择“确定”按钮   。
 
 2. 在项目中创建一个名为“数据”的目录来保存数据集文件  ：
 
@@ -58,7 +58,7 @@ ms.locfileid: "86282094"
 
     [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 
-    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”   。 选择“nuget.org”作为包源，然后选择“浏览”选项卡并搜索“Microsoft.ML”，在列表中选择包，再选择“安装”按钮    。 选择“预览更改”  对话框上的“确定”  按钮，如果你同意所列包的许可条款，则选择“接受许可”  对话框上的“我接受”  按钮。 对“Microsoft.ML.Recommender”重复这些步骤  。
+    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”   。 选择“nuget.org”作为包源，然后选择“浏览”选项卡并搜索“Microsoft.ML”，在列表中选择包，再选择“安装”按钮  。 选择“预览更改”  对话框上的“确定”  按钮，如果你同意所列包的许可条款，则选择“接受许可”  对话框上的“我接受”  按钮。 对“Microsoft.ML.Recommender”重复这些步骤  。
 
 4. 在 Program.cs 文件的顶部添加以下 `using` 语句  ：
 
@@ -169,20 +169,6 @@ ML.NET 中的数据表示为 [IDataView 类](xref:Microsoft.ML.IDataView)。 `ID
 
 ## <a name="build-and-train-your-model"></a>生成并训练模型
 
-ML.NET 中包含三个主要概念：[数据](../resources/glossary.md#data)、[转换器](../resources/glossary.md#transformer)和[估算器](../resources/glossary.md#estimator)。
-
-机器学习训练算法需要特定格式的数据。 `Transformers` 用于将表格数据转换为兼容格式。
-
-![转换器数据流的关系图。](./media/movie-recommendation/data-transformer-transformed.png)
-
-可以通过创建 `Estimators` 在 ML.NET 中创建 `Transformers`。 `Estimators` 接收数据并返回 `Transformers`。
-
-![估算器数据流的关系图。](./media/movie-recommendation/data-estimator-transformer.png)
-
-将用于训练模型的推荐训练算法就是一个 `Estimator` 示例。
-
-使用以下步骤生成 `Estimator`：
-
 使用下面的代码紧随 `LoadData()` 方法后创建 `BuildAndTrainModel()` 方法：
 
 ```csharp
@@ -229,6 +215,8 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView tra
 [!code-csharp[FitModel](./snippets/movie-recommendation/csharp/Program.cs#FitModel "Call the Fit method and return back the trained model")]
 
 [Fit()](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Fit%28Microsoft.ML.IDataView,Microsoft.ML.IDataView%29) 方法使用提供的训练数据集训练模型。 从技术上讲，该方法通过转换数据并应用训练来执行 `Estimator` 定义，然后返回经过训练的模型，即 `Transformer`。
+
+若要详细了解 ML.NET 中的模型训练工作流，请参阅[什么是 ML.NET 以及它如何工作？](../how-does-mldotnet-work.md#code-workflow)。
 
 将以下内容添加为 `Main()` 方法中的下一代码行，以调用 `BuildAndTrainModel()` 方法并返回经过训练的模型：
 

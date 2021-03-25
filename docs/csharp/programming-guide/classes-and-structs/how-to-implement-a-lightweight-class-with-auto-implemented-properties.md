@@ -8,23 +8,26 @@ helpviewer_keywords:
 ms.topic: how-to
 ms.custom: contperf-fy21q2
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: 4b28ee17f4be2b933373cce0d3670cbfa9a12895
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: 1d80cb2391a94c21360117c8217ecc4514fd666e
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97513037"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190263"
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>如何使用自动实现的属性实现轻量类（C# 编程指南）
 
 本示例演示如何创建一个仅用于封装一组自动实现的属性的不可变轻型类。 当你必须使用引用类型语义时，请使用此种构造而不是结构。
 
-可通过两种方法来实现不可变的属性：
+可通过以下方法来实现不可变的属性：
 
-- 可以将 [set](../../language-reference/keywords/set.md) 访问器声明为[专用](../../language-reference/keywords/private.md)。  属性只能在该类型中设置，但它对于使用者是不可变的。
+- 仅声明 [get](../../language-reference/keywords/get.md) 访问器，使属性除了能在该类型的构造函数中可变，在其他任何位置都不可变。
+
+- 声明 [init](../../language-reference/keywords/init.md) 访问器而不是 `set` 访问器，这使属性只能在构造函数中进行设置，或者通过使用[对象初始值设定项](object-and-collection-initializers.md)设置。
+
+- 将 [set](../../language-reference/keywords/set.md) 访问器声明为[专用](../../language-reference/keywords/private.md)。  属性可在该类型中设置，但它对于使用者是不可变的。
 
   当你声明一个 private `set` 取值函数时，你无法使用对象初始值设定项来初始化属性。 你必须使用构造函数或工厂方法。
-- 也可以仅声明 [get](../../language-reference/keywords/get.md) 访问器，使属性除了能在该类型的构造函数中可变，在其他任何位置都不可变。
 
 下面的示例显示了只有 get 访问器的属性与具有 get 和 private set 的属性的区别。
 

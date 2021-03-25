@@ -3,12 +3,12 @@ title: 使用 PerfCollect 跟踪 .NET 应用程序。
 description: 本教程引导你完成在 .NET 中使用 perfcollect 收集跟踪的过程。
 ms.topic: tutorial
 ms.date: 10/23/2020
-ms.openlocfilehash: 53e4584953d2af4e766daadfa757cca752ae7329
-ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
+ms.openlocfilehash: 20e1bf56714fb32b5231d45b0ba35cdfcedaea2e
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97593215"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103189925"
 ---
 # <a name="trace-net-applications-with-perfcollect"></a>使用 PerfCollect 跟踪 .NET 应用程序
 
@@ -158,6 +158,9 @@ PerfView 将基于跟踪文件中包含的数据显示受支持的视图列表�
 - 如果没有所需信息的视图，可以尝试在原始事件视图中查找事件。  选择“事件”。
 
 有关如何在 PerfView 中解释视图的详细信息，请参见视图本身的帮助链接，或者从 PerfView 的主窗口中，选择“帮助”->“用户指南”。
+
+> [!NOTE]
+> 通过 <xref:System.Diagnostics.Tracing.EventSource?displayProperty=nameWithType> API 编写的事件（包括 Framework 中的事件）不会显示在其提供程序名称下。 相反，它们被编写为 `Microsoft-Windows-DotNETRuntime` 提供程序下的 `EventSourceEvent` 事件，其有效负载是经过 JSON 序列化的。
 
 ### <a name="use-tracecompass-to-open-the-trace-file"></a>使用 TraceCompass 打开跟踪文件
 

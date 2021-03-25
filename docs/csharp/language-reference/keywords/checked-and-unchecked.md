@@ -10,12 +10,12 @@ helpviewer_keywords:
 - unchecked statement [C#]
 - statements [C#], checked and unchecked
 ms.assetid: a84bc877-2c7f-4396-8735-1ce97c42f35e
-ms.openlocfilehash: 0ab30eb238a4db21233da612d132dfcbdb9e8895
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0121090265881bfa8287e2f9e83ad4b886bf17c1
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91160510"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477482"
 ---
 # <a name="checked-and-unchecked-c-reference"></a>Checked 和 Unchecked（C# 参考）
 
@@ -33,7 +33,7 @@ C# 语句既可以在已检查的上下文中执行，也可以在未检查的�
   
 - 整型类型之间或从 `float` 或 `double` 到整型类型的显式数字转换。  
   
- 如果既未指定 `checked`，也未指定 `unchecked`，则非常量表达式（在运行时计算的表达式）的默认上下文将由 [-checked](../compiler-options/checked-compiler-option.md) 编译器选项的值定义。 默认情况下，该选项的值未设置，且算术运算在未选中的上下文中执行。
+ 如果既未指定 `checked`，也未指定 `unchecked`，则非常量表达式（在运行时计算的表达式）的默认上下文将由 [CheckForOverflowUnderflow](../compiler-options/language.md#checkforoverflowunderflow) 编译器选项的值定义。 默认情况下，该选项的值未设置，且算术运算在未选中的上下文中执行。
 
  对于常量表达式（可在编译时完全计算的表达式），将始终选中默认上下文。 除非在未选中的上下文中显式放置常量表达式，否则在编译时间计算表达式过程中出现的溢出将导致编译时错误。
   

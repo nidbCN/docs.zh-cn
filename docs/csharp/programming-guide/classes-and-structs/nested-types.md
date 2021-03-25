@@ -5,16 +5,16 @@ ms.date: 02/08/2020
 helpviewer_keywords:
 - nested types [C#]
 ms.assetid: f2e1b315-e3d1-48ce-977f-7bae0960ba99
-ms.openlocfilehash: 0741ae88103b16ce34fd5a38b789beaf428e734a
-ms.sourcegitcommit: 0014aa4d5cb2da56a70e03fc68f663d64df5247a
+ms.openlocfilehash: 853138beed6ad9ddffa789f0080ca1fd2ba9d700
+ms.sourcegitcommit: 1d3af230ec30d8d061be7a887f6ba38a530c4ece
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96918575"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102511913"
 ---
 # <a name="nested-types-c-programming-guide"></a>嵌套类型（C# 编程指南）
 
-在[类](../../language-reference/keywords/class.md)、[构造](../../language-reference/builtin-types/struct.md)、[委托](../../language-reference/builtin-types/reference-types.md#the-delegate-type)或[接口](../../language-reference/keywords/interface.md)中定义的类型称为嵌套类型。 例如
+在[类](../../language-reference/keywords/class.md)、[构造](../../language-reference/builtin-types/struct.md)或[接口](../../language-reference/keywords/interface.md)中定义的类型称为嵌套类型。 例如
 
 [!code-csharp[DeclareNestedClass](~/samples/snippets/csharp/objectoriented/nestedtypes.cs#DeclareNestedClass)]
 
@@ -25,7 +25,9 @@ ms.locfileid: "96918575"
 - “类”的嵌套类型可以是 [public](../../language-reference/keywords/public.md)、[protected](../../language-reference/keywords/protected.md)、[internal](../../language-reference/keywords/internal.md)、[protected internal](../../language-reference/keywords/protected-internal.md)、[private](../../language-reference/keywords/private.md) 或 [private protected](../../language-reference/keywords/private-protected.md)。
 
    但是，在[密封类](../../language-reference/keywords/sealed.md)中定义 `protected`、`protected internal` 或 `private protected` 嵌套类将产生编译器警告 [CS0628](../../misc/cs0628.md)“封闭类汇中声明了新的受保护成员”。
-  
+
+   另请注意，使嵌套类型在外部可见违反了代码质量规则 [CA1034](../../../fundamentals/code-analysis/quality-rules/ca1034.md)“嵌套类型不应是可见的”。
+
 - 构造的嵌套类型可以是 [public](../../language-reference/keywords/public.md)、[internal](../../language-reference/keywords/internal.md) 或 [private](../../language-reference/keywords/private.md)。
 
 以下示例使 `Nested` 类为 public：
@@ -48,3 +50,4 @@ ms.locfileid: "96918575"
 - [类和结构](./index.md)
 - [访问修饰符](./access-modifiers.md)
 - [构造函数](./constructors.md)
+- [CA1034 规则](../../../fundamentals/code-analysis/quality-rules/ca1034.md)

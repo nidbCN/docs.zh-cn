@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <value> C# XML tag
 - value C# XML tag
 ms.assetid: 08dbadaf-9ab6-43d9-9493-98e43bed199a
-ms.openlocfilehash: d8294b477d7067653c71d1ec2047a85a0bfe6d02
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: c910a60a50e95621c1e3ad773000cbac0d43bb10
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87380769"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477640"
 ---
 # <a name="value-c-programming-guide"></a>\<value>（C# 编程指南）
 
@@ -33,7 +33,7 @@ ms.locfileid: "87380769"
 
 `<value>` 标记可用于描述属性表示的值。 在 Visual Studio .NET 开发环境中通过代码向导添加属性时，将添加新属性的 [\<summary>](./summary.md) 标记。 然后，应手动添加 `<value>` 标记，以描述属性表示的值。
 
-使用 [-doc](../../language-reference/compiler-options/doc-compiler-option.md) 进行编译以便将文档注释处理到文件中。
+使用 [DocumentationFile](../../language-reference/compiler-options/output.md#documentationfile) 进行编译可以将文档注释处理到文件中。
 
 ## <a name="example"></a>示例
 

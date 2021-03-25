@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#define directive [C#]'
 ms.assetid: 23638b8f-779c-450e-b600-d55682de7d01
-ms.openlocfilehash: 961c20c091a4a6d7da421d94500abd41d2d60a5b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: dddc60b99a55762ae26a470fcd6b6a0e9b98bcf8
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91160497"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103480352"
 ---
 # <a name="define-c-reference"></a>#define（C# 参考）
 
@@ -31,7 +31,7 @@ ms.locfileid: "91160497"
   
  可以定义一个符号，但不能向符号分配值。 文件中必须先出现 `#define` 指令，才能使用并非同时也是预处理器指令的任何指示。  
   
- 还可以通过 [-define](../compiler-options/define-compiler-option.md) 编译器选项来定义符号。 可以通过 [#undef](./preprocessor-undef.md) 取消定义符号。  
+ 还可以通过 [DefineConstants](../compiler-options/language.md#defineconstants) 编译器选项来定义符号。 可以通过 [#undef](./preprocessor-undef.md) 取消定义符号。  
   
  使用 `-define` 或 `#define` 定义的符号与具有相同名称的变量不冲突。 也就是说，变量名称不应传递给预处理器指令，且符号仅能由预处理器指令评估。  
   

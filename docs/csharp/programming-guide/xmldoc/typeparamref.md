@@ -8,12 +8,12 @@ helpviewer_keywords:
 - typeparamref C# XML tag
 - <typeparamref> C# XML tag
 ms.assetid: 6d8ffc58-12c5-4688-8db6-833a7ded5886
-ms.openlocfilehash: a39e896f1242452c7bcc94faa1e7ef3086ae2149
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 1bb9a73f4122f3b9d521565a7172a9b8f75f7a98
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87380717"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477666"
 ---
 # <a name="typeparamref-c-programming-guide"></a>\<typeparamref>（C# 编程指南）
 
@@ -35,7 +35,7 @@ ms.locfileid: "87380717"
 
 通过此标记，文档文件的使用者可显著设置字体格式，例如采用斜体。
 
-使用 [-doc](../../language-reference/compiler-options/doc-compiler-option.md) 进行编译以便将文档注释处理到文件中。
+使用 [DocumentationFile](../../language-reference/compiler-options/output.md#documentationfile) 进行编译可以将文档注释处理到文件中。
 
 ## <a name="example"></a>示例
 

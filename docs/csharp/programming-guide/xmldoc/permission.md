@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <permission> C# XML tag
 - permission C# XML tag
 ms.assetid: 769e93fe-8404-443f-bf99-577aa42b6a49
-ms.openlocfilehash: 38c87505b8b2973875e474ffd296dc02b7fb9de6
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 379d3fda06c50e9e988784e671061d604e6e5b36
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381718"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477850"
 ---
 # <a name="permission-c-programming-guide"></a>\<permission>（C# 编程指南）
 
@@ -40,7 +40,7 @@ ms.locfileid: "87381718"
 
 使用 `<permission>` 标记可以记录成员访问权限。 <xref:System.Security.PermissionSet> 类可指定对成员的访问权限。
 
-使用 [-doc](../../language-reference/compiler-options/doc-compiler-option.md) 进行编译以便将文档注释处理到文件中。
+使用 [DocumentationFile](../../language-reference/compiler-options/output.md#documentationfile) 进行编译可以将文档注释处理到文件中。
 
 ## <a name="example"></a>示例
 

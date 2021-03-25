@@ -8,25 +8,25 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: 231e8e6a11f2655ccdea5489f054910a1ecf2586
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 6079fc5d2611ed1111d39d3f39e4c91817db528f
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86863937"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103189873"
 ---
 # <a name="properties-c-programming-guide"></a>属性（C# 编程指南）
 
-属性是一种成员，它提供灵活的机制来读取、写入或计算私有字段的值。 属性可用作公共数据成员，但它们实际上是称为*访问器*的特殊方法。 这使得可以轻松访问数据，还有助于提高方法的安全性和灵活性。  
+属性是一种成员，它提供灵活的机制来读取、写入或计算私有字段的值。 属性可用作公共数据成员，但它们实际上是称为 *访问器* 的特殊方法。 这使得可以轻松访问数据，还有助于提高方法的安全性和灵活性。  
 
 ## <a name="properties-overview"></a>属性概述  
   
 - 属性允许类公开获取和设置值的公共方法，而隐藏实现或验证代码。  
   
-- [get](../../language-reference/keywords/get.md) 属性访问器用于返回属性值，而 [set](../../language-reference/keywords/set.md) 属性访问器用于分配新值。 这些访问器可以具有不同的访问级别。 有关详细信息，请参阅[限制访问器可访问性](./restricting-accessor-accessibility.md)。  
+- [get](../../language-reference/keywords/get.md) 属性访问器用于返回属性值，而 [set](../../language-reference/keywords/set.md) 属性访问器用于分配新值。 在 C# 9 及更高版本中，[init](../../language-reference/keywords/init.md) 属性访问器仅用于在对象构造过程中分配新值。 这些访问器可以具有不同的访问级别。 有关详细信息，请参阅[限制访问器可访问性](./restricting-accessor-accessibility.md)。  
   
-- [value](../../language-reference/keywords/value.md) 关键字用于定义由 `set` 访问器分配的值。  
-- 属性可以是*读-写*属性（既有 `get` 访问器又有 `set` 访问器）、*只读*属性（有 `get` 访问器，但没有 `set` 访问器）或*只写*访问器（有 `set` 访问器，但没有 `get` 访问器）。 只写属性很少出现，常用于限制对敏感数据的访问。
+- [value](../../language-reference/keywords/value.md) 关键字用于定义由 `set` 或 `init` 访问器分配的值。  
+- 属性可以是 *读-写* 属性（既有 `get` 访问器又有 `set` 访问器）、*只读* 属性（有 `get` 访问器，但没有 `set` 访问器）或 *只写* 访问器（有 `set` 访问器，但没有 `get` 访问器）。 只写属性很少出现，常用于限制对敏感数据的访问。
 
 - 不需要自定义访问器代码的简单属性可以作为表达式主体定义或[自动实现的属性](./auto-implemented-properties.md)来实现。
 
@@ -54,7 +54,7 @@ ms.locfileid: "86863937"
 
 在某些情况下，属性 `get` 和 `set` 访问器仅向支持字段赋值或仅从其中检索值，而不包括任何附加逻辑。 通过使用自动实现的属性，既能简化代码，还能让 C# 编译器透明地提供支持字段。
 
-如果属性具有 `get` 和 `set` 访问器，则必须自动实现这两个访问器。 自动实现的属性通过以下方式定义：使用 `get` 和 `set` 关键字，但不提供任何实现。 下面的示例与上一个示例基本相同，只不过 `Name` 和 `Price` 是自动实现的属性。 请注意，该示例还删除了参数化构造函数，以便通过调用无参数构造函数和[对象初始值设定项](object-and-collection-initializers.md)立即初始化 `SaleItem` 对象。
+如果属性具有 `get` 和 `set`（或 `get` 和 `init`）访问器，则必须自动实现这两个访问器。 自动实现的属性通过以下方式定义：使用 `get` 和 `set` 关键字，但不提供任何实现。 下面的示例与上一个示例基本相同，只不过 `Name` 和 `Price` 是自动实现的属性。 该示例还删除了参数化构造函数，以便通过调用无参数构造函数和[对象初始值设定项](object-and-collection-initializers.md)立即初始化 `SaleItem` 对象。
 
   [!code-csharp[Properties#4](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-4.cs)]  
 

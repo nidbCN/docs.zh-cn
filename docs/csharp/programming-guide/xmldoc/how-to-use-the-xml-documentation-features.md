@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 9ad2cfe62c70174eec9020ad4c8ce11608aca36d
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 3a030e07e6f0e48a37c1682ef1d93b33932bbaaa
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87380665"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103478423"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a>如何使用 XML 文档功能
 
@@ -135,7 +135,7 @@ XML 文档以 `///` 开头。 创建新项目时，向导会放置一些以 `///
 ## <a name="see-also"></a>请参阅
 
 - [C# 编程指南](../index.md)
-- [-doc（C# 编译器选项）](../../language-reference/compiler-options/doc-compiler-option.md)
+- [DocumentationFile（C# 编译器选项）](../../language-reference/compiler-options/output.md#documentationfile)
 - [XML 文档注释](./index.md)
 - [DocFX 文档处理器](https://dotnet.github.io/docfx/)
 - [Sandcastle 文档处理器](https://github.com/EWSoftware/SHFB)

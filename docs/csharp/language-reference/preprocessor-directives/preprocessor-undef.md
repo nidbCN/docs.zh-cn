@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - '#undef directive [C#]'
 ms.assetid: 686c92d2-7194-4be4-b2f4-80091712d513
-ms.openlocfilehash: 7db79be7ea9d8462e09b6ae874bf0ae7d265afe2
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: ecbf8f5793e70c7dd6e602a3992ee3783a76c7ca
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "91150552"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477973"
 ---
 # <a name="undef-c-reference"></a>#undef（C# 参考）
 
 `#undef` 允许你定义一个符号，这样一来，通过将该符号用作 [#if](./preprocessor-if.md) 指令中的表达式，表达式将计算为 `false`。  
   
- 可使用 [#define](./preprocessor-define.md) 指令或 [-define](../compiler-options/define-compiler-option.md) 编译器选项来定义符号。 文件中必须先出现 `#undef` 指令，才能使用任何非指令的语句。  
+ 可使用 [#define](./preprocessor-define.md) 指令或 [DefineConstants](../compiler-options/language.md#defineconstants) 编译器选项来定义符号。 文件中必须先出现 `#undef` 指令，才能使用任何非指令的语句。  
   
 ## <a name="example"></a>示例  
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: bc4b5755bf56a013a0deb4efdb821df18db5a18e
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 6c2c49a9fd55c406b69c02586a9b0e4a1d16ccd4
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87303018"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103479925"
 ---
 # <a name="how-to-access-office-interop-objects-c-programming-guide"></a>如何访问 Office 互操作对象（C# 编程指南）
 
@@ -95,7 +95,7 @@ C# 具有一些功能，可简化对 Office API 对象的访问。 这些新功�
 
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]
 
-     C# 4 及更高版本自动将返回的 `Object` 转换为 `dynamic`，前提是程序集由 [-link](../../language-reference/compiler-options/link-compiler-option.md) 编译器选项引用，或 Excel 的“嵌入互操作类型”属性设置为 true。 True 是此属性的默认值。
+     C# 4 及更高版本自动将返回的 `Object` 转换为 `dynamic`，前提是程序集由 [EmbedInteropTypes](../../language-reference/compiler-options/inputs.md#embedinteroptypes) 编译器选项引用，或 Excel 的“嵌入互操作类型”属性设置为 true。 True 是此属性的默认值。
 
 ## <a name="to-run-the-project"></a>运行项目
 
@@ -149,7 +149,7 @@ C# 具有一些功能，可简化对 Office API 对象的访问。 这些新功�
 
 3. 如果看不到“属性”窗口，请按“F4”。
 
-4. 在属性列表中找到“嵌入互操作类型”，将其值更改为“False”。 同样地，还可以通过在命令提示符下使用 [-reference](../../language-reference/compiler-options/reference-compiler-option.md) 编译器选项代替 [-link](../../language-reference/compiler-options/link-compiler-option.md) 进行编译。
+4. 在属性列表中找到“嵌入互操作类型”，将其值更改为“False”。 同样地，还可以通过在命令提示符处使用 [References](../../language-reference/compiler-options/inputs.md#references) 编译器选项代替 [EmbedInteropTypes](../../language-reference/compiler-options/inputs.md#embedinteroptypes) 进行编译。
 
 ## <a name="to-add-additional-formatting-to-the-table"></a>将其他格式添加到表格
 

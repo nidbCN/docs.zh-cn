@@ -1,24 +1,36 @@
 ---
 title: 命令行参数 - C# 编程指南
 description: 了解命令行参数。 查看在控制台应用程序中使用命令行参数的示例。
-ms.date: 07/20/2015
+ms.date: 03/11/2021
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 35ff0425d3f09cf4ad116cf688b943cef3ef02e3
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: f495efb3bc2c76a98f74c173d5b777ebe383edcb
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381913"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190406"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>命令行参数（C# 编程指南）
 
 可以通过以下方式之一定义方法来将自变量发送到 `Main` 方法：
 
-[!code-csharp[csProgGuideMain#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#2)]  
+| `Main` 方法代码                 | `Main` 签名                             |
+|------------------------------------|----------------------------------------------|
+| 无返回值，不使用 `await` | `static void Main(string[] args)`            |
+| 返回值，不使用 `await`    | `static int Main(string[] args)`             |
+| 无返回值，使用 `await`      | `static async Task Main(string[] args)`      |
+| 返回值，使用 `await`         | `static async Task<int> Main(string[] args)` |
 
-[!code-csharp[csProgGuideMain#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#3)]
+如果不使用参数，可以从方法签名中省略 `args`，使代码更为简单：
+
+| `Main` 方法代码                 | `Main` 签名                |
+|------------------------------------|---------------------------------|
+| 无返回值，不使用 `await` | `static void Main()`            |
+| 返回值，不使用 `await`    | `static int Main()`             |
+| 无返回值，使用 `await`      | `static async Task Main()`      |
+| 返回值，使用 `await`         | `static async Task<int> Main()` |
 
 > [!NOTE]
 > 若要在 Windows 窗体应用程序的 `Main` 方法中启用命令行参数，必须手动修改 program.cs 中 `Main` 的签名。 Windows 窗体设计器生成的代码创建没有输入参数的 `Main`。 还可使用 <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> 或 <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> 从控制台或 Windows 应用程序的任意位置访问命令行参数。

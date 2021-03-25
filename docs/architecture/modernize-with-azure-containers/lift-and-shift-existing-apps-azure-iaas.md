@@ -2,12 +2,12 @@
 title: 将现有 .NET 应用直接迁移到 Azure IaaS（云基础结构就绪）
 description: 通过 Azure 云和 Windows 容器现代化现有 .NET 应用程序。
 ms.date: 12/21/2020
-ms.openlocfilehash: fb875c38cac236826007bba217189238b7c00898
-ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
+ms.openlocfilehash: 69e89702b41cd7388ee6c90e77efafc7cd2bebe8
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98025389"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605108"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>将现有 .NET 应用直接迁移到 Azure IaaS（云基础结构就绪）
 
@@ -63,7 +63,7 @@ Azure Migrate 使你确信工作负荷可以在对业务的影响最小的情况
 
 图 2-2 显示了 Azure Migrate 执行的所有服务器和应用程序连接的内置依赖项映射。
 
-![定位云基础结构就绪应用程序](./media/image2-2.png)
+![服务器和应用程序连接的依赖项](./media/image2-2.png)
 
 **图 2-2。** 定位云基础结构就绪应用程序
 
@@ -75,7 +75,7 @@ Site Recovery 也专门用于部分在本地、部分在 Azure 上的混合环�
 
 图 2-3 显示了如何使用 Azure Site Recovery 执行多个 VM 迁移。
 
-![定位云基础结构就绪应用程序](./media/image2-3.png)
+![使用 Azure Site Recovery 迁移 VM](./media/image2-3.png)
 
 **图 2-3**。 定位云基础结构就绪应用程序
 
