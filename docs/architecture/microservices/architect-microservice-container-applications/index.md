@@ -2,18 +2,18 @@
 title: 构建基于微服务的容器化应用程序
 description: 构建基于微服务的容器化应用程序并不简单，不应掉以轻心。 了解本章的核心概念。
 ms.date: 01/13/2021
-ms.openlocfilehash: d87633b6c5073a9098c34c1192bcca1abad00e5c
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: b31c560fefa0928cefef2fdb92d6cfdbac084c57
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189481"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873141"
 ---
 # <a name="architecting-container-and-microservice-based-applications"></a>构建基于微服务的容器化应用程序
 
 微服务提供很多优点，但也会引起新的巨大挑战。创建基于微服务的应用程序时，微服务体系结构模式是基础支柱。
 
-本指南前面部分介绍了有关容器和 Docker 的基本概念。 要开始使用容器，至少要了解这些基本信息。 虽然容器为实现微服务提供可能，并且非常适用于微服务，但微服务体系结构并不强制使用容器。本节介绍体系结构，但即使不使用容器，其中许多体系结构概念仍然适用。 然而，由于已介绍容器的重要性，本指南将重点介绍两者交叉部分。
+本指南前面部分介绍了有关容器和 Docker 的基本概念。 要开始使用容器，至少要了解这些基本信息。 虽然容器是微服务运行的基础，并且非常适合用于微服务，但它们并非是微服务体系结构所必需的。 此体系结构部分中的许多体系结构概念都适用于没有容器的情况。 然而，由于已介绍容器的重要性，本指南将重点介绍两者交叉部分。
 
 企业应用程序可能会很复杂，它们通常由多个服务组成，而不是基于单个服务的应用程序。 对于这些情况，需要了解其他体系结构方法，如微服务和某些域驱动设计 (DDD) 模式以及容器业务流程的概念。 请注意，本章节不仅介绍容器上的微服务，还介绍任何容器化应用程序。
 

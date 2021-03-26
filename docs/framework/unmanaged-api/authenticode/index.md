@@ -3,12 +3,12 @@ description: 详细了解：Authenticode（非托管 API 参考）
 title: Authenticode（非托管 API 参考）
 ms.date: 03/30/2017
 ms.assetid: 7e8cc303-6e77-4116-aa8b-7ea297a3a467
-ms.openlocfilehash: d7a1684fde900bfc01161193d0747b156c6856a8
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 0a4a9b4ba3cc9a5818896508c80bc31073f514e7
+ms.sourcegitcommit: 26721a2260deabb3318cc98af8619306711153cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99772830"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "105027839"
 ---
 # <a name="authenticode-unmanaged-api-reference"></a>Authenticode（非托管 API 参考）
 
@@ -42,6 +42,10 @@ ms.locfileid: "99772830"
   
  [AXL_AUTHENTICODE_TIMESTAMPER_INFO 结构](axl-authenticode-timestamper-info-structure.md)  
  定义验证码时间戳签署人的信息。  
+
+## <a name="requirements"></a>要求
+
+**库**：clr.dll
   
 ## <a name="see-also"></a>另请参阅
 

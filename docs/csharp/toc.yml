@@ -35,41 +35,55 @@ items:
                 href: tour-of-csharp/tutorials/branches-and-loops-local.md
               - name: 列表集合
                 href: tour-of-csharp/tutorials/arrays-and-collections.md
+  - name: C# 中的新增功能
+    items:
+      - name: C# 9.0
+        displayName: what's new
+        href: whats-new/csharp-9.md
+      - name: C# 8.0
+        href: whats-new/csharp-8.md
+      - name: C# 7.0-7.3
+        href: whats-new/csharp-7.md
+      - name: 编译器的重大更改
+        href: whats-new/breaking-changes.md
+      - name: C# 版本历史记录
+        href: whats-new/csharp-version-history.md
+      - name: 与 .NET 库的关系
+        href: whats-new/relationships-between-language-and-library.md
+      - name: 版本兼容性
+        href: whats-new/version-update-considerations.md
+      - name: 教程
+        items:
+          - name: 浏览记录类型
+            href: whats-new/tutorials/records.md
+          - name: 探索顶级语句
+            href: whats-new/tutorials/top-level-statements.md
+          - name: 探索对象中的模式
+            href: whats-new/tutorials/patterns-objects.md
+          - name: 使用默认接口方法安全地更新接口
+            href: whats-new/tutorials/default-interface-methods-versions.md
+          - name: 用默认接口方法创建 mixin 功能
+            href: whats-new/tutorials/mixins-with-default-interface-methods.md
+          - name: 探索索引和范围
+            href: whats-new/tutorials/ranges-indexes.md
+          - name: 使用可为空引用类型
+            href: whats-new/tutorials/nullable-reference-types.md
+          - name: 将应用升级为可为空引用类型
+            href: whats-new/tutorials/upgrade-to-nullable-references.md
+          - name: 生成和使用异步流
+            href: whats-new/tutorials/generate-consume-asynchronous-stream.md
   - name: 教程
     items:
-      - name: 概述
-        displayName: tutorials
-        href: tutorials/index.md
       - name: 类简介
         href: tutorials/intro-to-csharp/introduction-to-classes.md
       - name: 面向对象的编程
         href: tutorials/intro-to-csharp/object-oriented-programming.md
-      - name: 浏览记录类型
-        href: tutorials/exploration/records.md
-      - name: 探索顶级语句
-        href: tutorials/exploration/top-level-statements.md
-      - name: 探索对象中的模式
-        href: tutorials/exploration/patterns-objects.md
       - name: 探索字符串内插 - 交互式
         href: tutorials/exploration/interpolated-strings.yml
       - name: 探索字符串内插 - 在环境中
         href: tutorials/exploration/interpolated-strings-local.md
       - name: 字符串内插的高级方案
         href: tutorials/string-interpolation.md
-      - name: 使用默认接口方法安全地更新接口
-        href: tutorials/default-interface-methods-versions.md
-      - name: 用默认接口方法创建 mixin 功能
-        href: tutorials/mixins-with-default-interface-methods.md
-      - name: 探索索引和范围
-        href: tutorials/ranges-indexes.md
-      - name: 使用可为空引用类型
-        href: tutorials/nullable-reference-types.md
-      - name: 将应用升级为可为空引用类型
-        href: tutorials/upgrade-to-nullable-references.md
-      - name: 生成和使用异步流
-        href: tutorials/generate-consume-asynchronous-stream.md
-      - name: 使用模式匹配生成数据驱动的算法
-        href: tutorials/pattern-matching.md
       - name: 控制台应用程序
         href: tutorials/console-teleprompter.md
       - name: REST 客户端
@@ -80,23 +94,8 @@ items:
         href: tutorials/working-with-linq.md
       - name: 使用特性
         href: tutorials/attributes.md
-  - name: C# 中的新增功能
-    items:
-      - name: C# 9.0
-        displayName: what's new
-        href: whats-new/csharp-9.md
-      - name: C# 8.0
-        href: whats-new/csharp-8.md
-      - name: C# 7.0-7.3
-        href: whats-new/csharp-7.md
-      - name: 编译器中的重大更改
-        href: whats-new/breaking-changes.md
-      - name: C# 版本历史记录
-        href: whats-new/csharp-version-history.md
-      - name: 语言与框架的关系
-        href: whats-new/relationships-between-language-and-library.md
-      - name: 版本和更新注意事项
-        href: whats-new/version-update-considerations.md
+      - name: 使用模式匹配生成数据驱动的算法
+        href: tutorials/pattern-matching.md
   - name: C# 概念
     items:
       - name: C# 类型系统
