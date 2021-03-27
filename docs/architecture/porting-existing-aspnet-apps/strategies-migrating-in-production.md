@@ -3,12 +3,12 @@ title: 在生产环境中运行时的迁移策略
 description: 不能 tenable 将大型应用从 ASP.NET MVC 迁移到一次 ASP.NET Core。 了解将应用程序迁移到 ASP.NET Core，同时使其在现有用户的工作和生产环境中运行的策略。
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 4910984cb281139493aa5424809ba3eedab776e9
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: e9dcdb3594cc431f3fd7e71b16e0d806ab8d1ba6
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102401057"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105637086"
 ---
 # <a name="strategies-for-migrating-while-running-in-production"></a>在生产环境中运行时的迁移策略
 
@@ -42,7 +42,7 @@ ms.locfileid: "102401057"
 
 ## <a name="multi-targeting-approaches"></a>多目标方法
 
-对于面向 .NET Framework 的大型应用程序，可以通过对每个框架使用多目标和单独的代码路径，迁移到 ASP.NET Core 一段时间。 例如，在两个环境中都必须运行的代码可以使用[预 `#if` 处理器](../../csharp/language-reference/preprocessor-directives/preprocessor-if.md)指令进行修改，以实现不同的功能，或在 .NET Framework 与 .net Core 运行时使用不同的依赖项。 另一种方法是修改项目文件，使其包含不同的文件集，以供基于的框架为目标。 项目文件可使用不同的组合模式，如 `*.core.cs` ，根据目标框架包含不同的源文件集。
+对于面向 .NET Framework 的大型应用程序，可以通过对每个框架使用多目标和单独的代码路径，迁移到 ASP.NET Core 一段时间。 例如，在两个环境中都必须运行的代码可以使用[预 `#if` 处理器](../../csharp/language-reference/preprocessor-directives.md#conditional-compilation)指令进行修改，以实现不同的功能，或在 .NET Framework 与 .net Core 运行时使用不同的依赖项。 另一种方法是修改项目文件，使其包含不同的文件集，以供基于的框架为目标。 项目文件可使用不同的组合模式，如 `*.core.cs` ，根据目标框架包含不同的源文件集。
 
 通过这些技术，可在添加新功能的同时，维护单个通用代码，并将应用的) 部分 (为使用 .NET Core。
 
