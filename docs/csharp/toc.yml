@@ -1091,7 +1091,7 @@ items:
                 href: language-reference/keywords/out-parameter-modifier.md
           - name: 命名空间关键字
             items:
-              - name: 命名空间
+              - name: namespace
                 href: language-reference/keywords/namespace.md
               - name: using
                 items:
@@ -1123,7 +1123,7 @@ items:
                 href: language-reference/keywords/this.md
           - name: 文字关键字
             items:
-              - name: 'Null'
+              - name: 'null'
                 href: language-reference/keywords/null.md
               - name: true 和 false
                 href: language-reference/builtin-types/bool.md
@@ -1290,15 +1290,15 @@ items:
           - name: 全局属性
             displayName: 'AssemblyName, AssemblyVersion, AssemblyCulture, AssemblyFlags, AssemblyProduct, AssemblyTrademark, AssemblyInformationalVersion, AssemblyCompany, AssemblyCopyright, AssemblyFileVersion, CLSCompliant, AssemblyTitle, AssemblyDescription, AssemblyConfiguration, AssemblyDefaultAlias'
             href: language-reference/attributes/global.md
-          - name: 常规
-            displayName: 'Conditional, Obsolete, AttributeUsage'
-            href: language-reference/attributes/general.md
           - name: 调用方信息
             displayName: 'CallerFilePath, CallerLineNumber, CallerMemberName'
             href: language-reference/attributes/caller-information.md
           - name: 可为空的静态分析
             displayName: 'AllowNull, DisallowNull, MaybeNull, NotNull, MaybeNullWhen, NotNullWhen, NotNullIfNotNull, DoesNotReturn, DoesNotReturnIf'
             href: language-reference/attributes/nullable-analysis.md
+          - name: 杂项
+            displayName: 'Conditional, Obsolete, AttributeUsage, ModuleInitializer, SkipLocalsInit'
+            href: language-reference/attributes/general.md
       - name: 预处理器指令
         items:
           - name: 概述
