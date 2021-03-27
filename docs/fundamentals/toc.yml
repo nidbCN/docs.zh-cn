@@ -426,7 +426,15 @@ items:
               - name: 已知事件提供程序
                 href: ../core/diagnostics/well-known-event-providers.md
               - name: 分布式跟踪
-                href: ../core/diagnostics/distributed-tracing.md
+                items:
+                  - name: 概述
+                    href: ../core/diagnostics/distributed-tracing.md
+                  - name: 概念
+                    href: ../core/diagnostics/distributed-tracing-concepts.md
+                  - name: 检测
+                    href: ../core/diagnostics/distributed-tracing-instrumentation-walkthroughs.md
+                  - name: 集合
+                    href: ../core/diagnostics/distributed-tracing-collection-walkthroughs.md
           - name: 符号
             href: ../core/diagnostics/symbols.md
           - name: 运行时事件
