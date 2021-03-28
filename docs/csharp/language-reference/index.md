@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: dfbf7a2548f403bce895d388fe2cd1483e092b2e
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 1e0dff24bb581a27f55b047d5f6351993ba58cdb
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102104058"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105637489"
 ---
 # <a name="c-reference"></a>C# 参考
 
@@ -34,7 +34,7 @@ ms.locfileid: "102104058"
  [C# 特殊字符](./tokens/index.md)  
  收录了主题链接，有助于你了解 C# 中的特殊上下文字符及其用法。  
 
- [C# 预处理器指令](./preprocessor-directives/index.md)  
+ [C# 预处理器指令](preprocessor-directives.md)  
  提供用于嵌入 C# 源代码中的编译器命令有关的信息的链接。  
   
  [C# 编译器选项](./compiler-options/index.md)  
