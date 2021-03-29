@@ -16,12 +16,12 @@ helpviewer_keywords:
 - security policy [.NET Framework], modifying
 - manually editing security configuration files
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
-ms.openlocfilehash: d26443d07dd76d8d18e0d21112d1e40de5b83c83
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 402f9e2c4ca378af4b6ed0cc0c8c39e2d337876d
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102258269"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104652888"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe（代码访问安全策略工具）
 
@@ -33,7 +33,7 @@ ms.locfileid: "102258269"
 > [!NOTE]
 > 64 位计算机同时包括 64 位和 32 位版本的安全策略。 若要确保你的策略更改同时应用于 32 位和 64 位应用程序，请同时运行 Caspol.exe 的 32 位和 64 位版本。  
   
- 代码访问安全策略工具自动随 .NET Framework 和 Visual Studio 一起安装。 可以在 32 位系统的 %windir%\Microsoft.NET\Framework\\*version* 中或是 64 位系统的 %windir%\Microsoft.NET\Framework64\\*version* 中找到 Caspol.exe。 （例如，对于 64 位系统上的 .NET Framework 4，相应的位置是 %windir%\Microsoft.NET\Framework64\v4.030319\caspol.exe。）如果计算机并行运行多个 .NET Framework 版本，则可能会安装该工具的多个版本。 可以从安装目录运行该工具。 但是，建议使用[开发人员命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)，这样就不需要导航到安装文件夹。  
+ 代码访问安全策略工具自动随 .NET Framework 和 Visual Studio 一起安装。 可以在 32 位系统的 %windir%\Microsoft.NET\Framework\\*version* 中或是 64 位系统的 %windir%\Microsoft.NET\Framework64\\*version* 中找到 Caspol.exe。 （例如，对于 64 位系统上的 .NET Framework 4，相应的位置是 %windir%\Microsoft.NET\Framework64\v4.030319\caspol.exe。）如果计算机并行运行多个 .NET Framework 版本，则可能会安装该工具的多个版本。 可以从安装目录运行该工具。 但是，我们建议你使用 [Visual studio 开发人员命令提示或 Visual Studio 开发人员 PowerShell](/visualstudio/ide/reference/command-prompt-powershell)，它们不需要导航到安装文件夹。  
   
  在命令提示符处，键入以下内容：  
   

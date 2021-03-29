@@ -12,12 +12,12 @@ helpviewer_keywords:
 - list of assemblies in global assembly cache
 - Global Assembly Cache tool
 ms.assetid: c5f786a0-969b-4f14-9f02-e77c3384d9af
-ms.openlocfilehash: a40c371e6f95f6c90ecbfbf28183226632a58e5b
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 56b4750e6b9338a6c136c16505b5da94f51fd72f
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102258307"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653590"
 ---
 # <a name="how-to-view-the-contents-of-the-global-assembly-cache"></a>如何：查看全局程序集缓存的内容
 
@@ -25,7 +25,7 @@ ms.locfileid: "102258307"
 
 ## <a name="view-the-assemblies-in-the-gac"></a>查看 GAC 中的程序集
 
-要查看全局程序集缓存中的程序集列表，请打开[开发人员命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)，然后输入以下命令：
+要查看全局程序集缓存中的程序集列表，请打开 [Visual Studio 开发人员命令提示或 Visual Studio 开发人员 PowerShell](/visualstudio/ide/reference/command-prompt-powershell)，然后输入以下命令：
 
 ```shell
 gacutil -l

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Aximp.exe
 - Windows Forms ActiveX Control Importer
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
-ms.openlocfilehash: 4d3b5b1720f29c70b5276d1c79275d8c057b179a
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: e0ee504f87eba811dab3422a367a60e235b3c51b
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259468"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104652914"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe（Windows 窗体 ActiveX 控件导入程序）
 
@@ -24,7 +24,7 @@ ActiveX 控件导入程序将 ActiveX 控件的 COM 类型库中的类型定义�
   
  若要承载 ActiveX 控件，必须生成从 <xref:System.Windows.Forms.AxHost> 派生的包装器控件。 此包装器控件包含基础 ActiveX 控件的一个实例。 它知道如何与 ActiveX 控件通信，但它显示为 Windows 窗体控件。 这个生成的控件承载 ActiveX 控件并将其属性、方法和事件作为生成的控件的属性、方法和事件公开。  
   
- 此工具会自动随 Visual Studio 一起安装。 若要运行该工具，请[对开发人员使用命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)。
+ 此工具会自动随 Visual Studio 一起安装。 若要运行该工具，请使用 [Visual Studio 开发人员命令提示或 Visual Studio 开发人员 PowerShell](/visualstudio/ide/reference/command-prompt-powershell)。
   
  在命令提示符处，键入以下内容：  
   

@@ -4,12 +4,12 @@ description: 了解从本机代码托管 .NET Core 运行时，以支持需要�
 author: mjrousos
 ms.topic: how-to
 ms.date: 12/21/2018
-ms.openlocfilehash: db458e9ebb0c6ad930f82e1d67619632a493ae3b
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: d7568c377e09b95fbc863610ec6bdc444f924976
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102604692"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104652706"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>编写自定义 .NET Core 主机以从本机代码控制 .NET 运行时
 
@@ -84,7 +84,7 @@ public delegate int ComponentEntryPoint(IntPtr args, int sizeBytes);
 
 以下步骤详细说明如何使用 `coreclrhost.h` API 在本机应用程序中启动 .NET Core 运行时并调用托管静态方法。 本文档中的代码片段使用一些特定于 Windows 的 API，但是[完整示例主机](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithCoreClrHost)同时显示 Windows 和 Linux 的代码路径。
 
-[Unix CoreRun 主机](https://github.com/dotnet/runtime/tree/master/src/coreclr/hosts/unixcorerun)显示使用 `coreclrhost.h` 的更为复杂的真实托管示例。
+[ corerun 主机](https://github.com/dotnet/runtime/tree/main/src/coreclr/hosts/corerun)显示使用 `coreclrhost.h` 的更为复杂的真实跨平台托管示例。
 
 ### <a name="step-1---find-and-load-coreclr"></a>步骤 1 - 查找和加载 CoreCLR
 

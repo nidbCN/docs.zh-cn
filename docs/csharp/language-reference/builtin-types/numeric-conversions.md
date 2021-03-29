@@ -1,7 +1,7 @@
 ---
 description: 了解 C# 中内置数值转换间的隐式转换和显式转换
 title: 内置数值转换 - C# 参考
-ms.date: 10/22/2019
+ms.date: 03/17/2021
 helpviewer_keywords:
 - implicit numeric conversions [C#]
 - explicit numeric conversion [C#]
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - numeric conversions [C#], explicit
 - conversions [C#], implicit numeric
 - conversions [C#], explicit numeric
-ms.openlocfilehash: ee5def3b5e0e067919a8c8335db701dbb6dd4d88
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 5ff0289f5365a7d3d334dd0130b3b0efcdf34c60
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89142240"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759685"
 ---
 # <a name="built-in-numeric-conversions-c-reference"></a>内置数值转换（C# 参考）
 
@@ -26,18 +26,20 @@ C# 提供了一组[整型](integral-numeric-types.md)和[浮点](floating-point-
 
 |From|到|
 |----------|--------|
-|[sbyte](integral-numeric-types.md)|`short`、`int`、`long`、`float`、`double` 或 `decimal`|
-|[byte](integral-numeric-types.md)|`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`float`、`double` 或 `decimal`|
-|[short](integral-numeric-types.md)|`int`、`long`、`float`、`double` 或 `decimal`|
-|[ushort](integral-numeric-types.md)|`int`、`uint`、`long`、`ulong`、`float`、`double` 或 `decimal`。|
-|[int](integral-numeric-types.md)|`long`、`float`、`double` 或 `decimal`|
-|[uint](integral-numeric-types.md)|`long`、`ulong`、`float`、`double` 或 `decimal`|
+|[sbyte](integral-numeric-types.md)|`short`、`int`、`long`、`float`、`double`、`decimal` 或 `nint`。|
+|[byte](integral-numeric-types.md)|`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`float`、`double`、`decimal`、`nint` 或 `nuint`|
+|[short](integral-numeric-types.md)|`int`、`long`、`float`、`double`、`decimal` 或 `nint`|
+|[ushort](integral-numeric-types.md)|`int`、`uint`、`long`、`ulong`、`float`、`double`、`decimal`、`nint` 或 `nuint`|
+|[int](integral-numeric-types.md)|`long`、`float`、`double`、`decimal` 或 `nint`|
+|[uint](integral-numeric-types.md)|`long`、`ulong`、`float`、`double`、`decimal` 或 `nuint`|
 |[long](integral-numeric-types.md)|`float`、`double` 或 `decimal`|
 |[ulong](integral-numeric-types.md)|`float`、`double` 或 `decimal`|
 |[float](floating-point-numeric-types.md)|`double`|
+|[nint](nint-nuint.md)|`long`、`float`、`double` 或 `decimal`|
+|[nuint](nint-nuint.md)|`ulong`、`float`、`double` 或 `decimal`|
 
 > [!NOTE]
-> 从 `int`、`uint``long` 或 `ulong` 到 `float` 的隐式转换以及从 `long` 或 `ulong` 到 `double` 的隐式转换可能会丢失精准率，但绝不会丢失一个数量级。 其他隐式数值转换不会丢失任何信息。
+> 从 `int`、`uint`、`long`、`ulong`、`nint` 或 `nuint` 到 `float` 的隐式转换以及从 `long`、`ulong`、`nint` 或 `nuint` 到 `double` 的隐式转换可能会丢失精准率，但绝不会丢失一个数量级。 其他隐式数值转换不会丢失任何信息。
 
 另请注意
 
@@ -47,7 +49,7 @@ C# 提供了一组[整型](integral-numeric-types.md)和[浮点](floating-point-
 
 - `decimal` 类型和 `float` 或 `double` 类型之间不存在隐式转换。
 
-- 类型 `int` 的常量表达式的值（例如，由整数文本所表示的值）如果在目标类型的范围内，则可隐式转换为 `sbyte`、`byte`、`short`、`ushort`、`uint` 或 `ulong`：
+- 类型 `int` 的常量表达式的值（例如，由整数文本所表示的值）如果在目标类型的范围内，则可隐式转换为 `sbyte`、`byte`、`short`、`ushort`、`uint`、`ulong`、`nint` 或 `nuint`：
 
   ```csharp
   byte a = 13;
@@ -62,17 +64,19 @@ C# 提供了一组[整型](integral-numeric-types.md)和[浮点](floating-point-
 
 |From|到|
 |----------|--------|
-|[sbyte](integral-numeric-types.md)|`byte`、`ushort`、`uint` 或 `ulong`|
+|[sbyte](integral-numeric-types.md)|`byte`、`ushort`、`uint`、`ulong` 或 `nuint`|
 |[byte](integral-numeric-types.md)|`sbyte`|
-|[short](integral-numeric-types.md)|`sbyte`、`byte`、`ushort`、`uint` 或 `ulong`|
+|[short](integral-numeric-types.md)|`sbyte`、`byte`、`ushort`、`uint`、`ulong` 或 `nuint`|
 |[ushort](integral-numeric-types.md)|`sbyte`、`byte` 或 `short`|
-|[int](integral-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`uint` 或 `ulong`|
+|[int](integral-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`uint`、`ulong` 或 `nuint`。|
 |[uint](integral-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort` 或 `int`|
-|[long](integral-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint` 或 `ulong`。|
-|[ulong](integral-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint` 或 `long`。|
-|[float](floating-point-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong` 或 `decimal`|
-|[double](floating-point-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`float` 或 `decimal`|
-|[decimal](floating-point-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`float` 或 `double`|
+|[long](integral-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`ulong`、`nint` 或 `nuint`|
+|[ulong](integral-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`nint` 或 `nuint`|
+|[float](floating-point-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`decimal`、`nint` 或 `nuint`|
+|[double](floating-point-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`float`、`decimal`、`nint` 或 `nuint`|
+|[decimal](floating-point-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`float`、`double`、`nint` 或 `nuint`|
+|[nint](nint-nuint.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`ulong` 或 `nuint`|
+|[nuint](nint-nuint.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long` 或 `nint`|
 
 > [!NOTE]
 > 显式数值转换可能会导致数据丢失或引发异常，通常为 <xref:System.OverflowException>。

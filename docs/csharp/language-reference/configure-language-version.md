@@ -3,12 +3,12 @@ title: C# 语言版本控制 - C# 指南
 description: 了解如何根据项目确定 C# 语言版本，以及背后的原因。 了解如何手动重写默认值。
 ms.custom: updateeachrelease
 ms.date: 08/11/2020
-ms.openlocfilehash: e1b5848f5cd589b0ea61518f0b19efb8fe801337
-ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
+ms.openlocfilehash: e605979c185c476cd908ef4c7b3808f72ded0067
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103477460"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104652966"
 ---
 # <a name="c-language-versioning"></a>C# 语言版本控制
 
@@ -88,7 +88,7 @@ C# 9.0 仅在 .NET 5 及更高版本上受支持。
 [!INCLUDE [langversion-table](includes/langversion-table.md)]
 
 > [!TIP]
-> 打开[开发人员命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)，并运行以下命令，查看计算机上可用的语言版本的列表。
+> 打开 [Visual Studio 开发人员命令提示或 Visual Studio 开发人员 PowerShell](/visualstudio/ide/reference/command-prompt-powershell)，运行以下命令以查看计算机上可用的语言版本列表。
 >
 > ```CMD
 > csc -langversion:?

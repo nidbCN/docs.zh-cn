@@ -1,21 +1,23 @@
 ---
 title: 方法 - C# 编程指南
 description: C# 中的方法是包含一系列语句的代码块。 程序通过调用该方法并指定参数来运行语句。
-ms.date: 07/20/2015
+ms.date: 03/08/2021
 helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 879e57cfbce82f1aa77f8810e23d6a61a6ea5bc8
-ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
+ms.openlocfilehash: d503c394e02f6f384e63de4fcd9cc8d2eec43da0
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "98899446"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653499"
 ---
 # <a name="methods-c-programming-guide"></a>方法（C# 编程指南）
 
-方法是包含一系列语句的代码块。 程序通过调用该方法并指定任何所需的方法参数使语句得以执行。 在 C# 中，每个执行的指令均在方法的上下文中执行。 `Main` 方法是每个 C# 应用程序的入口点，并在启动程序时由公共语言运行时 (CLR) 调用。
+方法是包含一系列语句的代码块。 程序通过调用该方法并指定任何所需的方法参数使语句得以执行。 在 C# 中，每个执行的指令均在方法的上下文中执行。
+
+`Main` 方法是每个 C# 应用程序的入口点，并在启动程序时由公共语言运行时 (CLR) 调用。 在使用[顶级语句](../main-and-command-args/top-level-statements.md)的应用程序中，`Main` 方法由编译器生成并包含所有顶级语句。
 
 > [!NOTE]
 > 本文讨论命名的方法。 有关匿名函数的信息，请参阅[匿名函数](../statements-expressions-operators/anonymous-functions.md)。
@@ -125,7 +127,7 @@ public static void FillMatrix(int[,] matrix)
 > [!NOTE]
 > 异步方法在遇到第一个尚未完成的 awaited 对象或到达异步方法的末尾时（以先发生者为准），将返回到调用方。
 
-异步方法可以具有 <xref:System.Threading.Tasks.Task%601>、 <xref:System.Threading.Tasks.Task>或 void 返回类型。 Void 返回类型主要用于定义需要 void 返回类型的事件处理程序。 无法等待返回 void 的异步方法，并且返回 void 方法的调用方无法捕获该方法引发的异常。
+异步方法通常具有 <xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.Task>、<xref:System.Collections.Generic.IAsyncEnumerable%601> 或 `void` 返回类型。 `void` 返回类型主要用于定义需要 `void` 返回类型的事件处理程序。 无法等待返回 `void` 的异步方法，并且返回 void 方法的调用方无法捕获该方法引发的异常。 从 C# 7.0 开始，异步方法可以有[任何类似任务的返回类型](../../whats-new/csharp-7.md#generalized-async-return-types)。
 
 在以下示例中， `DelayAsync` 是具有 <xref:System.Threading.Tasks.Task%601>返回类型的异步方法。 `DelayAsync` 具有返回整数的 `return` 语句。 因此， `DelayAsync` 的方法声明必须具有 `Task<int>`的返回类型。 因为返回类型是 `Task<int>`， `await` 中 `DoSomethingAsync` 表达式的计算如以下语句所示得出整数： `int result = await delayTask`。
 

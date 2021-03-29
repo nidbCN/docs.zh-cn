@@ -10,12 +10,12 @@ helpviewer_keywords:
 - locating assemblies
 - Assembly Binding Log Viewer
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
-ms.openlocfilehash: d9c028507c19ef8599e58b38dcdf15af2ede1dee
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 6d6482edd3b8c78ad230cfc34ed84bd5db712fde
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259273"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104654149"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe（程序集绑定日志查看器）
 
@@ -24,7 +24,7 @@ ms.locfileid: "102259273"
 > [!IMPORTANT]
 > 你必须使用管理员特权运行 fuslogvw.exe。
 
-此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请通过管理员凭据使用[开发人员命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)。
+此工具会自动随 Visual Studio 一起安装。 若要运行该工具，请通过管理员凭据使用 [Visual Studio 开发人员命令提示或 Visual Studio 开发人员 PowerShell](/visualstudio/ide/reference/command-prompt-powershell)。
 
 在命令提示符处，输入下列命令：
 

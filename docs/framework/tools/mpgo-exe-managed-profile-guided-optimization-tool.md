@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Ngen.exe
 - Ngen.exe, profilers and native images
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
-ms.openlocfilehash: 050822d12ef4e0a7dfa752e4789f9861c4894cfa
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 0336c3a98fb93a3b3d3689048e5c313b811630d9
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259377"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653902"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe（按托管配置文件优化工具）
 
@@ -24,7 +24,7 @@ ms.locfileid: "102259377"
 
 当你遇到与中间语言 (IL) 程序集的启动时间和工作集大小相关的性能问题时，建议你先使用 Ngen.exe 消除实时 (JIT) 编译成本和推动代码共享。 如果你需要更多改进，则可使用 Mpgo.exe 进一步优化应用程序。 你可以使用未优化的本机映像程序集的性能数据作为计算性能提升的基准。 使用 Mpgo.exe 可以获得更短的冷启动时间和更小的工作集大小。 Mpgo.exe 将信息到添加 Ngen.exe 用于创建优化的本机映像程序集的 IL 程序集中。 有关详细信息，请参阅 .NET 博客中的 [Improving Launch Performance for your Desktop Applications](https://devblogs.microsoft.com/dotnet/improving-launch-performance-for-your-desktop-applications/)（提高桌面应用程序的启动性能）。
 
-此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请通过管理员凭据使用[开发人员命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)。
+此工具会自动随 Visual Studio 一起安装。 若要运行该工具，请通过管理员凭据使用[开发人员命令提示或开发人员 PowerShell](/visualstudio/ide/reference/command-prompt-powershell)。
 
 在命令提示符处输入以下命令：
 

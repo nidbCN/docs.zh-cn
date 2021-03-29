@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SOS debugging extensions
 - SOS.dll
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
-ms.openlocfilehash: 6a145b7de157269cc83ff1375386cff7f2fb30a1
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 33f75003e18abce95778ddea8e3163211e3bfa5c
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102258824"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653629"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll（SOS 调试扩展）
 
@@ -26,7 +26,7 @@ SOS 调试扩展 (SOS.dll) 通过提供有关内部公共语言运行时 (CLR) �
 
 ## <a name="commands"></a>命令
 
-|Command|说明|
+|命令|说明|
 |-------------|-----------------|
 |**AnalyzeOOM** (**ao**)|显示对垃圾回收堆进行分配请求时发生的最后一次内存不足 (OOM) 的信息。 （在服务器垃圾回收中，它将在每个垃圾回收堆上显示 OOM（如果有））。|
 |**BPMD** [ **-nofuturemodule**] [\<*module name*> \<*method name*>] [ **-md** <`MethodDesc`>] **-list** **-clear** \<*pending breakpoint number*> **-clearall**|在指定模块中的指定方法处创建断点。<br /><br /> 如果尚未加载指定的模块和方法，则此命令将在创建断点之前等待已加载并进行实时 (JIT) 编译的模块的通知。<br /><br /> 可以通过使用 **-list**、 **-clear** 和 **-clearall** 选项来管理挂起断点的列表：<br /><br /> 该 **-list** 选项生成所有挂起断点的列表。 如果挂起断点有一个非零模块 ID，则该断点特定于该特定已加载模块中的函数。 如果挂起断点有一个零模块 ID，则该断点适用于尚未加载的模块。<br /><br /> 使用 **-clear** 或 **-clearall** 选项可从该列表中移除挂起断点。|

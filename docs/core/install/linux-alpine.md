@@ -4,12 +4,12 @@ description: 演示在 Alpine 上安装 .NET SDK 和 .NET 运行时的各种方�
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: 6adaa905c400b45526ebbc3d8e2606522863eec3
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: 19cae3c6237dc9f1a23087ec654e8f24ca13cd66
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970845"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653434"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-alpine"></a>在 Alpine 上安装 .NET SDK 或 .NET 运行时
 
@@ -51,14 +51,28 @@ ms.locfileid: "97970845"
 
 Alpine Linux 上的 .NET 要求安装以下依赖项：
 
+- bash
 - icu-libs
 - krb5-libs
 - libgcc
+- libgdiplus（.NET 应用需要 System.Drawing.Common 程序集时）
 - libintl
 - libssl1.1（Alpine v3.9 或更高版本）
 - libssl1.0（Alpine v3.8 或更低版本）
 - libstdc++
 - zlib
+
+若要安装必需项，请运行以下命令：
+
+```bash
+apk add bash icu-libs krb5-libs libgcc libintl libssl1.1 libstdc++ zlib
+```
+
+若要安装 libgdiplus，可能需要指定一个存储库：
+
+```bash
+apk add libgdiplus --repository https://dl-3.alpinelinux.org/alpine/edge/testing/
+```
 
 ## <a name="next-steps"></a>后续步骤
 

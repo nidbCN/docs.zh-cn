@@ -2,12 +2,12 @@
 title: dotnet-trace 诊断工具 - .NET CLI
 description: 了解如何通过使用 .NET EventPipe 来安装和使用 dotnet-trace CLI 工具，以在没有本机探查器的情况下收集运行中的进程的 .NET 跟踪。
 ms.date: 11/17/2020
-ms.openlocfilehash: abf98df6e31747ea3e8013fc77b246613a3402ad
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: e4e5bf91a7e6a9bf98e8cb006864b4cbc5ca17a2
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100582998"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103624183"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-trace 性能分析实用工具
 
@@ -91,6 +91,9 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
 - **`--buffersize <size>`**
 
   设置内存中循环缓冲区的大小（以 MB 表示）。 默认值为 256 MB。
+
+  > [!NOTE]
+  > 如果目标进程过于频繁地写入事件，则它可能会溢出此缓冲区，并且某些事件可能会被丢弃。 如果丢弃的事件过多，请增加缓冲区大小，查看丢弃的事件数是否减少。 如果丢弃的事件数未随缓冲区大小的增加而减少，则可能是因为读取器的速度较慢，导致无法刷新目标进程的缓冲区。
 
 - **`--clreventlevel <clreventlevel>`**
 

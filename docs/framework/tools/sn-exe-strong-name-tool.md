@@ -11,12 +11,12 @@ helpviewer_keywords:
 - strong-named assemblies, signing files
 - key pairs for signing files
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
-ms.openlocfilehash: 76999ab305f9924bafaa95884b634e2a59251ff0
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: ca985d808da4f048376774f413cb779b967f3c2c
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259042"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653772"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe（强名称工具）
 
@@ -27,7 +27,7 @@ ms.locfileid: "102259042"
 
  有关强命名和强命名的程序集的详细信息，请参阅[具有强命名的程序集](../../standard/assembly/strong-named.md)和[如何：使用强名称为程序集签名](../../standard/assembly/sign-strong-name.md)。  
   
- 强名称工具自动随 Visual Studio 一起安装。 若要启动此工具，请使用[开发人员命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)。  
+ 强名称工具自动随 Visual Studio 一起安装。 若要启动该工具，请使用 [Visual Studio 开发人员命令提示或 Visual Studio 开发人员 PowerShell](/visualstudio/ide/reference/command-prompt-powershell)。  
 
 > [!NOTE]
 > 在 64 位计算机上，可通过使用 Visual Studio 开发人员命令提示运行 32 位版本的 Sn.exe，也可使用 Visual Studio x64 Win64 命令提示运行 64 位版本的 Sn.exe。

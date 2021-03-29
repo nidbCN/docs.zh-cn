@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: ce3724271663163f26a34b6710b28503f7b0c52e
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: df329d121009e519d2e9efd77dc4d2fbc37d198e
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259923"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104654006"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe（清单生成和编辑工具）
 
@@ -19,7 +19,7 @@ ms.locfileid: "102259923"
 
 也可以使用一种图形应用程序 MageUI.exe 来代替 Mage.exe 。 有关详细信息，请参阅 [MageUI.exe (Manifest Generation and Editing Tool, Graphical Client)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)。
 
-此工具会自动随 Visual Studio 一起安装。 若要运行该工具，请[对开发人员使用命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)。
+此工具会自动随 Visual Studio 一起安装。 若要运行该工具，请使用 [Visual Studio 开发人员命令提示或 Visual Studio 开发人员 PowerShell](/visualstudio/ide/reference/command-prompt-powershell)。
 
 Mage.exe 和 MageUI.exe 的两个版本包含在 Visual Studio 中 。 若要查看版本信息，请运行 MageUI.exe，依次选择“帮助”和“关于” 。 本文档介绍 Mage.exe 和 MageUI.exe 的 4.0.x.x 版本 。
 

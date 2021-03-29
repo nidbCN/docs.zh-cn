@@ -4,12 +4,12 @@ description: .NET SDK 可以理解的 MSBuild 属性和项的引用。
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: 18f2be734fa10e2fd4977166ab4334332b120a91
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: f6a49a0040bcb38dbaf433f6ea53bb8aad24c65b
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102604757"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759880"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>.NET SDK 项目的 MSBuild 引用
 
@@ -19,6 +19,8 @@ ms.locfileid: "102604757"
 > 此页面正在运行中，未列出 .NET SDK 的所有有用的 MSBuild 属性。 有关通用 MSBuild 属性的列表，请参阅[通用 MSBuild 属性](/visualstudio/msbuild/common-msbuild-project-properties)。
 
 ## <a name="framework-properties"></a>框架属性
+
+本节收录了以下 MSBuild 属性：
 
 - [TargetFramework](#targetframework)
 - [TargetFrameworks](#targetframeworks)
@@ -79,45 +81,18 @@ ms.locfileid: "102604757"
 </PropertyGroup>
 ```
 
-## <a name="publish-properties-items-and-metadata"></a>发布属性、项和元数据
+## <a name="publish-related-properties"></a>与发布相关的属性
+
+本节收录了以下 MSBuild 属性：
 
 - [AppendRuntimeIdentifierToOutputPath](#appendruntimeidentifiertooutputpath)
 - [AppendTargetFrameworkToOutputPath](#appendtargetframeworktooutputpath)
 - [CopyLocalLockFileAssemblies](#copylocallockfileassemblies)
-- [CopyToPublishDirectory](#copytopublishdirectory)
-- [LinkBase](#linkbase)
 - [PreserveCompilationContext](#preservecompilationcontext)
 - [PreserveCompilationReferences](#preservecompilationreferences)
 - [RuntimeIdentifier](#runtimeidentifier)
 - [RuntimeIdentifiers](#runtimeidentifiers)
-- [TrimmerRootAssembly](#trimmerrootassembly)
 - [UseAppHost](#useapphost)
-
-### <a name="copytopublishdirectory"></a>CopyToPublishDirectory
-
-MSBuild 项上的 `CopyToPublishDirectory` 元数据控制何时将项复制到发布目录。 允许的值为 `PreserveNewest`（仅在项已更改时复制项）、`Always`（始终复制项）和 `Never`（从不复制项）。 从性能角度来看，`PreserveNewest` 更为可取，因为它可实现增量生成。
-
-```xml
-<ItemGroup>
-  <None Update="appsettings.Development.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
-</ItemGroup>
-```
-
-### <a name="linkbase"></a>LinkBase
-
-对于项目目录及其子目录之外的项，发布目标使用项的[链接元数据](/visualstudio/msbuild/common-msbuild-item-metadata)来确定要将项复制到的位置。 `Link` 还将确定项目树外的项在 Visual Studio 的“解决方案资源管理器”窗口中的显示方式。
-
-如果没有为项目圆锥之外的项指定 `Link`，则默认为 `%(LinkBase)\%(RecursiveDir)%(Filename)%(Extension)`。 通过 `LinkBase`，可以为项目圆锥之外的项指定一个合理的基础文件夹。 基础文件夹下的文件夹层次结构通过 `RecursiveDir` 保留。 如果未指定 `LinkBase`，则将从 `Link` 路径中省略它。
-
-```xml
-<ItemGroup>
-  <Content Include="..\Extras\**\*.cs" LinkBase="Shared"/>
-</ItemGroup>
-```
-
-下图显示通过上一个项 `Include` glob 包含的文件在解决方案资源管理器中的显示方式。
-
-:::image type="content" source="media/solution-explorer-linkbase.png" alt-text="解决方案资源管理器，显示具有 LinkBase 元数据的项。":::
 
 ### <a name="appendtargetframeworktooutputpath"></a>AppendTargetFrameworkToOutputPath
 
@@ -203,18 +178,6 @@ MSBuild 项上的 `CopyToPublishDirectory` 元数据控制何时将项复制到�
 </PropertyGroup>
 ```
 
-### <a name="trimmerrootassembly"></a>TrimmerRootAssembly
-
-`TrimmerRootAssembly` 项允许通过[修整](../deploying/trim-self-contained.md)排除程序集。 修整是从打包的应用程序中删除运行时未使用部分的过程。 在某些情况下，修整可能会错误地删除所需的引用。
-
-以下 XML 通过修整排除 `System.Security` 程序集。
-
-```xml
-<ItemGroup>
-  <TrimmerRootAssembly Include="System.Security" />
-</ItemGroup>
-```
-
 ### <a name="useapphost"></a>UseAppHost
 
 `UseAppHost` 属性控制是否为部署创建本机可执行文件。 自包含部署需要本机可执行文件。
@@ -229,7 +192,9 @@ MSBuild 项上的 `CopyToPublishDirectory` 元数据控制何时将项复制到�
 
 有关部署的详细信息，请参阅 [.NET 应用程序部署](../deploying/index.md)。
 
-## <a name="compile-properties"></a>编译属性
+## <a name="compilation-related-properties"></a>与编译相关的属性
+
+本节收录了以下 MSBuild 属性：
 
 - [EmbeddedResourceUseDependentUponConvention](#embeddedresourceusedependentuponconvention)
 - [LangVersion](#langversion)
@@ -262,6 +227,8 @@ MSBuild 项上的 `CopyToPublishDirectory` 元数据控制何时将项复制到�
 有关详细信息，请参阅 [C# 语言版本控制](../../csharp/language-reference/configure-language-version.md#override-a-default)。
 
 ## <a name="default-item-inclusion-properties"></a>默认项包含属性
+
+本节收录了以下 MSBuild 属性：
 
 - [DefaultExcludesInProjectFolder](#defaultexcludesinprojectfolder)
 - [DefaultItemExcludes](#defaultitemexcludes)
@@ -335,6 +302,8 @@ MSBuild 项上的 `CopyToPublishDirectory` 元数据控制何时将项复制到�
 ```
 
 ## <a name="code-analysis-properties"></a>代码分析属性
+
+本节收录了以下 MSBuild 属性：
 
 - [AnalysisLevel](#analysislevel)
 - [AnalysisMode](#analysismode)
@@ -532,13 +501,12 @@ MSBuild 项上的 `CopyToPublishDirectory` 元数据控制何时将项复制到�
 </PropertyGroup>
 ```
 
-## <a name="reference-properties-and-items"></a>引用属性和项
+## <a name="reference-properties"></a>引用属性
+
+本节收录了以下 MSBuild 属性：
 
 - [AssetTargetFallback](#assettargetfallback)
 - [DisableImplicitFrameworkReferences](#disableimplicitframeworkreferences)
-- [PackageReference](#packagereference)
-- [ProjectReference](#projectreference)
-- [引用](#reference)
 - [与还原相关的属性](#restore-related-properties)
 
 ### <a name="assettargetfallback"></a>AssetTargetFallback
@@ -565,74 +533,6 @@ MSBuild 项上的 `CopyToPublishDirectory` 元数据控制何时将项复制到�
 </PropertyGroup>
 ```
 
-### <a name="packagereference"></a>PackageReference
-
-`PackageReference` 项定义了对 NuGet 包的引用。
-
-`Include` 属性指定包 ID。 `Version` 特性指定版本或版本范围。 若要了解如何指定最低版本、最高版本、范围或完全匹配，请参阅[版本范围](/nuget/concepts/package-versioning#version-ranges)。 还可以将[资产特性](#asset-attributes)添加到包引用中。
-
-以下示例中的项目文件片段引用 [System.Runtime](https://www.nuget.org/packages/System.Runtime/) 包。
-
-```xml
-<ItemGroup>
-  <PackageReference Include="System.Runtime" Version="4.3.0" />
-</ItemGroup>
-```
-
-有关详细信息，请参阅[项目文件中的包引用](/nuget/consume-packages/package-references-in-project-files)。
-
-#### <a name="asset-attributes"></a>资产特性
-
-可以将 `IncludeAssets`、`ExcludeAssets` 和 `PrivateAssets` 元数据添加到包引用中。
-
-| 属性 | 描述 |
-| - | - |
-| `IncludeAssets` | 指定应使用 `<PackageReference>` 指定的包中的哪些资产。 默认情况下，包含所有包资产。 |
-| `ExcludeAssets`| 指定不应使用 `<PackageReference>` 指定的包中的哪些资产。 |
-| `PrivateAssets` | 指定应使用 `<PackageReference>` 指定的包中的哪些资产，但不得将这些资产传递到下一个项目。 不存在此特性时，`Analyzers`、`Build` 和 `ContentFiles` 资产默认为私有。 |
-
-这些属性可以包含以下一个或多个项，如果列出多个项，则用分号 `;` 进行分隔：
-
-- `Compile` - 可对 lib 文件夹的内容进行编译  。
-- `Runtime` - 分发 runtime 文件夹的内容  。
-- `ContentFiles` - 使用 *contentfiles* 文件夹的内容。
-- `Build` - 使用 build 文件夹中的属性/目标  。
-- `Native` - 将本机资产内容复制到 output 文件夹  以供运行时使用。
-- `Analyzers` - 使用分析器。
-
-此属性也可以包含：
-
-- `None` - 不使用任何资产。
-- `All` - 使用所有资产。
-
-### <a name="projectreference"></a>ProjectReference
-
-`ProjectReference` 项定义对另一个项目的引用。 被引用的项目作为 NuGet 包依赖项添加，即它被视为与 `PackageReference` 相同。
-
-`Include` 特性指定项目路径。 还可以将下面的元数据添加到项目引用中：`IncludeAssets`、`ExcludeAssets` 和 `PrivateAssets`。
-
-以下示例中的项目文件片段引用名为 `Project2` 的项目。
-
-```xml
-<ItemGroup>
-  <ProjectReference Include="..\Project2.csproj" />
-</ItemGroup>
-```
-
-### <a name="reference"></a>参考
-
-`Reference` 项定义对程序集文件的引用。
-
-`Include` 特性用于指定文件名，`HintPath` 元数据用于指定程序集路径。
-
-```xml
-<ItemGroup>
-  <Reference Include="MyAssembly">
-    <HintPath>..\..\Assemblies\MyAssembly.dll</HintPath>
-  </Reference>
-</ItemGroup>
-```
-
 ### <a name="restore-related-properties"></a>与还原相关的属性
 
 还原被引用的包会安装它的所有直接依赖项，以及这些依赖项的全部依赖项。 可以通过指定 `RestorePackagesPath` 和 `RestoreIgnoreFailedSources` 等属性来自定义包还原。 若要详细了解这些属性和其他属性，请参阅[还原目标](/nuget/reference/msbuild-targets#restore-target)。
@@ -643,7 +543,7 @@ MSBuild 项上的 `CopyToPublishDirectory` 元数据控制何时将项复制到�
 </PropertyGroup>
 ```
 
-## <a name="run-properties"></a>运行属性
+## <a name="run-related-properties"></a>与运行相关的属性
 
 以下属性用于使用 [`dotnet run`](../tools/dotnet-run.md) 命令启动应用：
 
@@ -673,7 +573,9 @@ MSBuild 项上的 `CopyToPublishDirectory` 元数据控制何时将项复制到�
 </PropertyGroup>
 ```
 
-## <a name="hosting-properties"></a>承载属性
+## <a name="hosting-related-properties"></a>与托管相关的属性
+
+本节收录了以下 MSBuild 属性：
 
 - [EnableComHosting](#enablecomhosting)
 - [EnableDynamicLoading](#enabledynamicloading)
@@ -703,6 +605,86 @@ MSBuild 项上的 `CopyToPublishDirectory` 元数据控制何时将项复制到�
   <EnableDynamicLoading>true</EnableDynamicLoading>
 </PropertyGroup>
 ```
+
+## <a name="items"></a>项
+
+[MSBuild 项](/visualstudio/msbuild/msbuild-items)是生成系统的输入。 根据项的类型（即元素名称）指定项。 例如，`Compile` 和 `Reference` 是两个[常见项类型](/visualstudio/msbuild/common-msbuild-project-items)。 .NET SDK 提供了以下附加项类型：
+
+- [PackageReference](#packagereference)
+- [TrimmerRootAssembly](#trimmerrootassembly)
+
+你可以在这些项上使用任何标准的[项目属性](/visualstudio/msbuild/item-element-msbuild#attributes-and-elements)，例如 `Include` 和 `Update`。 使用 `Include` 添加新项，使用 `Update` 修改现有项。 例如，`Update` 通常用于修改由 .NET SDK 隐式添加的项。
+
+### <a name="packagereference"></a>PackageReference
+
+`PackageReference` 项定义了对 NuGet 包的引用。
+
+`Include` 属性指定包 ID。 `Version` 特性指定版本或版本范围。 若要了解如何指定最低版本、最高版本、范围或完全匹配，请参阅[版本范围](/nuget/concepts/package-versioning#version-ranges)。
+
+以下示例中的项目文件片段引用 [System.Runtime](https://www.nuget.org/packages/System.Runtime/) 包。
+
+```xml
+<ItemGroup>
+  <PackageReference Include="System.Runtime" Version="4.3.0" />
+</ItemGroup>
+```
+
+你还可以使用元数据（例如 `PrivateAssets`）来[控制依赖项资产](/nuget/consume-packages/package-references-in-project-files#controlling-dependency-assets)。
+
+```xml
+<ItemGroup>
+  <PackageReference Include="Contoso.Utility.UsefulStuff" Version="3.6.0">
+    <PrivateAssets>all</PrivateAssets>
+  </PackageReference>
+</ItemGroup>
+```
+
+有关详细信息，请参阅[项目文件中的包引用](/nuget/consume-packages/package-references-in-project-files)。
+
+### <a name="trimmerrootassembly"></a>TrimmerRootAssembly
+
+`TrimmerRootAssembly` 项允许通过[修整](../deploying/trim-self-contained.md)排除程序集。 修整是从打包的应用程序中删除运行时未使用部分的过程。 在某些情况下，修整可能会错误地删除所需的引用。
+
+以下 XML 通过修整排除 `System.Security` 程序集。
+
+```xml
+<ItemGroup>
+  <TrimmerRootAssembly Include="System.Security" />
+</ItemGroup>
+```
+
+## <a name="item-metadata"></a>项元数据
+
+除了标准的 [MSBuild 项目属性](/visualstudio/msbuild/item-element-msbuild#attributes-and-elements)之外，.net SDK 还提供以下项元数据标记：
+
+- [CopyToPublishDirectory](#copytopublishdirectory)
+- [LinkBase](#linkbase)
+
+### <a name="copytopublishdirectory"></a>CopyToPublishDirectory
+
+MSBuild 项上的 `CopyToPublishDirectory` 元数据控制何时将项复制到发布目录。 允许的值为 `PreserveNewest`（仅在项已更改时复制项）、`Always`（始终复制项）和 `Never`（从不复制项）。 从性能角度来看，`PreserveNewest` 更为可取，因为它可实现增量生成。
+
+```xml
+<ItemGroup>
+  <None Update="appsettings.Development.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+</ItemGroup>
+```
+
+### <a name="linkbase"></a>LinkBase
+
+对于项目目录及其子目录之外的项，发布目标使用项的[链接元数据](/visualstudio/msbuild/common-msbuild-item-metadata)来确定要将项复制到的位置。 `Link` 还将确定项目树外的项在 Visual Studio 的“解决方案资源管理器”窗口中的显示方式。
+
+如果没有为项目圆锥之外的项指定 `Link`，则默认为 `%(LinkBase)\%(RecursiveDir)%(Filename)%(Extension)`。 通过 `LinkBase`，可以为项目圆锥之外的项指定一个合理的基础文件夹。 基础文件夹下的文件夹层次结构通过 `RecursiveDir` 保留。 如果未指定 `LinkBase`，则将从 `Link` 路径中省略它。
+
+```xml
+<ItemGroup>
+  <Content Include="..\Extras\**\*.cs" LinkBase="Shared"/>
+</ItemGroup>
+```
+
+下图显示通过上一个项 `Include` glob 包含的文件在解决方案资源管理器中的显示方式。
+
+:::image type="content" source="media/solution-explorer-linkbase.png" alt-text="解决方案资源管理器，显示具有 LinkBase 元数据的项。":::
 
 ## <a name="see-also"></a>请参阅
 

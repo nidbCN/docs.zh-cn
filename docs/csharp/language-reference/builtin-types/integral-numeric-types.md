@@ -1,24 +1,16 @@
 ---
 title: 整型数值类型 - C# 参考
 description: 了解每种整型数值类型的范围、存储大小和用途。
-ms.date: 10/22/2019
+ms.date: 03/17/2021
 f1_keywords:
-- byte
 - byte_CSharpKeyword
 - sbyte_CSharpKeyword
-- sbyte
-- short
 - short_CSharpKeyword
-- ushort
 - ushort_CSharpKeyword
 - int_CSharpKeyword
-- int
-- uint
 - uint_CSharpKeyword
 - long_CSharpKeyword
-- long
 - ulong_CSharpKeyword
-- ulong
 helpviewer_keywords:
 - integral types, C#
 - Visual C#, integral types
@@ -32,12 +24,12 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 51ea64065ea8422e5885022105545780bc916f06
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 02b1451dc3aa22dfe27181b0e9160d198349107c
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739010"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760166"
 ---
 # <a name="integral-numeric-types--c-reference"></a>整型数值类型（C# 参考）
 
@@ -57,15 +49,21 @@ C# 支持以下预定义整型类型：
 |`uint`|0 到 4,294,967,295|无符号的 32 位整数|<xref:System.UInt32?displayProperty=nameWithType>|
 |`long`|-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807|64 位带符号整数|<xref:System.Int64?displayProperty=nameWithType>|
 |`ulong`|0 到 18,446,744,073,709,551,615|无符号 64 位整数|<xref:System.UInt64?displayProperty=nameWithType>|
+|`nint`|取决于平台|带符号的 32 位或 64 位整数|<xref:System.IntPtr?displayProperty=nameWithType>|
+|`nuint`|取决于平台|无符号的 32 位或 64 位整数|<xref:System.UIntPtr?displayProperty=nameWithType>|
 
-在上表中，最左侧列中的每个 C# 类型关键字都是相应 .NET 类型的别名。 它们是可互换的。 例如，以下声明声明了相同类型的变量：
+在除最后两行之外的所有表行中，最左侧列中的每个 C# 类型关键字都是相应 .NET 类型的别名。 关键字和 .NET 类型名称是可互换的。 例如，以下声明声明了相同类型的变量：
 
 ```csharp
 int a = 123;
 System.Int32 b = 123;
 ```
 
-每个整型类型的默认值都为零 `0`。 每个整型类型都有 `MinValue` 和 `MaxValue` 常量，提供该类型的最小值和最大值。
+表的最后两行中的 `nint` 和 `nuint` 类型是本机大小的整数。 在内部它们由所指示的 .NET 类型表示，但在任意情况下关键字和 .NET 类型都是不可互换的。 编译器为 `nint` 和 `nuint` 的整数类型提供操作和转换，而不为指针类型 `System.IntPtr` 和 `System.UIntPtr` 提供。 有关详细信息，请参阅 [`nint` 和 `nuint` 类型](nint-nuint.md)。
+
+有关本机大小的整数类型的信息，请参阅 [`nint` 和 `nuint`](nint-nuint.md)。
+
+每个整型类型的默认值都为零 `0`。 除本机大小的类型外，每个整型类型都有 `MinValue` 和 `MaxValue` 常量，提供该类型的最小值和最大值。
 
 <xref:System.Numerics.BigInteger?displayProperty=nameWithType> 结构用于表示没有上限或下限的带符号整数。
 
@@ -85,7 +83,7 @@ var hexLiteral = 0x2A;
 var binaryLiteral = 0b_0010_1010;
 ```
 
-前面的示例还演示了如何将 `_` 用作数字分隔符  （从 C# 7.0 开始提供支持）。 可以将数字分隔符用于所有类型的数字文本。
+前面的示例还演示了如何将 `_` 用作数字分隔符（从 C# 7.0 开始提供支持）。 可以将数字分隔符用于所有类型的数字文本。
 
 整数文本的类型由其后缀确定，如下所示：
 
@@ -100,7 +98,7 @@ var binaryLiteral = 0b_0010_1010;
 
 如果由整数字面量所表示的值超出了 <xref:System.UInt64.MaxValue?displayProperty=nameWithType>，则将出现编译器错误 [CS1021](../../misc/cs1021.md)。
 
-如果确定的整数文本的类型为 `int`，且文本所表示的值位于目标类型的范围内，则该值可以隐式转换为 `sbyte`、`byte`、`short`、`ushort`、`uint` 或 `ulong`：
+如果确定的整数文本的类型为 `int`，且文本所表示的值位于目标类型的范围内，则该值可以隐式转换为 `sbyte`、`byte`、`short`、`ushort`、`uint`、`ulong`、`nint` 或 `nuint`：
 
 ```csharp
 byte a = 17;

@@ -2,12 +2,12 @@
 title: .NET 中的符号
 description: .NET 中的符号和可移植 PDB 简介
 ms.date: 02/08/2021
-ms.openlocfilehash: da59a07166cd1f73160da8d9ac53b5823bf13e7b
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 8f217bf8b62ff12a6ea1dc6a5b14b34d8037dd2d
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102108207"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759893"
 ---
 # <a name="symbols"></a>符号
 
@@ -39,7 +39,7 @@ PDB 文件是编译器生成的辅助文件，目的是向其他工具（尤其�
 
 * 可能存在不支持可移植 PDB 的更低版本的探查器。
 
-若要在不支持可移植 PDB 的工具上使用这些格式，可尝试使用 Pdb2Pdb[https://github.com/dotnet/symreader-converter#pdb2pdb ]，它会在可移植 PDB 和 Windows PDB 之间进行转换。
+若要在不支持可移植 PDB 的工具上使用这些格式，可尝试使用 [Pdb2Pdb](https://github.com/dotnet/symreader-converter#pdb2pdb)，它会在可移植 PDB 和 Windows PDB 之间进行转换。
 
 ### <a name="support-for-windows-pdbs"></a>支持 Windows PDB
 

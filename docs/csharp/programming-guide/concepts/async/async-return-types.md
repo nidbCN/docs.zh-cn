@@ -3,12 +3,12 @@ title: 异步返回类型 (C#)
 description: 了解在 C# 中异步方法可以具有的返回类型，以及每种类型的代码示例和其他资源。
 ms.date: 08/19/2020
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 71e560ed8ee0cae14da396e5ea2f3ab29611ebab
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 53eb3bedebb99cd829101eee4c2e190c0fb952bf
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811491"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653447"
 ---
 # <a name="async-return-types-c"></a>异步返回类型 (C#)
 
@@ -38,12 +38,7 @@ ms.locfileid: "88811491"
 
 :::code language="csharp" source="snippets/async-return-types/async-returns2.cs" id="TaskReturn":::
 
-通过使用 await 语句而不是 await 表达式等待 `WaitAndApologizeAsync`，类似于返回 void 的同步方法的调用语句。 Await 运算符的应用程序在这种情况下不生成值。 若要阐明术语语句和表达式，请参阅下表：
-
-| Await 种类 | 示例                                      | 类型                                   |
-|------------|----------------------------------------------|----------------------------------------|
-| 语句  | `await SomeTaskMethodAsync()`                | <xref:System.Threading.Tasks.Task>     |
-| 表达式 | `T result = await SomeTaskMethodAsync<T>();` | <xref:System.Threading.Tasks.Task%601> |
+通过使用 await 语句而不是 await 表达式等待 `WaitAndApologizeAsync`，类似于返回 void 的同步方法的调用语句。 Await 运算符的应用程序在这种情况下不生成值。 当 `await` 的右操作数是 <xref:System.Threading.Tasks.Task%601> 时，`await` 表达式生成的结果为 `T`。 当 `await` 的右操作数是 <xref:System.Threading.Tasks.Task> 时，`await` 及其操作数是一个语句。
 
 可从 await 运算符的应用程序中分离对 `WaitAndApologizeAsync` 的调用，如以下代码所示。 但是，请记住，`Task` 没有 `Result` 属性，并且当 await 运算符应用于 `Task` 时不产生值。
 
@@ -84,13 +79,15 @@ ms.locfileid: "88811491"
 
 ## <a name="generalized-async-return-types-and-valuetasktresult"></a>通用的异步返回类型和 ValueTask\<TResult\>
 
-从 C# 7.0 开始，异步方法可返回任何具有可访问的 `GetAwaiter` 方法的类型。
+从 C# 7.0 起，异步方法可以返回具有返回 awaiter 类型实例的可访问 `GetAwaiter` 方法的所有类型。 此外，`GetAwaiter` 方法返回的类型必须具有 <xref:System.Runtime.CompilerServices.AsyncMethodBuilderAttribute?displayProperty=nameWithType> 特性。 有关详细信息，请参阅[类似任务的返回类型](../../../../../_csharplang/proposals/csharp-7.0/task-types.md)的功能说明。
 
-<xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 是引用类型，因此，性能关键路径中的内存分配会对性能产生负面影响，尤其当分配出现在紧凑循环中时。 支持通用返回类型意味着可返回轻量值类型（而不是引用类型），从而避免额外的内存分配。
+此功能与 [awaitable 表达式](../../../../../_csharplang/spec/expressions.md#awaitable-expressions)相辅相成，后者描述 `await` 操作数的要求。 编译器可以使用通用异步返回类型生成返回不同类型的 `async` 方法。 通用异步返回类型通过 .NET 库实现性能改进。 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 是引用类型，因此，性能关键路径中的内存分配会对性能产生负面影响，尤其当分配出现在紧凑循环中时。 支持通用返回类型意味着可返回轻量值类型（而不是引用类型），从而避免额外的内存分配。
 
 .NET 提供 <xref:System.Threading.Tasks.ValueTask%601?displayProperty=nameWithType> 结构作为返回任务的通用值的轻量实现。 要使用 <xref:System.Threading.Tasks.ValueTask%601?displayProperty=nameWithType> 类型，必须向项目添加 `System.Threading.Tasks.Extensions` NuGet 包。 如下示例使用 <xref:System.Threading.Tasks.ValueTask%601> 结构检索两个骰子的值。
 
 :::code language="csharp" source="snippets/async-return-types/async-valuetask.cs":::
+
+编写通用异步返回类型是一种高级方案，旨在用于非常特定的环境中。 请考虑改用 `Task`、`Task<T>` 和 `ValueTask<T>` 类型，它们覆盖了大多数的异步代码方案。
 
 ## <a name="async-streams-with-iasyncenumerablet"></a>使用 IAsyncEnumerable\<T\> 的异步流
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: 1a9806cd71f9990d9ce70b35b3af760a22347003
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 69e79f4d2a75117f74428fdeee7684048d218e27
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102258798"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104654032"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe（许可证编译器）
 
@@ -28,7 +28,7 @@ ms.locfileid: "102258798"
   
  在生成项目时，如果使用许可证编译器，则不支持在 32 位与 64 位之间进行交叉编译。 这是因为，许可证编译器必须加载程序集，而不允许从 32 位应用程序加载 64 位程序集，反之亦然。 在这种情况下，使用许可证编译器从命令行手动编译许可证，并指定相应的体系结构。  
   
- 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用[开发人员命令行 shell](/visualstudio/ide/reference/command-prompt-powershell)。  
+ 此工具会自动随 Visual Studio 一起安装。 若要运行该工具，请使用 [Visual Studio 开发人员命令提示或 Visual Studio 开发人员 PowerShell](/visualstudio/ide/reference/command-prompt-powershell)。  
   
  在命令提示符处，键入以下内容：  
   
