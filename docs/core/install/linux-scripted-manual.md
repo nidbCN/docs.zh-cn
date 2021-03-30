@@ -4,12 +4,12 @@ description: 演示如何在 Linux 上无包管理器的情况下安装 .NET SDK
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: 414246e472c3d58a6768311bd7a4635100f3b618
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 6840814627be0124d7b3855f08a433eab76eac4a
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102105175"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873908"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-manually"></a>手动安装 .NET SDK 或 .NET Runtime
 
@@ -45,7 +45,7 @@ ms.locfileid: "102105175"
 - [SLES](linux-sles.md#dependencies)
 - [Ubuntu](linux-ubuntu.md#dependencies)
 
-有关依赖项的一般信息，请参阅[独立式 Linux 应用](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md)。
+有关依赖项的一般信息，请参阅[独立式 Linux 应用](https://github.com/dotnet/core/blob/main/Documentation/self-contained-linux-apps.md)。
 
 ### <a name="rpm-dependencies"></a>RPM 依赖项
 

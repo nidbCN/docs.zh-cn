@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: bab14ec385ca6e4d71919ddaebd6d49ee8d002e0
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: f401af3ec7f1fc729e6f3af005acbde2ad61f586
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102104986"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875832"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0 的新增功能
 
@@ -31,8 +31,8 @@ C# 8.0 也是该发布的一部分，包含[可为空引用类型](../../csharp/
 
 与 C# 8.0 语言功能相关的教程：
 
-- [教程：使用可为空和不可为空引用类型更清晰地表达设计意图](../../csharp/tutorials/nullable-reference-types.md)
-- [教程：使用 C# 8.0 和 .NET Core 3.0 生成和使用异步流](../../csharp/tutorials/generate-consume-asynchronous-stream.md)
+- [教程：使用可为空和不可为空引用类型更清晰地表达设计意图](../../csharp/whats-new/tutorials/nullable-reference-types.md)
+- [教程：使用 C# 8.0 和 .NET Core 3.0 生成和使用异步流](../../csharp/whats-new/tutorials/generate-consume-asynchronous-stream.md)
 - [教程：使用模式匹配来构建类型驱动和数据驱动的算法](../../csharp/tutorials/pattern-matching.md)
 
 添加了语言增强功能，以支持下面详细说明的 API 功能：
@@ -114,7 +114,7 @@ C# 8.0 也是该发布的一部分，包含[可为空引用类型](../../csharp/
 dotnet publish -r win10-x64 -p:PublishSingleFile=true
 ```
 
-有关单文件发布的详细信息，请参阅[单文件捆绑程序设计文档](https://github.com/dotnet/designs/blob/master/accepted/2020/single-file/design.md)。
+有关单文件发布的详细信息，请参阅[单文件捆绑程序设计文档](https://github.com/dotnet/designs/blob/main/accepted/2020/single-file/design.md)。
 
 ### <a name="assembly-linking"></a>程序集链接
 
@@ -146,7 +146,7 @@ dotnet publish -r <rid> -c Release
 
 ### <a name="tiered-compilation"></a>分层编译
 
-.NET Core 3.0 中默认启用了[分层编译](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation.md) (TC)。 此功能使运行时能够更适应地使用实时 (JIT) 编译器来实现更好的性能。
+.NET Core 3.0 中默认启用了[分层编译](https://github.com/dotnet/runtime/blob/main/docs/design/features/tiered-compilation.md) (TC)。 此功能使运行时能够更适应地使用实时 (JIT) 编译器来实现更好的性能。
 
 分层编译的主要优势是提供两种实现实时的方法，可在低质量快速层或高质量慢速层中编译。 质量是指方法的优化程度。 这有助于提高应用程序在从启动到稳定状态的各个执行阶段的性能。 禁用分层编译后，每种方法都以同一种方式进行编译，这种方式倾向于牺牲启动性能来保证稳定状态性能。
 
@@ -329,11 +329,11 @@ Visual Studio 2019 添加了适用于 .NET Core 3.0 Windows 窗体和 WPF 的“
 
 与将 *mscoree.dll* 用作 COM 服务器的 .NET Framework 不同，.NET Core 将在生成 COM 组件时向 *bin* 目录添加本机启动程序 dll。
 
-有关如何创建 COM 组件并使用它的示例，请参阅 [COM 演示](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo)。
+有关如何创建 COM 组件并使用它的示例，请参阅 [COM 演示](https://github.com/dotnet/samples/tree/main/core/extensions/COMServerDemo)。
 
 ### <a name="windows-native-interop"></a>Windows 本机互操作
 
-Windows 提供丰富的本机 API，包括平面 C API、COM 和 WinRT 的形式。 .NET Core 支持 **P/Invoke**, .NET Core 3.0 则增加了 **CoCreate COM API** 和 **Activate WinRT API** 的功能。 有关代码示例，请参阅 [Excel 演示](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo)。
+Windows 提供丰富的本机 API，包括平面 C API、COM 和 WinRT 的形式。 .NET Core 支持 **P/Invoke**, .NET Core 3.0 则增加了 **CoCreate COM API** 和 **Activate WinRT API** 的功能。 有关代码示例，请参阅 [Excel 演示](https://github.com/dotnet/samples/tree/main/core/extensions/ExcelDemo)。
 
 ### <a name="msix-deployment"></a>MSIX 部署
 
@@ -372,7 +372,7 @@ Windows 提供丰富的本机 API，包括平面 C API、COM 和 WinRT 的形式
 - [System.Device.Gpio](https://www.nuget.org/packages/System.Device.Gpio)
 - [Iot.Device.Bindings](https://www.nuget.org/packages/Iot.Device.Bindings)
 
-GPIO 包包括用于 *GPIO*、*SPI*、*I2C* 和 *PWM* 设备的 API。 IoT 绑定包包括设备绑定。 有关详细信息，请参阅[设备 GitHub 存储库](https://github.com/dotnet/iot/blob/master/src/devices/)。
+GPIO 包包括用于 *GPIO*、*SPI*、*I2C* 和 *PWM* 设备的 API。 IoT 绑定包包括设备绑定。 有关详细信息，请参阅[设备 GitHub 存储库](https://github.com/dotnet/iot/blob/main/src/devices/)。
 
 ### <a name="arm64-linux-support"></a>ARM64 Linux 支持
 
@@ -455,7 +455,7 @@ Console.WriteLine($"{a[i1]}, {a[i2]}"); // "3, 6"
 var slice = a[i1..i2]; // { 3, 4, 5 }
 ```
 
-有关详细信息，请参阅[范围和索引教程](../../csharp/tutorials/ranges-indexes.md)。
+有关详细信息，请参阅[范围和索引教程](../../csharp/whats-new/tutorials/ranges-indexes.md)。
 
 ### <a name="async-streams"></a>异步流
 
@@ -475,7 +475,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 除了能够 `await foreach`，还可以创建异步迭代器，例如，一个返回 `IAsyncEnumerable/IAsyncEnumerator` 的迭代器，可以在其中进行 `await` 和 `yield` 操作。 对于需要处理的对象，可以使用各种 BCL 类型（如 `Stream` 和 `Timer`）实现的 `IAsyncDisposable`。
 
-有关详细信息，请参阅[异步流教程](../../csharp/tutorials/generate-consume-asynchronous-stream.md)。
+有关详细信息，请参阅[异步流教程](../../csharp/whats-new/tutorials/generate-consume-asynchronous-stream.md)。
 
 ### <a name="ieee-floating-point"></a>IEEE 浮点
 
@@ -516,7 +516,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 在适当的情况下，.NET 库已开始使用这些指令来改进性能。
 
-有关详细信息，请参阅 [.NET Platform Dependent Intrinsics](https://github.com/dotnet/designs/blob/master/accepted/2018/platform-intrinsics.md)（.NET 平台相关内部函数）。
+有关详细信息，请参阅 [.NET Platform Dependent Intrinsics](https://github.com/dotnet/designs/blob/main/accepted/2018/platform-intrinsics.md)（.NET 平台相关内部函数）。
 
 ### <a name="improved-net-core-version-apis"></a>改进的 .NET Core 版本 API
 

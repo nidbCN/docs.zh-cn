@@ -4,12 +4,12 @@ description: 了解从本机代码托管 .NET Core 运行时，以支持需要�
 author: mjrousos
 ms.topic: how-to
 ms.date: 12/21/2018
-ms.openlocfilehash: d7568c377e09b95fbc863610ec6bdc444f924976
-ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
+ms.openlocfilehash: a05e1e1d09f1f988ad8354f98521681e3f6cbea8
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104652706"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875845"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>编写自定义 .NET Core 主机以从本机代码控制 .NET 运行时
 
@@ -27,24 +27,24 @@ ms.locfileid: "104652706"
 
 ## <a name="hosting-apis"></a>承载 API
 
-可以使用两种不同的 API 来承载 .NET Core。 本文（及其相关的[示例](https://github.com/dotnet/samples/tree/master/core/hosting)）涵盖这两个选项。
+可以使用两种不同的 API 来承载 .NET Core。 本文（及其相关的[示例](https://github.com/dotnet/samples/tree/main/core/hosting)）涵盖这两个选项。
 
 * 在 .NET Core 3.0 及更高版本中托管 .NET Core 运行时的首选方法是借助 `nethost` 和 `hostfxr` 库的 API。 由这些入口点来处理查找和设置运行时进行初始化所遇到的复杂性；通过它们，还可启动托管应用程序和调用静态托管方法。
-* 托管低于 .NET Core 3.0 的 .NET Core 运行时的首选方法是使用 [`coreclrhost.h`](https://github.com/dotnet/runtime/blob/master/src/coreclr/hosts/inc/coreclrhost.h) API。 此 API 公开一些函数，用于轻松地启动和停止运行时并调用托管代码（通过启动托管 exe 或通过调用静态托管方法）。
+* 托管低于 .NET Core 3.0 的 .NET Core 运行时的首选方法是使用 [`coreclrhost.h`](https://github.com/dotnet/runtime/blob/main/src/coreclr/hosts/inc/coreclrhost.h) API。 此 API 公开一些函数，用于轻松地启动和停止运行时并调用托管代码（通过启动托管 exe 或通过调用静态托管方法）。
 
 ## <a name="sample-hosts"></a>示例主机
 
-有关展示在下面的教程中所述步骤的[示例主机](https://github.com/dotnet/samples/tree/master/core/hosting)，请访问 dotnet/samples GitHub 存储库。 该示例中的注释清楚地将这些教程中已编号的步骤与它们在示例中的执行位置关联。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#view-and-download-samples)。
+有关展示在下面的教程中所述步骤的[示例主机](https://github.com/dotnet/samples/tree/main/core/hosting)，请访问 dotnet/samples GitHub 存储库。 该示例中的注释清楚地将这些教程中已编号的步骤与它们在示例中的执行位置关联。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#view-and-download-samples)。
 
 请记住，示例主机的用途在于提供学习指导，在纠错方面不甚严谨，其重在可读性而非效率。
 
 ## <a name="create-a-host-using-nethosth-and-hostfxrh"></a>使用 `nethost.h` 和 `hostfxr.h` 创建主机
 
-以下步骤详细说明如何使用 `nethost` 和 `hostfxr` 库在本机应用程序中启动 .NET Core 运行时并调用托管静态方法。 [示例](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithHostFxr)使用了随 .NET SDK 一起安装的 `nethost` 标头和库，以及 [dotnet/runtime](https://github.com/dotnet/runtime) 存储库中的 [`coreclr_delegates.h`](https://github.com/dotnet/runtime/blob/main/src/native/corehost/coreclr_delegates.h) 和 [`hostfxr.h`](https://github.com/dotnet/runtime/blob/master/src/native/corehost/hostfxr.h) 文件的副本。
+以下步骤详细说明如何使用 `nethost` 和 `hostfxr` 库在本机应用程序中启动 .NET Core 运行时并调用托管静态方法。 [示例](https://github.com/dotnet/samples/tree/main/core/hosting/HostWithHostFxr)使用了随 .NET SDK 一起安装的 `nethost` 标头和库，以及 [dotnet/runtime](https://github.com/dotnet/runtime) 存储库中的 [`coreclr_delegates.h`](https://github.com/dotnet/runtime/blob/main/src/native/corehost/coreclr_delegates.h) 和 [`hostfxr.h`](https://github.com/dotnet/runtime/blob/main/src/native/corehost/hostfxr.h) 文件的副本。
 
 ### <a name="step-1---load-hostfxr-and-get-exported-hosting-functions"></a>步骤 1 - 加载 `hostfxr` 并获取导出的托管函数
 
-`nethost` 库提供用于查找 `hostfxr` 库的 `get_hostfxr_path` 函数。 `hostfxr` 库公开用于托管 .NET Core 运行时的函数。 函数的完整列表可在 [`hostfxr.h`](https://github.com/dotnet/runtime/blob/master/src/native/corehost/hostfxr.h) 和[本机托管设计文档](https://github.com/dotnet/runtime/blob/master/docs/design/features/native-hosting.md)中找到。 示例和本教程使用以下函数：
+`nethost` 库提供用于查找 `hostfxr` 库的 `get_hostfxr_path` 函数。 `hostfxr` 库公开用于托管 .NET Core 运行时的函数。 函数的完整列表可在 [`hostfxr.h`](https://github.com/dotnet/runtime/blob/main/src/native/corehost/hostfxr.h) 和[本机托管设计文档](https://github.com/dotnet/runtime/blob/main/docs/design/features/native-hosting.md)中找到。 示例和本教程使用以下函数：
 
 * `hostfxr_initialize_for_runtime_config`：初始化主机上下文，并使用指定的运行时配置准备初始化 .NET Core 运行时。
 * `hostfxr_get_runtime_delegate`：获取对运行时功能的委托。
@@ -82,7 +82,7 @@ public delegate int ComponentEntryPoint(IntPtr args, int sizeBytes);
 
 ## <a name="create-a-host-using-coreclrhosth"></a>使用 `coreclrhost.h` 创建主机
 
-以下步骤详细说明如何使用 `coreclrhost.h` API 在本机应用程序中启动 .NET Core 运行时并调用托管静态方法。 本文档中的代码片段使用一些特定于 Windows 的 API，但是[完整示例主机](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithCoreClrHost)同时显示 Windows 和 Linux 的代码路径。
+以下步骤详细说明如何使用 `coreclrhost.h` API 在本机应用程序中启动 .NET Core 运行时并调用托管静态方法。 本文档中的代码片段使用一些特定于 Windows 的 API，但是[完整示例主机](https://github.com/dotnet/samples/tree/main/core/hosting/HostWithCoreClrHost)同时显示 Windows 和 Linux 的代码路径。
 
 [ corerun 主机](https://github.com/dotnet/runtime/tree/main/src/coreclr/hosts/corerun)显示使用 `coreclrhost.h` 的更为复杂的真实跨平台托管示例。
 

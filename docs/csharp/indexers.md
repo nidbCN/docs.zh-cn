@@ -4,16 +4,16 @@ description: 了解 C# 索引器以及它们如何实现索引属性，这些属
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 1369740404c500d8b44b4706959bf4640c26aa2d
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 2efd8735587c35be8e89dba7499a0a661796067d
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656106"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875780"
 ---
 # <a name="indexers"></a>索引器
 
-*索引器*类似于属性。 很多时候，创建索引器与创建[属性](properties.md)所使用的编程语言特性是一样的。 索引器使属性可以被索引：使用一个或多个参数引用的属性。 这些参数为某些值集合提供索引。
+*索引器* 类似于属性。 很多时候，创建索引器与创建[属性](properties.md)所使用的编程语言特性是一样的。 索引器使属性可以被索引：使用一个或多个参数引用的属性。 这些参数为某些值集合提供索引。
 
 ## <a name="indexer-syntax"></a>索引器语法
 
@@ -46,7 +46,7 @@ public int this[string key]
 如果类型的 API 对集合进行建模，并且为集合定义了参数，则需要在此类型中定义索引器。 索引器可能直接映射到属于 .NET Core 框架一部分的集合类型，也可能不。 除了对集合进行建模，类型还有其他职责。
 通过索引器可提供与类型的抽象化匹配的 API，而无需公开如何存储或计算此抽象化的值的内部细节。
 
-让我们演练一些使用索引器的常见场景。 可以访问[索引器的示例文件夹](https://github.com/dotnet/samples/tree/master/csharp/indexers)。 有关下载说明，请参阅[示例和教程](../samples-and-tutorials/index.md#view-and-download-samples)。
+让我们演练一些使用索引器的常见场景。 可以访问[索引器的示例文件夹](https://github.com/dotnet/samples/tree/main/csharp/indexers)。 有关下载说明，请参阅[示例和教程](../samples-and-tutorials/index.md#view-and-download-samples)。
 
 ### <a name="arrays-and-vectors"></a>数组和矢量
 

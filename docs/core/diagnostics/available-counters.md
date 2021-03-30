@@ -3,12 +3,12 @@ title: .NET 中的已知 EventCounters
 description: 查看 .NET 运行时和库发布的 EventCounters。
 ms.topic: reference
 ms.date: 12/17/2020
-ms.openlocfilehash: db7417993786eae18c9d7b6cc3bb79284d543dd3
-ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
+ms.openlocfilehash: aad4fa8b33ebf0dcb7803c77b11fb99a6b6d7b83
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2021
-ms.locfileid: "103189938"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872829"
 ---
 # <a name="well-known-eventcounters-in-net"></a>.NET 中的已知 EventCounters
 
@@ -46,7 +46,7 @@ ms.locfileid: "103189938"
 
 ## <a name="microsoftaspnetcorehosting-counters"></a>“Microsoft.AspNetCore.Hosting”计数器
 
-以下计数器作为 [ASP.NET Core](/aspnet/core) 的一部分发布，并在 [`HostingEventSource.cs`](https://github.com/dotnet/aspnetcore/blob/master/src/Hosting/Hosting/src/Internal/HostingEventSource.cs) 中进行维护。
+以下计数器作为 [ASP.NET Core](/aspnet/core) 的一部分发布，并在 [`HostingEventSource.cs`](https://github.com/dotnet/aspnetcore/blob/main/src/Hosting/Hosting/src/Internal/HostingEventSource.cs) 中进行维护。
 
 | 计数器 | 说明 |
 |--|--|
@@ -57,7 +57,7 @@ ms.locfileid: "103189938"
 
 ## <a name="microsoftaspnetcorehttpconnections-counters"></a>“Microsoft.AspNetCore.Http.Connections”计数器
 
-以下计数器作为 [ASP.NET Core SignalR](/aspnet/core/signalr/introduction) 的一部分发布，并在 [`HttpConnectionsEventSource.cs`](https://github.com/dotnet/aspnetcore/blob/master/src/SignalR/common/Http.Connections/src/Internal/HttpConnectionsEventSource.cs) 中进行维护。
+以下计数器作为 [ASP.NET Core SignalR](/aspnet/core/signalr/introduction) 的一部分发布，并在 [`HttpConnectionsEventSource.cs`](https://github.com/dotnet/aspnetcore/blob/main/src/SignalR/common/Http.Connections/src/Internal/HttpConnectionsEventSource.cs) 中进行维护。
 
 | 计数器 | 说明 |
 |--|--|
@@ -69,7 +69,7 @@ ms.locfileid: "103189938"
 
 ## <a name="microsoft-aspnetcore-server-kestrel-counters"></a>“Microsoft-AspNetCore-Server-Kestrel”计数器
 
-以下计数器作为 [ASP.NET Core Kestrel Web 服务器](/aspnet/core/fundamentals/servers/kestrel)的一部分发布，并在 [`KestrelEventSource.cs`](https://github.com/dotnet/aspnetcore/blob/master/src/Servers/Kestrel/Core/src/Internal/Infrastructure/KestrelEventSource.cs) 中进行维护。
+以下计数器作为 [ASP.NET Core Kestrel Web 服务器](/aspnet/core/fundamentals/servers/kestrel)的一部分发布，并在 [`KestrelEventSource.cs`](https://github.com/dotnet/aspnetcore/blob/main/src/Servers/Kestrel/Core/src/Internal/Infrastructure/KestrelEventSource.cs) 中进行维护。
 
 | 计数器 | 说明 |
 |--|--|

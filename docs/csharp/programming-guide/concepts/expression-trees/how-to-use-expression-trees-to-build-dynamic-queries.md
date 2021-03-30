@@ -3,12 +3,12 @@ title: 基于运行时状态进行查询 (C#)
 description: 介绍了可由代码用来根据运行时状态，通过改变 LINQ 方法调用或传入这些方法的表达式树来进行动态查询的各种技术。
 ms.date: 02/11/2021
 ms.assetid: 52cd44dd-a3ec-441e-b93a-4eca388119c7
-ms.openlocfilehash: 5e015bbc69b61b783abd7eba9cfcf13c29d5c3be
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: 1a3bbe8c9ba6752c541d69502b7c4ac020fd9708
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100581935"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876716"
 ---
 # <a name="querying-based-on-runtime-state-c"></a>基于运行时状态进行查询 (C#)
 
@@ -48,7 +48,7 @@ ms.locfileid: "100581935"
 
 ## <a name="call-additional-linq-methods"></a>调用其他 LINQ 方法
 
-通常，<xref:System.Linq.Queryable> 的[内置 LINQ 方法](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Linq.Queryable/src/System/Linq/Queryable.cs)执行两个步骤：
+通常，<xref:System.Linq.Queryable> 的[内置 LINQ 方法](https://github.com/dotnet/runtime/blob/main/src/libraries/System.Linq.Queryable/src/System/Linq/Queryable.cs)执行两个步骤：
 
 * 在表示方法调用的 <xref:System.Linq.Expressions.MethodCallExpression> 中包装当前的表达式树。
 * 将包装的表达式树传递回提供程序，以便通过提供程序的 <xref:System.Linq.IQueryProvider.Execute%2A?displayProperty=nameWithType> 方法返回值；或通过 <xref:System.Linq.IQueryProvider.CreateQuery%2A?displayProperty=nameWithType> 方法返回转换后的查询对象。

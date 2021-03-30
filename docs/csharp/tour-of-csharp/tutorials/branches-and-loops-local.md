@@ -2,12 +2,12 @@
 title: 分支和循环 - C# 教程简介
 description: 在本教程的“分支和循环”中，将编写 C# 代码以研究支持条件分支和循环重复执行语句的语言语法。
 ms.date: 02/05/2021
-ms.openlocfilehash: c609286f0c60432f9df7c1174f6fda699e2d0fbc
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: ae57b370022bfc86200ca20a913d44f64e46d68d
+ms.sourcegitcommit: 5ce37699c2a51ed173171813be68ef7577b1aba5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100626605"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104881115"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>通过分支和循环语句了解条件逻辑
 
@@ -278,7 +278,7 @@ for (int row = 1; row < 11; row++)
 - `if` 语句中的条件可用于判断是否应将数字计入总和。
 - `for` 循环有助于对 1 到 20 中的所有数字重复执行一系列步骤。
 
-亲自试一试吧。 然后，看看自己是怎么做到的。 你应获取的答案为 63。 通过[在 GitHub 上查看已完成的代码](https://github.com/dotnet/samples/tree/master/csharp/branches-quickstart/Program.cs#L46-L54)，你可以看到一个可能的答案。
+亲自试一试吧。 然后，看看自己是怎么做到的。 你应获取的答案为 63。 通过[在 GitHub 上查看已完成的代码](https://github.com/dotnet/samples/blob/main/csharp/branches-quickstart/Program.cs#L87-L95)，你可以看到一个可能的答案。
 
 已完成“分支和循环”教程。
 

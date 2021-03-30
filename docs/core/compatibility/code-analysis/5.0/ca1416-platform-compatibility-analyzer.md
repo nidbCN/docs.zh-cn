@@ -2,12 +2,12 @@
 title: 中断性变更：CA1416：平台兼容性
 description: 了解 .NET 5 中因启用代码分析规则 CA1416 而导致的中断性变更。
 ms.date: 09/29/2020
-ms.openlocfilehash: fa03e1f0bfa8438b3b2899aaf7c97f42533c7c02
-ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
+ms.openlocfilehash: b1d8c9115d5ad0bc97b6ba68cc058de195d01584
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103477546"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874350"
 ---
 # <a name="warning-ca1416-platform-compatibility"></a>警告 CA1416：平台兼容性
 
@@ -111,7 +111,7 @@ public void PlayCMajor()
 
 对于 Windows 平台：
 
-- <https://github.com/dotnet/designs/blob/master/accepted/2020/windows-specific-apis/windows-specific-apis.md> 上列出的所有 API。
+- <https://github.com/dotnet/designs/blob/main/accepted/2020/windows-specific-apis/windows-specific-apis.md> 上列出的所有 API。
 - <xref:System.Security.Cryptography.DSAOpenSsl?displayProperty=fullName>
 - <xref:System.Security.Cryptography.ECDiffieHellmanOpenSsl?displayProperty=fullName>
 - <xref:System.Security.Cryptography.ECDsaOpenSsl?displayProperty=fullName>

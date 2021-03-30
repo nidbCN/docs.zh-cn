@@ -3,12 +3,12 @@ title: 使用 PerfCollect 跟踪 .NET 应用程序。
 description: 本教程引导你完成在 .NET 中使用 perfcollect 收集跟踪的过程。
 ms.topic: tutorial
 ms.date: 10/23/2020
-ms.openlocfilehash: 20e1bf56714fb32b5231d45b0ba35cdfcedaea2e
-ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
+ms.openlocfilehash: d6ee77fea5c419e00e684e8b1472278f752544b0
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2021
-ms.locfileid: "103189925"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874181"
 ---
 # <a name="trace-net-applications-with-perfcollect"></a>使用 PerfCollect 跟踪 .NET 应用程序
 
@@ -225,7 +225,7 @@ export COMPlus_ZapDisable=1
 
 大多数情况下，你感兴趣的是自己的代码，`perfcollect` 默认解析这些代码。 有时查看 .NET DLL 内部的情况很有用（这是上一节讨论的内容），但有时查看本机运行时 dll 中的情况（通常为 libcoreclr.so）也很有趣。  `perfcollect` 在转换其数据时将解析这些符号，但前提是存在这些本机 DLL 的符号（并且位于它们所对应的库的旁边）。
 
-有一个名为 [dotnet-symbol](https://github.com/dotnet/symstore/blob/master/src/dotnet-symbol/README.md#symbol-downloader-dotnet-cli-extension) 的全局命令可以执行此操作。 使用 dotnet-symbol 获取本机运行时符号：
+有一个名为 [dotnet-symbol](https://github.com/dotnet/symstore/blob/main/src/dotnet-symbol/README.md#symbol-downloader-dotnet-cli-extension) 的全局命令可以执行此操作。 使用 dotnet-symbol 获取本机运行时符号：
 
 1. 安装 `dotnet-symbol`：
 

@@ -4,12 +4,12 @@ description: 介绍了如何在 .NET Core 中收集程序集加载信息
 author: elinor-fung
 ms.author: elfung
 ms.date: 11/17/2020
-ms.openlocfilehash: b121982995b440ade6d72190f44f9b9d237c8af6
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: 505fc827021fe4d34675b2ef5a7fc5746ada1af6
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99506468"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872933"
 ---
 # <a name="collect-detailed-assembly-loading-information"></a>收集详细的程序集加载信息
 
@@ -36,7 +36,7 @@ dotnet-trace collect --providers Microsoft-Windows-DotNETRuntime:4 --process-id 
 
 ## <a name="example-on-windows"></a>示例（在 Windows 上）
 
-本例使用[程序集加载扩展点示例](https://github.com/dotnet/samples/tree/master/core/extensions/AssemblyLoading)。 应用程序尝试加载程序集 `MyLibrary`（应用程序未引用的程序集），因此需要在程序集加载扩展点中进行处理才能成功加载。
+本例使用[程序集加载扩展点示例](https://docs.microsoft.com/samples/dotnet/samples/assembly-loading-extension-points/)。 应用程序尝试加载程序集 `MyLibrary`（应用程序未引用的程序集），因此需要在程序集加载扩展点中进行处理才能成功加载。
 
 ### <a name="collect-the-trace"></a>收集跟踪
 

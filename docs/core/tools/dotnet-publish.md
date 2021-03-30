@@ -2,12 +2,12 @@
 title: dotnet publish 命令
 description: dotnet publish 命令可将 .NET 项目或解决方案发布到目录。
 ms.date: 02/03/2021
-ms.openlocfilehash: 5391e56a88f782294c3a71c523d0fc27a09e0dd8
-ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
+ms.openlocfilehash: 64f300c415d8810badca99878e4243b37f32d86d
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99585671"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873414"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -155,7 +155,7 @@ dotnet publish -p:PublishProfile=FolderProfile
 
   将应用打包到特定于平台的单个文件可执行文件中。 该可执行文件是自解压缩文件，包含运行应用所需的所有依赖项（包括本机依赖项）。 首次运行应用时，应用程序将根据应用名称和生成标识符自解压缩到一个目录中。 再次运行应用程序时，启动速度将变快。 除非使用了新版本，否则应用程序无需再次进行自解压缩。 自 .NET Core 3.0 SDK 起可用。
 
-  有关单文件发布的详细信息，请参阅[单文件捆绑程序设计文档](https://github.com/dotnet/designs/blob/master/accepted/2020/single-file/design.md)。
+  有关单文件发布的详细信息，请参阅[单文件捆绑程序设计文档](https://github.com/dotnet/designs/blob/main/accepted/2020/single-file/design.md)。
 
   建议在发布配置文件中而不是在命令行中指定此选项。 有关详细信息，请参阅 [MSBuild](#msbuild)。
 

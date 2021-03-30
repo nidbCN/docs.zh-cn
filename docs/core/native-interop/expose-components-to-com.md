@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 13c91e5cb6728c5669642d1b5f7bb461efdd44f8
-ms.sourcegitcommit: 78eb25647b0c750cd80354ebd6ce83a60668e22c
+ms.openlocfilehash: 30323113520f3bd148a0f1a6fab9801381a332b3
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99065046"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875143"
 ---
 # <a name="exposing-net-core-components-to-com"></a>向 COM 公开 .NET Core 组件
 
@@ -87,7 +87,7 @@ ms.locfileid: "99065046"
 
 ## <a name="sample"></a>示例
 
-GitHub 上的 dotnet/samples 存储库中有一个正常运行的 [COM 服务器示例](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo)。
+GitHub 上的 dotnet/samples 存储库中有一个正常运行的 [COM 服务器示例](https://github.com/dotnet/samples/tree/main/core/extensions/COMServerDemo)。
 
 ## <a name="additional-notes"></a>附加说明
 

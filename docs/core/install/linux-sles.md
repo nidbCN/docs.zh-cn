@@ -4,12 +4,12 @@ description: 演示在 SLES 上安装 .NET SDK 和 .NET 运行时的各种方式
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: 80da69616dd1507b809ef56d439645d569a6a805
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: db8773c82417eda0deac04f95cfe8199621d04c4
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970780"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875260"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-sles"></a>在 SLES 上安装 .NET SDK 或 .NET 运行时
 
@@ -90,7 +90,7 @@ sudo rpm -Uvh https://packages.microsoft.com/config/sles/12/packages-microsoft-p
 
 如果目标运行时环境的 OpenSSL 版本为1.1 或更高版本，则需要安装 compat-openssl10。
 
-有关依赖项的详细信息，请参阅[独立式 Linux 应用](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md)。
+有关依赖项的详细信息，请参阅[独立式 Linux 应用](https://github.com/dotnet/core/blob/main/Documentation/self-contained-linux-apps.md)。
 
 对于使用 System.Drawing.Common 程序集的 .NET 应用，还需要以下依赖项：
 

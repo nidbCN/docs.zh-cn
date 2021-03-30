@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: d2695b1f271e57bb44ed3f94acbbe17b830fdd60
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 65c9c4929d9ed8ab4005677fbcb0a3745ed14190
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102255681"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874298"
 ---
 # <a name="publish-net-apps-with-the-net-cli"></a>使用 .NET CLI 发布 .NET 应用
 
@@ -149,11 +149,11 @@ End Module
 如果使用[示例应用](#sample-app)，请运行 `dotnet publish -f net5.0 -r win10-x64 --self-contained false`。 此命令将创建以下可执行文件：`./bin/Debug/net5.0/win10-x64/publish/apptest1.exe`
 
 > [!NOTE]
-> 可以通过启用全局固定模式来降低部署的总大小。 此模式适用于不具有全局意识且可以使用[固定区域性](xref:System.Globalization.CultureInfo.InvariantCulture)的格式约定、大小写约定以及字符串比较和排序顺序的应用程序。 若要详细了解全球化固定模式以及如何启用它，请参阅 [.NET 全球化固定模式](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)。
+> 可以通过启用全局固定模式来降低部署的总大小。 此模式适用于不具有全局意识且可以使用[固定区域性](xref:System.Globalization.CultureInfo.InvariantCulture)的格式约定、大小写约定以及字符串比较和排序顺序的应用程序。 若要详细了解全球化固定模式以及如何启用它，请参阅 [.NET 全球化固定模式](https://github.com/dotnet/runtime/blob/main/docs/design/features/globalization-invariant-mode.md)。
 
 ## <a name="self-contained-deployment"></a>独立部署
 
-当你发布独立式部署 (SCD) 时，.NET SDK 会创建特定于平台的可执行文件。 如果发布 SCD，则会包括运行应用所需的所有 .NET 文件，但不包括 [.NET 的本机依赖项](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)。 这些依赖项必须在应用运行前存在于系统中。
+当你发布独立式部署 (SCD) 时，.NET SDK 会创建特定于平台的可执行文件。 如果发布 SCD，则会包括运行应用所需的所有 .NET 文件，但不包括 [.NET 的本机依赖项](https://github.com/dotnet/core/blob/main/Documentation/prereqs.md)。 这些依赖项必须在应用运行前存在于系统中。
 
 如果发布 SCD，则会创建一个不前滚到最新可用 .NET 安全补丁的应用。 若要详细了解编译时的版本绑定，请参阅[选择要使用的 .NET 版本](../versions/selection.md#self-contained-deployments-include-the-selected-runtime)。
 
@@ -170,7 +170,7 @@ End Module
 |                                | 5.0         | `dotnet publish -c Release -r <RID> --self-contained true`  |
 
 > [!NOTE]
-> 可以通过启用全局固定模式来降低部署的总大小。 此模式适用于不具有全局意识且可以使用[固定区域性](xref:System.Globalization.CultureInfo.InvariantCulture)的格式约定、大小写约定以及字符串比较和排序顺序的应用程序。 有关全局固定模式及其启用方式的详细信息，请参阅 [.NET Core 全局固定模式](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)。
+> 可以通过启用全局固定模式来降低部署的总大小。 此模式适用于不具有全局意识且可以使用[固定区域性](xref:System.Globalization.CultureInfo.InvariantCulture)的格式约定、大小写约定以及字符串比较和排序顺序的应用程序。 有关全局固定模式及其启用方式的详细信息，请参阅 [.NET Core 全局固定模式](https://github.com/dotnet/runtime/blob/main/docs/design/features/globalization-invariant-mode.md)。
 
 ## <a name="see-also"></a>另请参阅
 

@@ -2,12 +2,12 @@
 title: C# 中的数字 - C# 教程简介
 description: 通过探索数字类型及其用途、属性和方法了解 C#。
 ms.date: 02/05/2021
-ms.openlocfilehash: 5576827cc92842a2cbd5374a691d9a5c560aec25
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: d6546fc8ac2609066a4f9b829749a4091fce7ce6
+ms.sourcegitcommit: 5ce37699c2a51ed173171813be68ef7577b1aba5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100626598"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104881102"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>处理 C\# 中的整数和浮点数
 
@@ -308,7 +308,7 @@ Console.WriteLine(c / d);
 
 至此，大家已了解不同的数字类型。请编写代码来计算圆面积（其中，半径为 2.50 厘米）。 请注意，圆面积是用半径的平方乘以 PI 进行计算。 小提示：.NET 包含 PI 常数 <xref:System.Math.PI?displayProperty=nameWithType>，可用于相应的值计算。 与 `System.Math` 命名空间中声明的所有常量一样，<xref:System.Math.PI?displayProperty=nameWithType> 也是 `double` 值。 因此，应使用 `double`（而不是 `decimal`）值来完成这项挑战。
 
-你应获得 19 和 20 之间的答案。 要查看你的答案，可以[查看 GitHub 上的完成示例代码](https://github.com/dotnet/samples/tree/master/csharp/numbers-quickstart/Program.cs#L104-L106)。
+你应获得 19 和 20 之间的答案。 要查看你的答案，可以[查看 GitHub 上的完成示例代码](https://github.com/dotnet/samples/tree/main/csharp/numbers-quickstart/Program.cs#L9-L11)。
 
 如果需要，可以试用一些其他公式。
 

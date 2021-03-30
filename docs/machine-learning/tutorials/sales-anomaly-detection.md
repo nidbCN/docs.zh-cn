@@ -4,12 +4,12 @@ description: 了解如何构建针对产品销售数据的异常检测应用程�
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 48a8b26409b20e2a01aa97425153336b34c9b5b7
-ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
+ms.openlocfilehash: 2262f2c5e8e389a13c583073bb2002fcd5da91ee
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97594171"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874649"
 ---
 # <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>教程：使用 ML.NET 检测产品销售中的异常
 
@@ -24,13 +24,13 @@ ms.locfileid: "97594171"
 > * 针对更改点异常情况检测创建转换
 > * 使用转换检测更改点异常
 
-可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/ProductSalesAnomalyDetection) 存储库中找到本教程的源代码。
+可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/ProductSalesAnomalyDetection) 存储库中找到本教程的源代码。
 
 ## <a name="prerequisites"></a>先决条件
 
 * 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017 版本 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。
 
-* [product-sales.csv 数据集](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)
+* [product-sales.csv 数据集](https://raw.githubusercontent.com/dotnet/machinelearning-samples/main/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)
 
 >[!NOTE]
 > `product-sales.csv` 中的数据格式基于“Shampoo Sales Over a Three Year Period”数据集，该数据集最初来自 DataMarket，由 Rob Hyndman 创建的 Time Series Data Library (TSDL) 提供。
@@ -42,11 +42,11 @@ ms.locfileid: "97594171"
 
 2. 在项目中创建名为“Data”的目录，用于保存数据集文件。
 
-3. 安装“Microsoft.ML NuGet 包”：
+3. 安装“Microsoft.ML NuGet 包”  ：
 
     [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 
-    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”。 选择“nuget.org”作为包源，然后选择“浏览”选项卡并搜索“Microsoft.ML”，再选择“安装”按钮 。 选择“预览更改”对话框上的“确定”按钮，如果你同意所列包的许可条款，则选择“接受许可”对话框上的“我接受”按钮。 对“Microsoft.ML.TimeSeries”重复这些步骤。
+    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”  。 选择“nuget.org”作为包源，然后选择“浏览”选项卡并搜索“Microsoft.ML”，再选择“安装”按钮 。 选择“预览更改”对话框上的“确定”按钮，如果你同意所列包的许可条款，则选择“接受许可”对话框上的“我接受”按钮。 对“Microsoft.ML.TimeSeries”重复这些步骤。
 
 4. 在 Program.cs 文件的顶部添加以下 `using` 语句：
 
@@ -56,7 +56,7 @@ ms.locfileid: "97594171"
 
 1. 下载数据集并将其保存到之前创建的 *Data* 文件夹中：
 
-   * 右键单击 [*product-sales.csv*](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv) 并选择“将链接(或目标)另存为...”
+   * 右键单击 [*product-sales.csv*](https://raw.githubusercontent.com/dotnet/machinelearning-samples/main/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv) 并选择“将链接(或目标)另存为...”
 
      确保将 \*.csv 文件保存到 *Data* 文件夹，或者在将其保存到其他位置后，将 \*.csv 文件移动到 *Data* 文件夹。
 
@@ -371,7 +371,7 @@ Alert   Score   P-Value Martingale value
 
 祝贺你！ 现在已成功生成用于检测销售数据中的峰值和更改点异常情况的机器学习模型。
 
-可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/ProductSalesAnomalyDetection) 存储库中找到本教程的源代码。
+可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/ProductSalesAnomalyDetection) 存储库中找到本教程的源代码。
 
 在本教程中，你将了解：
 > [!div class="checklist"]
@@ -386,4 +386,4 @@ Alert   Score   P-Value Martingale value
 
 请查看机器学习示例 GitHub 存储库，以探索周期性数据异常情况检测示例。
 > [!div class="nextstepaction"]
-> [dotnet/machinelearning-samples GitHub 存储库](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/AnomalyDetection_PhoneCalls)
+> [dotnet/machinelearning-samples GitHub 存储库](https://github.com/dotnet/machinelearning-samples/tree/main/samples/csharp/getting-started/AnomalyDetection_PhoneCalls)

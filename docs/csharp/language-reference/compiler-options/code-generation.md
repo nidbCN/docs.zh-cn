@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Optimize compiler option [C#]
 - Deterministic compiler option [C#]
 - ProduceOnlyReferenceAssembly compiler option [C#]
-ms.openlocfilehash: 6b66c50b408f9615bc3c63ab4dd46dbc4215c62f
-ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
+ms.openlocfilehash: a846bc515c501ec5a14069dd3b312b5e2df43d25
+ms.sourcegitcommit: 5ce37699c2a51ed173171813be68ef7577b1aba5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103482415"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104881130"
 ---
 # <a name="c-compiler-options-that-control-code-generation"></a>控制代码生成的 C# 编译器选项
 
@@ -56,7 +56,7 @@ Optimize 还指示公共语言运行时在运行时优化代码。 默认情况�
 如果输入相同，则会导致编译器生成的程序集其逐字节输出在整个编译期间中相同。
 
 ```xml
-<Deterministic></Deterministic>
+<Deterministic>true</Deterministic>
 ```
 
 默认情况下，一组给定输入的编译器输出是唯一的，因为编译器会添加时间戳和随意数字生成的 MVID。 使用 `<Deterministic>` 选项生成确定性的程序集，只要输入保持不变，该程序集的二进制内容在整个编译中都是相同的  。 在此类生成中，时间戳和 MVID 字段会被替换为从所有编译输入的哈希派生的值。 编译器会考虑影响确定性的以下输入：
@@ -88,7 +88,7 @@ Optimize 还指示公共语言运行时在运行时优化代码。 默认情况�
 ProduceOnlyReferenceAssembly 选项表示应输出引用程序集（而不是实现程序集）作为主输出。 ProduceOnlyReferenceAssembly 参数以无提示方式禁用输出 PDB，因为无法执行引用程序集。
 
 ```xml
-<ProduceOnlyReferenceAssembly></ProduceOnlyReferenceAssembly>
+<ProduceOnlyReferenceAssembly>true</ProduceOnlyReferenceAssembly>
 ```
 
 引用程序集是一种特殊类型的程序集。 引用程序集只包含表示库的公共 API 外围应用所需的最少元数据量。 它们包括在生成工具中引用程序集时所需的所有成员的声明，但不包括所有成员实现以及对其 API 协定没有明显影响的私有成员的声明。 有关详细信息，请参阅[引用程序集](../../../standard/assembly/reference-assemblies.md)。

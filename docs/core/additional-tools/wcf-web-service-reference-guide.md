@@ -4,12 +4,12 @@ description: Microsoft WCF Web Service Reference Provider 工具概述，该工�
 author: dasetser
 ms.date: 10/29/2019
 ms.custom: mvc
-ms.openlocfilehash: 1f7b1831a956553dbef26f58f4f257c2f3914ede
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: fcb7695c904e80d3fcb5ea68cba7ea198b3905f3
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400599"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872972"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>使用 WCF Web Service Reference Provider 工具
 
@@ -80,7 +80,7 @@ ms.locfileid: "93400599"
 
 - [Windows Communication Foundation 应用程序入门](../../framework/wcf/getting-started-tutorial.md)
 - [Visual Studio 中的 Windows Communication Foundation 服务和 WCF 数据服务](/visualstudio/data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio)
-- [.NET Core 上 WCF 支持的功能](https://github.com/dotnet/wcf/blob/master/release-notes/SupportedFeatures-v2.1.0.md)
+- [.NET Core 上 WCF 支持的功能](https://github.com/dotnet/wcf/blob/main/release-notes/SupportedFeatures-v2.1.0.md)
 
 ## <a name="feedback--questions"></a>反馈和问题
 
@@ -88,4 +88,4 @@ ms.locfileid: "93400599"
 
 ## <a name="release-notes"></a>发行说明
 
-- 请参阅[发行说明](https://github.com/dotnet/wcf/blob/master/release-notes/WCF-Web-Service-Reference-notes.md)，了解更新的版本信息（包括已知问题）。
+- 请参阅[发行说明](https://github.com/dotnet/wcf/blob/main/release-notes/WCF-Web-Service-Reference-notes.md)，了解更新的版本信息（包括已知问题）。

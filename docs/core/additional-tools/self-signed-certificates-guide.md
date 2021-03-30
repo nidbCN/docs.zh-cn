@@ -3,18 +3,18 @@ title: 生成自签名证书概述
 description: 简要介绍添加了 .NET Core 和 ASP.NET Core 项目功能的 Microsoft dotnet dev-certs 工具，以及使用自签名证书的其他选项。
 author: angee
 ms.date: 11/19/2020
-ms.openlocfilehash: d1675abb7d584b72d981f9db739e02269abe662c
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 738af3fc091e415399a53015a40748ad6116a2b4
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189136"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873011"
 ---
 # <a name="generate-self-signed-certificates-with-the-net-cli"></a>通过 .NET CLI 生成自签名证书
 
 使用自签名证书时，可通过不同的方式创建自签名证书，并将它们用于开发和测试场景。  本指南将介绍如何通过 `dotnet dev-certs` 以及 `PowerShell` 和 `OpenSSL` 等其他选项使用自签名证书。
 
-然后，可以使用容器中托管的 [ASP.NET Core 应用](https://github.com/dotnet/dotnet-docker/blob/master/samples/run-aspnetcore-https-development.md)等示例来验证是否将加载证书。
+然后，可以使用容器中托管的 [ASP.NET Core 应用](https://github.com/dotnet/dotnet-docker/blob/main/samples/run-aspnetcore-https-development.md)等示例来验证是否将加载证书。
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -46,7 +46,7 @@ git clone https://github.com/dotnet/dotnet-docker/
 
 > [!NOTE]
 > 如果要使用 dotnet publish 参数对部署进行剪裁，则应确保包含适当的依赖项以便支持 SSL 证书。
-更新 [dotnet-docker\samples\aspnetapp\aspnetapp.csproj](https://github.com/dotnet/dotnet-docker/blob/master/samples/aspnetapp/aspnetapp/aspnetapp.csproj) 以确保容器中包含适当的程序集。 有关参考，请查看如何更新 .csproj 文件以便在对自包含部署应用剪裁时[支持 SSL 证书](../deploying/trim-self-contained.md#support-for-ssl-certificates)。
+更新 [dotnet-docker\samples\aspnetapp\aspnetapp.csproj](https://github.com/dotnet/dotnet-docker/blob/main/samples/aspnetapp/aspnetapp/aspnetapp.csproj) 以确保容器中包含适当的程序集。 有关参考，请查看如何更新 .csproj 文件以便在对自包含部署应用剪裁时[支持 SSL 证书](../deploying/trim-self-contained.md#support-for-ssl-certificates)。
 
 确保 `aspnetapp.csproj` 包含适当的目标框架：
 
@@ -101,7 +101,7 @@ docker build -t aspnetapp:my-sample -f Dockerfile .
 
 对于本指南，应针对 .NET 5 检查[示例 aspnetapp](https://hub.docker.com/_/microsoft-dotnet-samples)。
 
-检查示例应用 [Dockerfile](https://github.com/dotnet/dotnet-docker/blob/master/samples/aspnetapp/Dockerfile) 是否使用 .NET 5。
+检查示例应用 [Dockerfile](https://github.com/dotnet/dotnet-docker/blob/main/samples/aspnetapp/Dockerfile) 是否使用 .NET 5。
 
 根据主机 OS，可能需要更新 ASP.NET 运行时。 例如，在 Dockerfile 中从 `mcr.microsoft.com/dotnet/aspnet:5.0-nanoservercore-2009 AS runtime` 更改为 `mcr.microsoft.com/dotnet/aspnet:5.0-windowsservercore-ltsc2019 AS runtime` 将有助于面向适当的 Windows 运行时。
 
@@ -148,7 +148,7 @@ ENTRYPOINT ["aspnetapp"]
 
 > [!NOTE]
 > 如果要使用 `dotnet publish` 参数对部署进行剪裁，请确保包含适当的依赖项以便支持 SSL 证书。
-更新 [dotnet-docker\samples\aspnetapp\aspnetapp.csproj](https://github.com/dotnet/dotnet-docker/blob/master/samples/aspnetapp/aspnetapp/aspnetapp.csproj) 以确保容器中包含适当的程序集。 有关参考，请查看如何更新 .csproj 文件以便在对自包含部署应用剪裁时[支持 SSL 证书](../deploying/trim-self-contained.md#support-for-ssl-certificates)。
+更新 [dotnet-docker\samples\aspnetapp\aspnetapp.csproj](https://github.com/dotnet/dotnet-docker/blob/main/samples/aspnetapp/aspnetapp/aspnetapp.csproj) 以确保容器中包含适当的程序集。 有关参考，请查看如何更新 .csproj 文件以便在对自包含部署应用剪裁时[支持 SSL 证书](../deploying/trim-self-contained.md#support-for-ssl-certificates)。
 
 确保指向示例应用。
 

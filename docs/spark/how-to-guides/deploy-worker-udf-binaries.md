@@ -4,12 +4,12 @@ description: 了解如何部署 .NET for Apache Spark 辅助角色和用户定�
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: c777fdb26045c62317b49259fdde974f43ba5c0d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: d3e86d22a308c7124812f2c11742c2e18803b13d
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96293762"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875533"
 ---
 # <a name="deploy-net-for-apache-spark-worker-and-user-defined-function-binaries"></a>部署 .NET for Apache Spark 辅助角色和用户定义的函数二进制文件
 
@@ -27,7 +27,7 @@ ms.locfileid: "96293762"
 | :--------------------------- | :----------
 | DOTNET_WORKER_DIR            | 生成 <code>Microsoft.Spark.Worker</code> 二进制文件的路径</br>它由 Spark 驱动程序使用，将被传递到 Spark 执行程序。 如果未设置此变量，Spark 执行器将搜索 <code>PATH</code> 环境变量中指定的路径。</br>例如  “C:\bin\Microsoft.Spark.Worker”
 | DOTNET_ASSEMBLY_SEARCH_PATHS | 逗号分隔的路径，<code>Microsoft.Spark.Worker</code> 将在这些路径中加载程序集。</br>请注意，如果路径以“.”开头，则将预置工作目录。 如果处于 yarn 模式，  则“.”表示容器的工作目录。</br>例如  “C:\Users\\&lt;用户名&gt;\\&lt;mysparkapp&gt;\bin\Debug\\&lt;dotnet 版本&gt;”
-| DOTNET_WORKER_DEBUG          | 如果要<a href="https://github.com/dotnet/spark/blob/master/docs/developer-guide.md#debugging-user-defined-function-udf">调试 UDF</a>，请在运行 <code>spark-submit</code> 之前将此环境变量设置为 <code>1</code>。
+| DOTNET_WORKER_DEBUG          | 如果要<a href="https://github.com/dotnet/spark/blob/main/docs/developer-guide.md#debugging-user-defined-function-udf">调试 UDF</a>，请在运行 <code>spark-submit</code> 之前将此环境变量设置为 <code>1</code>。
 
 ### <a name="parameter-options"></a>参数选项
 

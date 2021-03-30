@@ -4,12 +4,12 @@ description: 本教程演示如何使用 ML.NET 生成回归模型来预测价�
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: beb48c9252b83cd693c351d39882b7ac9d08d882
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: f8f7146241368edaca31afd970af54a098d1aafa
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309711"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874636"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>教程：将回归与 ML.NET 配合使用以预测价格
 
@@ -39,13 +39,13 @@ ms.locfileid: "86309711"
 
     [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 
-    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包” 。 选择“nuget.org”作为包源，然后选择“浏览”选项卡并搜索“Microsoft.ML”，在列表中选择包，再选择“安装”按钮  。 选择“预览更改”对话框上的“确定”按钮，如果你同意所列包的许可条款，则选择“接受许可”对话框上的“我接受”按钮。 对 **Microsoft.ML.FastTree** NuGet 包执行相同操作。
+    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包” 。 选择“nuget.org”作为包源，然后选择“浏览”选项卡并搜索“Microsoft.ML”，在列表中选择包，再选择“安装”按钮  。 选择“预览更改”  对话框上的“确定”  按钮，如果你同意所列包的许可条款，则选择“接受许可”  对话框上的“我接受”  按钮。 对 **Microsoft.ML.FastTree** NuGet 包执行相同操作。
 
 ## <a name="prepare-and-understand-the-data"></a>准备和了解数据
 
-1. 下载 [taxi-fare-train.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-train.csv) 和 [taxi-fare-test.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-test.csv) 数据集，并将它们保存到先前创建的“数据”文件夹。 我们使用这些数据集定型机器学习模型，然后评估模型的准确性。 这些数据集最初来自 [NYC TLC 出租车行程数据集](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page)。
+1. 下载 [taxi-fare-train.csv](https://github.com/dotnet/machinelearning/blob/main/test/data/taxi-fare-train.csv) 和 [taxi-fare-test.csv](https://github.com/dotnet/machinelearning/blob/main/test/data/taxi-fare-test.csv) 数据集，并将它们保存到先前创建的“数据”文件夹。 我们使用这些数据集定型机器学习模型，然后评估模型的准确性。 这些数据集最初来自 [NYC TLC 出租车行程数据集](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page)。
 
-1. 在“解决方案资源管理器”中，右键单击每个 \*.csv 文件，然后选择“属性” 。 在“高级”下，将“复制到输出目录”的值更改为“如果较新则复制”  。
+1. 在“解决方案资源管理器”中，右键单击每个 \*.csv 文件，然后选择“属性” 。 在“高级”下，将“复制到输出目录”的值更改为“如果较新则复制”    。
 
 1. 打开“taxi-fare-train.csv”数据集并查看第一行中的列标题。 查看每个列。 了解数据并确定哪些列是“特征”以及哪些是“标签” 。
 
@@ -66,7 +66,7 @@ ms.locfileid: "86309711"
 创建输入数据和预测类：
 
 1. 在“解决方案资源管理器”中，右键单击项目，然后选择“添加” > “新项”。
-1. 在“添加新项”对话框中，选择“类”并将“名称”字段更改为“TaxiTrip.cs”。 然后，选择“添加”按钮。
+1. 在“添加新项”对话框中，选择“类”并将“名称”字段更改为“TaxiTrip.cs”。 然后，选择“添加”  按钮。
 1. 将以下 `using` 指令添加到新文件：
 
    [!code-csharp[AddUsings](./snippets/predict-prices/csharp/TaxiTrip.cs#1 "Add necessary usings")]
@@ -268,7 +268,7 @@ private static void TestSinglePrediction(MLContext mlContext, ITransformer model
 
 运行此程序，查看测试用例的预测出租车费。
 
-祝贺你！ 你已成功生成用于预测出租车费的机器学习模型、评估其准确性，并用其进行预测。 可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TaxiFarePrediction) GitHub 存储库中找到本教程的源代码。
+祝贺你！ 你已成功生成用于预测出租车费的机器学习模型、评估其准确性，并用其进行预测。 可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/TaxiFarePrediction) GitHub 存储库中找到本教程的源代码。
 
 ## <a name="next-steps"></a>后续步骤
 

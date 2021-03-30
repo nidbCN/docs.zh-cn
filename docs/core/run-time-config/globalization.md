@@ -3,12 +3,12 @@ title: 全球化配置设置
 description: 了解对 .NET Core 应用的全球化方面进行配置的运行时设置。例如，如何分析日语日期。
 ms.date: 05/18/2020
 ms.topic: reference
-ms.openlocfilehash: fc98e965093c28b75b9b66e4f1c9f147abd4680e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e8179a7e1421a3ff0ceacf07a2843c1b77af6143
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721903"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873544"
 ---
 # <a name="run-time-configuration-options-for-globalization"></a>用于全球化的运行时配置选项
 
@@ -16,7 +16,7 @@ ms.locfileid: "95721903"
 
 - 确定 .NET Core 应用是否以全球化固定模式运行而无权访问特定区域性的数据和行为。
 - 如果省略此设置，应用可运行并可访问区域性数据。 它等效于将值设置为 `false`。
-- 有关详细信息，请参阅 [.NET Core 全球化固定模式](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)。
+- 有关详细信息，请参阅 [.NET Core 全球化固定模式](https://github.com/dotnet/runtime/blob/main/docs/design/features/globalization-invariant-mode.md)。
 
 | | 设置名 | 值 |
 | - | - | - |

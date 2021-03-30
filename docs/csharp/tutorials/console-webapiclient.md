@@ -3,12 +3,12 @@ title: 使用 .NET Core 创建 REST 客户端
 description: 此教程介绍 .NET Core 和 C# 语言的一些功能。
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: a8490efbc954ca585a2a0fa9d571191095a4b24c
-ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
+ms.openlocfilehash: 4d36cdafd232de9bbd0fac12e894f905b4808419
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98024972"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876144"
 ---
 # <a name="rest-client"></a>REST 客户端
 
@@ -25,7 +25,7 @@ ms.locfileid: "98024972"
 
 此教程中介绍了多项功能。 我们将逐个生成这些功能。
 
-如果想要按照用于本文的[最终示例](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient)操作，可以下载它。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#view-and-download-samples)。
+如果想要按照用于本文的[最终示例](https://github.com/dotnet/samples/tree/main/csharp/getting-started/console-webapiclient)操作，可以下载它。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#view-and-download-samples)。
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -304,7 +304,7 @@ public DateTime LastPush => LastPushUtc.ToLocalTime();
 Console.WriteLine(repo.LastPush);
 ```
 
-你的版本现在应与[已完成的示例](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient)匹配。
+你的版本现在应与[已完成的示例](https://github.com/dotnet/samples/tree/main/csharp/getting-started/console-webapiclient)匹配。
 
 ## <a name="conclusion"></a>结束语
 

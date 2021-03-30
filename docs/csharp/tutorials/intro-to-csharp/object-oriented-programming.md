@@ -2,12 +2,12 @@
 title: 面向对象的编程 (C#)
 description: C# 提供针对面向对象的编程（包括抽象、封装、继承和多态性）的完整支持。
 ms.date: 09/30/2020
-ms.openlocfilehash: e6261e9018217094e0c3ce742ff0172b8559deaf
-ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
+ms.openlocfilehash: 70642ef00f7ec6462c716498ff14450ab763956b
+ms.sourcegitcommit: e16315d9f1ff355f55ff8ab84a28915be0a8e42b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2021
-ms.locfileid: "103624209"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105111356"
 ---
 # <a name="object-oriented-programming-c"></a>面向对象的编程 (C#)
 
@@ -192,4 +192,4 @@ public void MakeWithdrawal(decimal amount, DateTime date, string note)
 - 使用已在 `BankAccount` 类中创建的实现来保存代码时，你使用了继承。
 - 创建 `virtual` 方法，派生类可以重写它们来创建该帐户类型的特定行为时，你使用了多形性。
 
-恭喜，你已完成我们的所有 C# 简介教程。 若要了解详细信息，请继续学习更多[教程](../index.md)。
+恭喜，你已完成我们的所有 C# 简介教程。 若要了解详细信息，请继续学习更多[教程](introduction-to-classes.md)。

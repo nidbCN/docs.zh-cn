@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: 51041f5a9076ad360a84cc39704aedb50b77d40a
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: aea264036ab4766696699980f464cca3d8229499
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679385"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875585"
 ---
 # <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>教程：使用时序分析和 ML.NET 预测自行车租赁服务需求
 
@@ -33,7 +33,7 @@ ms.locfileid: "90679385"
 
 ## <a name="time-series-forecasting-sample-overview"></a>时序预测示例概述
 
-此示例为 C# .NET Core 控制台应用程序，它使用单变量时序分析算法（称为单谱分析）来预测自行车租赁需求。 此示例的代码可以在 GitHub 上的 [dotnet/machinelearning-samples 存储库](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand)找到。
+此示例为 C# .NET Core 控制台应用程序，它使用单变量时序分析算法（称为单谱分析）来预测自行车租赁需求。 此示例的代码可以在 GitHub 上的 [dotnet/machinelearning-samples 存储库](https://github.com/dotnet/machinelearning-samples/tree/main/samples/csharp/getting-started/Forecasting_BikeSharingDemand)找到。
 
 ## <a name="understand-the-problem"></a>了解问题
 
@@ -53,14 +53,14 @@ ms.locfileid: "90679385"
     1. 在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”。
     1. 选择“nuget.org”作为“包源”，选择“浏览”选项卡，再搜索“Microsoft.ML”。
     1. 选中“包括预发行版”复选框。
-    1. 选择“安装”按钮。
+    1. 选择“安装”按钮  。
     1. 选择“预览更改”对话框中的“确定”按钮；如果同意所列包的许可条款，请选择“接受许可”对话框中的“我接受”按钮。
     1. 针对 System.Data.SqlClient 和 Microsoft.ML.TimeSeries 重复上述步骤 。
 
 ### <a name="prepare-and-understand-the-data"></a>准备和了解数据
 
 1. 创建一个名为“Data”的目录。
-1. 下载 [DailyDemand.mdf 数据库文件](https://github.com/dotnet/machinelearning-samples/raw/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Data/DailyDemand.mdf)并将其保存到“Data”目录中。 
+1. 下载 [DailyDemand.mdf 数据库文件](https://github.com/dotnet/machinelearning-samples/raw/main/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Data/DailyDemand.mdf)并将其保存到“Data”目录中。 
 
 > [!NOTE]
 > 此教程使用的数据来自 [UCI 自行车共享数据集](http://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset)。 作者 Fanaee-T,Hadi 和 Gama, Joao，“事件标签结合集合探测器和背景知识”，人工智能进展 (2013)：1-15 页，Springer Berlin Heidelberg，[网页链接](https://link.springer.com/article/10.1007%2Fs13748-013-0040-3)。
@@ -285,7 +285,7 @@ CREATE TABLE [Rentals] (
 
 祝贺你！ 你已成功生成用于预测自行车租赁需求的时序机器学习模型。
 
-可以在 [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand) 存储库中找到本教程的源代码。
+可以在 [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/main/samples/csharp/getting-started/Forecasting_BikeSharingDemand) 存储库中找到本教程的源代码。
 
 ## <a name="next-steps"></a>后续步骤
 

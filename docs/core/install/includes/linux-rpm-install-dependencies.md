@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5a027054024d8429831d73525ab3748c51ae850e
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: e3f6d2d4af55e831a262a2211bf495e2f2bd772e
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102255746"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104879634"
 ---
 
 使用包管理器进行安装时，将为你安装这些库。 但是，如果手动安装 .NET Core 或发布自包含的应用，则需要确保已安装以下库：
@@ -16,7 +16,7 @@ ms.locfileid: "102255746"
 
 如果目标运行时环境的 OpenSSL 版本为1.1 或更高版本，则需要安装 compat-openssl10。
 
-有关依赖项的详细信息，请参阅[独立式 Linux 应用](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md)。
+有关依赖项的详细信息，请参阅[独立式 Linux 应用](https://github.com/dotnet/core/blob/main/Documentation/self-contained-linux-apps.md)。
 
 对于使用 System.Drawing.Common 程序集的 .NET Core 应用，还需要以下依赖项：
 

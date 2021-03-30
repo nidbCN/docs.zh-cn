@@ -4,12 +4,12 @@ description: 了解用于构建多种应用的免费开源开发平台 .NET。
 author: tdykstra
 ms.date: 11/16/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 7997346c9b248962b36688592d357247ec0ce6aa
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 78713ee08fadd7a947ee26997b8abe6373ab98d8
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102105084"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875130"
 ---
 # <a name="introduction-to-net"></a>.NET 简介
 
@@ -54,13 +54,13 @@ ms.locfileid: "102105084"
 
 通过 .NET，可以使用特定于平台的功能，如操作系统 API。 例如 Windows 上的 Windows 窗体和 WPF，以及从 Xamarin 到每个移动平台的原生绑定。
 
-有关详细信息，请参阅[支持的 OS 生命周期策略](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md)和 [.NET RID 目录](rid-catalog.md)。
+有关详细信息，请参阅[支持的 OS 生命周期策略](https://github.com/dotnet/core/blob/main/os-lifecycle-policy.md)和 [.NET RID 目录](rid-catalog.md)。
 
 ## <a name="open-source"></a>开源
 
-.NET 是开放源代码，使用 [MIT 和 Apache 2 许可证](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT)。 .NET 是 [.NET Foundation](https://dotnetfoundation.org/) 的项目。
+.NET 是开放源代码，使用 [MIT 和 Apache 2 许可证](https://github.com/dotnet/runtime/blob/main/LICENSE.TXT)。 .NET 是 [.NET Foundation](https://dotnetfoundation.org/) 的项目。
 
-有关详细信息，请参阅 [GitHub.com 上的项目存储库列表](https://github.com/dotnet/core/blob/master/Documentation/core-repos.md)。
+有关详细信息，请参阅 [GitHub.com 上的项目存储库列表](https://github.com/dotnet/core/blob/main/Documentation/core-repos.md)。
 
 ## <a name="support"></a>支持
 
@@ -283,7 +283,7 @@ GC 是一种有助于确保内存安全的 CLR 服务。 如果某个程序仅�
 * [序列化](../standard/serialization/index.md)实用程序类型，例如 <xref:System.Text.Json.JsonSerializer?displayProperty=nameWithType> 和 <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>。
 * 高性能类型，例如 <xref:System.Span%601?displayProperty=nameWithType>、<xref:System.Numerics.Vector?displayProperty=nameWithType> 和 [Pipelines](../standard/io/pipelines.md)。
 
-有关详细信息，请参阅[运行时库概述](../standard/runtime-libraries-overview.md)。 库的源代码位于 [GitHub dotnet/运行时存储库](https://github.com/dotnet/runtime/tree/master/src/libraries)中。
+有关详细信息，请参阅[运行时库概述](../standard/runtime-libraries-overview.md)。 库的源代码位于 [GitHub dotnet/运行时存储库](https://github.com/dotnet/runtime/tree/main/src/libraries)中。
 
 ### <a name="extensions-to-the-runtime-libraries"></a>运行时库的扩展
 

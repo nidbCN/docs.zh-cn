@@ -4,12 +4,12 @@ description: 本教程演示如何创建 .NET Core 控制台应用程序，该�
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: da972d793570a8dd6b906762640bd6bfe5531a5b
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 3dbcb3cbd4eea2d01638bedc7123f570ff9d64d1
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557159"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874585"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>教程：在 ML.NET 中使用二元分类分析网站评论的情绪
 
@@ -26,7 +26,7 @@ ms.locfileid: "87557159"
 > - 使用模型进行预测
 > - 查看结果
 
-可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) 存储库中找到本教程的源代码。
+可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/SentimentAnalysis) 存储库中找到本教程的源代码。
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -40,11 +40,11 @@ ms.locfileid: "87557159"
 
 2. 在项目中创建名为“Data”的目录，用于保存数据集文件。
 
-3. 安装“Microsoft.ML NuGet 包”：
+3. 安装“Microsoft.ML NuGet 包”  ：
 
     [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 
-    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”。 选择“nuget.org”作为包源，然后选择“浏览”选项卡。搜索“Microsoft.ML”，选择所需的包，然后选择“安装”按钮 。 同意所选包的许可条款，继续执行安装。
+    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”  。 选择“nuget.org”作为包源，然后选择“浏览”选项卡。搜索“Microsoft.ML”，选择所需的包，然后选择“安装”按钮 。 同意所选包的许可条款，继续执行安装。
 
 ## <a name="prepare-your-data"></a>准备数据
 
@@ -55,7 +55,7 @@ ms.locfileid: "87557159"
 
 2. 将 `yelp_labelled.txt` 文件复制到已创建的“Data”目录中。
 
-3. 在“解决方案资源管理器”中，右键单击 `yelp_labeled.txt` 文件并选择“属性”。 在“高级”下，将“复制到输出目录”的值更改为“如果较新则复制”  。
+3. 在“解决方案资源管理器”中，右键单击 `yelp_labeled.txt` 文件并选择“属性”。 在“高级”下，将“复制到输出目录”的值更改为“如果较新则复制”    。
 
 ### <a name="create-classes-and-define-paths"></a>创建类和定义路径
 
@@ -71,9 +71,9 @@ ms.locfileid: "87557159"
 
     - 在“解决方案资源管理器”中，右键单击项目，然后选择“添加” > “新项”。
 
-    - 在“添加新项”对话框中，选择“类”并将“名称”字段更改为“SentimentData.cs”。 然后，选择“添加”按钮。
+    - 在“添加新项”  对话框中，选择“类”  并将“名称”  字段更改为“SentimentData.cs”  。 然后，选择“添加”  按钮。
 
-1. “SentimentData.cs”文件随即在代码编辑器中打开。 将下面的 `using` 语句添加到 SentimentData.cs 的顶部：
+1. “SentimentData.cs”  文件随即在代码编辑器中打开。 将下面的 `using` 语句添加到 SentimentData.cs 的顶部：
 
     [!code-csharp[AddUsings](./snippets/sentiment-analysis/csharp/SentimentData.cs#AddUsings "Add necessary usings")]
 
@@ -380,7 +380,7 @@ Press any key to continue . . .
 
 生成成功的模型是一个迭代过程。 由于本教程使用小型数据集来提供快速模型训练，因此该模型的初始质量较低。 如果对模型质量不满意，可以通过尝试提供更大的训练数据集，或通过为每种算法选择具有不同[超参数](../resources/glossary.md#hyperparameter)的不同训练算法来改进它。
 
-可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) 存储库中找到本教程的源代码。
+可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/SentimentAnalysis) 存储库中找到本教程的源代码。
 
 ## <a name="next-steps"></a>后续步骤
 

@@ -19,19 +19,19 @@ helpviewer_keywords:
 - BypassNGenAttribute
 - System.Runtime.BypassNGenAttribute
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
-ms.openlocfilehash: dcf22b1840be5dd91b8ad2224871b8a22efb1183
-ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
+ms.openlocfilehash: 05b77df39645b85872b07b43bcf6e8c852d6f664
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104653876"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874363"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe（本机映像生成器）
 
 本机映像生成器 (Ngen.exe) 是一种提高托管应用程序性能的工具。 Ngen.exe 创建本机映像（包含经编译的特定于处理器的机器代码的文件），并将它们安装到本地计算机上的本机映像缓存中。 运行时可从缓存中使用本机映像，而不必使用实时 (JIT) 编译器编译原始程序集。
 
 > [!NOTE]
-> Ngen.exe 编译仅面向 .NET Framework 的程序集的本机映像。 适用于 .NET Core 的等效本机映像生成器为 [CrossGen](https://github.com/dotnet/runtime/blob/master/docs/workflow/building/coreclr/crossgen.md)。
+> Ngen.exe 编译仅面向 .NET Framework 的程序集的本机映像。 适用于 .NET Core 的等效本机映像生成器为 [CrossGen](https://github.com/dotnet/runtime/blob/main/docs/workflow/building/coreclr/crossgen.md)。
 
 .NET Framework 4 中对 Ngen.exe 进行的更改：
 

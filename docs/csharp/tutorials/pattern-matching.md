@@ -4,12 +4,12 @@ description: 本高级教程展示了如何使用模式匹配技术，通过单�
 ms.date: 10/06/2020
 ms.technology: csharp-whats-new
 ms.custom: contperf-fy21q1
-ms.openlocfilehash: b0ee4ee905c130876cf201cb3a1a441d54226c52
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: c081e6a75b3ea834641b050bc2450fed1e45c60c
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100582792"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874506"
 ---
 # <a name="tutorial-use-pattern-matching-to-build-type-driven-and-data-driven-algorithms"></a>教程：使用模式匹配来生成类型驱动和数据驱动的算法
 
@@ -43,7 +43,7 @@ C# 7 引入了基本模式匹配功能。 C# 8 和 C# 9 通过新增表达式和
 
 [!code-csharp[ExternalSystems](~/samples/snippets/csharp/tutorials/patterns/start/toll-calculator/ExternalSystems.cs)]
 
-若要下载起始代码，可以访问 [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/patterns/start) GitHub 存储库。 可以看到，车辆类来自不同的系统，且位于不同的命名空间中。 没有常见基类，可利用的 `System.Object` 除外。
+若要下载起始代码，可以访问 [dotnet/samples](https://github.com/dotnet/samples/tree/main/csharp/tutorials/patterns/start) GitHub 存储库。 可以看到，车辆类来自不同的系统，且位于不同的命名空间中。 没有常见基类，可利用的 `System.Object` 除外。
 
 ## <a name="pattern-matching-designs"></a>模式匹配设计
 
@@ -390,4 +390,4 @@ public decimal PeakTimePremium(DateTime timeOfToll, bool inbound) =>
 
 ## <a name="next-steps"></a>后续步骤
 
-若要下载完成后的代码，可以访问 [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/patterns/finished) GitHub 存储库。 请自行探索模式，并将此技术纳入你的常规编码活动。 学些这些技术，你可以通过其他方式来处理问题和新建功能。
+若要下载完成后的代码，可以访问 [dotnet/samples](https://github.com/dotnet/samples/tree/main/csharp/tutorials/patterns/finished) GitHub 存储库。 请自行探索模式，并将此技术纳入你的常规编码活动。 学些这些技术，你可以通过其他方式来处理问题和新建功能。

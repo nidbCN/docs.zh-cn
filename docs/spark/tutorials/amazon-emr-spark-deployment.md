@@ -4,12 +4,12 @@ description: 了解如何将 .NET for Apache Spark 应用程序部署到 Amazon 
 ms.date: 10/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: dd1cfdf12266b55d9dbc0210479b89ba68c59a38
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: a0904b5b692e1c32ba12a685f2c3a3f7d86c2c58
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688067"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874051"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-amazon-emr-spark"></a>将 .NET for Apache Spark 应用程序部署到 Amazon EMR Spark
 
@@ -32,7 +32,7 @@ ms.locfileid: "94688067"
 开始之前，请执行以下操作：
 
 * 下载 [AWS CLI](https://aws.amazon.com/cli/)。
-* 将 [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) 下载到本地计算机。 这是稍后用于将 .NET for Apache Spark 依赖文件复制到 Spark 群集的工作器节点的帮助程序脚本。
+* 将 [install-worker.sh](https://github.com/dotnet/spark/blob/main/deployment/install-worker.sh) 下载到本地计算机。 这是稍后用于将 .NET for Apache Spark 依赖文件复制到 Spark 群集的工作器节点的帮助程序脚本。
 
 ## <a name="prepare-worker-dependencies"></a>准备辅助角色依赖项
 
@@ -42,7 +42,7 @@ Microsoft.Spark.Worker 是后端组件，位于 Spark 群集的单个工作器�
 
    例如，如果需要使用 `netcoreapp3.1` 的 `.NET for Apache Spark v1.0.0`，则需要下载 [Microsoft.Spark.Worker.netcoreapp3.1.linux-x64-1.0.0.tar.gz](https://github.com/dotnet/spark/releases/download/v1.0.0/Microsoft.Spark.Worker.netcoreapp3.1.linux-x64-1.0.0.tar.gz)。
 
-2. 将 `Microsoft.Spark.Worker.<release>.tar.gz` 和 [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) 上传到群集具有访问权限的分布式文件系统（如 S3）。
+2. 将 `Microsoft.Spark.Worker.<release>.tar.gz` 和 [install-worker.sh](https://github.com/dotnet/spark/blob/main/deployment/install-worker.sh) 上传到群集具有访问权限的分布式文件系统（如 S3）。
 
 ## <a name="prepare-your-net-for-apache-spark-app"></a>准备 .NET for Apache Spark 应用
 
@@ -135,4 +135,4 @@ aws emr add-steps \
 在本教程中，你已将 .NET for Apache Spark 应用程序部署到 Amazon EMR Spark。 对于 .NET for Apache Spark 示例项目，请继续使用 GitHub。
 
 > [!div class="nextstepaction"]
-> [.NET for Apache Spark 示例](https://github.com/dotnet/spark/tree/master/examples)
+> [.NET for Apache Spark 示例](https://github.com/dotnet/spark/tree/main/examples)

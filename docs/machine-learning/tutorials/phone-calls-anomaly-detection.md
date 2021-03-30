@@ -4,12 +4,12 @@ description: 了解如何为时序数据构建异常检测应用程序。 本教
 ms.date: 12/04/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 7edb84ae53f1da7903cf4b3f77d215206ffbf1ef
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 52ce0a60c91ef7a82f7ef1a0709701302b9e11d9
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259819"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874766"
 ---
 # <a name="tutorial-detect-anomalies-in-time-series-with-mlnet"></a>教程：使用 ML.NET 检测时序中的异常
 
@@ -22,13 +22,13 @@ ms.locfileid: "102259819"
 > * 检测时序的周期
 > * 检测周期性时序的异常
 
-可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/PhoneCallsAnomalyDetection) 存储库中找到本教程的源代码。
+可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/PhoneCallsAnomalyDetection) 存储库中找到本教程的源代码。
 
 ## <a name="prerequisites"></a>先决条件
 
 * 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2019 16.7.8 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。
 
-* [phone-calls.csv 数据集](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_PhoneCalls/SrEntireDetection/Data/phone-calls.csv)。
+* [phone-calls.csv 数据集](https://github.com/dotnet/machinelearning-samples/blob/main/samples/csharp/getting-started/AnomalyDetection_PhoneCalls/SrEntireDetection/Data/phone-calls.csv)。
 
 ## <a name="create-a-console-application"></a>创建控制台应用程序
 
@@ -50,7 +50,7 @@ ms.locfileid: "102259819"
 
 1. 下载数据集并将其保存到之前创建的 *Data* 文件夹中：
 
-    右键单击 [phone-calls.csv](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/AnomalyDetection_PhoneCalls/SrEntireDetection/Data/phone-calls.csv) 并选择“将链接(或目标)另存为…”
+    右键单击 [phone-calls.csv](https://raw.githubusercontent.com/dotnet/machinelearning-samples/main/samples/csharp/getting-started/AnomalyDetection_PhoneCalls/SrEntireDetection/Data/phone-calls.csv) 并选择“将链接(或目标)另存为…”
 
      确保将 \*.csv 文件保存到 *Data* 文件夹，或者在将其保存到其他位置后，将 \*.csv 文件移动到 *Data* 文件夹。
 
@@ -249,7 +249,7 @@ Index   Data    Anomaly AnomalyScore    Mag     ExpectedValue   BoundaryUnit    
 
 祝贺你！ 你现在已成功构建机器学习模型，用于检测周期性时序中的周期和异常。
 
-可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/PhoneCallsAnomalyDetection) 存储库中找到本教程的源代码。
+可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/PhoneCallsAnomalyDetection) 存储库中找到本教程的源代码。
 
 在本教程中，你将了解：
 > [!div class="checklist"]
@@ -262,4 +262,4 @@ Index   Data    Anomaly AnomalyScore    Mag     ExpectedValue   BoundaryUnit    
 
 请查看机器学习示例 GitHub 存储库，以探索能耗异常情况检测示例。
 > [!div class="nextstepaction"]
-> [dotnet/machinelearning-samples GitHub 存储库](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/AnomalyDetection_PowerMeterReadings)
+> [dotnet/machinelearning-samples GitHub 存储库](https://github.com/dotnet/machinelearning-samples/tree/main/samples/csharp/getting-started/AnomalyDetection_PowerMeterReadings)

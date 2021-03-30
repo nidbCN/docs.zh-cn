@@ -4,12 +4,12 @@ description: 了解如何控制自包含应用的剪裁。
 author: sbomer
 ms.author: svbomer
 ms.date: 08/25/2020
-ms.openlocfilehash: e36aca3aadb6968f73a439ca985dc410d1bc88d8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 93fee991cf218a52ad1d9a2597b1c9b2d442110a
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95704651"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874246"
 ---
 # <a name="trimming-options"></a>剪裁选项
 
@@ -162,4 +162,4 @@ SDK 还可使用属性 `DebuggerSupport` 来禁用调试器支持。 禁用调�
 
     删除 `System.*` 程序集的异常消息。 当 `System.*` 程序集中引发异常时，该消息将是简化的资源 ID，而不是完整的消息。
 
- 这些属性将导致剪裁相关代码，同时还将通过 [runtimeconfig](../run-time-config/index.md) 文件禁用功能。 有关这些属性（包括相应的 runtimeconfig 选项）的详细信息，请参阅[功能切换](https://github.com/dotnet/runtime/blob/master/docs/workflow/trimming/feature-switches.md)。 某些 SDK 可能具有这些属性的默认值。
+ 这些属性将导致剪裁相关代码，同时还将通过 [runtimeconfig](../run-time-config/index.md) 文件禁用功能。 有关这些属性（包括相应的 runtimeconfig 选项）的详细信息，请参阅[功能切换](https://github.com/dotnet/runtime/blob/main/docs/workflow/trimming/feature-switches.md)。 某些 SDK 可能具有这些属性的默认值。

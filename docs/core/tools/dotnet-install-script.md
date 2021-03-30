@@ -2,12 +2,12 @@
 title: dotnet-install 脚本
 description: 了解用于安装 .NET SDK 和共享运行时的 dotnet-install 脚本。
 ms.date: 09/22/2020
-ms.openlocfilehash: 51482ca70d08d86e02a493f1da49b056fed8d11c
-ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
+ms.openlocfilehash: 45b5a15bdbaa3f3167dd434e2600e33b69dc9b85
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102206682"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875156"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 脚本引用
 
@@ -267,4 +267,4 @@ bash 脚本也读取 PowerShell 开关。因此，可以在 Linux/macOS 系统�
 ## <a name="see-also"></a>请参阅
 
 - [.NET 版本](https://github.com/dotnet/core/releases)
-- [.NET 运行时和 SDK 下载存档](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)
+- [.NET 运行时和 SDK 下载存档](https://github.com/dotnet/core/blob/main/release-notes/download-archive.md)

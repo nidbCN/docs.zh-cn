@@ -5,18 +5,18 @@ author: mamccrea
 ms.author: mamccrea
 ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: 3a02ac52155971f480c7f0c338d4a2a9a7d1d81c
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 29f90c43ece1f2655a15f759b473f723e712bda8
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688015"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873167"
 ---
 # <a name="tutorial-structured-streaming-with-net-for-apache-spark"></a>教程：使用 .NET for Apache Spark 进行结构化流式处理
 
 本教程介绍如何使用 .NET for Apache Spark 调用 Spark 结构化流式处理。 Spark 结构化流式处理是 Apache Spark 对处理实时数据流的支持。 流处理是指在生成实时数据时对其进行分析。
 
-在本教程中，你将了解：
+本教程介绍如何执行下列操作：
 
 > [!div class="checklist"]
 >
@@ -37,7 +37,7 @@ ms.locfileid: "94688015"
    cd mySparkStreamingApp
    ```
 
-   `dotnet` 命令将创建 `console` 类型的 `new` 应用程序。 `-o` 参数将创建名为 mySparkStreamingApp 的目录，其中会存储你的应用并填充必需文件  。 `cd mySparkStreamingApp` 命令会将目录更改为你刚才创建的应用目录。
+   `dotnet` 命令将创建 `console` 类型的 `new` 应用程序。 `-o` 参数将创建名为 mySparkStreamingApp 的目录，其中会存储你的应用并填充必需文件。 `cd mySparkStreamingApp` 命令会将目录更改为你刚才创建的应用目录。
 
 1. 要在应用中使用 .NET for Apache Spark，请安装 Microsoft.Spark 包。 在控制台中运行以下命令：
 
@@ -47,7 +47,7 @@ ms.locfileid: "94688015"
 
 ## <a name="establish-and-connect-to-a-data-stream"></a>建立连接并连接到数据流
 
-测试流处理的一个常用方法是通过 netcat  。 netcat（也称为 nc  ）可用于从网络连接中读取以及向网络连接写入。 通过终端窗口建立与 netcat 的网络连接。
+测试流处理的一个常用方法是通过 netcat。 netcat（也称为 nc）可用于从网络连接中读取以及向网络连接写入。 通过终端窗口建立与 netcat 的网络连接。
 
 ### <a name="create-a-data-stream-with-netcat"></a>使用 netcat 创建数据流
 
@@ -71,7 +71,7 @@ ms.locfileid: "94688015"
 
 ### <a name="create-a-sparksession"></a>创建 SparkSession
 
-1. 将以下附加的 `using` 语句添加到 mySparkStreamingApp 中 Program.cs 文件顶部   ：
+1. 将以下附加的 `using` 语句添加到 mySparkStreamingApp 中 Program.cs 文件顶部：
 
    ```csharp
    using System;
@@ -106,7 +106,7 @@ DataFrame lines = spark
 
 ## <a name="register-a-user-defined-function"></a>注册用户定义的函数
 
-可以使用 Spark 应用程序中的 UDF（用户定义的函数）来对数据执行计算和分析  。
+可以使用 Spark 应用程序中的 UDF（用户定义的函数）来对数据执行计算和分析。
 
 将以下代码添加到 `Main` 方法，以注册名为 `udfArray` 的 UDF。
 
@@ -115,9 +115,9 @@ Func<Column, Column> udfArray =
     Udf<string, string[]>((str) => new string[] { str, $"{str} {str.Length}" });
 ```
 
-此 UDF 处理从 netcat 终端接收的每个字符串，以生成包含原始字符串（包含在 str  中）的数组，后跟与原始字符串的长度串联的原始字符串。
+此 UDF 处理从 netcat 终端接收的每个字符串，以生成包含原始字符串（包含在 str 中）的数组，后跟与原始字符串的长度串联的原始字符串。
 
-例如，在 netcat 终端中输入“Hello world”会生成一个数组，其中  ：
+例如，在 netcat 终端中输入“Hello world”会生成一个数组，其中：
 
 * array\[0] = Hello world
 * array\[1] = Hello world 11
@@ -130,7 +130,7 @@ Func<Column, Column> udfArray =
 DataFrame arrayDF = lines.Select(Explode(udfArray(lines["value"])));
 ```
 
-此代码片段将 udfArray 应用于数据帧中的每个值，这表示从 netcat 终端读取的每个字符串  。 应用 SparkSQL 方法 <xref:Microsoft.Spark.Sql.Functions.Explode%2A>，将数组的每个项放在其自己的行中。 最后，使用 <xref:Microsoft.Spark.Sql.DataFrame.Select%2A> 放置在新的数据帧 arrayDF 中生成的列  。
+此代码片段将 udfArray 应用于数据帧中的每个值，这表示从 netcat 终端读取的每个字符串。 应用 SparkSQL 方法 <xref:Microsoft.Spark.Sql.Functions.Explode%2A>，将数组的每个项放在其自己的行中。 最后，使用 <xref:Microsoft.Spark.Sql.DataFrame.Select%2A> 放置在新的数据帧 arrayDF 中生成的列。
 
 ## <a name="display-your-stream"></a>显示流
 
@@ -145,7 +145,7 @@ StreamingQuery query = arrayDf
 
 ## <a name="run-your-code"></a>运行代码
 
-Spark 中的结构化流式处理通过一系列小型批处理来处理数据  。  运行程序时，建立 netcat 连接的命令提示符允许你开始键入。 每次在该命令提示符下键入数据后按 Enter 键，Spark 都会将你的项视为批处理，并运行 UDF。
+Spark 中的结构化流式处理通过一系列小型批处理来处理数据。  运行程序时，建立 netcat 连接的命令提示符允许你开始键入。 每次在该命令提示符下键入数据后按 Enter 键，Spark 都会将你的项视为批处理，并运行 UDF。
 
 ### <a name="use-spark-submit-to-run-your-app"></a>使用 spark-submit 运行应用
 
@@ -160,11 +160,11 @@ spark-submit --class org.apache.spark.deploy.dotnet.DotnetRunner --master local 
 
 ## <a name="get-the-code"></a>获取代码
 
-本教程使用 [StructuredNetworkCharacterCount.cs](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkCharacterCount.cs) 示例，但 GitHub 上还有其他三个完整的流处理示例：
+本教程使用 [StructuredNetworkCharacterCount.cs](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkCharacterCount.cs) 示例，但 GitHub 上还有其他三个完整的流处理示例：
 
-* [StructuredNetworkWordCount.cs](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCount.cs)：从任意源流式传输的数据的字数统计
-* [StructuredNetworkWordCountWindowed.cs](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCountWindowed.cs)：包含窗口化逻辑的数据的字数统计
-* [StructuredKafkaWordCount.cs](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)：从 Kafka 流式传输的数据的字数统计
+* [StructuredNetworkWordCount.cs](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCount.cs)：从任意源流式传输的数据的字数统计
+* [StructuredNetworkWordCountWindowed.cs](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCountWindowed.cs)：包含窗口化逻辑的数据的字数统计
+* [StructuredKafkaWordCount.cs](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)：从 Kafka 流式传输的数据的字数统计
 
 ## <a name="next-steps"></a>后续步骤
 

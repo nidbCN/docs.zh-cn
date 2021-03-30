@@ -4,18 +4,18 @@ description: 了解 ASP.NET Core 6.0 中标题为“可以为 Null 的引用类�
 author: scottaddie
 ms.author: scaddie
 ms.date: 02/24/2021
-ms.openlocfilehash: d289ee68a10ee6a237e553a9e0ade153add8f608
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: d6a43b4885a7b11669fc0eeb469c740b60d0cd4c
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102257884"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874337"
 ---
 # <a name="nullable-reference-type-annotations-changed"></a>可以为 Null 的引用类型注释已更改
 
 此问题表示一项正在进行的工作。在整个 ASP.NET Core 6.0 中，所有对为 Null 性注释的中断性变更都将汇总到这个问题中。
 
-从 ASP.NET Core 5.0 开始，为 Null 性注释已应用到部分代码中。 从这项工作一开始，就预料到这些注释会[出现错误](https://github.com/dotnet/runtime/blob/master/docs/coding-guidelines/api-guidelines/nullability.md#breaking-change-guidance)，需要进行修正。 在 ASP.NET Core 6.0 中，将对某些以前应用的批注进行更新。 其中的某些更改被视为源中断性变更。 这些更改导致 API 不兼容或具有更大的限制性。 如果在启用了可以为 Null 的引用类型的项目中使用，则更新后的 API 可能会导致生成时警告。
+从 ASP.NET Core 5.0 开始，为 Null 性注释已应用到部分代码中。 从这项工作一开始，就预料到这些注释会[出现错误](https://github.com/dotnet/runtime/blob/main/docs/coding-guidelines/api-guidelines/nullability.md#breaking-change-guidance)，需要进行修正。 在 ASP.NET Core 6.0 中，将对某些以前应用的批注进行更新。 其中的某些更改被视为源中断性变更。 这些更改导致 API 不兼容或具有更大的限制性。 如果在启用了可以为 Null 的引用类型的项目中使用，则更新后的 API 可能会导致生成时警告。
 
 有关讨论，请参阅 GitHub 问题 [dotnet/aspnetcore#27564](https://github.com/dotnet/aspnetcore/issues/27564)。
 

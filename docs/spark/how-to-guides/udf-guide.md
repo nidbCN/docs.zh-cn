@@ -6,12 +6,12 @@ author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 50e631b0c561ebdf081d4c1b7d16bf25abb322e5
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 13898bdbd9522730c8f0cd19bd13d4e6f3a6a10e
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224188"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874064"
 ---
 # <a name="create-user-defined-functions-udf-in-net-for-apache-spark"></a>在 .NET for Apache Spark 中创建用户定义的函数 (UDF)
 
@@ -27,7 +27,7 @@ Func<Column, Column> udf = Udf<string, string>(
     str => $"{s1} {str}");
 ```
 
-UDF 将 `string` 以[数据帧](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Sql/DataFrame.cs#L24)的[列](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Sql/Column.cs#L14)的形式作为输入，并返回在该输入之前追加 `hello` 的 `string`。
+UDF 将 `string` 以[数据帧](https://github.com/dotnet/spark/blob/main/src/csharp/Microsoft.Spark/Sql/DataFrame.cs#L24)的[列](https://github.com/dotnet/spark/blob/main/src/csharp/Microsoft.Spark/Sql/Column.cs#L14)的形式作为输入，并返回在该输入之前追加 `hello` 的 `string`。
 
 以下数据帧 `df` 包含名称列表：
 
@@ -59,11 +59,11 @@ DataFrame udfResult = df.Select(udf(df["name"]));
 +-------------+
 ```
 
-为更好地了解如何实现 UDF，请在 GitHub 上查看 [UDF 帮助程序函数](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Sql/Functions.cs#L3616)和[示例](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark.E2ETest/UdfTests/UdfSimpleTypesTests.cs#L49)。
+为更好地了解如何实现 UDF，请在 GitHub 上查看 [UDF 帮助程序函数](https://github.com/dotnet/spark/blob/main/src/csharp/Microsoft.Spark/Sql/Functions.cs#L3616)和[示例](https://github.com/dotnet/spark/blob/main/src/csharp/Microsoft.Spark.E2ETest/UdfTests/UdfSimpleTypesTests.cs#L49)。
 
 ## <a name="udf-serialization"></a>UDF 序列化
 
-由于 UDF 函数需要在辅助角色上运行，因此必须将其序列化并作为有效负载的一部分从驱动程序发送到辅助角色。 需要将[委托](../../csharp/programming-guide/delegates/index.md)（即对方法的引用）及其[目标](xref:System.Delegate.Target%2A)（即当前委托在其中调用实例方法的类实例）序列化。 查看此处的 [GitHub 中的代码示例](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Utils/CommandSerDe.cs#L149)，更好地了解如何实现 UDF 序列化。
+由于 UDF 函数需要在辅助角色上运行，因此必须将其序列化并作为有效负载的一部分从驱动程序发送到辅助角色。 需要将[委托](../../csharp/programming-guide/delegates/index.md)（即对方法的引用）及其[目标](xref:System.Delegate.Target%2A)（即当前委托在其中调用实例方法的类实例）序列化。 查看此处的 [GitHub 中的代码示例](https://github.com/dotnet/spark/blob/main/src/csharp/Microsoft.Spark/Utils/CommandSerDe.cs#L149)，更好地了解如何实现 UDF 序列化。
 
 .NET for Apache Spark 使用不支持序列化委托的 .NET Core。 相反，反射用于序列化定义委托的目标。 在公共范围内定义多个委托时，这些委托将具有一个共享闭包，该闭包会成为用于序列化的反射的目标。
 

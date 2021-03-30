@@ -4,12 +4,12 @@ description: 本教程演示如何使用预先训练的 TensorFlow 模型对网�
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 9a2e7f72d59e31cfd7db5b89bfad55bccb063cea
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 0c2cfd46375406726913a83d67c45ff922a1085b
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281402"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104877002"
 ---
 # <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>教程：在 ML.NET 中使用预先训练的 TensorFlow 模型分析电影评论的情绪
 
@@ -24,7 +24,7 @@ ms.locfileid: "86281402"
 > * 将网站评论文本转换为适用于模型的特征
 > * 使用模型进行预测
 
-可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TextClassificationTF) 存储库中找到本教程的源代码。
+可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/TextClassificationTF) 存储库中找到本教程的源代码。
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -38,18 +38,18 @@ ms.locfileid: "86281402"
 
 2. 在项目中创建名为“Data”的目录，用于保存数据集文件。
 
-3. 安装“Microsoft.ML NuGet 包”：
+3. 安装“Microsoft.ML NuGet 包”  ：
 
     [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 
-    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”。 选择“nuget.org”作为包源，然后选择“浏览”选项卡。搜索“Microsoft.ML”，选择所需的包，然后选择“安装”按钮 。 同意所选包的许可条款，继续执行安装。 对 Microsoft.ML.TensorFlow、Microsoft.ML.SampleUtils 和 SciSharp.TensorFlow.Redist，重复上述步骤。  
+    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”  。 选择“nuget.org”作为包源，然后选择“浏览”选项卡。搜索“Microsoft.ML”，选择所需的包，然后选择“安装”按钮 。 同意所选包的许可条款，继续执行安装。 对 Microsoft.ML.TensorFlow、Microsoft.ML.SampleUtils 和 SciSharp.TensorFlow.Redist，重复上述步骤。  
 
 ### <a name="add-the-tensorflow-model-to-the-project"></a>将 TensorFlow 模型添加到项目
 
 > [!NOTE]
-> 本教程的模型来自 [dotnet/machinelearning-testdata](https://github.com/dotnet/machinelearning-testdata/tree/master/Microsoft.ML.TensorFlow.TestModels/sentiment_model) GitHub 存储库。 该模型采用 TensorFlow SavedModel 格式。
+> 本教程的模型来自 [dotnet/machinelearning-testdata](https://github.com/dotnet/machinelearning-testdata/tree/main/Microsoft.ML.TensorFlow.TestModels/sentiment_model) GitHub 存储库。 该模型采用 TensorFlow SavedModel 格式。
 
-1. 下载 [sentiment_model zip 文件](https://github.com/dotnet/samples/blob/master/machine-learning/models/textclassificationtf/sentiment_model.zip?raw=true)并将其解压缩。
+1. 下载 [sentiment_model zip 文件](https://github.com/dotnet/samples/blob/main/machine-learning/models/textclassificationtf/sentiment_model.zip?raw=true)并将其解压缩。
 
     该 zip 文件包含：
 
@@ -81,14 +81,14 @@ ms.locfileid: "86281402"
 
 首先是将文本拆分为单独的单词，然后使用提供的映射文件将每个单词映射到整数编码。 这种转换的结果是一个可变长度的整数数组，其长度对应于句子中的单词数。
 
-|Property| “值”|类型|
+|Property| 值|类型|
 |-------------|-----------------------|------|
 |ReviewText|这部电影非常不错|string|
 |VariableLengthFeatures|14,22,9,66,78,... |int[]|
 
 然后将可变长度特征数组的大小调整为固定长度 600。 这是 TensorFlow 模型所需的长度。
 
-|Property| “值”|类型|
+|Property| 值|类型|
 |-------------|-----------------------|------|
 |ReviewText|这部电影非常不错|string|
 |VariableLengthFeatures|14,22,9,66,78,... |int[]|
@@ -226,7 +226,7 @@ ms.locfileid: "86281402"
 
 1. [Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) 函数对单行数据进行预测：
 
-    |Property| “值”|类型|
+    |Property| 值|类型|
     |-------------|-----------------------|------|
     |预测|[0.5459937, 0.454006255]|float[]|
 
@@ -251,7 +251,7 @@ Is sentiment/review positive ? Yes
 
 祝贺你！ 现已通过在 ML.NET 中重用预先训练的 `TensorFlow` 模型成功生成用于分类和预测消息情绪的机器学习模型。
 
-可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TextClassificationTF) 存储库中找到本教程的源代码。
+可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/TextClassificationTF) 存储库中找到本教程的源代码。
 
 在本教程中，你将了解：
 > [!div class="checklist"]

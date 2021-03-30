@@ -5,12 +5,12 @@ author: briacht
 ms.date: 06/30/2020
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 2df774110d3355bf75a14e211555984a12cf7fa4
-ms.sourcegitcommit: b27645cb378d4e8137a267e5467ff31409acf6c0
+ms.openlocfilehash: 9171a6ca073e6296220ebcb874258b6893b2974f
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "103231389"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875351"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorization-with-mlnet"></a>教程：使用矩阵因子分解和 ML.NET 生成影片推荐系统
 
@@ -25,7 +25,7 @@ ms.locfileid: "103231389"
 > * 评估模型
 > * 部署和使用模型
 
-可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/MovieRecommendation) 存储库中找到本教程的源代码。
+可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/MovieRecommendation) 存储库中找到本教程的源代码。
 
 ## <a name="machine-learning-workflow"></a>机器学习工作流
 
@@ -68,8 +68,8 @@ ms.locfileid: "103231389"
 
 1. 下载两个数据集并将其保存到先前创建的“数据”文件夹中  ：
 
-   * 右键单击 [recommended-ratings-train.csv](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/MatrixFactorization_MovieRecommendation/Data/recommendation-ratings-train.csv)，然后选择“将链接(或目标)另存为...” 
-   * 右键单击 [recommendation-ratings-test.csv](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/MatrixFactorization_MovieRecommendation/Data/recommendation-ratings-test.csv)，然后选择“将链接(或目标)另存为...” 
+   * 右键单击 [recommended-ratings-train.csv](https://raw.githubusercontent.com/dotnet/machinelearning-samples/main/samples/csharp/getting-started/MatrixFactorization_MovieRecommendation/Data/recommendation-ratings-train.csv)，然后选择“将链接(或目标)另存为...” 
+   * 右键单击 [recommendation-ratings-test.csv](https://raw.githubusercontent.com/dotnet/machinelearning-samples/main/samples/csharp/getting-started/MatrixFactorization_MovieRecommendation/Data/recommendation-ratings-test.csv)，然后选择“将链接(或目标)另存为...” 
 
      确保将 .csv 文件保存到“数据”文件夹，或者将其保存到其他位置后，将 .csv 文件移动到“数据”文件夹\*  \*  。
 
@@ -400,7 +400,7 @@ Movie 10 is recommended for user 6
 =============== Saving the model to a file ===============
 ```
 
-祝贺你！ 现已成功构建了用于推荐影片的机器学习模型。 可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/MovieRecommendation) 存储库中找到本教程的源代码。
+祝贺你！ 现已成功构建了用于推荐影片的机器学习模型。 可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/MovieRecommendation) 存储库中找到本教程的源代码。
 
 ## <a name="improve-your-model"></a>提升模型
 
@@ -445,8 +445,8 @@ var options = new MatrixFactorizationTrainer.Options
 
 | 算法       | 方案           | 示例  |
 | ------------- |:-------------:| -----:|
-| 一类矩阵分解 | 当只有 userId 和 movieId 时使用此选项。 这种推荐方式基于共同购买方案或经常一起购买的产品，这意味着它将根据自己的采购订单历史记录向客户推荐一组产品。 | [>试试吧](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/MatrixFactorization_ProductRecommendation) |
-| 场感知分解机 | 当拥有的特征不止 userId、productId 和评分（例如产品描述或产品价格）时，可使用此选项进行建议。 此方法也使用协作筛选法。 | [>试试吧](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/end-to-end-apps/Recommendation-MovieRecommender) |
+| 一类矩阵分解 | 当只有 userId 和 movieId 时使用此选项。 这种推荐方式基于共同购买方案或经常一起购买的产品，这意味着它将根据自己的采购订单历史记录向客户推荐一组产品。 | [>试试吧](https://github.com/dotnet/machinelearning-samples/tree/main/samples/csharp/getting-started/MatrixFactorization_ProductRecommendation) |
+| 场感知分解机 | 当拥有的特征不止 userId、productId 和评分（例如产品描述或产品价格）时，可使用此选项进行建议。 此方法也使用协作筛选法。 | [>试试吧](https://github.com/dotnet/machinelearning-samples/tree/main/samples/csharp/end-to-end-apps/Recommendation-MovieRecommender) |
 
 ### <a name="new-user-scenario"></a>新用户方案
 

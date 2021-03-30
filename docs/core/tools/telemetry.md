@@ -3,12 +3,12 @@ title: .NET SDK 遥测
 description: 了解可收集使用情况信息以供分析的 .NET SDK 遥测功能、收集的数据，以及如何禁用遥测。
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: 137b703dc9369f09fb535af40edf057e4e02117a
-ms.sourcegitcommit: 2b878d7011306b215dbf3d5dc9c1e78355a6dcd5
+ms.openlocfilehash: 1a863fe0c713cb49eca2968464d550eae2c9f36a
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2021
-ms.locfileid: "98757832"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873401"
 ---
 # <a name="net-sdk-telemetry"></a>.NET SDK 遥测
 
@@ -142,4 +142,4 @@ at Microsoft.DotNet.Cli.Program.Main(String[] args)
 ## <a name="see-also"></a>请参阅
 
 - [.NET CLI 遥测数据](https://dotnet.microsoft.com/platform/telemetry)
-- [遥测参考源（dotnet/sdk 存储库）](https://github.com/dotnet/sdk/tree/master/src/Cli/dotnet/Telemetry)
+- [遥测参考源（dotnet/sdk 存储库）](https://github.com/dotnet/sdk/tree/main/src/Cli/dotnet/Telemetry)

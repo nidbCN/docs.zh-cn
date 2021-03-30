@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DefineConstants compiler option [C#]
 - LangVersion compiler option [C#]
 - Nullable compiler option [C#]
-ms.openlocfilehash: 7d1d00a52bd2ca1608d4059d7d217e763defa7b9
-ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
+ms.openlocfilehash: fe3b7b8c06aa86e406757feb7635a5e9ca1032e9
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103482411"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105637021"
 ---
 # <a name="c-compiler-options-for-language-feature-rules"></a>用于语言功能规则的 C# 编译器选项
 
@@ -55,7 +55,7 @@ DefineConstants 选项将定义程序中所有源代码文件的符号。
 <DefineConstants>name;name2</DefineConstants>
 ```
 
-此选项指定要定义的一个或多个符号的名称。 DefineConstants 选项具有与 [#define](../preprocessor-directives/preprocessor-define.md) 预处理器指令相同的效果，只不过编译器选项对项目中的所有文件都有效。 符号在源文件中保持已定义状态，直到源文件中的 [#undef](../preprocessor-directives/preprocessor-undef.md) 指令删除该定义。 当你使用 `-define` 选项时，一个文件中的 `#undef` 指令不影响项目中的其他源代码文件。 可以将由此选项创建的符号同 [#if](../preprocessor-directives/preprocessor-if.md)、[#else](../preprocessor-directives/preprocessor-else.md)、[#elif](../preprocessor-directives/preprocessor-elif.md) 和 [#endif](../preprocessor-directives/preprocessor-endif.md) 一起使用，对源文件进行条件编译。 C# 编译器本身不定义源代码中使用的符号或宏；所有符号定义必须都是用户定义的。
+此选项指定要定义的一个或多个符号的名称。 DefineConstants 选项具有与 [#define](../preprocessor-directives.md#defining-symbols) 预处理器指令相同的效果，只不过编译器选项对项目中的所有文件都有效。 符号在源文件中保持已定义状态，直到源文件中的 [#undef](../preprocessor-directives.md#defining-symbols) 指令删除该定义。 当你使用 `-define` 选项时，一个文件中的 `#undef` 指令不影响项目中的其他源代码文件。 可以将由此选项创建的符号同 [#if](../preprocessor-directives.md#conditional-compilation)、[#else](../preprocessor-directives.md)、[#elif](../preprocessor-directives.md#conditional-compilation) 和 [#endif](../preprocessor-directives.md#conditional-compilation) 一起使用，对源文件进行条件编译。 C# 编译器本身不定义源代码中使用的符号或宏；所有符号定义必须都是用户定义的。
 
 > [!NOTE]
 > 同 C++ 等语言一样，C# `#define` 指令不允许为符号赋值。 例如，`#define` 不能用于创建宏或定义常数。 如果需要定义一个常数，请使用 `enum` 变量。 若要创建 C++ 风格的宏，请考虑泛型等替代项。 由于宏非常容易出错，所以 C# 不允许使用宏，但提供了更安全的替代项。
@@ -152,4 +152,4 @@ C# 应用程序引用的元数据不受 LangVersion 编译器选项约束。
 > 1. 文件名以 TemporaryGeneratedFile_ 开头
 > 1. 文件名用以 .designer.cs、.generated.cs、.g.cs 或 .g.i.cs 结尾   。
 >
-> 生成器可以选择使用 [`#nullable`](../preprocessor-directives/preprocessor-nullable.md) 预处理器指令。
+> 生成器可以选择使用 [`#nullable`](../preprocessor-directives.md#nullable-context) 预处理器指令。

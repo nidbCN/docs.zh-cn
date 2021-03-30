@@ -3,28 +3,28 @@ title: 语义分析入门
 description: 本教程概述如何使用.NET 编译器 SDK 进行语义分析。
 ms.date: 02/06/2018
 ms.custom: mvc
-ms.openlocfilehash: a6dcaeeb86acb5c0e1602f01dc5952ffd9d5e3f5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3119363822328c0e5fc67c2a2a4a917a7d37cfd2
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240503"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872556"
 ---
 # <a name="get-started-with-semantic-analysis"></a>语义分析入门
 
 本教程假定你熟悉语法 API。 [语法分析入门](syntax-analysis.md)一文提供了详细介绍。
 
-在本教程中，你将了解“符号”和“绑定 API”   。 这些 API 提供关于程序语义含义  的信息。 它们帮助你就程序中的符号所代表的类型进行问答。
+在本教程中，你将了解“符号”和“绑定 API”。 这些 API 提供关于程序语义含义的信息。 它们帮助你就程序中的符号所代表的类型进行问答。
 
-需要安装 .NET Compiler Platform SDK  ：
+需要安装 .NET Compiler Platform SDK：
 
 [!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
 ## <a name="understanding-compilations-and-symbols"></a>了解编译和符号
 
-随着 .NET 编译器 SDK 的使用越来越多，你会越来越熟悉语法 API 和语义 API 之间的区别。 “语法 API”使你可以看到程序的结构   。 但是经常会需要更多关于程序的语义或含义的信息  。 虽然可以独立地对松散的代码文件或 Visual Basic 或 C# 代码的代码片段进行语法上的分析，但是凭空提出类似“这是什么类型的变量？”这样的问题毫无意义。 类型名称的含义可能取决于程序集引用、命名空间导入或其他代码文件。 使用**语义 API** 回答这些问题，特别是 <xref:Microsoft.CodeAnalysis.Compilation?displayProperty=nameWithType> 类。
+随着 .NET 编译器 SDK 的使用越来越多，你会越来越熟悉语法 API 和语义 API 之间的区别。 “语法 API”使你可以看到程序的结构。 但是经常会需要更多关于程序的语义或含义的信息。 虽然可以独立地对松散的代码文件或 Visual Basic 或 C# 代码的代码片段进行语法上的分析，但是凭空提出类似“这是什么类型的变量？”这样的问题毫无意义。 类型名称的含义可能取决于程序集引用、命名空间导入或其他代码文件。 使用 **语义 API** 回答这些问题，特别是 <xref:Microsoft.CodeAnalysis.Compilation?displayProperty=nameWithType> 类。
 
-<xref:Microsoft.CodeAnalysis.Compilation> 实例类似于编译器所看见的单个项目，且代表编译 Visual Basic 或 C# 程序所需的一切。 编译  包括一组要编译的源文件、程序集引用和编译器选项。 可以使用此上下文中所有的其他信息来推断代码的含义。 <xref:Microsoft.CodeAnalysis.Compilation> 允许你查找“符号”  - 类似名称和其他表达式引用的类型、命名空间、成员和变量的实体。 将名称和表达式与“符号”进行关联的过程被称为“绑定”   。
+<xref:Microsoft.CodeAnalysis.Compilation> 实例类似于编译器所看见的单个项目，且代表编译 Visual Basic 或 C# 程序所需的一切。 编译包括一组要编译的源文件、程序集引用和编译器选项。 可以使用此上下文中所有的其他信息来推断代码的含义。 <xref:Microsoft.CodeAnalysis.Compilation> 允许你查找“符号” - 类似名称和其他表达式引用的类型、命名空间、成员和变量的实体。 将名称和表达式与“符号”进行关联的过程被称为“绑定”。
 
 与 <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType> 类似，<xref:Microsoft.CodeAnalysis.Compilation> 是一个带有语言特定派生类的抽象类。 在创建编译实例时，必须在 <xref:Microsoft.CodeAnalysis.CSharp.CSharpCompilation?displayProperty=nameWithType>（或 <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicCompilation?displayProperty=nameWithType>）类上调用工厂方法。
 
@@ -32,7 +32,7 @@ ms.locfileid: "78240503"
 
 在本教程中，你会再次看到“Hello World”程序。 这次你将在该程序中查询符号，以理解这些符号所代表的类型。 在命名空间中查询类型，并学习如何查找类型上可用的方法。
 
-可以在[我们的 GitHub 存储库](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SemanticQuickStart)中看到此示例的已完成代码。
+可以在[我们的 GitHub 存储库](https://github.com/dotnet/samples/tree/main/csharp/roslyn-sdk/SemanticQuickStart)中看到此示例的已完成代码。
 
 > [!NOTE]
 > 语法树类型使用继承描述不同的语法元素，这些语法元素在程序中的不同位置生效。 使用这些 API 通常意味着将属性或集合成员强制转换为特定的派生类型。 在以下示例中，作业和强制转换分别是独立的语句，采用显式类型化变量。 你可以读取代码以查看 API 的返回类型以及所返回对象的运行时类型。 在实践中，更常见的是使用隐式类型化变量并靠 API 名称来描述要检查的对象的类型。
@@ -41,7 +41,7 @@ ms.locfileid: "78240503"
 
 * 在 Visual Studio 中，选择“文件”   > “新建”   > “项目”  ，显示新建项目对话框。
 * 在“Visual C#”   > “扩展性”  下，选择“独立代码分析工具”  。
-* 将项目命名为“SemanticQuickStart”并单击“确定”  。
+* 将项目命名为“SemanticQuickStart”并单击“确定”。
 
 你将分析上面展示过的基本“Hello World!” 程序。
 为 Hello World 程序添加文本，作为 `Program` 类中的常量：
@@ -70,7 +70,7 @@ ms.locfileid: "78240503"
 
 [!code-csharp[Find the namespace symbol for the first using](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#5 "Find the namespace symbol for the first using")]
 
-上述代码示例演示如何绑定第一个 `using` 指令中的名称以检索 `System` 命名空间的 <xref:Microsoft.CodeAnalysis.SymbolInfo?displayProperty=nameWithType>。 上述代码还说明，使用语法模型  查找代码的结构；使用语义模型理解它的含义  。  语法模型在 using 语句中找到字符串 `System`。  语义模型具有关于 `System` 命名空间中所定义类型的全部信息。
+上述代码示例演示如何绑定第一个 `using` 指令中的名称以检索 `System` 命名空间的 <xref:Microsoft.CodeAnalysis.SymbolInfo?displayProperty=nameWithType>。 上述代码还说明，使用语法模型查找代码的结构；使用语义模型理解它的含义。 语法模型在 using 语句中找到字符串 `System`。 语义模型具有关于 `System` 命名空间中所定义类型的全部信息。
 
 可以从 <xref:Microsoft.CodeAnalysis.SymbolInfo> 对象获取使用 <xref:Microsoft.CodeAnalysis.SymbolInfo.Symbol?displayProperty=nameWithType> 属性的 <xref:Microsoft.CodeAnalysis.ISymbol?displayProperty=nameWithType>。 此属性返回此表达式所引用的符号。 对于不引用任何内容的表达式（例如数字参数），此属性为 `null`。 若 <xref:Microsoft.CodeAnalysis.SymbolInfo.Symbol?displayProperty=nameWithType> 不为 null，<xref:Microsoft.CodeAnalysis.ISymbol.Kind?displayProperty=nameWithType> 表示符号的类型。 在此示例中，<xref:Microsoft.CodeAnalysis.ISymbol.Kind?displayProperty=nameWithType> 属性是 <xref:Microsoft.CodeAnalysis.SymbolKind.Namespace?displayProperty=nameWithType>。 将以下代码添加到 `Main` 方法。 它检索 `System` 命名空间的符号，然后将 `System` 命名空间中声明的所有子命名空间显示出来：
 
@@ -133,7 +133,7 @@ Press any key to continue . . .
 
 [!code-csharp[build and display the results of this query.](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#13 "Build and display the results of the query.")]
 
-生成并运行该程序。 您应看到以下输出：
+生成并运行程序。 应会看到以下输出：
 
 ```output
 Join

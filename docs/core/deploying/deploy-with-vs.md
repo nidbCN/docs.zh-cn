@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 1c9aba10e27609bdf8e95d844ead60fd0ec0bd2c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4fe2663f7fd428035aaca61e4e47bd2bf2a4f391
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538718"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872907"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>使用 Visual Studio 部署 .NET Core 应用
 
@@ -94,7 +94,7 @@ ms.locfileid: "90538718"
 
 1. 确定是否要使用全球化固定模式。
 
-   特别是如果应用面向 Linux，则可以通过利用[全球化固定模式](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)来减小部署的总规模。 全球化固定模式适用于不具有全局意识且可以使用[固定区域性](xref:System.Globalization.CultureInfo.InvariantCulture)的格式约定、大小写约定以及字符串比较和排序顺序的应用程序。
+   特别是如果应用面向 Linux，则可以通过利用[全球化固定模式](https://github.com/dotnet/runtime/blob/main/docs/design/features/globalization-invariant-mode.md)来减小部署的总规模。 全球化固定模式适用于不具有全局意识且可以使用[固定区域性](xref:System.Globalization.CultureInfo.InvariantCulture)的格式约定、大小写约定以及字符串比较和排序顺序的应用程序。
 
    要启用固定模式，右键单击“解决方案资源管理器”中的项目（不是解决方案），然后选择“编辑 SCD.csproj”或“编辑 SCD.vbproj”  。 然后将以下突出显示的行添加到文件中：
 

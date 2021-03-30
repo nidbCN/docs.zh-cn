@@ -2,12 +2,12 @@
 title: dotnet 命令
 description: 了解 dotnet 命令（.NET CLI 的通用驱动程序）及其用法。
 ms.date: 11/11/2020
-ms.openlocfilehash: 7a0c8f2eb7ab407bd725db56cbf31da4689970e4
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 33c5f9d22166b818f5c860c4f4632d359f686919
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634020"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874532"
 ---
 # <a name="dotnet-command"></a>dotnet 命令
 
@@ -118,7 +118,7 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
 - **`--additional-deps <PATH>`**
 
-  附加 .deps.json 文件的路径。 deps.json 文件包含依赖项、编译依赖项和用于解决程序集冲突的版本信息列表。 有关详细信息，请参阅 GitHub 上的[运行时配置文件](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)。
+  附加 .deps.json 文件的路径。 deps.json 文件包含依赖项、编译依赖项和用于解决程序集冲突的版本信息列表。 有关详细信息，请参阅 GitHub 上的[运行时配置文件](https://github.com/dotnet/sdk/blob/main/documentation/specs/runtime-configuration-file.md)。
 
 - **`--depsfile <PATH_TO_DEPSFILE>`**
 
@@ -345,5 +345,5 @@ dotnet myapp.dll
 
 ## <a name="see-also"></a>请参阅
 
-- [运行时配置文件](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)
+- [运行时配置文件](https://github.com/dotnet/sdk/blob/main/documentation/specs/runtime-configuration-file.md)
 - [.NET 运行时配置设置](../run-time-config/index.md)

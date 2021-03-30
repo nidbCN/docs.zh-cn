@@ -4,24 +4,24 @@ description: 通过使用 dotnet test 和 xUnit 分步生成示例解决方案�
 author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.openlocfilehash: e0f2b6f88a650f412148f51cc0236fa46ed8c618
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 76386097ebe9b0ec6141abd089b219275d989446
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656548"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875026"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-xunit"></a>使用 dotnet test 和 xUnit 在 .NET Core 中进行 F# 库单元测试
 
-本教程介绍分步构建示例解决方案的交互式体验，以了解单元测试概念。 如果希望使用预构建解决方案学习本教程，请在开始前[查看或下载示例代码](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp/)。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#view-and-download-samples)。
+本教程介绍分步构建示例解决方案的交互式体验，以了解单元测试概念。 如果希望使用预构建解决方案学习本教程，请在开始前[查看或下载示例代码](https://github.com/dotnet/samples/tree/main/core/getting-started/unit-testing-with-fsharp/)。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#view-and-download-samples)。
 
 [!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
 ## <a name="creating-the-source-project"></a>创建源项目
 
-打开 shell 窗口。 创建一个名为 unit-testing-with-fsharp  的目录，以保留该解决方案。
+打开 shell 窗口。 创建一个名为 unit-testing-with-fsharp 的目录，以保留该解决方案。
 在此新目录中，运行 `dotnet new sln` 创建新的解决方案。 这样便于管理类库和单元测试项目。
-在解决方案库中，创建 MathService  目录。 目录和文件结构目前如下所示：
+在解决方案库中，创建 MathService 目录。 目录和文件结构目前如下所示：
 
 ```
 /unit-testing-with-fsharp
@@ -29,18 +29,18 @@ ms.locfileid: "88656548"
     /MathService
 ```
 
-将 MathService  作为当前目录，然后运行 `dotnet new classlib -lang "F#"` 以创建源项目。 创建数学服务的失败实现：
+将 MathService 作为当前目录，然后运行 `dotnet new classlib -lang "F#"` 以创建源项目。 创建数学服务的失败实现：
 
 ```fsharp
 module MyMath =
     let squaresOfOdds xs = raise (System.NotImplementedException("You haven't written a test yet!"))
 ```
 
-将目录更改回 unit-testing-with-fsharp  目录。 运行 `dotnet sln add .\MathService\MathService.fsproj` 向解决方案添加类库项目。
+将目录更改回 unit-testing-with-fsharp 目录。 运行 `dotnet sln add .\MathService\MathService.fsproj` 向解决方案添加类库项目。
 
 ## <a name="creating-the-test-project"></a>创建测试项目
 
-接下来，创建 MathService.Tests  目录。 下图显示了它的目录结构：
+接下来，创建 MathService.Tests 目录。 下图显示了它的目录结构：
 
 ```
 /unit-testing-with-fsharp
@@ -51,7 +51,7 @@ module MyMath =
     /MathService.Tests
 ```
 
-将 MathService.Tests  目录作为当前目录，并使用 `dotnet new xunit -lang "F#"` 创建一个新项目。 这会创建将 xUnit 用作测试库的测试项目。 生成的模板在 MathServiceTests.fsproj  中配置测试运行程序：
+将 MathService.Tests 目录作为当前目录，并使用 `dotnet new xunit -lang "F#"` 创建一个新项目。 这会创建将 xUnit 用作测试库的测试项目。 生成的模板在 MathServiceTests.fsproj 中配置测试运行程序：
 
 ```xml
 <ItemGroup>
@@ -67,7 +67,7 @@ module MyMath =
 dotnet add reference ../MathService/MathService.fsproj
 ```
 
-可以在 GitHub 上的[示例存储库](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-with-fsharp/MathService.Tests/MathService.Tests.fsproj)中看到整个文件。
+可以在 GitHub 上的[示例存储库](https://github.com/dotnet/samples/blob/main/core/getting-started/unit-testing-with-fsharp/MathService.Tests/MathService.Tests.fsproj)中看到整个文件。
 
 最终的解决方案布局将如下所示：
 
@@ -86,7 +86,7 @@ dotnet add reference ../MathService/MathService.fsproj
 
 ## <a name="creating-the-first-test"></a>创建第一个测试
 
-编写一个失败测试，使其通过，然后重复此过程。 打开 Tests.fs  并添加以下代码：
+编写一个失败测试，使其通过，然后重复此过程。 打开 Tests.fs 并添加以下代码：
 
 ```fsharp
 [<Fact>]
@@ -97,7 +97,7 @@ let ``My test`` () =
 let ``Fail every time`` () = Assert.True(false)
 ```
 
-`[<Fact>]` 属性表示由测试运行程序运行的测试方法。 在 unit-testing-with-fsharp  中，执行 `dotnet test` 以构建测试和类库，然后运行测试。 xUnit 测试运行程序包含要运行测试的程序入口点。 `dotnet test` 使用已创建的单元测试项目启动测试运行程序。
+`[<Fact>]` 属性表示由测试运行程序运行的测试方法。 在 unit-testing-with-fsharp中，执行 `dotnet test` 以构建测试和类库，然后运行测试。 xUnit 测试运行程序包含要运行测试的程序入口点。 `dotnet test` 使用已创建的单元测试项目启动测试运行程序。
 
 这两个测试演示了最基本的已通过测试和未通过测试。 `My test` 通过，而 `Fail every time` 未通过。 现在创建针对 `squaresOfOdds` 方法的测试。 `squaresOfOdds` 方法返回输入序列中所有奇整数值的平方序列。 可以以迭代的方式创建可验证此功能的测试，而非尝试同时写入所有的函数。 若要让每个测试都通过，意味着要针对此方法创建必要的功能。
 
@@ -118,7 +118,7 @@ let squaresOfOdds xs =
     Seq.empty<int>
 ```
 
-在 unit-testing-with-fsharp  目录中，再次运行 `dotnet test`。 `dotnet test` 命令构建 `MathService` 项目，然后构建 `MathService.Tests` 项目。 构建这两个项目后，该命令将运行此单项测试。 测试通过。
+在 unit-testing-with-fsharp 目录中，再次运行 `dotnet test`。 `dotnet test` 命令构建 `MathService` 项目，然后构建 `MathService.Tests` 项目。 构建这两个项目后，该命令将运行此单项测试。 测试通过。
 
 ## <a name="completing-the-requirements"></a>完成要求
 

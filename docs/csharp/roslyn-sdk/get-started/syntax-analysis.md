@@ -3,12 +3,12 @@ title: 语法分析 (Roslyn API) 入门
 description: 介绍如何遍历、查询及浏览语法树。
 ms.date: 02/05/2018
 ms.custom: mvc
-ms.openlocfilehash: 8b9dd909a83877755dc1ebafd58aae892e460b93
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 7fea6145ed927ed197295b08ab35dbf177920061
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91756151"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872504"
 ---
 # <a name="get-started-with-syntax-analysis"></a>语法分析入门
 
@@ -70,7 +70,7 @@ SyntaxNode：蓝色 | SyntaxToken：绿色 | SyntaxTrivia：红色    ![C# 代�
 
 ### <a name="manual-traversal"></a>手动遍历
 
-可以在[我们的 GitHub 存储库](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SyntaxQuickStart)中看到此示例的已完成代码。
+可以在[我们的 GitHub 存储库](https://github.com/dotnet/samples/tree/main/csharp/roslyn-sdk/SyntaxQuickStart)中看到此示例的已完成代码。
 
 > [!NOTE]
 > 语法树类型使用继承描述不同的语法元素，这些语法元素在程序中的不同位置生效。 使用这些 API 通常意味着将属性或集合成员强制转换为特定的派生类型。 在以下示例中，作业和强制转换分别是独立的语句，采用显式类型化变量。 你可以读取代码以查看 API 的返回类型以及所返回对象的运行时类型。 在实践中，更常见的是使用隐式类型化变量并靠 API 名称来描述要检查的对象的类型。
@@ -160,7 +160,7 @@ The body text of the Main method follows:
 
 新建 C#“独立代码分析工具”项目  ，将其命名为 SyntaxWalker  。
 
-可以在[我们的 GitHub 存储库](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SyntaxQuickStart)中看到此示例的已完成代码。 GitHub 上的示例包含本教程介绍的两个项目。
+可以在[我们的 GitHub 存储库](https://github.com/dotnet/samples/tree/main/csharp/roslyn-sdk/SyntaxQuickStart)中看到此示例的已完成代码。 GitHub 上的示例包含本教程介绍的两个项目。
 
 如前面的示例所示，你可以定义字符串常量来保存将要分析的程序的文本：
 

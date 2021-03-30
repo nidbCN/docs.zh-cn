@@ -3,12 +3,12 @@ title: 调试内存泄漏教程
 description: 了解如何调试 .NET Core 中的内存泄漏。
 ms.topic: tutorial
 ms.date: 04/20/2020
-ms.openlocfilehash: 2cdc6e2f27ac04b6057aca3787564024d084fe63
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 09777b6c9f80c28e1eec28983d605f2a2e261c92
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102255667"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872738"
 ---
 # <a name="debug-a-memory-leak-in-net-core"></a>调试 .NET Core 中的内存泄漏
 
@@ -238,7 +238,7 @@ Found 2 roots.
 - 用于列出进程的 [dotnet-trace](dotnet-trace.md)
 - 用于检查托管内存使用情况的 [dotnet-counters](dotnet-counters.md)
 - 用于收集和分析转储文件的 [dotnet-dump](dotnet-dump.md)
-- [dotnet/diagnostics](https://github.com/dotnet/diagnostics/tree/master/documentation/tutorial)
+- [dotnet/diagnostics](https://github.com/dotnet/diagnostics/tree/main/documentation/tutorial)
 - [使用 Visual Studio 调试内存泄漏](/visualstudio/profiling/memory-usage)
 
 ## <a name="next-steps"></a>后续步骤

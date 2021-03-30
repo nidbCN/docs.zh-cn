@@ -2,12 +2,12 @@
 title: 何时为 Docker 容器选择 .NET Framework
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 何时为 Docker 容器选择 .NET Framework
 ms.date: 01/13/2021
-ms.openlocfilehash: 476f891a70a220172f84d8168c8492416b8e56bd
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: fa644753c3a39f285052aba7a8524ea96442c842
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98188110"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873128"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>何时为 Docker 容器选择 .NET Framework
 
@@ -39,7 +39,7 @@ ms.locfileid: "98188110"
 
 - 与工作流相关的服务。 Windows Workflow Foundation (WF)、工作流服务（WCF + 单个服务中的 WF）和 WCF Data Services（以前称为 ADO.NET Data Services）仅在 .NET Framework 上可用。 尚未计划将其引入 .NET 5。
 
-除了官方 [.NET 路线图](https://github.com/dotnet/core/blob/master/roadmap.md)中列出的技术之外，可能还会将其他功能移植到新的[统一 .NET 平台](https://devblogs.microsoft.com/dotnet/introducing-net-5/)中。 请参与 GitHub 上的讨论，发表你的看法。 如果认为遗漏了某些内容，请在 [dotnet/runtime](https://github.com/dotnet/runtime/issues/new) GitHub 存储库中提出新的问题。
+除了官方 [.NET 路线图](https://github.com/dotnet/core/blob/main/roadmap.md)中列出的技术之外，可能还会将其他功能移植到新的[统一 .NET 平台](https://devblogs.microsoft.com/dotnet/introducing-net-5/)中。 请参与 GitHub 上的讨论，发表你的看法。 如果认为遗漏了某些内容，请在 [dotnet/runtime](https://github.com/dotnet/runtime/issues/new) GitHub 存储库中提出新的问题。
 
 ## <a name="using-a-platform-or-api-that-doesnt-support-net-5"></a>使用不支持 .NET 5 的平台或 API
 

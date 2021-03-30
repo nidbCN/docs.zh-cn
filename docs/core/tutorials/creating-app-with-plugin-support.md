@@ -4,12 +4,12 @@ description: 了解如何创建支持插件的 .NET Core 应用程序。
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 10/16/2019
-ms.openlocfilehash: d3b532ae72a80eef9603fc6f3ada8c11cae966dd
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: aef91231bd4a32937d6e3cd2cb7204777c6efe96
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98187894"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873375"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>使用插件创建 .NET Core 应用程序
 
@@ -272,7 +272,7 @@ static Assembly LoadPlugin(string relativePath)
 
 ## <a name="other-examples-in-the-sample"></a>示例中的其他示例
 
-可以在 [dotnet/samples 存储库](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin)中找到本教程的完整源代码。 完成的示例包括 `AssemblyDependencyResolver` 行为的一些其他示例。 例如，`AssemblyDependencyResolver` 对象还可以解析本机库和 NuGet 包中所包含的已本地化的附属程序集。 示例存储库中的 `UVPlugin` 和 `FrenchPlugin` 演示了这些方案。
+可以在 [dotnet/samples 存储库](https://github.com/dotnet/samples/tree/main/core/extensions/AppWithPlugin)中找到本教程的完整源代码。 完成的示例包括 `AssemblyDependencyResolver` 行为的一些其他示例。 例如，`AssemblyDependencyResolver` 对象还可以解析本机库和 NuGet 包中所包含的已本地化的附属程序集。 示例存储库中的 `UVPlugin` 和 `FrenchPlugin` 演示了这些方案。
 
 ## <a name="reference-a-plugin-interface-from-a-nuget-package"></a>从 NuGet 包引用插件接口
 

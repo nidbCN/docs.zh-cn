@@ -6,12 +6,12 @@ author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 8fb729a0b8220d15af641f916383bbd6146e2e33
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: c29c3a9f6269a342d1051d6d979a4e3adb42da02
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94441071"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875546"
 ---
 # <a name="write-and-call-udfs-in-net-for-apache-spark-interactive-environments"></a>在 .NET for Apache Spark 交互环境中编写和调用 UDF
 
@@ -69,8 +69,8 @@ ms.locfileid: "94441071"
 
     ![广播变量失败](./media/dotnet-interactive/broadcast-fails.png)
 
-    如前面几节中所述，虽然我们在同一单元格中定义 UDF 及其引用的对象（在本例中为广播变量），但仍会看到提示 `Microsoft.Spark.Sql.Session` 未标记为可序列化的 `SerializationException` 错误。 这是因为当编译器尝试序列化广播变量对象 `bv` 时，发现其名称追加到了 [`SparkSession`](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Sql/SparkSession.cs#L20) 对象 `spark` 中，而该对象需要标记为可序列化。 通过查看此单元格提交的反向编译程序集，可以更轻松地演示这种情形：
+    如前面几节中所述，虽然我们在同一单元格中定义 UDF 及其引用的对象（在本例中为广播变量），但仍会看到提示 `Microsoft.Spark.Sql.Session` 未标记为可序列化的 `SerializationException` 错误。 这是因为当编译器尝试序列化广播变量对象 `bv` 时，发现其名称追加到了 [`SparkSession`](https://github.com/dotnet/spark/blob/main/src/csharp/Microsoft.Spark/Sql/SparkSession.cs#L20) 对象 `spark` 中，而该对象需要标记为可序列化。 通过查看此单元格提交的反向编译程序集，可以更轻松地演示这种情形：
 
     ![反向编译程序集代码](./media/dotnet-interactive/decompiledAssembly.png)
 
-    如果将 [`SparkSession`](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Sql/SparkSession.cs#L20) 类标记为 `[Serializable]`，则可以使用此解决方案，但它并不是理想选择，因为我们不想让用户序列化 SparkSession 对象，这可能会导致一些奇怪的非预期行为。 这是一个[已知问题](https://github.com/dotnet/spark/issues/619)，将在未来版本中解决。
+    如果将 [`SparkSession`](https://github.com/dotnet/spark/blob/main/src/csharp/Microsoft.Spark/Sql/SparkSession.cs#L20) 类标记为 `[Serializable]`，则可以使用此解决方案，但它并不是理想选择，因为我们不想让用户序列化 SparkSession 对象，这可能会导致一些奇怪的非预期行为。 这是一个[已知问题](https://github.com/dotnet/spark/issues/619)，将在未来版本中解决。

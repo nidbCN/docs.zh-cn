@@ -4,12 +4,12 @@ description: 了解如何在 Azure HDInsight 的 Jupyter Notebook 中安装 .NET
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: b84d61c29d2b2aa7a9fee20a8af9f3eee23f7e8b
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: 100991a5c6e07f9e7c21a64f53310f91d381873c
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102605472"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875494"
 ---
 # <a name="install-net-for-apache-spark-on-jupyter-notebooks-on-azure-hdinsight-spark-clusters"></a>在 Azure HDInsight Spark 群集的 Jupyter Notebook 中安装 .NET for Apache Spark
 
@@ -59,7 +59,7 @@ Azure HDInsight 群集已附带 Jupyter Notebook，因此只需将 Jupyter Noteb
 
 1. `install-interactive-notebook.sh` 是一个脚本，它可安装 .NET for Apache Spark 并可更改 Apache Livy 和 sparkmagic。 必须先创建并上传 `install-interactive-notebook.sh`，然后才可将脚本操作提交到 HDInsight。
 
-   在本地计算机中新建名称为 install-interactive-notebook.sh 的文件，粘贴 [install-interactive-notebook.sh 内容](https://raw.githubusercontent.com/dotnet/spark/master/deployment/HDI-Spark/Notebooks/install-interactive-notebook.sh)中的内容。 
+   在本地计算机中新建名称为 install-interactive-notebook.sh 的文件，粘贴 [install-interactive-notebook.sh 内容](https://raw.githubusercontent.com/dotnet/spark/main/deployment/HDI-Spark/Notebooks/install-interactive-notebook.sh)中的内容。 
 
    将此脚本上传到可从 HDInsight 群集访问的 [URI](/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux#understand-script-actions) 上。 例如 `https://<my storage account>.blob.core.windows.net/<my container>/<some dir>/install-interactive-notebook.sh`。
 

@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 28d3d9c3261f1a852d16f2637309b21412611c10
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b3ba56c7485d27d2692a589e2a8e5b330ea0de85
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95691235"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873895"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a>成员访问运算符和表达式（C# 参考）
 
@@ -182,7 +182,7 @@ if (handler != null)
 
 如前面的示例所示，表达式 `^e` 属于 <xref:System.Index?displayProperty=nameWithType> 类型。 在表达式 `^e` 中，`e` 的结果必须隐式转换为 `int`。
 
-还可以将 `^` 运算符与[范围运算符](#range-operator-)一起使用以创建一个索引范围。 有关详细信息，请参阅[索引和范围](../../tutorials/ranges-indexes.md)。
+还可以将 `^` 运算符与[范围运算符](#range-operator-)一起使用以创建一个索引范围。 有关详细信息，请参阅[索引和范围](../../whats-new/tutorials/ranges-indexes.md)。
 
 ## <a name="range-operator-"></a>范围运算符 .
 
@@ -200,7 +200,7 @@ if (handler != null)
 
 [!code-csharp[ranges with omitted operands](snippets/shared/MemberAccessOperators.cs#RangesOptional)]
 
-有关详细信息，请参阅[索引和范围](../../tutorials/ranges-indexes.md)。
+有关详细信息，请参阅[索引和范围](../../whats-new/tutorials/ranges-indexes.md)。
 
 ## <a name="operator-overloadability"></a>运算符可重载性
 

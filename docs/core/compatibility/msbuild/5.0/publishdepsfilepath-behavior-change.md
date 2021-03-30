@@ -2,12 +2,12 @@
 title: 中断性变更：PublishDepsFilePath 行为变更
 description: 了解 .NET 5 中的中断性变更：对于单文件应用程序，PublishDepsFilePath MSBuild 属性为空。
 ms.date: 09/17/2020
-ms.openlocfilehash: 3a32f733ceaa2a24eb55d5e89f2eb1791c277f0d
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 845073e73ec6bdf820f28ace487d9ae4d04d0790
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102256499"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872920"
 ---
 # <a name="publishdepsfilepath-behavior-change"></a>PublishDepsFilePath 行为变更
 
@@ -27,7 +27,7 @@ ms.locfileid: "102256499"
 
 进行此更改有以下几个原因：
 
-- 在 .NET 5 中，为了支持[改进的单文件应用](https://github.com/dotnet/designs/blob/master/accepted/2020/single-file/design.md)，重构了发布逻辑。
+- 在 .NET 5 中，为了支持[改进的单文件应用](https://github.com/dotnet/designs/blob/main/accepted/2020/single-file/design.md)，重构了发布逻辑。
 
 - 在单文件应用中，为了帮助保护在捆绑 deps.json 后尝试重写 deps.json 文件的目标，从而静默不影响该应用 。 因此，对于单文件应用程序，`PublishDepsFilePath` 为空。
 

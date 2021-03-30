@@ -2,12 +2,12 @@
 title: 演练：使用 C# 保留对象
 description: 本示例使用 C# 创建一个基本 Loan 对象，并将其数据保存到文件中，然后使用该文件中的数据创建一个新的对象。
 ms.date: 04/26/2018
-ms.openlocfilehash: 9f165addc5b9b0d056936458e8529ec1912c417b
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 0fc733982b7800653a3c8c283bd0af8384d72168
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302758"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876443"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>演练：使用 C\# 保留对象
 
@@ -32,7 +32,7 @@ ms.locfileid: "87302758"
 
 - 该示例需要 C# 7.3。 请参阅[选择 C# 语言版本](../../../language-reference/configure-language-version.md)
 
-可在 [.NET 示例 GitHub 存储库](https://github.com/dotnet/samples/tree/master/csharp/serialization)在线检查示例代码。
+可在 [.NET 示例 GitHub 存储库](https://github.com/dotnet/samples/tree/main/csharp/serialization)在线检查示例代码。
 
 ## <a name="creating-the-loan-object"></a>创建 Loan 对象
 

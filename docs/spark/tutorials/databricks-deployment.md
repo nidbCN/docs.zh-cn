@@ -4,12 +4,12 @@ description: 了解如何将 .NET for Apache Spark 应用程序部署到 Databri
 ms.date: 10/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: d17fd5002d47dcde804cb43fc27edb2c2c9be595
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: e751953937279a5f9f78f777bac8a5ca510a2f87
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688145"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876963"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>教程：将 .NET for Apache Spark 应用程序部署到 Databricks
 
@@ -46,7 +46,7 @@ ms.locfileid: "94688145"
 
 2. 在“Azure Databricks 服务”下，提供所需的值以创建 Databricks 工作区。
 
-    |Property  |描述  |
+    |Property  |说明  |
     |---------|---------|
     |**工作区名称**     | 为 Databricks 工作区提供一个名称。        |
     |**订阅**     | 从下拉列表中选择自己的 Azure 订阅。        |
@@ -112,11 +112,11 @@ Databricks CLI 安装完毕之后，接下来需要设置身份验证详细信�
 
 2. install-worker.sh 是一个脚本，可使用该脚本将 .NET for Apache Spark 依赖项文件复制到群集的节点中。
 
-   在本地计算机上创建一个名为 install-worker.sh 的新文件，并粘贴位于 GitHub 上的 [install-worker.sh 内容](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh)。
+   在本地计算机上创建一个名为 install-worker.sh 的新文件，并粘贴位于 GitHub 上的 [install-worker.sh 内容](https://raw.githubusercontent.com/dotnet/spark/main/deployment/install-worker.sh)。
 
 3. db-init.sh 是用于将依赖项安装到 Databricks Spark 群集上的脚本。
 
-   在本地计算机上创建一个名为 db-init.sh 的新文件，并粘贴位于 GitHub 上的 [db-init.sh 内容](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh)。
+   在本地计算机上创建一个名为 db-init.sh 的新文件，并粘贴位于 GitHub 上的 [db-init.sh 内容](https://github.com/dotnet/spark/blob/main/deployment/db-init.sh)。
 
    在刚刚创建的文件中，将 `DOTNET_SPARK_RELEASE` 变量设置为 `https://github.com/dotnet/spark/releases/download/v1.0.0/Microsoft.Spark.Worker.netcoreapp3.1.linux-x64-1.0.0.tar.gz`。 按原样保留 db-init.sh 文件的其余部分。
 

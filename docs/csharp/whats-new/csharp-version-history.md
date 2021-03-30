@@ -3,16 +3,16 @@ title: C# 发展历史 - C# 指南
 description: 这些语言在最早版本中是什么样的，它又是如何演化的？
 author: erikdietrich
 ms.date: 04/08/2020
-ms.openlocfilehash: 0f6739ba7a2dd0488c52b917c4a60a1b3f04a930
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 0c427563701bd3bff87178022feab19f4dcfc519
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100456414"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104877054"
 ---
 # <a name="the-history-of-c"></a>C\# 发展历史
 
-本页介绍了 C# 语言每个主要版本的发展历史。 C# 团队将继续创新，以添加新功能。 可以在 GitHub 上的 [dotnet/roslyn 存储库](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md)上找到详细的语言功能状态，包括考虑在即将发布的版本中添加的功能。
+本页介绍了 C# 语言每个主要版本的发展历史。 C# 团队将继续创新，以添加新功能。 可以在 GitHub 上的 [dotnet/roslyn 存储库](https://github.com/dotnet/roslyn/blob/main/docs/Language%20Feature%20Status.md)上找到详细的语言功能状态，包括考虑在即将发布的版本中添加的功能。
 
 > [!IMPORTANT]
 > 为了提供一些功能，C# 语言依赖 C# 规范定义为标准库  所用的类型和方法。 .NET 平台通过许多包交付这些类型和方法。 例如，异常处理。 为了确保引发的对象派生自 <xref:System.Exception>，将会检查每个 `throw` 语句或表达式。 同样，还会检查每个 `catch`，以确保捕获的类型派生自 <xref:System.Exception>。 每个版本都可能会新增要求。 若要在旧版环境中使用最新语言功能，可能需要安装特定库。 每个特定版本的页面中记录了这些依赖项。 若要了解此依赖项的背景信息，可以详细了解[语言与库的关系](relationships-between-language-and-library.md)。

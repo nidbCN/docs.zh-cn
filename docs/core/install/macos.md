@@ -4,12 +4,12 @@ description: 了解可在其上安装 .NET 的 macOS 版本。
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: fe42a1593d4e8249252d2bd964dbfd52cdcd81a9
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 9961d3e3ddb5f38be1c9c13c01af2e41815f50c9
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102105188"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875247"
 ---
 # <a name="install-net-on-macos"></a>在 macOS 上安装 .NET
 
@@ -77,11 +77,11 @@ SDK 用于生成和发布 .NET 应用和库。 安装 SDK 会包含两个[运行
 
 | .NET Core 版本 | macOS                 | 体系结构 | 详细信息    |
 | ----------------- | --------------------- | --------------| --- |
-| 5.0               | High Sierra (10.13+)  | X64 | [详细信息](https://github.com/dotnet/core/blob/master/release-notes/5.0/5.0-supported-os.md) |
-| 3.1               | High Sierra (10.13+)  | X64 | [详细信息](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md) |
-| 3.0               | High Sierra (10.13+)  | X64 | [详细信息](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) |
-| 2.2               | Sierra (10.12+)       | X64 | [详细信息](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) |
-| 2.1               | Sierra (10.12+)       | X64 | [详细信息](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) |
+| 5.0               | High Sierra (10.13+)  | X64 | [详细信息](https://github.com/dotnet/core/blob/main/release-notes/5.0/5.0-supported-os.md) |
+| 3.1               | High Sierra (10.13+)  | X64 | [详细信息](https://github.com/dotnet/core/blob/main/release-notes/3.1/3.1-supported-os.md) |
+| 3.0               | High Sierra (10.13+)  | X64 | [详细信息](https://github.com/dotnet/core/blob/main/release-notes/3.0/3.0-supported-os.md) |
+| 2.2               | Sierra (10.12+)       | X64 | [详细信息](https://github.com/dotnet/core/blob/main/release-notes/2.2/2.2-supported-os.md) |
+| 2.1               | Sierra (10.12+)       | X64 | [详细信息](https://github.com/dotnet/core/blob/main/release-notes/2.1/2.1-supported-os.md) |
 
 自 macOS Catalina（版本10.15）开始，所有在 2019 年 6 月 1 日之后生成并使用开发者 ID 扩散的软件都必须经过公证。 此要求适用于 .NET 运行时、.NET SDK 以及使用 .NET 创建的软件。
 
@@ -194,7 +194,7 @@ Visual Studio Code 是一个功能强大的轻量级源代码编辑器，可在�
 
 Microsoft 提供适合特定场景的映像。 例如，[ASP.NET Core 存储库](https://hub.docker.com/_/microsoft-dotnet-aspnet)提供针对在生产环境中运行 ASP.NET Core 应用生成的映像。
 
-有关在 Docker 容器中使用 .NET Core 的详细信息，请参阅 [.NET 和 Docker 简介](../docker/introduction.md)和[示例](https://github.com/dotnet/dotnet-docker/blob/master/samples/README.md)。
+有关在 Docker 容器中使用 .NET Core 的详细信息，请参阅 [.NET 和 Docker 简介](../docker/introduction.md)和[示例](https://github.com/dotnet/dotnet-docker/blob/main/samples/README.md)。
 
 ## <a name="next-steps"></a>后续步骤
 
@@ -204,9 +204,9 @@ Microsoft 提供适合特定场景的映像。 例如，[ASP.NET Core 存储库]
 - [教程：使用 Visual Studio Code 创建一个新应用](../tutorials/with-visual-studio-code.md)。
 - [教程：使 .NET Core 应用容器化](../docker/build-container.md)。
 
-[release-notes-21]: https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md
-[release-notes-31]: https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md
-[release-notes-50]: https://github.com/dotnet/core/blob/master/release-notes/5.0/5.0-supported-os.md
-[release-notes-20]: https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md
-[release-notes-22]: https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md
-[release-notes-30]: https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md
+[release-notes-21]: https://github.com/dotnet/core/blob/main/release-notes/2.1/2.1-supported-os.md
+[release-notes-31]: https://github.com/dotnet/core/blob/main/release-notes/3.1/3.1-supported-os.md
+[release-notes-50]: https://github.com/dotnet/core/blob/main/release-notes/5.0/5.0-supported-os.md
+[release-notes-20]: https://github.com/dotnet/core/blob/main/release-notes/2.0/2.0-supported-os.md
+[release-notes-22]: https://github.com/dotnet/core/blob/main/release-notes/2.2/2.2-supported-os.md
+[release-notes-30]: https://github.com/dotnet/core/blob/main/release-notes/3.0/3.0-supported-os.md

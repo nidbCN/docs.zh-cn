@@ -3,12 +3,12 @@ title: EventPipe 概述
 description: 了解 EventPipe 以及如何使用它来跟踪 .NET 应用程序，以诊断性能问题。
 ms.date: 11/09/2020
 ms.topic: overview
-ms.openlocfilehash: 0b4782306c85590d74b521edd254659fb162b0c2
-ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
+ms.openlocfilehash: de00f448dea9752c3dff2af35977d97c07aec6f3
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2021
-ms.locfileid: "103624157"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874155"
 ---
 # <a name="eventpipe"></a>EventPipe
 
@@ -22,7 +22,7 @@ EventPipe 是众多诊断工具背后的一种机制，可用于接收运行时�
 
 EventPipe 聚合由运行时组件发出的事件（例如实时编译器或垃圾回收器）以及从库和用户代码中的 [EventSource](xref:System.Diagnostics.Tracing.EventSource) 实例编写的事件。
 
-然后，将这些事件序列化，并直接写入文件或通过诊断端口在进程外使用。 在 Windows 上，诊断端口作为 `NamedPipe` 实现。 在非 Windows 平台（如 Linux 或 macOS）上，该端口可使用 Unix 域套接字实现。 有关诊断端口以及如何通过其自定义进程内通信协议与之交互的详细信息，请参阅[诊断 IPC 协议文档](https://github.com/dotnet/diagnostics/blob/master/documentation/design-docs/ipc-protocol.md)。
+然后，将这些事件序列化，并直接写入文件或通过诊断端口在进程外使用。 在 Windows 上，诊断端口作为 `NamedPipe` 实现。 在非 Windows 平台（如 Linux 或 macOS）上，该端口可使用 Unix 域套接字实现。 有关诊断端口以及如何通过其自定义进程内通信协议与之交互的详细信息，请参阅[诊断 IPC 协议文档](https://github.com/dotnet/diagnostics/blob/main/documentation/design-docs/ipc-protocol.md)。
 
 然后，EventPipe 以 `.nettrace` 文件格式写入序列化事件，可作为流通过诊断端口写入，也可直接写入文件。 若要了解有关 EventPipe 序列化格式的详细信息，请参阅 [EventPipe 格式文档](https://github.com/microsoft/perfview/blob/master/src/TraceEvent/EventPipe/EventPipeFormat.md)。
 
@@ -49,7 +49,7 @@ EventPipe 和 ETW/LTTng 之间的另一个主要区别是管理员/根用户权�
 
 * 使用基于 EventPipe 构建的[诊断工具](#tools-that-use-eventpipe)之一。
 
-* 使用 [Microsoft.Diagnostics.NETCore.Client](https://github.com/dotnet/diagnostics/blob/master/documentation/diagnostics-client-library-instructions.md) 库来编写自己的工具，以自行配置和启动 EventPipe 会话。
+* 使用 [Microsoft.Diagnostics.NETCore.Client](https://github.com/dotnet/diagnostics/blob/main/documentation/diagnostics-client-library-instructions.md) 库来编写自己的工具，以自行配置和启动 EventPipe 会话。
 
 * 使用[环境变量](#trace-using-environment-variables)来启动 EventPipe。
 

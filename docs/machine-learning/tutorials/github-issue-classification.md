@@ -4,12 +4,12 @@ description: 了解如何在多类分类方案中使用 ML.NET 对 GitHub 问题
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: fa00306e80046097c1269533d3a3ca1e85f10288
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: dfc007f72fcd67f31139bc7fcbad93dde39d88fb
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679490"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875624"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-mlnet"></a>教程：将多类分类与 ML.NET 配合使用，对支持问题分类
 
@@ -25,19 +25,19 @@ ms.locfileid: "90679490"
 > * 使用训练的模型预测
 > * 使用加载模型部署和预测
 
-可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/GitHubIssueClassification) 存储库中找到本教程的源代码。
+可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/GitHubIssueClassification) 存储库中找到本教程的源代码。
 
 ## <a name="prerequisites"></a>先决条件
 
 * 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 或更高版本或 Visual Studio 2017 版本 15.6 或更高版本。
-* [GitHub 问题制表符分隔文件 (issues_train.tsv)](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv)。
-* [GitHub 问题测试制表符分隔文件 (issues_test.tsv)](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv)。
+* [GitHub 问题制表符分隔文件 (issues_train.tsv)](https://raw.githubusercontent.com/dotnet/samples/main/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv)。
+* [GitHub 问题测试制表符分隔文件 (issues_test.tsv)](https://raw.githubusercontent.com/dotnet/samples/main/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv)。
 
 ## <a name="create-a-console-application"></a>创建控制台应用程序
 
 ### <a name="create-a-project"></a>创建项目
 
-1. 打开 Visual Studio 2017。 从菜单栏中选择“文件” > “新建” > “项目”。 在“新项目”对话框中，依次选择“Visual C#”和“.NET Core”节点。 然后，选择“控制台应用程序(.NET Core)”项目模板。 在“名称”文本框中，键入“GitHubIssueClassification”，然后选择“确定”按钮。
+1. 打开 Visual Studio 2017。 从菜单栏中选择“文件” > “新建” > “项目”。 在“新项目”对话框中，依次选择“Visual C#”和“.NET Core”节点。 然后，选择“控制台应用程序(.NET Core)”  项目模板。 在“名称”文本框中，键入“GitHubIssueClassification”，然后选择“确定”按钮。
 
 2. 在项目中创建一个名为“Data”的目录来保存数据集文件：
 
@@ -47,17 +47,17 @@ ms.locfileid: "90679490"
 
     在“解决方案资源管理器”中，右键单击项目，然后选择“添加” > “新文件夹”。 键入“Models”，然后按 Enter。
 
-4. 安装“Microsoft.ML NuGet 包”：
+4. 安装“Microsoft.ML NuGet 包”  ：
 
     [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 
-    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”。 选择“nuget.org”作为包源，然后选择“浏览”选项卡并搜索“Microsoft.ML”，再选择“安装”按钮 。 选择“预览更改”对话框上的“确定”按钮，如果你同意所列包的许可条款，则选择“接受许可”对话框上的“我接受”按钮。
+    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”  。 选择“nuget.org”作为包源，然后选择“浏览”选项卡并搜索“Microsoft.ML”，再选择“安装”按钮 。 选择“预览更改”  对话框上的“确定”  按钮，如果你同意所列包的许可条款，则选择“接受许可”  对话框上的“我接受”  按钮。
 
 ### <a name="prepare-your-data"></a>准备数据
 
-1. 下载 [issues_train.tsv](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv) 和 [issues_test.tsv](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv) 数据集，并将它们保存到先前创建的“Data”文件夹。 第一个数据集用于定型机器学习模型，第二个数据集可用来评估模型的准确度。
+1. 下载 [issues_train.tsv](https://raw.githubusercontent.com/dotnet/samples/main/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv) 和 [issues_test.tsv](https://raw.githubusercontent.com/dotnet/samples/main/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv) 数据集，并将它们保存到先前创建的“Data”文件夹。 第一个数据集用于定型机器学习模型，第二个数据集可用来评估模型的准确度。
 
-2. 在“解决方案资源管理器”中，右键单击每个 \*.tsv 文件，然后选择“属性”。 在“高级”下，将“复制到输出目录”的值更改为“如果较新则复制”  。
+2. 在“解决方案资源管理器”中，右键单击每个 \*.tsv 文件，然后选择“属性”。 在“高级”下，将“复制到输出目录”的值更改为“如果较新则复制”    。
 
 ### <a name="create-classes-and-define-paths"></a>创建类和定义路径
 
@@ -82,7 +82,7 @@ ms.locfileid: "90679490"
 
 1. 在“解决方案资源管理器”中，右键单击项目，然后选择“添加” > “新项”。
 
-1. 在“添加新项”对话框中，选择“类”并将“名称”字段更改为“GitHubIssueData.cs”  。 然后，选择“添加”按钮。
+1. 在“添加新项”对话框中，选择“类”并将“名称”字段更改为“GitHubIssueData.cs”  。 然后，选择“添加”  按钮。
 
     “GitHubIssueData.cs”文件随即在代码编辑器中打开。 将下面的 `using` 语句添加到 GitHubIssueData.cs 的顶部：
 
@@ -192,7 +192,7 @@ public static IEstimator<ITransformer> BuildAndTrainModel(IDataView trainingData
 
 ### <a name="about-the-classification-task"></a>有关分类任务
 
-分类是一项机器学习任务，它使用数据来**确定**某个项或数据行的类别、类型或类，并且通常是以下类型之一：
+分类是一项机器学习任务，它使用数据来 **确定** 某个项或数据行的类别、类型或类，并且通常是以下类型之一：
 
 * 二元：A 或 B。
 * 多类：可以通过使用单个模型来预测多个类别。
@@ -373,7 +373,7 @@ private static void PredictIssue()
 =============== Single Prediction - Result: area-System.Data ===============
 ```
 
-祝贺你！ 现在，已成功生成用于为 GitHub 问题分类和预测区域标签的机器学习模型。 可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/GitHubIssueClassification) 存储库中找到本教程的源代码。
+祝贺你！ 现在，已成功生成用于为 GitHub 问题分类和预测区域标签的机器学习模型。 可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/GitHubIssueClassification) 存储库中找到本教程的源代码。
 
 ## <a name="next-steps"></a>后续步骤
 

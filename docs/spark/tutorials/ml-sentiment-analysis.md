@@ -5,12 +5,12 @@ author: mamccrea
 ms.author: mamccrea
 ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: 1c2c966a4ff50a9d2f6951e20d909c5c20c75bfb
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: a21b92f910d82cbddd2976adeb292cea5f7bc78b
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688236"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876859"
 ---
 # <a name="tutorial-sentiment-analysis-with-net-for-apache-spark-and-mlnet"></a>教程：使用 .NET for Apache Spark 和 ML.NET 进行情绪分析
 
@@ -33,11 +33,11 @@ ms.locfileid: "94688236"
 
 * [下载并安装](https://marketplace.visualstudio.com/items?itemName=MLNET.07) ML.NET 模型生成器（预览）。
 
-* 下载 Yelp 评论数据集：[yelptest.csv](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/MachineLearning/Sentiment/Resources/yelptest.csv) 和 [yelptrain.csv](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/MachineLearning/Sentiment/Resources/yelptrain.csv)。
+* 下载 Yelp 评论数据集：[yelptest.csv](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/MachineLearning/Sentiment/Resources/yelptest.csv) 和 [yelptrain.csv](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/MachineLearning/Sentiment/Resources/yelptrain.csv)。
 
 ## <a name="review-the-data"></a>查看数据
 
-Yelp 评论数据集包含关于各种服务的 Yelp 在线评论。 打开 [yelptrain.csv](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/MachineLearning/Sentiment/Resources/yelptrain.csv)，并注意观察其数据结构。 第一列包含评论文本，第二列包含情绪评分。 若情绪评分为 1，则为积极评论，若情绪评分为 0，则为消极评论。
+Yelp 评论数据集包含关于各种服务的 Yelp 在线评论。 打开 [yelptrain.csv](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/MachineLearning/Sentiment/Resources/yelptrain.csv)，并注意观察其数据结构。 第一列包含评论文本，第二列包含情绪评分。 若情绪评分为 1，则为积极评论，若情绪评分为 0，则为消极评论。
 
 下表包含示例数据：
 
@@ -203,7 +203,7 @@ dotnet publish
 
 ## <a name="get-the-code"></a>获取代码
 
-本教程与[使用大数据进行情绪分析](https://github.com/dotnet/spark/tree/master/examples/Microsoft.Spark.CSharp.Examples/MachineLearning/Sentiment)示例中的代码相似。
+本教程与[使用大数据进行情绪分析](https://github.com/dotnet/spark/tree/main/examples/Microsoft.Spark.CSharp.Examples/MachineLearning/Sentiment)示例中的代码相似。
 
 ## <a name="next-steps"></a>后续步骤
 

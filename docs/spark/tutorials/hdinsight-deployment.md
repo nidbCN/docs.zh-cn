@@ -4,12 +4,12 @@ description: 了解如何将 .NET for Apache Spark 应用程序部署到 HDInsig
 ms.date: 10/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: f7a3b0c0d972d5cb6dbc6eea818fe794c5060eae
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 0c2b7522e0e6790ded418413ef0f128aae1e0884
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687899"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875338"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>教程：将 .NET for Apache Spark 应用程序部署到 Azure HDInsight
 
@@ -57,7 +57,7 @@ ms.locfileid: "94687899"
 
 3. 在“基本”下，提供以下值  ：
 
-    |Property  |描述  |
+    |Property  |说明  |
     |---------|---------|
     |订阅  | 从下拉列表中选择一个可用 Azure 订阅。 |
     |资源组 | 指定是要创建新的资源组还是使用现有的资源组。 资源组是用于保存 Azure 解决方案相关资源的容器。 |
@@ -71,7 +71,7 @@ ms.locfileid: "94687899"
 
 4. 在完成时选择“下一步:  存储 >>”转到“存储”页  。 在“存储”下，提供以下值  ：
 
-    |Property  |描述  |
+    |属性  |说明  |
     |---------|---------|
     |主存储类型|使用默认值“Azure 存储”。 |
     |选择方法|使用默认值“从列表中选择”。 |
@@ -130,7 +130,7 @@ ms.locfileid: "94687899"
 
 3. install-worker.sh 是一个脚本，可使用该脚本将 .NET for Apache Spark 依赖项文件复制到群集的节点中。
 
-   在本地计算机上创建一个名为 install-worker.sh 的新文件，并粘贴位于 GitHub 上的 [install-worker.sh 内容](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh)。 然后，将 install-worker.sh 上传到 blob 容器中。
+   在本地计算机上创建一个名为 install-worker.sh 的新文件，并粘贴位于 GitHub 上的 [install-worker.sh 内容](https://raw.githubusercontent.com/dotnet/spark/main/deployment/install-worker.sh)。 然后，将 install-worker.sh 上传到 blob 容器中。
 
 4. 群集需要 publish.zip 文件，后者包含应用的已发布文件。 导航到已发布文件夹“mySparkApp/bin/Release/netcoreapp3.1/ubuntu.16.04-x64”，并找到“publish.zip” 。 然后，将 publish.zip 上传到 blob 容器。
 
@@ -164,7 +164,7 @@ ms.locfileid: "94687899"
 
 2. 复制 ssh 登录信息，并将登录名粘贴到终端。 使用在群集创建期间设置的密码登录到群集。 应会看到“欢迎使用 Ubuntu 和 Spark”的消息。
 
-3. 使用 spark-submit 命令在 HDInsight 群集上运行应用。 请记得将示例脚本中的 mycontainer 和 mystorageaccount 替换为 blob 容器和存储帐户的实际名称。
+3. 使用 spark-submit 命令在 HDInsight 群集上运行应用  。 请记得将示例脚本中的 mycontainer 和 mystorageaccount 替换为 blob 容器和存储帐户的实际名称。
 
    ```bash
    $SPARK_HOME/bin/spark-submit \

@@ -3,12 +3,12 @@ title: 调试死锁 - .NET Core
 description: 本教程演示如何调试 .NET Core 中的锁定问题。
 ms.topic: tutorial
 ms.date: 07/20/2020
-ms.openlocfilehash: 0f5862c9acc4c1ae892caf29cea2ca484116cabf
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: a268884740ff38d7975303a5a5e5f2c24f16778d
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102105579"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874261"
 ---
 # <a name="debug-a-deadlock-in-net-core"></a>调试 .NET Core 中的死锁
 
@@ -267,7 +267,7 @@ OS Thread Id: 0x5634 (28)
 - 用于列出进程的 [dotnet-trace](dotnet-trace.md)
 - 用于检查托管内存使用情况的 [dotnet-counters](dotnet-counters.md)
 - 用于收集和分析转储文件的 [dotnet-dump](dotnet-dump.md)
-- [dotnet/diagnostics](https://github.com/dotnet/diagnostics/tree/master/documentation/tutorial)
+- [dotnet/diagnostics](https://github.com/dotnet/diagnostics/tree/main/documentation/tutorial)
 
 ## <a name="next-steps"></a>后续步骤
 

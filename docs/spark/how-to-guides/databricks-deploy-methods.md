@@ -4,12 +4,12 @@ description: 了解如何使用 spark-submit 和 Set Jar 将 .NET for Apache Spa
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 4d37383ccb3c9b311e0fbd0ada195ac20113e505
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 39be961ad67da3f8593cb98e1bad8df354f28893
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688197"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875572"
 ---
 # <a name="submit-a-net-for-apache-spark-job-to-databricks"></a>将 .NET for Apache Spark 作业提交到 Databricks
 
@@ -71,7 +71,7 @@ ms.locfileid: "94688197"
     databricks fs cp <assembly>.dll dbfs:/apps/dependencies
     ```
 
-    取消评论并将 [db-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) 中的应用依赖项部分修改为指向应用依赖项路径。 然后，将已更新的 db-init.sh 上传到群集：
+    取消评论并将 [db-init.sh](https://github.com/dotnet/spark/blob/main/deployment/db-init.sh) 中的应用依赖项部分修改为指向应用依赖项路径。 然后，将已更新的 db-init.sh 上传到群集：
 
     ```console
     cd <path-to-db-init-and-install-worker>

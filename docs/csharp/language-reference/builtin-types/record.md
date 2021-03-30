@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - record keyword [C#]
 - record type [C#]
-ms.openlocfilehash: 10fe7bcc1f3239b7a6bde0abcac41b177467cf0a
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 57474caf0f1106380e52da7fcb7608b62a0f23e5
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102260024"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872647"
 ---
 # <a name="records-c-reference"></a>记录（C# 参考）
 
@@ -128,7 +128,7 @@ init-only 属性无论是通过位置参数创建的，还是通过指定 `init`
 对于引用类型，将显示属性所引用的对象的类型名称，而不是属性值。 在下面的示例中，数组是一个引用类型，因此显示的是 `System.String[]`，而不是实际的数组元素值：
 
 ```
-Person { FirstName = Nancy, LastName = Davolio, ChildNames = System.String[] } 
+Person { FirstName = Nancy, LastName = Davolio, ChildNames = System.String[] }
 ```
 
 为了实现此功能，编译器合成了一个虚拟 `PrintMembers` 方法和一个 <xref:System.Object.ToString%2A> 替代。

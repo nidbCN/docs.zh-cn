@@ -6,12 +6,12 @@ author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc,mlnet-tooling
-ms.openlocfilehash: 7761240055c90ae9c713b1c460e9e83316d256f9
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: cb4f18ad9da2e57ee09598183a1226b20a1d7aec
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2020
-ms.locfileid: "81278946"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874610"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>教程：使用 ML.NET 模型生成器在 Web 应用程序中分析网站评论的情绪
 
@@ -54,7 +54,7 @@ ms.locfileid: "81278946"
 
 ## <a name="prepare-and-understand-the-data"></a>准备和了解数据
 
-下载[维基百科 detox 数据集](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)。 打开网页时，右键单击页面，选择“另存为”  ，将文件保存到计算机上的任何位置。
+下载[维基百科 detox 数据集](https://raw.githubusercontent.com/dotnet/machinelearning/main/test/data/wikipedia-detox-250-line-data.tsv)。 打开网页时，右键单击页面，选择“另存为”  ，将文件保存到计算机上的任何位置。
 
 wikipedia-detox-250-line-data.tsv  数据集中的每一行都代表一个用户在维基百科上留下的不同评价。 第一列表示文本的情绪（0 表示 non-toxic (无害)，1 表示 toxic (不良)），第二列表示用户留下的评论。 列由制表符分隔。 数据类似如下所示：
 

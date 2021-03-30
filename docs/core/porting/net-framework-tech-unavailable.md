@@ -4,12 +4,12 @@ titleSuffix: ''
 description: 了解在 .NET Core 和 .NET 5.0 及更高版本上不可用的 .NET Framework 技术。
 author: cartermp
 ms.date: 03/08/2021
-ms.openlocfilehash: cd273e95c5c889b900cb8ff744e8c49bb1ce69c4
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: d8eccce7e36552e0d5396779936681227cb1e28a
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102604926"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875117"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core-and-net-5"></a>.NET Framework 技术在 .NET Core 和 .NET 5+ 上不可用
 
@@ -21,7 +21,7 @@ ms.locfileid: "102604926"
 
 应用程序域 (AppDomain) 可将应用相互隔离。 AppDomain 需要运行时支持，并且耗费的资源成本较高。 不支持创建其他应用域，也尚未计划在将来添加此功能。 对于代码隔离，将流程或容器用作备用。 若要动态加载程序集，请使用 <xref:System.Runtime.Loader.AssemblyLoadContext> 类。
 
-.NET 5+ 公开了一些 <xref:System.AppDomain> API 曲面，以便可以更轻松地从 .NET Framework 进行代码迁移。 一些 API 可正常工作（例如 <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>），一些成员不会执行任何操作（例如 <xref:System.AppDomain.SetCachePath%2A>），也有一些会引发 <xref:System.PlatformNotSupportedException>（例如 <xref:System.AppDomain.CreateDomain%2A>）。 对照 [dotnet/runtime GitHub 存储库](https://github.com/dotnet/runtime)中的 [`System.AppDomain` 引用源](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Private.CoreLib/src/System/AppDomain.cs)检查所使用的类型。 确保选择与已实现的版本相匹配的分支。
+.NET 5+ 公开了一些 <xref:System.AppDomain> API 曲面，以便可以更轻松地从 .NET Framework 进行代码迁移。 一些 API 可正常工作（例如 <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>），一些成员不会执行任何操作（例如 <xref:System.AppDomain.SetCachePath%2A>），也有一些会引发 <xref:System.PlatformNotSupportedException>（例如 <xref:System.AppDomain.CreateDomain%2A>）。 对照 [dotnet/runtime GitHub 存储库](https://github.com/dotnet/runtime)中的 [`System.AppDomain` 引用源](https://github.com/dotnet/runtime/blob/main/src/libraries/System.Private.CoreLib/src/System/AppDomain.cs)检查所使用的类型。 确保选择与已实现的版本相匹配的分支。
 
 ## <a name="remoting"></a>远程处理
 

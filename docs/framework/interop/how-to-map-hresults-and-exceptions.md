@@ -12,12 +12,12 @@ helpviewer_keywords:
 - COM interop, HRESULTs
 - COM interop, exceptions
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
-ms.openlocfilehash: ff20dc50e1a5f1ce87a4a40691110d247b52e479
-ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
+ms.openlocfilehash: 13798de1547428d54c10f83c41a5a402e2b3fb53
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98794683"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872400"
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>如何：映射 HRESULT 和异常
 
@@ -55,7 +55,7 @@ CMyClass::MethodThatThrows
 }
 ```
 
- 下表提供从 HRESULT 到其在 NET 中的相似异常类的通用映射。 不带显式映射的 HRESULT 值映射到 `COMException`。 可以在 [dotnet/runtime 存储库](https://github.com/dotnet/runtime/blob/master/src/coreclr/vm/rexcep.h)中找到完整的最新映射。
+ 下表提供从 HRESULT 到其在 NET 中的相似异常类的通用映射。 不带显式映射的 HRESULT 值映射到 `COMException`。 可以在 [dotnet/runtime 存储库](https://github.com/dotnet/runtime/blob/main/src/coreclr/vm/rexcep.h)中找到完整的最新映射。
 
 |HRESULT|.NET 异常|
 |-------------|--------------------|

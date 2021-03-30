@@ -3,12 +3,12 @@ title: 调试分析配置设置
 description: 了解为 .NET Core 应用配置调试和分析的运行时设置。
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 5efd0f776da4b7ce6ff7f3bdfda24feec6e00f79
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: dd96862582f13adc19df7572b1865800b18d9954
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761988"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875013"
 ---
 # <a name="run-time-configuration-options-for-debugging-and-profiling"></a>用于调试和分析的运行时配置选项
 
@@ -45,7 +45,7 @@ ms.locfileid: "83761988"
 
 - 指定要加载到当前正在运行的进程（或 32 位/64 位进程）的探查器 DLL 路径。
 - 如果设置了多个变量，则优先使用指定位数的变量。 它们指定要加载的探查器的位数。
-- 有关详细信息，请参阅 [Finding the profiler library](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/profiling/Profiler%20Loading.md)（查找探查器库）。
+- 有关详细信息，请参阅 [Finding the profiler library](https://github.com/dotnet/runtime/blob/main/docs/design/coreclr/profiling/Profiler%20Loading.md)（查找探查器库）。
 
 | | 设置名 | 值 |
 | - | - | - |

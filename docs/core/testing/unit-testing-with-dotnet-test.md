@@ -4,16 +4,16 @@ description: 通过使用 dotnet test 和 xUnit 分步生成示例解决方案�
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/21/2020
-ms.openlocfilehash: e1972858be00e8a884efbd66b618ddb9ab77e9ba
-ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
+ms.openlocfilehash: fb4434fc4eebc009fa0bbe075d4d2290bff3b0bf
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92471532"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873466"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>使用 dotnet test 和 xUnit 在 .NET Core 中进行 C# 单元测试
 
-本教程演示如何生成包含单元测试项目和源代码项目的解决方案。 若要使用预构建解决方案学习本教程，请[查看或下载示例代码](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-using-dotnet-test/)。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#view-and-download-samples)。
+本教程演示如何生成包含单元测试项目和源代码项目的解决方案。 若要使用预构建解决方案学习本教程，请[查看或下载示例代码](https://github.com/dotnet/samples/tree/main/core/getting-started/unit-testing-using-dotnet-test/)。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#view-and-download-samples)。
 
 ## <a name="create-the-solution"></a>创建解决方案
 
@@ -48,7 +48,7 @@ ms.locfileid: "92471532"
   ```
 
    [`dotnet new classlib`](../tools/dotnet-new.md) 命令用于在 PrimeService 文件夹中创建新的类库项目。 新的类库将包含要测试的代码。
-* 将 *Class1.cs* 重命名为 *PrimeService.cs* 。
+* 将 *Class1.cs* 重命名为 *PrimeService.cs*。
 * 将 PrimeService.cs 中的代码替换为以下代码：
   
   ```csharp
@@ -85,7 +85,7 @@ ms.locfileid: "92471532"
   ```
 
 * 上面的命令：
-  * 在 PrimeService.Tests 目录中创建 PrimeService.Tests 项目。 测试项目将 [xUnit](https://xunit.net/) 用作测试库。
+  * 在 PrimeService.Tests 目录中创建 PrimeService.Tests 项目 。 测试项目将 [xUnit](https://xunit.net/) 用作测试库。
   * 通过将以下 `<PackageReference />` 元素添加到项目文件来配置测试运行程序：
     * “Microsoft.NET.Test.Sdk”
     * “xunit”
@@ -219,7 +219,7 @@ public bool IsPrime(int candidate)
 }
 ```
 
-遵循 TDD 方法，添加更多失败的测试，然后更新目标代码。 请参阅[已完成的测试版本](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs)和[库的完整实现](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-dotnet-test/PrimeService/PrimeService.cs)。
+遵循 TDD 方法，添加更多失败的测试，然后更新目标代码。 请参阅[已完成的测试版本](https://github.com/dotnet/samples/blob/main/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs)和[库的完整实现](https://github.com/dotnet/samples/blob/main/core/getting-started/unit-testing-using-dotnet-test/PrimeService/PrimeService.cs)。
 
 已完成的 `IsPrime` 方法不是用于测试素性的有效算法。
 

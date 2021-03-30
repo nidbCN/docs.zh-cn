@@ -10,12 +10,12 @@ helpviewer_keywords:
 - PlatformTarget compiler option [C#]
 - ProduceReferenceAssembly compiler option [C#]
 - TargetType compiler option [C#]
-ms.openlocfilehash: 2d8b7edbf970875d7300a394ab75756c1316ac9d
-ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
+ms.openlocfilehash: 9caa290a7c9b5fea1b0f896e9443075b4b470f7b
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103482409"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105636839"
 ---
 # <a name="c-compiler-options-that-control-compiler-output"></a>用于控制编译器输出的 C# 编译器选项
 
@@ -38,7 +38,7 @@ ms.locfileid: "103482409"
 包含 Main 或顶级语句的源代码文件首先输出到 XML 中。 通常需要将生成的 .xml 文件与 [IntelliSense](/visualstudio/ide/using-intellisense) 一起使用。 .xml 文件名必须与程序集名称相同。 .xml 文件必须与程序集位于同一目录中。 在 Visual Studio 项目中引用程序集时，也会找到 .xml 文件。 若要详细了解如何生成代码注释，请参阅[提供代码注释](/visualstudio/ide/reference/generate-xml-documentation-comments)。 除非用 [`<TargetType:Module>`](#targettype) 进行编译，否则 `file` 将包含 `<assembly>` 和 `</assembly>` 标记，用于指定包含输出文件的程序集清单的文件名。 例如，请参阅[如何使用 XML 文档功能](../../programming-guide/xmldoc/how-to-use-the-xml-documentation-features.md)。
 
 > [!NOTE]
-> DocumentationFile 选项适用于项目中的所有文件。 若要禁用与特定文件或一段代码的文档注释相关的警告，请使用 [#pragma 警告](../preprocessor-directives/preprocessor-pragma-warning.md)。
+> DocumentationFile 选项适用于项目中的所有文件。 若要禁用与特定文件或一段代码的文档注释相关的警告，请使用 [#pragma 警告](../preprocessor-directives.md#pragma-warning)。
 
 ## <a name="outputassembly"></a>OutputAssembly
 
@@ -144,6 +144,6 @@ winexe 选项会导致编译器创建可执行的 (EXE) Windows 程序。 将创
 
 ### <a name="appcontainerexe"></a>appcontainerexe
 
-如果使用 appcontainerexe 编译器选项，则编译器会创建一个 Windows 可执行 (.exe) 文件，该文件必须在应用容器中运行。 此选项与 [-target:winexe](./target-winexe-compiler-option.md) 等效，但专门用于 Windows 8.x 应用商店应用。
+如果使用 appcontainerexe 编译器选项，则编译器会创建一个 Windows 可执行 (.exe) 文件，该文件必须在应用容器中运行。 此选项与 [-target:winexe](output.md) 等效，但专门用于 Windows 8.x 应用商店应用。
 
 为了要求应用在应用容器中运行，此选项在[可移植可执行](/windows/desktop/Debug/pe-format) (PE) 文件中设置了一个位。 设置该位时，如果 CreateProcess 方法尝试在应用容器外启动该可执行文件，就会发生错误。 除非使用 [OutputAssembly](#outputassembly) 选项，否则输出文件的名称将采用包含 [`Main`](../../programming-guide/main-and-command-args/index.md) 方法的输入文件的名称。

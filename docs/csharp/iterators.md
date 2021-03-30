@@ -4,12 +4,12 @@ description: 了解如何使用内置 C# 迭代器以及如何创建自己的自
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: ee72331cb85ba1a03d48e2f58526ad432c7fe6d4
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 357f05f6ae1a4cec7566ddc821036354c932af90
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656093"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872634"
 ---
 # <a name="iterators"></a>迭代器
 
@@ -24,7 +24,7 @@ ms.locfileid: "88656093"
 
 C# 语言提供了适用于这两种方案的功能。 本文概述了这些功能。
 
-在此教程中，将执行多步操作。 执行每步操作后，都可以运行应用程序，并查看进度。 还可以[查看或下载本主题的已完成示例](https://github.com/dotnet/samples/blob/master/csharp/iterators)。 有关下载说明，请参阅[示例和教程](../samples-and-tutorials/index.md#view-and-download-samples)。
+在此教程中，将执行多步操作。 执行每步操作后，都可以运行应用程序，并查看进度。 还可以[查看或下载本主题的已完成示例](https://github.com/dotnet/samples/blob/main/csharp/iterators)。 有关下载说明，请参阅[示例和教程](../samples-and-tutorials/index.md#view-and-download-samples)。
 
 ## <a name="iterating-with-foreach"></a>使用 foreach 执行循环访问
 

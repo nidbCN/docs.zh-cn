@@ -4,12 +4,12 @@ description: 了解可在其上安装 .NET 的 Windows 版本。
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: 7909a94c6384e53569db3ba17047cbcc93e80fe1
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 9b0c5c2ea26546a142029b730dfd38923231bae4
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102105097"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873739"
 ---
 # <a name="install-net-on-windows"></a>在 Windows 上安装 .NET
 
@@ -102,7 +102,7 @@ SDK 用于生成和发布 .NET 应用和库。 安装 SDK 会包含三个[运行
 | Windows Server 核心 | 2012 R2+      | x64、x86        |
 | Nano Server         | 版本 1809+ | X64             |
 
-有关 .NET 5.0 支持的操作系统、发行版和生命周期策略的详细信息，请参阅 [.NET 5.0 支持的 OS 版本](https://github.com/dotnet/core/blob/master/release-notes/5.0/5.0-supported-os.md)。
+有关 .NET 5.0 支持的操作系统、发行版和生命周期策略的详细信息，请参阅 [.NET 5.0 支持的 OS 版本](https://github.com/dotnet/core/blob/main/release-notes/5.0/5.0-supported-os.md)。
 
 # <a name="net-core-31"></a>[.NET Core 3.1](#tab/netcore31)
 
@@ -118,7 +118,7 @@ SDK 用于生成和发布 .NET 应用和库。 安装 SDK 会包含三个[运行
 | Windows Server                | 2012 R2+                       | x64、x86        |
 | Nano Server                   | 版本 1803+                  | x64、ARM32      |
 
-有关 .NET Core 3.1 支持的操作系统、发行版和生命周期策略的详细信息，请参阅 [.NET Core 3.1 支持的 OS 版本](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md)。
+有关 .NET Core 3.1 支持的操作系统、发行版和生命周期策略的详细信息，请参阅 [.NET Core 3.1 支持的 OS 版本](https://github.com/dotnet/core/blob/main/release-notes/3.1/3.1-supported-os.md)。
 
 # <a name="net-core-30"></a>[.NET Core 3.0](#tab/netcore30)
 
@@ -136,7 +136,7 @@ SDK 用于生成和发布 .NET 应用和库。 安装 SDK 会包含三个[运行
 | Windows Server                | 2012 R2+                       | x64、x86        |
 | Nano Server                   | 版本 1803+                  | x64、ARM32      |
 
-有关 .NET Core 3.0 支持的操作系统、发行版和生命周期策略的详细信息，请参阅 [.NET Core 3.0 支持的 OS 版本](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)。
+有关 .NET Core 3.0 支持的操作系统、发行版和生命周期策略的详细信息，请参阅 [.NET Core 3.0 支持的 OS 版本](https://github.com/dotnet/core/blob/main/release-notes/3.0/3.0-supported-os.md)。
 
 # <a name="net-core-22"></a>[.NET Core 2.2](#tab/netcore22)
 
@@ -154,7 +154,7 @@ SDK 用于生成和发布 .NET 应用和库。 安装 SDK 会包含三个[运行
 | Windows Server                | 2008 R2 SP1+                   | x64、x86        |
 | Nano Server                   | 版本 1803+                   | x64、ARM32      |
 
-有关 .NET Core 2.2 支持的操作系统、发行版和生命周期策略的详细信息，请参阅 [.NET Core 2.2 支持的 OS 版本](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md)。
+有关 .NET Core 2.2 支持的操作系统、发行版和生命周期策略的详细信息，请参阅 [.NET Core 2.2 支持的 OS 版本](https://github.com/dotnet/core/blob/main/release-notes/2.2/2.2-supported-os.md)。
 
 # <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
@@ -170,7 +170,7 @@ SDK 用于生成和发布 .NET 应用和库。 安装 SDK 会包含三个[运行
 | Windows Server                | 2008 R2 SP1+                   | x64、x86        |
 | Nano Server                   | 版本 1803+                  | x64            |
 
-有关 .NET Core 2.1 支持的操作系统、发行版和生命周期策略的详细信息，请参阅 [.NET Core 2.1 支持的 OS 版本](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)。
+有关 .NET Core 2.1 支持的操作系统、发行版和生命周期策略的详细信息，请参阅 [.NET Core 2.1 支持的 OS 版本](https://github.com/dotnet/core/blob/main/release-notes/2.1/2.1-supported-os.md)。
 
 ### <a name="offline-install-for-windows-7"></a>Windows 7 的脱机安装
 
@@ -329,7 +329,7 @@ set DOTNET_MULTILEVEL_LOOKUP=0
 
 Microsoft 提供适合特定场景的映像。 例如，[ASP.NET Core 存储库](https://hub.docker.com/_/microsoft-dotnet-aspnet)提供针对在生产环境中运行 ASP.NET Core 应用生成的映像。
 
-有关在 Docker 容器中使用 .NET 的详细信息，请参阅 [.NET 和 Docker 简介](../docker/introduction.md)和[示例](https://github.com/dotnet/dotnet-docker/blob/master/samples/README.md)。
+有关在 Docker 容器中使用 .NET 的详细信息，请参阅 [.NET 和 Docker 简介](../docker/introduction.md)和[示例](https://github.com/dotnet/dotnet-docker/blob/main/samples/README.md)。
 
 ## <a name="next-steps"></a>后续步骤
 

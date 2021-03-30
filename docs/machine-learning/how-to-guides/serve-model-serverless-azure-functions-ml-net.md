@@ -5,12 +5,12 @@ ms.date: 02/21/2020
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 74a7a5b941596ba9fffc62ef87a01763937d88c0
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 90b52aa295e224eb3744d2576b9a146e4e90dced
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2020
-ms.locfileid: "91608772"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875884"
 ---
 # <a name="deploy-a-model-to-azure-functions"></a>将模型部署到 Azure Functions
 
@@ -24,11 +24,11 @@ ms.locfileid: "91608772"
 - 安装了“.NET Core 跨平台开发”和“Azure 部署”工作负载的 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 或更高版本或 Visual Studio 2017 版本 15.6 或更高版本。
 - [Azure Functions 工具](/azure/azure-functions/functions-develop-vs#check-your-tools-version)
 - PowerShell
-- 预先定型的模型。 使用 [ML.NET 情绪分析教程](../tutorials/sentiment-analysis.md)生成自己的模型，或下载此[预先训练的情绪分析机器学习模型](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)
+- 预先定型的模型。 使用 [ML.NET 情绪分析教程](../tutorials/sentiment-analysis.md)生成自己的模型，或下载此[预先训练的情绪分析机器学习模型](https://github.com/dotnet/samples/blob/main/machine-learning/models/sentimentanalysis/sentiment_model.zip)
 
 ## <a name="azure-functions-sample-overview"></a>Azure Functions 示例概述
 
-此示例是 C# HTTP 触发器 Azure Functions 应用程序  ，它使用预先定型的二进制分类模型将文本的情绪分类为消极或积极。 Azure Functions 提供了一种简便的方法，可以在云中托管的无服务器环境中大规模运行少量代码。 若要获取此示例的代码，请参阅 GitHub 上的 [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction) 存储库。
+此示例是 C# HTTP 触发器 Azure Functions 应用程序  ，它使用预先定型的二进制分类模型将文本的情绪分类为消极或积极。 Azure Functions 提供了一种简便的方法，可以在云中托管的无服务器环境中大规模运行少量代码。 若要获取此示例的代码，请参阅 GitHub 上的 [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/main/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction) 存储库。
 
 ## <a name="create-azure-functions-project"></a>创建 Azure Functions 项目
 
@@ -161,7 +161,7 @@ ms.locfileid: "91608772"
 >builder.Services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
 >   .FromUri(
 >       modelName: "SentimentAnalysisModel",
->       uri:"https://github.com/dotnet/samples/raw/master/machine-learning/models/sentimentanalysis/sentiment_model.zip",
+>       uri:"https://github.com/dotnet/samples/raw/main/machine-learning/models/sentimentanalysis/sentiment_model.zip",
 >       period: TimeSpan.FromMinutes(1));
 >```
 

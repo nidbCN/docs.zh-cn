@@ -2,12 +2,12 @@
 title: 使用集合 - C# 教程简介
 description: 在本教程中通过探索列表集合了解 C#。
 ms.date: 02/05/2021
-ms.openlocfilehash: 7a04a983622a6ae36ec5b12d279aa29e52c52a4f
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: 0bc2b84964e8fc270fe7e9d635c4c18aa1abb390
+ms.sourcegitcommit: e16315d9f1ff355f55ff8ab84a28915be0a8e42b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100626610"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105111135"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>了解如何使用泛型列表类型管理数据集合
 
@@ -207,10 +207,10 @@ foreach (var item in fibonacciNumbers)
 
 ## <a name="complete-challenge"></a>完成挑战
 
-可以[查看 GitHub 上的完成示例代码](https://github.com/dotnet/samples/tree/master/csharp/list-quickstart/Program.cs#L8-L16)，了解示例解决方案。
+可以[查看 GitHub 上的完成示例代码](https://github.com/dotnet/samples/tree/main/csharp/list-quickstart/Program.cs#L8-L16)，了解示例解决方案。
 
 在循环的每次迭代中，取此列表中的最后两个整数进行求和，并将计算出的总和值添加到列表中。 循环会一直重复运行到列表中有 20 个项为止。
 
-恭喜！已完成“列表集合”教程。 你可以继续在自己的开发环境中学习[更多](../../tutorials/index.md)教程。
+恭喜！已完成“列表集合”教程。 你可以继续在自己的开发环境中学习[更多](../../tutorials/intro-to-csharp/introduction-to-classes.md)教程。
 
 若要详细了解如何使用 `List` 类型，可参阅有关[集合](../../../standard/collections/index.md)的 .NET 基础知识文章。 还可以了解其他许多集合类型。

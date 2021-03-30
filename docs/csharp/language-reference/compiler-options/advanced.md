@@ -21,12 +21,12 @@ helpviewer_keywords:
 - AdditionalLibPaths compiler option [C#]
 - ApplicationConfiguration compiler option [C#]
 - ModuleAssemblyName compiler option [C#]
-ms.openlocfilehash: 47c84968682e056acdb73805807d907c6bb7c7ee
-ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
+ms.openlocfilehash: 5c51a4dd950a33fb51c338dbd1d86bb5b03eb694
+ms.sourcegitcommit: e16315d9f1ff355f55ff8ab84a28915be0a8e42b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104652758"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105111031"
 ---
 # <a name="advanced-c-compiler-options"></a>高级 C# 编译器选项
 
@@ -259,9 +259,9 @@ NoStandardLib 可防止导入 mscorlib.dll，后者定义了整个 System 命名
 SubsystemVersion 编译器选项的默认值取决于以下列表中的条件：
 
 - 只要设置了以下列表中的任意编译器选项，则默认值为 6.02：
-  - [/target:appcontainerexe](./target-appcontainerexe-compiler-option.md)
-  - [/target:winmdobj](./target-winmdobj-compiler-option.md)
-  - [-platform:arm](./platform-compiler-option.md)
+  - [/target:appcontainerexe](output.md)
+  - [/target:winmdobj](output.md)
+  - [-platform:arm](output.md)
 - 如果使用 MSBuild，面向 .NET Framework 4.5，并且未设置先前在此列表中指定的任何编译器选项，则默认值为 6.00。
 - 如果前面的条件均不符合，则默认值为 4.00。
 

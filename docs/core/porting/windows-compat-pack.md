@@ -3,12 +3,12 @@ title: 使用 Windows 兼容性包移植代码
 description: 了解 Windows 兼容性包，以及如何使用它将现有 .NET Framework 代码移植到 .NET 5 和 .NET Core 3.1。
 author: terrajobst
 ms.date: 03/04/2021
-ms.openlocfilehash: c90cc960cd9ff3707877afc023f95e0e03716aab
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: 655657e38f564d84ea3e56b5374debc04b405eeb
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102604809"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873635"
 ---
 # <a name="use-the-windows-compatibility-pack-to-port-code-to-net-5"></a>使用 Windows 兼容性包将代码移植到 .NET 5+
 
@@ -40,7 +40,7 @@ Windows 兼容性包通过 [Microsoft.Windows.Compatibility NuGet 包](https://w
 - Windows 运行时缓存
 - Windows 服务
 
-有关详细信息，请参阅[兼容包规范](https://github.com/dotnet/designs/blob/master/accepted/2018/compat-pack/compat-pack.md)。
+有关详细信息，请参阅[兼容包规范](https://github.com/dotnet/designs/blob/main/accepted/2018/compat-pack/compat-pack.md)。
 
 ## <a name="get-started"></a>入门
 

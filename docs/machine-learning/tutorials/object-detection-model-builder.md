@@ -6,12 +6,12 @@ ms.author: brachtma
 ms.date: 03/12/2021
 ms.topic: tutorial
 ms.custom: mlnet-tooling
-ms.openlocfilehash: 21b672b84c7f55578a76459fa9f02aca3455d719
-ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
+ms.openlocfilehash: 470849257f2a75bec9e708d8c17905f69c4d0aa7
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104658350"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875390"
 ---
 # <a name="tutorial-detect-stop-signs-in-images-with-model-builder"></a>教程：使用 Model Builder 检测图像中的停车标志
 
@@ -51,7 +51,7 @@ ms.locfileid: "104658350"
 - 对象计数
 - 活动识别
 
-此示例将创建一个 C# .NET Core 控制台应用程序，该应用程序使用通过 Model Builder 生成的机器学习模型来检测图像中的停车标志。 有关本教程中的源代码，可以从 [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/modelbuilder/ObjectDetection_StopSigns) GitHub 存储库中找到。
+此示例将创建一个 C# .NET Core 控制台应用程序，该应用程序使用通过 Model Builder 生成的机器学习模型来检测图像中的停车标志。 有关本教程中的源代码，可以从 [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/main/samples/modelbuilder/ObjectDetection_StopSigns) GitHub 存储库中找到。
 
 ## <a name="prepare-and-understand-the-data"></a>准备和了解数据
 
@@ -257,7 +257,7 @@ Azure ML 试验是一种封装一次或多次机器学习训练运行的配置�
     Top: 89.453415, Left: 481.95343, Right: 724.8073, Bottom: 388.32385, Label: Stop-Sign, Score: 0.99539465
     ```
 
-祝贺你！ 你已成功使用 Model Builder 生成用来检测图像中停车标志的机器学习模型。 有关本教程中的源代码，可以从 [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/modelbuilder/ObjectDetection_StopSigns) GitHub 存储库中找到。
+祝贺你！ 你已成功使用 Model Builder 生成用来检测图像中停车标志的机器学习模型。 有关本教程中的源代码，可以从 [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/main/samples/modelbuilder/ObjectDetection_StopSigns) GitHub 存储库中找到。
 
 ## <a name="additional-resources"></a>其他资源
 

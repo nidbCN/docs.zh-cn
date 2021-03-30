@@ -3,12 +3,12 @@ title: 使用 .NET CLI 组织和测试项目
 description: 本教程介绍如何通过命令行组织和测试 .NET 项目。
 author: cartermp
 ms.date: 09/10/2018
-ms.openlocfilehash: 263eaf15beac008de8bb353a385b8f3588a7fefc
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.openlocfilehash: c668cff48a2418cc1bc34aef78ea26c863d9de6a
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633632"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872673"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-cli"></a>使用 .NET CLI 组织和测试项目
 
@@ -49,7 +49,7 @@ ms.locfileid: "97633632"
 
 ### <a name="building-the-sample"></a>生成示例
 
-对于下列步骤，可使用 [NewTypes Pets 示例](https://github.com/dotnet/samples/tree/master/core/console-apps/NewTypesMsBuild)进行相关操作，也可以创建自己的文件与文件夹进行操作。 各类型按逻辑组织为文件夹结构，允许日后加入更多类型，测试也按逻辑放置在文件夹中，允许日后加入更多测试。
+对于下列步骤，可使用 [NewTypes Pets 示例](https://github.com/dotnet/samples/tree/main/core/console-apps/NewTypesMsBuild)进行相关操作，也可以创建自己的文件与文件夹进行操作。 各类型按逻辑组织为文件夹结构，允许日后加入更多类型，测试也按逻辑放置在文件夹中，允许日后加入更多测试。
 
 此示例包含两种类型 `Dog` 和 `Cat`，并使它们实现一个公共接口 `IPet`。 对于 `NewTypes` 项目，目标是将与宠物相关的类型组织到 Pets 文件夹中。 如果之后添加了另一组类型（例如 WildAnimals），则将其与 Pets 文件夹一同放在 NewTypes 文件夹中。 WildAnimals 文件夹可包含不属于宠物的动物类型，如 `Squirrel` 和 `Rabbit` 类型。 按照这种方式添加类型，不会破坏项目的良好组织。
 

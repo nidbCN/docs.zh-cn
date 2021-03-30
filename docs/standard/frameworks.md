@@ -5,12 +5,12 @@ ms.date: 03/03/2021
 ms.prod: dotnet
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 9e831726a87493b109578a3546a8f29b7b71cb6c
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: f0c8c8a61aec2ee3b527d392e5460b9b77a03f26
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102604601"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105637191"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>SDK 样式项目中的目标框架
 
@@ -143,7 +143,7 @@ ms.locfileid: "102604601"
 </Project>
 ```
 
-在库或应用中，使用[预处理器指令](../csharp/language-reference/preprocessor-directives/preprocessor-if.md)编写条件代码，针对每个目标框架进行编译：
+在库或应用中，使用[预处理器指令](../csharp/language-reference/preprocessor-directives.md#conditional-compilation)编写条件代码，针对每个目标框架进行编译：
 
 ```csharp
 public class MyClass
@@ -184,7 +184,7 @@ public class MyClass
 
 ## <a name="see-also"></a>另请参阅
 
-- [.NET 5 中的目标框架名称](https://github.com/dotnet/designs/blob/master/accepted/2020/net5/net5.md)
+- [.NET 5 中的目标框架名称](https://github.com/dotnet/designs/blob/main/accepted/2020/net5/net5.md)
 - [在桌面应用中调用 Windows 运行时 API](/windows/apps/desktop/modernize/desktop-to-uwp-enhance)
 - [使用跨平台工具开发库](../core/tutorials/libraries.md)
 - [.NET Standard](net-standard.md)

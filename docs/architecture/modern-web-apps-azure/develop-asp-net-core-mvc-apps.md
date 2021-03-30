@@ -7,12 +7,12 @@ ms.date: 12/01/2020
 no-loc:
 - Blazor
 - WebAssembly
-ms.openlocfilehash: c0fc92b2dbc25a1a48e0264b64c79fc8631fa8f0
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 494e73bd32ac6793d355b6828408b61bb09ca880
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009659"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873115"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>开发 ASP.NET Core MVC 应用
 
@@ -303,7 +303,7 @@ services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 
 ASP.NET Core MVC 还使用约定来确定视图的位置。 可以使用自定义约定取而代之，使视图位于功能文件夹中（使用上述 FeatureConvention 提供的功能名称）。 可在 MSDN 杂志文章 [ASP.NET Core MVC 的功能切片](/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc)中详细了解此方法并下载工作示例。
 
-### <a name="apis-and-no-locblazor-applications"></a>API 和 Blazor 应用程序
+### <a name="apis-and-blazor-applications"></a>API 和 Blazor 应用程序
 
 如果应用程序包含一组必须受到保护的 Web API，最好将这些 apis 配置为独立于 View 或 Razor Pages 应用程序的项目。 从服务器端 Web 应用程序中分离 API（尤其是公共 API）有很多好处。 这些应用程序通常具有独特的部署和负载特征。 这些应用程序也很可能采用不同的安全机制，其中利用基于 Cookie 的身份验证和 API 的基于表单的标准应用程序很可能使用基于令牌的身份验证。
 
@@ -495,7 +495,7 @@ services.AddAuthentication(config =>
 
 虽然可以在一个项目中配置多个不同的身份验证方案，但配置一个默认方案要简单得多。 出于此原因，eShopOnWeb 引用应用程序将其 API 划分到自己的项目 `PublicApi` 中，与包含应用程序视图和 Razor Pages 的主 `Web` 项目分开。
 
-#### <a name="authentication-in-no-locblazor-apps"></a>Blazor 应用中的身份验证
+#### <a name="authentication-in-blazor-apps"></a>Blazor 应用中的身份验证
 
 Blazor Server 应用程序可以利用与任何其他 ASP.NET Core 应用程序相同的身份验证功能。 不过，Blazor WebAssembly 应用程序无法使用内置的标识和身份验证提供程序，因为它们在浏览器中运行。 Blazor WebAssembly 应用程序可以在本地存储用户身份验证状态，并且可以访问声明，以确定用户应执行的操作。 但是，不管在 Blazor WebAssembly 应用内部实现了什么逻辑，都应在服务器上执行所有身份验证和授权检查，因为用户可以轻松地绕过该应用并直接与 API 进行交互。
 
@@ -654,7 +654,7 @@ public class Program
 > ### <a name="references--client-communication"></a>参考 - 客户端通信
 >
 > - **ASP.NET Core SignalR**\
->   <https://github.com/dotnet/aspnetcore/tree/master/src/SignalR>
+>   <https://github.com/dotnet/aspnetcore/tree/main/src/SignalR>
 > - **WebSocket 管理器**\
 >   <https://github.com/radu-matei/websocket-manager>
 

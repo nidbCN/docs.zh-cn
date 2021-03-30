@@ -2,12 +2,12 @@
 title: dotnet list package 命令
 description: 使用“dotnet list package”命令，可以方便地列出项目或解决方案的包引用。
 ms.date: 11/11/2020
-ms.openlocfilehash: 684b73dec553a424252e1368c265847622fb7850
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: b51ef5deb8b6418938787003b409803a3c814b08
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189891"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873427"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
@@ -31,7 +31,7 @@ dotnet list package -h|--help
 
 ## <a name="description"></a>描述
 
-使用 `dotnet list package` 命令，可以方便地列出特定项目或解决方案的所有 NuGet 包引用。 首先，需要生成项目，以提供必需资产以供此命令处理。 下面的示例展示了 [SentimentAnalysis](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) 项目的 `dotnet list package` 命令输出：
+使用 `dotnet list package` 命令，可以方便地列出特定项目或解决方案的所有 NuGet 包引用。 首先，需要生成项目，以提供必需资产以供此命令处理。 下面的示例展示了 [SentimentAnalysis](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/SentimentAnalysis) 项目的 `dotnet list package` 命令输出：
 
 ```output
 Project 'SentimentAnalysis' has the following package references
@@ -58,7 +58,7 @@ Project `SentimentAnalysis` has the following updates to its packages
    > Microsoft.ML         1.4.0       1.4.0      1.5.0-preview
 ```
 
-如果需要确定项目是否有可传递依赖关系，请使用 `--include-transitive` 选项。 如果在项目中添加包，它转而又依赖另一个包，就会出现可传递依赖关系。 下面的示例展示了 [HelloPlugin](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin/HelloPlugin) 项目的 `dotnet list package --include-transitive` 命令运行输出，其中显示顶级包及其依赖的包：
+如果需要确定项目是否有可传递依赖关系，请使用 `--include-transitive` 选项。 如果在项目中添加包，它转而又依赖另一个包，就会出现可传递依赖关系。 下面的示例展示了 [HelloPlugin](https://github.com/dotnet/samples/tree/main/core/extensions/AppWithPlugin/HelloPlugin) 项目的 `dotnet list package --include-transitive` 命令运行输出，其中显示顶级包及其依赖的包：
 
 ```output
 Project 'HelloPlugin' has the following package references

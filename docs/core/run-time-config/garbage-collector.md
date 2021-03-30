@@ -3,12 +3,12 @@ title: 垃圾回收器配置设置
 description: 了解用于配置垃圾回收器如何为 .NET Core 应用管理内存的运行时设置。
 ms.date: 07/10/2020
 ms.topic: reference
-ms.openlocfilehash: 91d155b638c7e69b3d2c0216266a7c0c0410db4c
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: c4f55124d9f50146ceac1eea52ce60b0dd77ad1d
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87915990"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875039"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>用于垃圾回收的运行时配置选项
 
@@ -427,7 +427,7 @@ runtimeconfig.json 文件：
 
 | | 设置名 | 值 | 引入的版本 |
 | - | - | - | - |
-| **runtimeconfig.json** | 不可用 | 空值 | 不可用 |
+| **runtimeconfig.json** | 不可用 | 不适用 | 不可用 |
 | **环境变量** | `COMPlus_GCLargePages` | `0` - 禁用<br/>`1` - 启用 | .NET Core 3.0 |
 
 ## <a name="allow-large-objects"></a>允许大型对象
@@ -438,7 +438,7 @@ runtimeconfig.json 文件：
 
 | | 设置名 | 值 | 引入的版本 |
 | - | - | - | - |
-| **runtimeconfig.json** | 不可用 | 空值 | 不可用 |
+| **runtimeconfig.json** | 不可用 | 不适用 | 不可用 |
 | **环境变量** | `COMPlus_gcAllowVeryLargeObjects` | `1` - 启用<br/> `0` - 禁用 | .NET Core 1.0 |
 | **.NET Framework 的 app.config** | [gcAllowVeryLargeObjects](../../framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md) | `1` - 启用<br/> `0` - 禁用 | .NET Framework 4.5 |
 
@@ -472,9 +472,9 @@ runtimeconfig.json 文件：
 ## <a name="standalone-gc"></a>独立 GC
 
 - 指定库的路径，该库包含运行时打算加载的垃圾回收器。
-- 有关详细信息，请参阅 [Standalone GC loader design](https://github.com/dotnet/runtime/blob/master/docs/design/features/standalone-gc-loading.md)（独立 GC 加载程序设计）。
+- 有关详细信息，请参阅 [Standalone GC loader design](https://github.com/dotnet/runtime/blob/main/docs/design/features/standalone-gc-loading.md)（独立 GC 加载程序设计）。
 
 | | 设置名 | 值 | 引入的版本 |
 | - | - | - | - |
-| **runtimeconfig.json** | 不可用 | 空值 | 不可用 |
+| **runtimeconfig.json** | 不可用 | 不适用 | 不可用 |
 | **环境变量** | `COMPlus_GCName` | string_path | .NET Core 2.0 |

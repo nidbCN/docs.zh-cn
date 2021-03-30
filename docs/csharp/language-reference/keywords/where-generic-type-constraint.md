@@ -10,18 +10,18 @@ f1_keywords:
 - enumconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: ff2d50b2148ea62e5bef5eceda547a976e4abf02
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 83fb5b562d9e1e4caaef179ca2911adb60fc01fa
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687321"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872621"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where（泛型类型约束）（C# 参考）
 
 泛型定义中的 `where` 子句指定对用作泛型类型、方法、委托或本地函数中类型参数的参数类型的约束。 约束可指定接口、基类或要求泛型类型为引用、值或非托管类型。 它们声明类型参数必须具备的功能。
 
-例如，可以声明一个泛型类 `MyGenericClass`，以使类型参数 `T` 实现 <xref:System.IComparable%601> 接口：
+例如，可以声明一个泛型类 `AGenericClass`，以使类型参数 `T` 实现 <xref:System.IComparable%601> 接口：
 
 [!code-csharp[using an interface constraint](snippets/GenericWhereConstraints.cs#1)]
 

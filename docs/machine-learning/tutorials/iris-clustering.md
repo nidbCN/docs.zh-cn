@@ -5,12 +5,12 @@ author: pkulikov
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 8ee8b177dc9cc89c4f54956b8c0a274b1d093ece
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 9240f365c6721baae03d8537e5e71153abf0f172
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86282080"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875598"
 ---
 # <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>教程：配合使用 K 平均值聚类分析和 ML.NET 来对鸢尾花分类
 
@@ -41,7 +41,7 @@ ms.locfileid: "86282080"
 
 ## <a name="create-a-console-application"></a>创建控制台应用程序
 
-1. 打开 Visual Studio。 从菜单栏中选择“文件”   > “新建”   > “项目”  。 在“新项目”  对话框中，依次选择“Visual C#”  和“.NET Core”  节点。 然后，选择“控制台应用程序(.NET Core)”  项目模板。 在“名称”文本框中，键入“IrisFlowerClustering”，然后选择“确定”按钮   。
+1. 打开 Visual Studio。 从菜单栏中选择“文件”   > “新建”   > “项目”  。 在“新项目”对话框中，依次选择“Visual C#”和“.NET Core”节点。 然后，选择“控制台应用程序(.NET Core)”  项目模板。 在“名称”文本框中，键入“IrisFlowerClustering”，然后选择“确定”按钮   。
 
 1. 在项目中创建一个名为“数据”的目录来保存数据集和模型文件  ：
 
@@ -55,7 +55,7 @@ ms.locfileid: "86282080"
 
 ## <a name="prepare-the-data"></a>准备数据
 
-1. 下载 [iris.data](https://github.com/dotnet/machinelearning/blob/master/test/data/iris.data) 数据集并将其保存至在上一步中创建的“数据”文件夹  。 若要详细了解鸢尾花数据集，请参阅[鸢尾花数据集](https://en.wikipedia.org/wiki/Iris_flower_data_set)维基百科页面，以及该数据集的源[鸢尾花数据集](http://archive.ics.uci.edu/ml/datasets/Iris)页面。
+1. 下载 [iris.data](https://github.com/dotnet/machinelearning/blob/main/test/data/iris.data) 数据集并将其保存至在上一步中创建的“数据”文件夹  。 若要详细了解鸢尾花数据集，请参阅[鸢尾花数据集](https://en.wikipedia.org/wiki/Iris_flower_data_set)维基百科页面，以及该数据集的源[鸢尾花数据集](http://archive.ics.uci.edu/ml/datasets/Iris)页面。
 
 1. 在“解决方案资源管理器”中，右键单击“iris.data”文件并选择“属性”    。 在“高级”下，将“复制到输出目录”的值更改为“如果较新则复制”    。
 
@@ -187,7 +187,7 @@ Cluster: 2
 Distances: 11.69127 0.02159119 25.59896
 ```
 
-祝贺你！ 现已成功地生成用于鸢尾花聚类分析的机器学习模型并将其用于预测。 可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/IrisFlowerClustering) GitHub 存储库中找到本教程的源代码。
+祝贺你！ 现已成功地生成用于鸢尾花聚类分析的机器学习模型并将其用于预测。 可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/IrisFlowerClustering) GitHub 存储库中找到本教程的源代码。
 
 ## <a name="next-steps"></a>后续步骤
 

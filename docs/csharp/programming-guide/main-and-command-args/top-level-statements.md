@@ -5,12 +5,12 @@ ms.date: 03/08/2021
 helpviewer_keywords:
 - C# language, top-level statements
 - C# language, Main method
-ms.openlocfilehash: 69ff5fd606f5e12f55bd3e6dfc15fc7e64d8352b
-ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
+ms.openlocfilehash: 31a9d3bba302823015058d59ca79da45754b761f
+ms.sourcegitcommit: 5ce37699c2a51ed173171813be68ef7577b1aba5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2021
-ms.locfileid: "103190435"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104881049"
 ---
 # <a name="top-level-statements-c-programming-guide"></a>顶级语句（C# 编程指南）
 
@@ -38,7 +38,7 @@ ms.locfileid: "103190435"
 
 > CS7022：程序的入口点是全局代码；忽略“Main()”入口点。
 
-在具有顶级语句的项目中，不能使用 [-main](../../language-reference/compiler-options/main-compiler-option.md) 编译器选项来选择入口点，即使该项目具有一个或多个 `Main` 方法。
+在具有顶级语句的项目中，不能使用 [-main](../../language-reference/compiler-options/advanced.md#mainentrypoint-or-startupobject) 编译器选项来选择入口点，即使该项目具有一个或多个 `Main` 方法。
 
 ## <a name="using-directives"></a>`using` 指令
 

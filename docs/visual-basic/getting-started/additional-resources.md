@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual Basic Web sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-ms.openlocfilehash: 06746347910f62a428d4897693a88b5efe78e86f
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: e666674f1d52ccb0fe1c9ba2f4c8d743549d5086
+ms.sourcegitcommit: 5ce37699c2a51ed173171813be68ef7577b1aba5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102258964"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104881129"
 ---
 # <a name="additional-resources"></a>其他资源
 
@@ -33,13 +33,13 @@ ms.locfileid: "102258964"
 |URL|描述|
 |----------|----------------|
 |[Visual Basic 文档示例](https://github.com/dotnet/docs/tree/main/samples/snippets/visualbasic)|包含整个 Visual Basic 和 .NET 文档中使用的示例。|
-|[示例浏览器](https://docs.microsoft.com/samples/browse/?languages=vb)|包含用 Visual Basic 编写的代码示例|
+|[示例浏览器](/samples/browse/?languages=vb)|包含用 Visual Basic 编写的代码示例|
 
 ### <a name="forums"></a>论坛
 
 |URL|说明|
 |----------|----------------|
-|[Microsoft Q&A](https://docs.microsoft.com/answers/topics/dotnet-visual-basic.html)|有关 Visual Basic 编程语言的技术问题。|
+|[Microsoft Q&A](/answers/topics/dotnet-visual-basic.html)|有关 Visual Basic 编程语言的技术问题。|
 
 ### <a name="videos-and-webcasts"></a>视频与网络广播
 

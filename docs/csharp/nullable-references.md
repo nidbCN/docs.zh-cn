@@ -3,12 +3,12 @@ title: 可为空引用类型
 description: 本文概述了在 C# 8.0 中添加的可为空引用类型。 你将了解该功能如何为新项目和现有项目提供针对空引用异常的安全性。
 ms.technology: csharp-null-safety
 ms.date: 04/21/2020
-ms.openlocfilehash: 36078031eebc1890edf04744475c330c2ba31f96
-ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
+ms.openlocfilehash: da3b75b28d7501e8436d29c0c325c550f0a44c93
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103480097"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105637155"
 ---
 # <a name="nullable-reference-types"></a>可为空引用类型
 
@@ -96,7 +96,7 @@ name!.Length;
 > 1. 文件名以 TemporaryGeneratedFile_ 开头
 > 1. 文件名用以 .designer.cs、.generated.cs、.g.cs 或 .g.i.cs 结尾   。
 >
-> 生成器可以选择使用 [`#nullable`](language-reference/preprocessor-directives/preprocessor-nullable.md) 预处理器指令。
+> 生成器可以选择使用 [`#nullable`](language-reference/preprocessor-directives.md#nullable-context) 预处理器指令。
 
 默认情况下，可为空注释和警告上下文处于禁用状态，包括新项目。 这意味着无需更改现有代码即可进行编译，并且不会生成任何新警告。
 
@@ -216,6 +216,6 @@ public static class Program
 ## <a name="see-also"></a>请参阅
 
 - [可为空引用类型规范草案](~/_csharplang/proposals/csharp-9.0/nullable-reference-types-specification.md)
-- [可为空引用教程简介](tutorials/nullable-reference-types.md)
-- [将现有代码库迁移到可为空引用](tutorials/upgrade-to-nullable-references.md)
+- [可为空引用教程简介](whats-new/tutorials/nullable-reference-types.md)
+- [将现有代码库迁移到可为空引用](whats-new/tutorials/upgrade-to-nullable-references.md)
 - [Nullable（C# 编译器选项）](language-reference/compiler-options/language.md#nullable)

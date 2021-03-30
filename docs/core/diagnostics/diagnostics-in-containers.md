@@ -2,12 +2,12 @@
 title: 收集容器中的诊断
 description: 在本文中，你将了解如何在 Docker 容器中使用 .NET Core 诊断工具。
 ms.date: 09/01/2020
-ms.openlocfilehash: cf4bbdf75e943f093a2202f91303a2eea7125487
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.openlocfilehash: 1d0c9eadca348dad5c4fc0a395c8b371e3821262
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94916204"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872751"
 ---
 # <a name="collect-diagnostics-in-containers"></a>收集容器中的诊断
 
@@ -68,7 +68,7 @@ COPY --from=build /tools .
 
 **此工具适用于：✔️** .NET Core 2.1 及更高版本
 
-[`createdump`](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md) 是 `dotnet-dump` 的一种替代方法，可用于在包含本机和托管信息的 Linux 上创建核心转储。 `createdump` 工具与 .NET Core 运行时一起安装，可以在 libcoreclr.so（通常位于“/usr/share/dotnet/shared/Microsoft.NETCore.App/[version]”中）旁边找到。 该工具在容器中的使用效果与在非容器化 Linux 环境中相同，唯一的差异是该工具需要 [`SYS_PTRACE` 功能](https://man7.org/linux/man-pages/man7/capabilities.7.html)，因此必须[通过该功能启动](https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities) Docker 容器。
+[`createdump`](https://github.com/dotnet/runtime/blob/main/docs/design/coreclr/botr/xplat-minidump-generation.md) 是 `dotnet-dump` 的一种替代方法，可用于在包含本机和托管信息的 Linux 上创建核心转储。 `createdump` 工具与 .NET Core 运行时一起安装，可以在 libcoreclr.so（通常位于“/usr/share/dotnet/shared/Microsoft.NETCore.App/[version]”中）旁边找到。 该工具在容器中的使用效果与在非容器化 Linux 环境中相同，唯一的差异是该工具需要 [`SYS_PTRACE` 功能](https://man7.org/linux/man-pages/man7/capabilities.7.html)，因此必须[通过该功能启动](https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities) Docker 容器。
 
 ### <a name="using-createdump-in-a-sidecar-container"></a>在挎斗容器中使用 `createdump`
 

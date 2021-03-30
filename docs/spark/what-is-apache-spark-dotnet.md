@@ -4,12 +4,12 @@ description: 了解 .NET for Apache Spark，一种免费、开放源代码、跨
 author: mamccrea
 ms.topic: overview
 ms.date: 10/09/2020
-ms.openlocfilehash: 533a4d3b497ad499edcf3accf250477c03f98714
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 1fa3ae16334176f0e3e888087078d5b98de9d869
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688028"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873193"
 ---
 # <a name="what-is-net-for-apache-spark"></a>什么是 .NET for Apache Spark？
 
@@ -41,11 +41,11 @@ C#/F# 语言与 Spark 的绑定是在新的 Spark 互操作层上编写的，该
 
 与使用 [TPC-H 基准](http://www.tpc.org/tpch/)的 Python 和 Scala 相比，.NET for Apache Spark 在大多数情况下表现良好，并且当用户定义的函数性能至关重要时，其速度比 Python 快两倍。 目前正在努力提升基准性能。
 
-若要建立自己的基准，请参阅 [.NET for Apache Spark GitHub](https://github.com/dotnet/spark/tree/master/benchmark) 上提供的基准。
+若要建立自己的基准，请参阅 [.NET for Apache Spark GitHub](https://github.com/dotnet/spark/tree/main/benchmark) 上提供的基准。
 
 ## <a name="net-for-apache-spark-roadmap"></a>.NET for Apache Spark 路线图
 
-了解官方 [.NET for Apache Spark 路线图](https://github.com/dotnet/spark/blob/master/ROADMAP.md)的短期和长期计划。
+了解官方 [.NET for Apache Spark 路线图](https://github.com/dotnet/spark/blob/main/ROADMAP.md)的短期和长期计划。
 
 ## <a name="net-foundation"></a>.NET Foundation
 

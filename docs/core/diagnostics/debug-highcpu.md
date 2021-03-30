@@ -3,12 +3,12 @@ title: 调试高 CPU 使用率 - .NET Core
 description: 本教程将演示如何调试 .NETCore 中的高 CPU 使用率。
 ms.topic: tutorial
 ms.date: 07/20/2020
-ms.openlocfilehash: 3ba07f0bb40f8128c091fa427b957d824c07bcd5
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: ed22da3d53dfd1197de1f9b3c11ef31389cad690
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102105357"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872790"
 ---
 # <a name="debug-high-cpu-usage-in-net-core"></a>调试 .NET Core 中的高 CPU 使用率
 
@@ -171,7 +171,7 @@ dotnet-trace collect -p 22884 --providers Microsoft-DotNETCore-SampleProfiler
 - 用于列出进程的 [dotnet-trace](dotnet-trace.md)
 - 用于检查托管内存使用情况的 [dotnet-counters](dotnet-counters.md)
 - 用于收集和分析转储文件的 [dotnet-dump](dotnet-dump.md)
-- [dotnet/diagnostics](https://github.com/dotnet/diagnostics/tree/master/documentation/tutorial)
+- [dotnet/diagnostics](https://github.com/dotnet/diagnostics/tree/main/documentation/tutorial)
 
 ## <a name="next-steps"></a>后续步骤
 

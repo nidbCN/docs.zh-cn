@@ -3,12 +3,12 @@ title: C# 7.0 中的新增功能 - C# 指南
 description: 大致了解 C# 语言的版本 7.0 中的新增功能。
 ms.date: 10/02/2020
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 897729022e45e96d0f54057ef4dad1a4fc0d6799
-ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
+ms.openlocfilehash: 973491044808d7abc58920381ffed57549ee58d3
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103480848"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876053"
 ---
 # <a name="whats-new-in-c-70-through-c-73"></a>C# 7.0 - C# 7.3 中的新增功能
 
@@ -54,7 +54,7 @@ C# 7.0-7.3 将这些功能和主题添加到了 C# 语言中：
 
 本文的其余部分概述了每个功能。 你将了解每项功能背后的原理和语法。 可以使用 `dotnet try` 全局工具在环境中浏览这些功能：
 
-1. 安装 [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup) 全局工具。
+1. 安装 [dotnet-try](https://github.com/dotnet/try/blob/main/DotNetTryLocal.md) 全局工具。
 1. 克隆 [dotnet/try-samples](https://github.com/dotnet/try-samples) 存储库。
 1. 将当前目录设置为 try-samples 存储库的 csharp7 子目录 。
 1. 运行 `dotnet try`。

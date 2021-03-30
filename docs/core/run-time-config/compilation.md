@@ -3,12 +3,12 @@ title: 编译配置设置
 description: 了解用于为 .NET Core 应用配置 JIT 编译器工作原理的运行时设置。
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: e5f9e1245b749864787fb808527d022665197edf
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 1badb063ea6fd7504636d431fbdc7927129239d2
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654837"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873583"
 ---
 # <a name="run-time-configuration-options-for-compilation"></a>用于编译的运行时配置选项
 
@@ -19,7 +19,7 @@ ms.locfileid: "91654837"
   - 第二层在后台生成优化的代码（“优化 JIT”）。
 - 在 NET Core 3.0 及更高版本中，默认情况下已启用分层编译。
 - 在 NET Core 2.1 和 2.2 中，默认情况下已禁用分层编译。
-- 有关详细信息，请参阅[分层编译指南](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation.md)。
+- 有关详细信息，请参阅[分层编译指南](https://github.com/dotnet/runtime/blob/main/docs/design/features/tiered-compilation.md)。
 
 | | 设置名 | 值 |
 | - | - | - |

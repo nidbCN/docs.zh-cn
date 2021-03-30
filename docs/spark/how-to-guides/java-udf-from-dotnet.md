@@ -6,12 +6,12 @@ author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 17f0ff611e68a5dab2032f78ef75912f314d88a5
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: f85ed5585c8daef0ca9a21275b8de71b2eead360
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688262"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875481"
 ---
 # <a name="call-a-java-udf-from-your-net-for-apache-spark-application"></a>从 .NET for Apache Spark 应用程序调用 Java UDF
 
@@ -45,7 +45,7 @@ ms.locfileid: "94688262"
 ## <a name="register-and-call-java-udfs-in-net-for-apache-spark"></a>在 .NET for Apache Spark 中注册和调用 Java UDF
 
 1. 使用 [`RegisterJava`](https://github.com/dotnet/spark/blob/8dcdcdc7c60d5f42cba5a90f1346d854ab5bf7bb/src/csharp/Microsoft.Spark/Sql/UDFRegistration.cs#L424) API 将 Java UDF 注册到 Spark SQL 中。
-2. 使用 [`CreateOrReplaceTempView`](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Sql/DataFrame.cs#L982) 函数，注册要将 UDF 作为 SQL 表调用的 `DataFrame`。
+2. 使用 [`CreateOrReplaceTempView`](https://github.com/dotnet/spark/blob/main/src/csharp/Microsoft.Spark/Sql/DataFrame.cs#L982) 函数，注册要将 UDF 作为 SQL 表调用的 `DataFrame`。
 3. 使用 `SparkSession.Sql` 调用使用 Spark SQL 的表视图上的 UDF。
 说明以上步骤的基本示例：
 

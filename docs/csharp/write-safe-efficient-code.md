@@ -4,12 +4,12 @@ description: 通过 C# 语言最新增强功能，可以编写可验证的安全
 ms.date: 03/17/2020
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: b739a4ce1f723798cbe50ef9eae673494996751c
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 4728ff279d0a14adf239c1e177f7f840ea208e6e
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102106613"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872478"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>编写安全有效的 C# 代码
 
@@ -229,7 +229,7 @@ public struct Point3D
 
 不应将可为 null 的值类型作为 `in` 参数传递。 <xref:System.Nullable%601> 类型未声明为只读结构。 这意味着编译器必须为使用参数声明中的 `in` 修饰符传递到方法的任何可以为 null 的值类型参数生成防御性副本。
 
-你可以在 GitHub 上的[示例存储库](https://github.com/dotnet/samples/tree/master/csharp/safe-efficient-code/benchmark)中看到使用 [BenchmarkDotNet](https://www.nuget.org/packages/BenchmarkDotNet/) 演示性能差异的示例程序。 它对按值和按引用传递可变结构与按值和按引用传递不可变结构进行了比较。 使用不可变结构并按引用传递是最快的。
+你可以在 GitHub 上的[示例存储库](https://github.com/dotnet/samples/tree/main/csharp/safe-efficient-code/benchmark)中看到使用 [BenchmarkDotNet](https://www.nuget.org/packages/BenchmarkDotNet/) 演示性能差异的示例程序。 它对按值和按引用传递可变结构与按值和按引用传递不可变结构进行了比较。 使用不可变结构并按引用传递是最快的。
 
 ## <a name="use-ref-struct-types-to-work-with-blocks-or-memory-on-a-single-stack-frame"></a>使用 `ref struct` 类型处理单个堆栈帧上的块或内存
 

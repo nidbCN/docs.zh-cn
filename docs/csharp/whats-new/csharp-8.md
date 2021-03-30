@@ -2,12 +2,12 @@
 title: C# 8.0 中的新增功能 - C# 指南
 description: 简要介绍 C# 8.0 中提供的新功能。
 ms.date: 04/07/2020
-ms.openlocfilehash: 1d6d33a36092ba685247f894375888da278b7e6e
-ms.sourcegitcommit: 98d20cb038669dca4a195eb39af37d22ea9d008e
+ms.openlocfilehash: 7e2e484b4eacf8fdbef61a600409fa561dd34cb3
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92434801"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876066"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 中的新增功能
 
@@ -36,7 +36,7 @@ C# 8.0 向 C# 语言添加了以下功能和增强功能：
 
 本文的剩余部分将简要介绍这些功能。 如果有详细讲解的文章，则将提供指向这些教程和概述的链接。 可以使用 `dotnet try` 全局工具在环境中浏览这些功能：
 
-1. 安装 [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup) 全局工具。
+1. 安装 [dotnet-try](https://github.com/dotnet/try/blob/main/DotNetTryLocal.md) 全局工具。
 1. 克隆 [dotnet/try-samples](https://github.com/dotnet/try-samples) 存储库。
 1. 将当前目录设置为 try-samples 存储库的 csharp8 子目录 。
 1. 运行 `dotnet try`。
@@ -96,7 +96,7 @@ public readonly void Translate(int xOffset, int yOffset)
 
 现在可以将成员添加到接口，并为这些成员提供实现。 借助此语言功能，API 作者可以将方法添加到以后版本的接口中，而不会破坏与该接口当前实现的源或二进制文件兼容性。 现有的实现继承默认实现。 此功能使 C# 与面向 Android 或 Swift 的 API 进行互操作，此类 API 支持类似功能。 默认接口方法还支持类似于“特征”语言功能的方案。
 
-默认接口方法会影响很多方案和语言元素。 我们的第一个教程介绍如何[使用默认实现更新接口](../tutorials/default-interface-methods-versions.md)。 其他教程和参考更新将适时公开发布。
+默认接口方法会影响很多方案和语言元素。 我们的第一个教程介绍如何[使用默认实现更新接口](./tutorials/default-interface-methods-versions.md)。
 
 ## <a name="more-patterns-in-more-places"></a>在更多位置中使用更多模式
 
@@ -359,7 +359,7 @@ int M()
 
 不对可为空引用类型进行检查以确保它们没有被赋予 Null 值或初始化为 Null。 不过，编译器使用流分析来确保可为空引用类型的任何变量在被访问或分配给不可为空引用类型之前，都会对其 Null 性进行检查。
 
-可以在[可为空引用类型](../nullable-references.md)的概述中了解该功能的更多信息。 可以在此[可为空引用类型教程](../tutorials/nullable-reference-types.md)中的新应用程序中自行尝试。 在[迁移应用程序以使用可为空引用类型教程](../tutorials/upgrade-to-nullable-references.md)中了解迁移现有代码库以使用可为空引用类型的步骤。
+可以在[可为空引用类型](../nullable-references.md)的概述中了解该功能的更多信息。 可以在此[可为空引用类型教程](tutorials/nullable-reference-types.md)中的新应用程序中自行尝试。 在[迁移应用程序以使用可为空引用类型教程](tutorials/upgrade-to-nullable-references.md)中了解迁移现有代码库以使用可为空引用类型的步骤。
 
 ## <a name="asynchronous-streams"></a>异步流
 
@@ -391,7 +391,7 @@ await foreach (var number in GenerateSequence())
 }
 ```
 
-可以在[创建和使用异步流](../tutorials/generate-consume-asynchronous-stream.md)的教程中自行尝试异步流。 默认情况下，在捕获的上下文中处理流元素。 如果要禁用上下文捕获，请使用 <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType> 扩展方法。 有关同步上下文并捕获当前上下文的详细信息，请参阅有关[使用基于任务的异步模式](../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)的文章。
+可以在[创建和使用异步流](tutorials/generate-consume-asynchronous-stream.md)的教程中自行尝试异步流。 默认情况下，在捕获的上下文中处理流元素。 如果要禁用上下文捕获，请使用 <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType> 扩展方法。 有关同步上下文并捕获当前上下文的详细信息，请参阅有关[使用基于任务的异步模式](../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)的文章。
 
 ## <a name="asynchronous-disposable"></a>异步可释放
 
@@ -469,9 +469,9 @@ Range phrase = 1..4;
 var text = words[phrase];
 ```
 
-不仅数组支持索引和范围。 还可以将索引和范围用于 [string](../language-reference/builtin-types/reference-types.md#the-string-type)、<xref:System.Span%601> 或 <xref:System.ReadOnlySpan%601>。 有关详细信息，请参阅[索引和范围的类型支持](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges)。
+不仅数组支持索引和范围。 还可以将索引和范围用于 [string](../language-reference/builtin-types/reference-types.md#the-string-type)、<xref:System.Span%601> 或 <xref:System.ReadOnlySpan%601>。 有关详细信息，请参阅[索引和范围的类型支持](tutorials/ranges-indexes.md#type-support-for-indices-and-ranges)。
 
-可在有关[索引和范围](../tutorials/ranges-indexes.md)的教程中详细了解索引和范围。
+可在有关[索引和范围](tutorials/ranges-indexes.md)的教程中详细了解索引和范围。
 
 ## <a name="null-coalescing-assignment"></a>Null 合并赋值
 

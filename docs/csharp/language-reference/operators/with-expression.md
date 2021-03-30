@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - with expression [C#]
 - with operator [C#]
-ms.openlocfilehash: d7d3758c8c5da7859974b5b50b63d2a5ca16b24d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 24b9fdfcef6fe042204217323bb09c047c58296c
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95702220"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872530"
 ---
 # <a name="with-expression-c-reference"></a>with 表达式（C# 参考）
 
-`with` 表达式在 C# 9.0 及更高版本中可用，使用修改的特定属性和字段生成其[记录](../../whats-new/csharp-9.md#record-types)操作数的副本：
+`with` 表达式在 C# 9.0 及更高版本中可用，使用修改的特定属性和字段生成其[记录](../builtin-types/record.md)操作数的副本：
 
 :::code language="csharp" source="snippets/with-expression/BasicExample.cs" :::
 
@@ -45,3 +45,4 @@ ms.locfileid: "95702220"
 
 - [C# 参考](../index.md)
 - [C# 运算符和表达式](index.md)
+- [记录](../builtin-types/record.md)

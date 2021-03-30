@@ -2,12 +2,12 @@
 title: dotnet-dump 诊断工具 - .NET CLI
 description: 了解如何安装和使用 dotnet-dump CLI 工具，以在没有任何本机调试器的情况下收集和分析 Windows 和 Linux 转储。
 ms.date: 11/17/2020
-ms.openlocfilehash: 84b3796f4ee92880e6d432df606a6addfd2471b0
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 6e9edbc8075691784028f3293750c92fe53d3782
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189798"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874168"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>转储收集和分析实用工具 (dotnet-dump)
 
@@ -189,7 +189,7 @@ dotnet-dump analyze <dump_path> [-h|--help] [-c|--command]
 
 ## <a name="using-dotnet-dump"></a>使用 `dotnet-dump`
 
-第一步是收集转储。 如果已生成核心转储，则可以跳过此步骤。 操作系统或 .NET Core 运行时的内置[转储生成功能](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md)均可以创建核心转储。
+第一步是收集转储。 如果已生成核心转储，则可以跳过此步骤。 操作系统或 .NET Core 运行时的内置[转储生成功能](https://github.com/dotnet/runtime/blob/main/docs/design/coreclr/botr/xplat-minidump-generation.md)均可以创建核心转储。
 
 ```console
 $ dotnet-dump collect --process-id 1902

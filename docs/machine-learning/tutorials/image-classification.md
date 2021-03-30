@@ -4,12 +4,12 @@ description: 了解如何将现有 TensorFlow 模型中的知识传输到新的 
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: a4c671816dce1fe2abdf77f81da0f27236136536
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: b3e5617979d1635248f87db6008d3e234bb3ffc5
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86282107"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104877028"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>教程：从预先训练的 TensorFlow 模型生成 ML.NET 图像分类模型
 
@@ -27,7 +27,7 @@ TensorFlow 模型经过训练，可以将图像分为一千个类别。 ML.NET �
 > * 训练和评估 ML.NET 模型
 > * 对测试图像进行分类
 
-可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TransferLearningTF) 存储库中找到本教程的源代码。 请注意在本教程中，.NET 项目配置默认面向 .NET core 2.2。
+可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/TransferLearningTF) 存储库中找到本教程的源代码。 请注意在本教程中，.NET 项目配置默认面向 .NET core 2.2。
 
 ## <a name="what-is-transfer-learning"></a>什么是迁移学习？
 
@@ -38,7 +38,7 @@ TensorFlow 模型经过训练，可以将图像分为一千个类别。 ML.NET �
 ## <a name="prerequisites"></a>先决条件
 
 * 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 或更高版本或 Visual Studio 2017 版本 15.6 或更高版本。
-* [教程资产目录 .ZIP 文件](https://github.com/dotnet/samples/blob/master/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip)
+* [教程资产目录 .ZIP 文件](https://github.com/dotnet/samples/blob/main/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip)
 * [InceptionV1 机器学习模型](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)
 
 ## <a name="select-the-right-machine-learning-task"></a>选择正确的机器学习任务
@@ -120,11 +120,11 @@ toaster2.png    appliance
 
 1. 创建名为“TransferLearningTF”的 **.NET Core 控制台应用程序**。
 
-1. 安装“Microsoft.ML NuGet 包”：
+1. 安装“Microsoft.ML NuGet 包”  ：
 
     [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 
-    * 在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”。
+    * 在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”  。
     * 选择“nuget.org”作为“包源”，选择“浏览”选项卡，再搜索“Microsoft.ML”。
     * 选择“安装”按钮。
     * 选择“预览更改”对话框中的“确定”按钮 。
@@ -133,7 +133,7 @@ toaster2.png    appliance
 
 ### <a name="download-assets"></a>下载资产
 
-1. 下载并解压缩[项目资产目录 zip 文件](https://github.com/dotnet/samples/blob/master/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip)。
+1. 下载并解压缩[项目资产目录 zip 文件](https://github.com/dotnet/samples/blob/main/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip)。
 
 1. 将“`assets`”目录复制到“TransferLearningTF”项目目录中。 此目录及其子目录包含本教程所需的数据和支持文件（Inception 模型除外，将在下一步中下载并添加此模型）。
 
@@ -143,7 +143,7 @@ toaster2.png    appliance
 
    ![Inception 目录内容](./media/image-classification/inception-files.png)
 
-1. 在“解决方案资源管理器”中，右键单击资产目录和子目录中的每个文件，再选择“属性”。 在“高级”下，将“复制到输出目录”的值更改为“如果较新则复制”  。
+1. 在“解决方案资源管理器”中，右键单击资产目录和子目录中的每个文件，再选择“属性”。 在“高级”下，将“复制到输出目录”的值更改为“如果较新则复制”    。
 
 ### <a name="create-classes-and-define-paths"></a>创建类和定义路径
 
@@ -278,7 +278,7 @@ ML.NET 模型管道是一个估算器链。 请注意，管道构造过程中不
 
     [!code-csharp[ScoreTensorFlowModel](./snippets/image-classification/csharp/Program.cs#ScoreTensorFlowModel)]
 
-    管道中的此阶段将 TensorFlow 模型加载到内存中，然后通过 TensorFlow 模型网络处理像素值的矢量。 将输入应用于深度学习模型并使用该模型生成输出的过程称为**评分**。 当作为一个整体使用模型时，评分将做出推理或预测。
+    管道中的此阶段将 TensorFlow 模型加载到内存中，然后通过 TensorFlow 模型网络处理像素值的矢量。 将输入应用于深度学习模型并使用该模型生成输出的过程称为 **评分**。 当作为一个整体使用模型时，评分将做出推理或预测。
 
     在本例中，将使用除最后一层（这是进行推理的层）之外的全部 TensorFlow 模型。 倒数第二层的输出标有 `softmax_2_preactivation`。 此层的输出实际上是特征矢量，用于描述原始输入图像的特征。
 
@@ -338,7 +338,7 @@ ML.NET 模型管道是一个估算器链。 请注意，管道构造过程中不
     下面是图像分类评估指标：
 
     * `Log-loss` - 请参阅[对数损失](../resources/glossary.md#log-loss)。 通常会希望对数损失尽可能接近 0。
-    * `Per class Log-loss`。 建议每类别的对数损失尽可能接近 0。
+    * `Per class Log-loss`. 建议每类别的对数损失尽可能接近 0。
 
 1. 添加以下代码，将经过训练的模型作为下一行代码返回：
 
@@ -370,7 +370,7 @@ ML.NET 模型管道是一个估算器链。 请注意，管道构造过程中不
 
 祝贺你！ 现在，通过在 ML.NET 中对 `TensorFlow` 模型应用迁移学习，已成功生成了用于图像分类的机器学习模型。
 
-可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TransferLearningTF) 存储库中找到本教程的源代码。
+可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/TransferLearningTF) 存储库中找到本教程的源代码。
 
 在本教程中，你将了解：
 > [!div class="checklist"]

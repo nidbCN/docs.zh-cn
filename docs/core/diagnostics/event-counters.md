@@ -2,12 +2,12 @@
 title: .NET Core 中的 EventCounters
 description: 本文将介绍什么是 EventCounters，如何实现它们，以及如何使用它们。
 ms.date: 08/07/2020
-ms.openlocfilehash: 843f1ec645bf7f52fd4f85e30d183e6e21fee5c6
-ms.sourcegitcommit: 78eb25647b0c750cd80354ebd6ce83a60668e22c
+ms.openlocfilehash: 8efa3134e83ba6fdc7563e97ef6422cb5f2099b6
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99065059"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872777"
 ---
 # <a name="eventcounters-in-net-core"></a>.NET Core 中的 EventCounters
 
@@ -127,7 +127,7 @@ var monitorContentionCounter = new IncrementingPollingCounter(
 > [!NOTE]
 > <xref:System.Diagnostics.Tracing.IncrementingPollingCounter.DisplayRateTimeScale> 不由 [dotnet-counters](dotnet-counters.md) 使用，不需要事件侦听器即可使用它。
 
-在 [.NET 运行时](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Private.CoreLib/src/System/Diagnostics/Tracing/RuntimeEventSource.cs)存储库中，有更多的计数器实现可用作参考。
+在 [.NET 运行时](https://github.com/dotnet/runtime/blob/main/src/libraries/System.Private.CoreLib/src/System/Diagnostics/Tracing/RuntimeEventSource.cs)存储库中，有更多的计数器实现可用作参考。
 
 ## <a name="concurrency"></a>并发
 
@@ -159,7 +159,7 @@ _requestRateCounter = new IncrementingPollingCounter("request-rate", this, () =>
 使用 EventCounters 主要方式有两种：进程内或进程外。 EventCounters 的使用可以分为三层不同的使用技术。
 
 - 通过 ETW 或 EventPipe 在原始流中传输事件：
-  - ETW API 附带 Windows OS，EventPipe 可作为 [.NET API](https://github.com/dotnet/diagnostics/blob/master/documentation/design-docs/diagnostics-client-library.md#1-attaching-to-a-process-and-dumping-out-all-the-runtime-gc-events-in-real-time-to-the-console) 或诊断 [IPC 协议](https://github.com/dotnet/diagnostics/blob/master/documentation/design-docs/ipc-protocol.md)进行访问。
+  - ETW API 附带 Windows OS，EventPipe 可作为 [.NET API](https://github.com/dotnet/diagnostics/blob/main/documentation/design-docs/diagnostics-client-library.md#1-attaching-to-a-process-and-dumping-out-all-the-runtime-gc-events-in-real-time-to-the-console) 或诊断 [IPC 协议](https://github.com/dotnet/diagnostics/blob/main/documentation/design-docs/ipc-protocol.md)进行访问。
 - 将二进制事件流解码为事件：
   - [TraceEvent 库](https://www.nuget.org/packages/Microsoft.Diagnostics.Tracing.TraceEvent)可处理 ETW 和 EventPipe 流格式。
 - 命令行和 GUI 工具：

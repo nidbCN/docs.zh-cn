@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 370c6eb23a50ed388f0b10a5c5f4779ba2a1b144
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: 49aa98edec8ed1ce35dd501c57aa82e4ca4cf286
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102623588"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104879652"
 ---
 ### <a name="project-tools-now-included-in-sdk"></a>SDK 现已包含项目工具
 
@@ -19,8 +19,8 @@ ms.locfileid: "102623588"
 | \<DotNetCliToolReference> 值                   | 工具                                                                                                            |
 |------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
 | `Microsoft.DotNet.Watcher.Tools`               | `dotnet-watch`               |
-| `Microsoft.Extensions.SecretManager.Tools`     | [dotnet-user-secrets](https://github.com/dotnet/aspnetcore/blob/master/src/Tools/dotnet-user-secrets/README.md) |
-| `Microsoft.Extensions.Caching.SqlConfig.Tools` | [dotnet-sql-cache](https://github.com/dotnet/aspnetcore/blob/master/src/Tools/dotnet-sql-cache/README.md)       |
+| `Microsoft.Extensions.SecretManager.Tools`     | [dotnet-user-secrets](https://github.com/dotnet/aspnetcore/blob/main/src/Tools/dotnet-user-secrets/README.md) |
+| `Microsoft.Extensions.Caching.SqlConfig.Tools` | [dotnet-sql-cache](https://github.com/dotnet/aspnetcore/blob/main/src/Tools/dotnet-sql-cache/README.md)       |
 | `Microsoft.EntityFrameworkCore.Tools.DotNet`   | [dotnet-ef](/ef/core/miscellaneous/cli/dotnet)                                                                  |
 
 #### <a name="version-introduced"></a>引入的版本

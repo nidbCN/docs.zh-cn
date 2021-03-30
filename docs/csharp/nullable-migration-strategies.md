@@ -3,12 +3,12 @@ title: 升级代码库，以使用可为 null 引用类型
 description: 选择升级代码库以使用可为 null 引用类型的最佳策略。
 ms.technology: csharp-null-safety
 ms.date: 07/31/2019
-ms.openlocfilehash: ab0970247c7e3f3c20d7fdb40ef035c4ba1d8b01
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: fff9ce4d053cc2543b0148d70435bdc793ecccd7
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "97866819"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105637152"
 ---
 # <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>更新库以使用可为 null 引用类型，并将可为空规则传达给调用方
 
@@ -69,7 +69,7 @@ bool TryGetMessage(string key, out string message)
 > 1. 文件名以 TemporaryGeneratedFile_ 开头
 > 1. 文件名用以 .designer.cs、.generated.cs、.g.cs 或 .g.i.cs 结尾   。
 >
-> 生成器可以选择使用 [`#nullable`](language-reference/preprocessor-directives/preprocessor-nullable.md) 预处理器指令。
+> 生成器可以选择使用 [`#nullable`](language-reference/preprocessor-directives.md#nullable-context) 预处理器指令。
 
 ## <a name="should-nullable-warnings-introduce-breaking-changes"></a>是否应为可为 null 警告引入中断性变更？
 
@@ -216,5 +216,5 @@ public string? VehicleRegistration { get; set; }
 
 ## <a name="see-also"></a>另请参阅
 
-- [将现有代码库迁移到可为空引用](tutorials/upgrade-to-nullable-references.md)
+- [将现有代码库迁移到可为空引用](whats-new/tutorials/upgrade-to-nullable-references.md)
 - [在 EF Core 中使用可为 null 引用类型](/ef/core/miscellaneous/nullable-reference-types)

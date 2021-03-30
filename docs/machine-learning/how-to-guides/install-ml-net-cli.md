@@ -3,12 +3,12 @@ title: 如何安装 ML.NET 命令行接口 (CLI) 工具
 description: 了解如何安装、升级、降级和卸载 ML.NET 命令行接口 (CLI) 工具。
 ms.date: 06/08/2020
 ms.custom: mlnet-tooling
-ms.openlocfilehash: a99ffa30dcbacba3341125fd0e37e617e0f4cd1e
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: a2fdaa06c1602a2c3986b2f034cd1840e39d16a3
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102103941"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876768"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>如何安装 ML.NET 命令行接口 (CLI) 工具
 
@@ -108,9 +108,9 @@ Tab 自动补全工作原理的示例如以下动画所示：
 
 2. 将适当的填充码脚本添加到 shell 配置文件中。 可能必须创建一个 shell 配置文件。 填充码脚本会将补全请求从 shell 转发到 `dotnet-suggest` 工具，其会委托到相应的基于 `System.CommandLine` 的应用。
 
-    - 对于 bash，将 [dotnet-suggest-shim.bash](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.bash) 的内容添加到 `~/.bash_profile`。
+    - 对于 bash，将 [dotnet-suggest-shim.bash](https://github.com/dotnet/System.CommandLine/blob/main/src/System.CommandLine.Suggest/dotnet-suggest-shim.bash) 的内容添加到 `~/.bash_profile`。
 
-    - 对于 PowerShell，将 [dotnet-suggest-shim.ps1](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.ps1) 的内容添加到 PowerShell 配置文件中。 可以通过在控制台中运行以下命令来查找 PowerShell 配置文件的预期路径：
+    - 对于 PowerShell，将 [dotnet-suggest-shim.ps1](https://github.com/dotnet/System.CommandLine/blob/main/src/System.CommandLine.Suggest/dotnet-suggest-shim.ps1) 的内容添加到 PowerShell 配置文件中。 可以通过在控制台中运行以下命令来查找 PowerShell 配置文件的预期路径：
 
     ```console
     echo $profile

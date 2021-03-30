@@ -3,33 +3,33 @@ title: 使用 NUnit 和 .NET Core 进行 C# 单元测试
 description: 使用 dotnet test 和 NUnit 分步构建一个示例解决方案，在此交互式体验中学习 C# 和 .NET Core 中的单元测试概念。
 author: rprouse
 ms.date: 08/31/2018
-ms.openlocfilehash: 9c9982b047f7b3c5a03ecdd2fabfa2a0edce4558
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.openlocfilehash: d471521fe324700502415c5e6fb1b28871492b9a
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633931"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873440"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>使用 NUnit 和 .NET Core 进行 C# 单元测试
 
-本教程介绍分步构建示例解决方案的交互式体验，以了解单元测试概念。 如果希望使用预构建解决方案学习本教程，请在开始前[查看或下载示例代码](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/)。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#view-and-download-samples)。
+本教程介绍分步构建示例解决方案的交互式体验，以了解单元测试概念。 如果希望使用预构建解决方案学习本教程，请在开始前[查看或下载示例代码](https://github.com/dotnet/samples/blob/main/core/getting-started/unit-testing-using-nunit/)。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#view-and-download-samples)。
 
 [!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 - [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 或更高版本。
 - 按需选择的文本编辑器或代码编辑器。
 
 ## <a name="creating-the-source-project"></a>创建源项目
 
-打开 shell 窗口。 创建一个名为 unit-testing-using-nunit  的目录，以保留该解决方案。 在此新目录中，运行以下命令，为类库和测试项目创建新的解决方案文件：
+打开 shell 窗口。 创建一个名为 unit-testing-using-nunit 的目录，以保留该解决方案。 在此新目录中，运行以下命令，为类库和测试项目创建新的解决方案文件：
 
 ```dotnetcli
 dotnet new sln
 ```
 
-接下来，创建 PrimeService  目录。 下图显示了当前的目录和文件结构：
+接下来，创建 PrimeService 目录。 下图显示了当前的目录和文件结构：
 
 ```console
 /unit-testing-using-nunit
@@ -37,7 +37,7 @@ dotnet new sln
     /PrimeService
 ```
 
-将 PrimeService  作为当前目录，并运行以下命令以创建源项目：
+将 PrimeService 作为当前目录，并运行以下命令以创建源项目：
 
 ```dotnetcli
 dotnet new classlib
@@ -60,7 +60,7 @@ namespace Prime.Services
 }
 ```
 
-将目录更改回 unit-testing-using-nunit  目录。 运行以下命令，向解决方案添加类库项目：
+将目录更改回 unit-testing-using-nunit 目录。 运行以下命令，向解决方案添加类库项目：
 
 ```dotnetcli
 dotnet sln add PrimeService/PrimeService.csproj
@@ -68,7 +68,7 @@ dotnet sln add PrimeService/PrimeService.csproj
 
 ## <a name="creating-the-test-project"></a>创建测试项目
 
-接下来，创建 PrimeService.Tests  目录。 下图显示了它的目录结构：
+接下来，创建 PrimeService.Tests 目录。 下图显示了它的目录结构：
 
 ```console
 /unit-testing-using-nunit
@@ -79,13 +79,13 @@ dotnet sln add PrimeService/PrimeService.csproj
     /PrimeService.Tests
 ```
 
-将 PrimeService.Tests  目录作为当前目录，并使用以下命令创建一个新项目：
+将 PrimeService.Tests 目录作为当前目录，并使用以下命令创建一个新项目：
 
 ```dotnetcli
 dotnet new nunit
 ```
 
-[dotnet new](../tools/dotnet-new.md) 命令可创建一个将 NUnit 用作测试库的测试项目。 生成的模板在 PrimeService.Tests.csproj  文件中配置测试运行程序：
+[dotnet new](../tools/dotnet-new.md) 命令可创建一个将 NUnit 用作测试库的测试项目。 生成的模板在 PrimeService.Tests.csproj 文件中配置测试运行程序：
 
 [!code-xml[Packages](~/samples/snippets/core/testing/unit-testing-using-nunit/csharp/PrimeService.Tests/PrimeService.Tests.csproj#Packages)]
 
@@ -95,7 +95,7 @@ dotnet new nunit
 dotnet add reference ../PrimeService/PrimeService.csproj
 ```
 
-可以在 GitHub 上的[示例存储库](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService.Tests.csproj)中看到整个文件。
+可以在 GitHub 上的[示例存储库](https://github.com/dotnet/samples/blob/main/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService.Tests.csproj)中看到整个文件。
 
 下图显示了最终的解决方案布局：
 
@@ -110,7 +110,7 @@ dotnet add reference ../PrimeService/PrimeService.csproj
         PrimeService.Tests.csproj
 ```
 
-在 unit-testing-using-nunit  目录中执行以下命令：
+在 unit-testing-using-nunit 目录中执行以下命令：
 
 ```dotnetcli
 dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
@@ -118,7 +118,7 @@ dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
 
 ## <a name="creating-the-first-test"></a>创建第一个测试
 
-编写一个失败测试，使其通过，然后重复此过程。 在 PrimeService.Tests  目录中，将 UnitTest1.cs  文件重命名为 PrimeService_IsPrimeShould.cs  ，并将其整个内容替换为以下代码：
+编写一个失败测试，使其通过，然后重复此过程。 在 PrimeService.Tests 目录中，将 UnitTest1.cs 文件重命名为 PrimeService_IsPrimeShould.cs，并将其整个内容替换为以下代码：
 
 ```csharp
 using NUnit.Framework;
@@ -165,7 +165,7 @@ public bool IsPrime(int candidate)
 }
 ```
 
-在 unit-testing-using-nunit  目录中再次运行 `dotnet test`。 `dotnet test` 命令构建 `PrimeService` 项目，然后构建 `PrimeService.Tests` 项目。 构建这两个项目后，该命令将运行此单项测试。 测试通过。
+在 unit-testing-using-nunit 目录中再次运行 `dotnet test`。 `dotnet test` 命令构建 `PrimeService` 项目，然后构建 `PrimeService.Tests` 项目。 构建这两个项目后，该命令将运行此单项测试。 测试通过。
 
 ## <a name="adding-more-features"></a>添加更多功能
 
@@ -181,6 +181,6 @@ public bool IsPrime(int candidate)
 if (candidate < 2)
 ```
 
-通过在主库中添加更多测试、理论和代码继续循环访问。 你将拥有[已完成的测试版本](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService_IsPrimeShould.cs)和[库的完整实现](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/PrimeService/PrimeService.cs)。
+通过在主库中添加更多测试、理论和代码继续循环访问。 你将拥有[已完成的测试版本](https://github.com/dotnet/samples/blob/main/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService_IsPrimeShould.cs)和[库的完整实现](https://github.com/dotnet/samples/blob/main/core/getting-started/unit-testing-using-nunit/PrimeService/PrimeService.cs)。
 
 你已生成一个小型库和该库的一组单元测试。 你已将解决方案结构化，使添加新包和新测试成为了正常工作流的一部分。 你已将多数的时间和精力集中在解决应用程序的目标上。

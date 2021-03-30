@@ -5,12 +5,12 @@ ms.date: 10/07/2020
 ms.topic: overview
 ms.author: tdykstra
 author: tdykstra
-ms.openlocfilehash: 65c13239f32a0166681d7a731de84a973a627f29
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 7b207811e0dab8c613b0e43a30301a0fb07f632a
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102104179"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875078"
 ---
 # <a name="releases-and-support-for-net-core-and-net-5"></a>.NET Core 和 .NET 5 的版本和支持
 
@@ -105,7 +105,7 @@ Microsoft 提供 .NET 5.0（和 .NET Core）及更高版本的主要版本、次
 
 当操作系统版本不受支持时，我们将停止测试该版本并停止对该版本提供支持。 用户需要升级到受支持的操作系统版本才能获得支持。
 
-有关详细信息，请参阅 [.NET OS 生命周期策略](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md)。
+有关详细信息，请参阅 [.NET OS 生命周期策略](https://github.com/dotnet/core/blob/main/os-lifecycle-policy.md)。
 
 ## <a name="get-support"></a>获取支持
 

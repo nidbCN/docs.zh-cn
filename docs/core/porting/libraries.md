@@ -3,12 +3,12 @@ title: 将库移植到 .NET
 description: 了解如何将 .NET Framework 中的库项目移植到 .NET。
 author: cartermp
 ms.date: 03/04/2021
-ms.openlocfilehash: 5fe7b57e583f74c12649746cd9968fde03b94435
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: 19ee6ab15597b3c99b39b47ad55ac72a3f9d681a
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102604939"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873674"
 ---
 # <a name="port-net-framework-libraries-to-net"></a>将 .NET Framework 库移植到 .NET 中
 
@@ -117,7 +117,7 @@ ms.locfileid: "102604939"
 
 - [xUnit](https://xunit.net/)
   - [入门](https://xunit.net/docs/getting-started/netcore/cmdline)
-  - [将 MSTest 项目转换为 xUnit 的工具](https://github.com/dotnet/codeformatter/tree/master/src/XUnitConverter)
+  - [将 MSTest 项目转换为 xUnit 的工具](https://github.com/dotnet/codeformatter/tree/main/src/XUnitConverter)
 - [NUnit](https://nunit.org/)
   - [入门](https://github.com/nunit/docs/wiki/Installation)
   - [关于从 MSTest 迁移到 NUnit 的博客文章](https://www.florian-rappl.de/News/Page/275/convert-mstest-to-nunit)

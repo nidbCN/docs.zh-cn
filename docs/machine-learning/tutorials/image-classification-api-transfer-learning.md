@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 02/09/2021
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 8397a12d179569c2836c43ab3946a2edba3bdba8
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 71d44ca3248d497b3f46d1d93c6505adcfc42021
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100469768"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873297"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>教程：通过 ML.NET 图像分类 API 使用迁移学习自动进行肉眼检查
 
@@ -90,7 +90,7 @@ ML.NET 提供了各种执行图像分类的方式。 本教程使用图像分类
     1. 选择“浏览”选项卡。
     1. 选中“包括预发行版”复选框。
     1. 搜索 Microsoft.ML。
-    1. 选择“安装”按钮。
+    1. 选择“安装”按钮  。
     1. 选择“预览更改”对话框上的“确定”按钮，如果你同意所列包的许可条款，则选择“接受许可”对话框上的“我接受”按钮。
     1. 为 Microsoft.ML.Vision、SciSharp.TensorFlow.Redist 和 Microsoft.ML.ImageAnalytics NuGet 包重复上述步骤。  
 
@@ -116,7 +116,7 @@ SDNET2018 是一个图像数据集，其中包含有裂缝和无裂缝混凝土�
 
 本教程仅使用桥面图像。
 
-1. 下载[数据集](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/assets.zip)并解压缩。
+1. 下载[数据集](https://github.com/dotnet/machinelearning-samples/tree/main/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/assets.zip)并解压缩。
 1. 在项目中创建名为“资产”的目录，用于保存数据集文件。
 1. 将 CD 与 UD 子目录从最近解压缩的目录复制到“资产”目录  。
 
