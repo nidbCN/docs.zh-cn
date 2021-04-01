@@ -1,21 +1,21 @@
 ---
-title: 利用 .NET IoT 库为 IoT 设备开发应用
-description: 了解如何使用 .NET 为 IoT 设备和方案生成应用程序。
+title: 使用 .NET IoT 库开发适用于 IoT 设备的应用
+description: 了解如何使用 .NET 生成适用于 IoT 设备和场景的应用程序。
 author: camsoper
 ms.author: casoper
 ms.date: 11/13/2020
 ms.topic: overview
 ms.prod: dotnet
-ms.openlocfilehash: 13460fdafbfd7ef4e047cb7537e832ae4039c614
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
-ms.translationtype: MT
+ms.openlocfilehash: 4d8dffb28b28c999b3d1bf77a65265280a8ae7a1
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102255426"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874779"
 ---
-# <a name="develop-apps-for-iot-devices-with-the-net-iot-libraries"></a>利用 .NET IoT 库为 IoT 设备开发应用
+# <a name="develop-apps-for-iot-devices-with-the-net-iot-libraries"></a>使用 .NET IoT 库开发适用于 IoT 设备的应用
 
-.NET 在各种平台和体系结构上运行。 支持常见物联网 (IoT) 板，如 Raspberry Pi 和 Hummingboard）。 IoT apps 通常与专用硬件（如传感器、模拟到数字转换器和 LCD 设备）交互。 .NET IoT 库可实现这些方案。
+.NET 可在多种平台和体系结构上运行。 它支持 Raspberry Pi 和 Hummingboard 等常见物联网 (IoT) 插件板。 IoT 应用通常与专用的硬件（例如传感器、模数转换器和 LCD 设备）交互。 .NET IoT 库支持这些场景。
 
 ## <a name="video-overview"></a>视频概述
 
@@ -31,44 +31,44 @@ ms.locfileid: "102255426"
 
 ### <a name="systemdevicegpio"></a>System.Device.Gpio
 
-`System.Device.Gpio` 支持各种协议，用于与低级别硬件 pin 交互以控制设备。 这些方法包括：
+`System.Device.Gpio` 支持多种协议，用于与低级别硬件引脚交互以控制设备。 其中包括:
 
 - 常规用途 I/O (GPIO)
-- Inter-Integrated 线路 (I2C) 
-- 串行外围设备接口 (SPI) 
-- 脉冲宽度调制 (PWM) 
+- 内置集成电路 (I2C)
+- 串行外围接口 (SPI)
+- 脉宽调制 (PWM)
 - 串行端口
 
 ### <a name="iotdevicebindings"></a>Iot.Device.Bindings
 
-`Iot.Device.Bindings`包：
+`Iot.Device.Bindings` 包：
 
-* 包含 [设备绑定](https://github.com/dotnet/iot/blob/master/src/devices/README.md) ，用于通过包装 system.web 来简化应用程序开发。
-* 支持社区，并持续添加其他绑定。
+* 包含[设备绑定](https://github.com/dotnet/iot/blob/main/src/devices/README.md)，通过包装 System.Device.Gpio 简化应用开发。
+* 受社区支持，并不断增加其他绑定。
 
 常用的设备绑定包括：
 
-- [CharacterLcd-LCD 字符显示](https://github.com/dotnet/iot/tree/master/src/devices/CharacterLcd)
-- [SN74HC595-8 位移位寄存器](https://github.com/dotnet/iot/tree/master/src/devices/Sn74hc595)
-- [BrickPi3](https://github.com/dotnet/iot/tree/master/src/devices/BrickPi3)
-- [Max7219 导向 Matrix 驱动程序](https://github.com/dotnet/iot/tree/master/src/devices/Max7219)
-- [RGBLedMatrix-RGB LED 矩阵](https://github.com/dotnet/iot/tree/master/src/devices/RGBLedMatrix)
+- [CharacterLcd - LCD 字符显示器](https://github.com/dotnet/iot/tree/main/src/devices/CharacterLcd)
+- [SN74HC595 - 8 位移位寄存器](https://github.com/dotnet/iot/tree/main/src/devices/Sn74hc595)
+- [BrickPi3](https://github.com/dotnet/iot/tree/main/src/devices/BrickPi3)
+- [Max7219 - LED 矩阵驱动器](https://github.com/dotnet/iot/tree/main/src/devices/Max7219)
+- [RGBLedMatrix - RGB LED 点阵屏](https://github.com/dotnet/iot/tree/main/src/devices/RGBLedMatrix)
 
 ## <a name="supported-operating-systems"></a>支持的操作系统
 
-`System.Device.Gpio` 支持 ARM/ARM64 和 Windows 10 IoT Core 的大多数 Linux 版本都支持。
+支持 ARM/ARM64 和 Windows 10 IoT Core 的多数 Linux 版本都支持 `System.Device.Gpio`。
 
 > [!TIP]
-> 对于 Raspberry Pi，建议使用 [Raspberry PI OS](https://www.raspberrypi.org/documentation/installation/installing-images/README.md)  (以前的 Raspbian) 。
+> 对于 Raspberry Pi，建议使用 [Raspberry PI OS](https://www.raspberrypi.org/documentation/installation/installing-images/README.md)（以前称为 Raspbian）。
 
 ## <a name="supported-hardware-platforms"></a>支持的硬件平台
 
-`System.Device.Gpio` 与大多数单板平台兼容。 推荐的平台是 Raspberry Pi (2 及更高版本) 和 Hummingboard。 已知兼容的其他平台是 BeagleBoard 和 ODROID。
+`System.Device.Gpio` 与大多数单插件板平台兼容。 建议使用 Raspberry Pi（2 和更高版本）以及 Hummingboard 平台。 已知的其他兼容平台有 BeagleBoard 和 ODROID。
 
-通过使用 USB 到 SPI/I2C 桥，支持 PC 平台。
+支持通过 USB 转 SPI/I2C 桥接器使用 PC 平台。
 
 > [!IMPORTANT]
-> 在 ARMv6 体系结构设备上不支持 .NET，其中包括 Raspberry Pi 2 之前的 Raspberry Pi 零和 Raspberry Pi 设备。
+> ARMv6 体系结构设备（包括 Raspberry Pi Zero 和 Raspberry Pi 2 之前的 Raspberry Pi 设备）不支持 .NET。
 
 ## <a name="resources"></a>资源
 

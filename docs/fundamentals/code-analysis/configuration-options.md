@@ -5,28 +5,28 @@ ms.date: 09/24/2020
 ms.topic: conceptual
 no-loc:
 - EditorConfig
-ms.openlocfilehash: 9c09fc381a161a9deea012d98d06ab57f2f7345e
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
-ms.translationtype: MT
+ms.openlocfilehash: c1992b32e5159e9bf7ae4d00b92a5baa7f7c1b8c
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100480539"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876612"
 ---
 # <a name="configuration-options-for-code-analysis"></a>代码分析的配置选项
 
-代码分析规则具有各种配置选项。 这些选项在 [分析器配置文件](configuration-files.md) 中使用语法指定为键值对 `<option key> = <option value>` 。
+代码分析规则具有多种配置选项。 这些选项是在[分析器配置文件](configuration-files.md)中使用 `<option key> = <option value>` 语法以键值对形式指定的。
 
-您要配置的最常见的选项是 [规则的严重性](#severity-level)。 您可以为所有分析器规则（包括 [代码质量规则](quality-rules/index.md) 和 [代码样式规则](style-rules/index.md)）配置严重级别。 例如，若要启用某个规则作为警告，可以将以下键值对添加到 EditorConfig 文件中。
+最常见的配置选项是[规则的严重性](#severity-level)。 你可以为所有分析器规则（包括[代码质量规则](quality-rules/index.md)和[代码样式规则](style-rules/index.md)）配置严重性级别。 例如，若要启用某个规则作为警告，可以向 EditorConfig 文件添加以下键值对。
 
 `dotnet_diagnostic.<rule ID>.severity = warning`
 
-你还可以配置其他选项以自定义规则行为：
+你还可以配置其他选项，来自定义规则行为：
 
-- 代码质量规则具有 [其他](code-quality-rule-options.md) 用于配置行为的选项，例如，要将规则应用到的方法的名称。
-- 代码样式规则具有 [自定义代码样式选项](code-style-rule-options.md)。
-- 第三方分析器规则可以定义自己的配置选项，其中包含自定义的键名和值格式。
+- 代码质量规则具有用于配置行为的[其他选项](code-quality-rule-options.md)，例如规则适用的方法名称。
+- 代码样式规则具有[自定义代码样式选项](code-style-rule-options.md)。
+- 第三方分析器规则可以使用自定义键名和值格式定义各自的配置选项。
 
-在 [分析器配置文件](configuration-files.md) 中配置特定规则严重性的语法如下所示：
+要在[分析器配置文件](configuration-files.md)中配置特定规则的严重性，请使用下面的语法：
 
 ```ini
 dotnet_diagnostic.<rule ID>.severity = <severity>
@@ -34,15 +34,15 @@ dotnet_diagnostic.<rule ID>.severity = <severity>
 
 ## <a name="general-options"></a>常规选项
 
-这些选项适用于整个代码分析。 它们不能仅应用于一个或一组规则。
+这些选项适用于整个代码分析。 不能只将它们应用于一个规则或一组规则。
 
 ### <a name="exclude-generated-code"></a>排除生成的代码
 
-你可以通过将 `generated_code = true | false` 条目添加到 [配置文件](configuration-files.md)，将其他文件和文件夹作为生成的代码进行配置。 .NET 代码分析器警告在生成的代码文件（如设计器生成的文件）上不有用，用户无法编辑这些文件来修复任何冲突。 在大多数情况下，代码分析器会跳过生成的代码文件，而不报告这些文件的冲突。
+通过将 `generated_code = true | false` 条目添加到[配置文件](configuration-files.md)，可以配置额外的文件和文件夹以作为生成的代码来处理。 .NET 代码分析器警告对生成的代码文件不起作用，比如对于设计器生成的文件，用户无法通过编辑这些文件来修复任何违规行为。 在大多数情况下，代码分析器会跳过生成的代码文件，并且不会报告这些文件上的违规行为。
 
-默认情况下，具有特定文件扩展名或自动生成的文件标头的文件被视为生成的代码文件。 例如，以或结尾的文件名被 `.designer.cs` `.generated.cs` 视为生成的代码。 此配置选项允许您指定其他命名模式。
+默认情况下，具有特定文件扩展名或自动生成的文件头的文件会被视为生成的代码文件。 例如，以 `.designer.cs` 或 `.generated.cs` 结尾的文件名被视为生成的代码。 使用这个配置选项可以指定更多命名模式。
 
-例如，若要将名称以结尾的所有文件视为 `.MyGenerated.cs` 生成的代码，请添加以下条目：
+例如，若要将名称以 `.MyGenerated.cs` 结尾的所有文件视为生成的代码，请添加以下条目：
 
 ```ini
 [*.MyGenerated.cs]
@@ -51,36 +51,36 @@ generated_code = true
 
 ## <a name="rule-specific-options"></a>特定于规则的选项
 
-特定于规则的选项可应用于单个规则、一组规则或所有规则。 特定于规则的选项包括：
+特定于规则的选项可应用于一个规则、一组规则或所有规则。 特定于规则的选项包括：
 
 - [规则严重性级别](#severity-level)
-- [特定于 *代码质量规则的* 选项](code-quality-rule-options.md)
+- [特定于代码质量规则的选项](code-quality-rule-options.md)
 
 ### <a name="severity-level"></a>严重性级别
 
-下表显示了可为所有分析器规则（包括 [代码质量](quality-rules/index.md) 和 [代码样式](style-rules/index.md) 规则）配置的不同规则严重性。
+下表显示了可为所有分析器规则（包括[代码质量](quality-rules/index.md)和[代码样式](style-rules/index.md)规则）配置的各种规则严重性。
 
 | 严重性配置值 | 生成时行为 |
 |-|-|
-| `error` | 冲突显示为生成 *错误* 并导致生成失败。|
-| `warning` | 冲突显示为生成 *警告* ，但不会导致生成失败 (除非您将选项设置为 "将警告视为错误") 。 |
-| `suggestion` | 冲突显示为生成 *消息* ，在 VISUAL Studio IDE 中显示为建议。 |
-| `silent` | 冲突对用户不可见。 |
+| `error` | 违规行为以生成错误形式出现，并会导致生成失败。|
+| `warning` | 违规行为以生成警告形式出现，但不会导致生成失败（除非你已设置将警告视为错误的选项）。 |
+| `suggestion` | 违规行为以生成消息形式出现，在 Visual Studio IDE 中以建议形式出现。 |
+| `silent` | 违规行为对用户不可见。 |
 | `none` | 完全禁止显示规则。 |
-| `default` | 使用规则的默认严重性。 [Roslyn](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md)存储库中列出了每个 .net 版本的默认严重性。 在该表中，"Disabled" 对应于 `none` ，"Hidden" 对应于 `silent` ，而 "Info" 对应于 `suggestion` 。 |
+| `default` | 使用规则的默认严重性。 [Roslyn 分析器存储库](https://github.com/dotnet/roslyn-analyzers/blob/main/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md)列出了每个 .NET 版本的默认严重性。 在该表中，“禁用”与 `none` 对应，“隐藏”与 `silent` 对应，“信息”与 `suggestion` 对应。 |
 
 > [!TIP]
-> 有关 Visual Studio 中规则严重性的详细信息，请参阅 [严重性级别](/visualstudio/ide/editorconfig-language-conventions#severity-levels)。
+> 若要了解规则严重性在 Visual Studio 中的显示方式，请参阅[严重性级别](/visualstudio/ide/editorconfig-language-conventions#severity-levels)。
 
 #### <a name="scope"></a>范围
 
-若要设置单个规则的规则严重性，请使用以下语法。
+若要为单个规则设置规则严重性，请使用以下语法。
 
 ```ini
 dotnet_diagnostic.<rule ID>.severity = <severity value>
 ```
 
-若要为 [规则类别](categories.md)设置默认规则严重性，请使用以下语法。 每个规则的类别在各个规则引用页中提供，例如， [CA1000](quality-rules/ca1000.md)。
+若要为某个[规则类别](categories.md)设置默认规则严重性，请使用以下语法。 各规则参考页（例如，[CA1000](quality-rules/ca1000.md)）中提供了每个规则的类别。
 
 ```ini
 dotnet_analyzer_diagnostic.category-<rule category>.severity = <severity value>
@@ -93,19 +93,19 @@ dotnet_analyzer_diagnostic.severity = <severity value>
 ```
 
 > [!IMPORTANT]
-> 使用单个条目为多个规则配置严重级别（对于规则 *类别* 或为 *所有* 规则），严重性仅适用于 [默认情况下启用](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md)的规则。 若要启用默认情况下禁用的规则，必须执行以下操作之一：
+> 当你使用一个条目为多个规则配置严重性级别时，无论是为一个规则类别还是为所有规则配置，严重性都只适用于[默认情况下启用](https://github.com/dotnet/roslyn-analyzers/blob/main/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md)的规则 。 若要启用默认情况下已禁用的规则，必须执行以下任一操作：
 >
-> - `dotnet_diagnostic.<rule ID>.severity = <severity>`为每个规则添加显式配置条目。
-> - 通过将设置为来启用 *所有* 规则 [\<AnalysisMode>](../../core/project-sdk/msbuild-props.md#analysismode) `AllEnabledByDefault` 。
+> - 为每个规则添加一个显式 `dotnet_diagnostic.<rule ID>.severity = <severity>` 配置条目。
+> - 通过将 [\<AnalysisMode>](../../core/project-sdk/msbuild-props.md#analysismode) 设置为 `AllEnabledByDefault` 来启用所有规则。
 
 #### <a name="precedence"></a>优先级
 
-如果有多个可应用于同一规则 ID 的严重性配置项，将按以下顺序选择优先级：
+如果你有多个严重性配置条目可应用于同一个规则 ID，将按以下顺序选择优先级：
 
-- 单个规则按 ID 列出的条目优先于类别的条目。
-- 类别的条目优先于所有分析器规则条目。
+- 基于 ID 的单个规则的条目优先于一个类别的条目。
+- 一个类别的条目优先于所有分析器规则的条目。
 
-请考虑以下示例，其中 [CA1822](/visualstudio/code-quality/ca1822) 的类别为 "Performance"：
+请考虑以下示例，其中 [CA1822](/visualstudio/code-quality/ca1822) 属于“性能”类别：
 
 ```ini
 [*.cs]
@@ -114,6 +114,6 @@ dotnet_analyzer_diagnostic.category-performance.severity = warning
 dotnet_analyzer_diagnostic.severity = suggestion
 ```
 
-在前面的示例中，所有三个严重性条目都适用于 CA1822。 但是，使用指定的优先规则，基于第一个规则 ID 的条目将在下一条目上入选。 在此示例中，CA1822 将具有有效的严重性 `error` 。 "性能" 类别中的所有其他规则都具有严重性 `warning` 。
+在前面的示例中，三个严重性条目都适用于 CA1822。 但是，按照指定的优先级规则，第一个基于规则 ID 的条目优先于后续条目。 在此示例中，CA1822 的有效严重性为 `error`。 “性能”类别内的所有其他规则的严重性为 `warning`。
 
-有关如何确定文件间优先级的信息，请参阅 [配置文件的优先级部分](configuration-files.md#precedence)。
+若要了解如何确定文件间的优先级，请参阅[“配置文件”一文的“优先级”部分](configuration-files.md#precedence)。

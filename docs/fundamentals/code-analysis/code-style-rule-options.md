@@ -5,24 +5,24 @@ ms.date: 09/25/2020
 ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 5e4d80ec55f7fbcd01e364bb2b9e2b4f49f820d5
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
-ms.translationtype: MT
+ms.openlocfilehash: dce31e7b8976caecfc7fb1dd50da7f246093b1e4
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "96590974"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876677"
 ---
 # <a name="code-style-rule-options"></a>代码样式规则选项
 
-可以通过在 [EditorConfig](/visualstudio/ide/create-portable-custom-editor-options)文件中定义 .net 代码样式规则选项，在代码库中定义和维护一致的 *代码样式*。 这些规则由各种开发 Ide （如 Visual Studio）在编辑代码时显示。 对于 .NET 项目，还可以 [在生成时强制执行](overview.md#code-style-analysis)这些规则。 您可以启用或禁用单个规则，并通过严重性级别配置要强制实施每个规则的程度。
+通过在 [EditorConfig](/visualstudio/ide/create-portable-custom-editor-options) 文件中定义 .NET 代码样式规则选项，可以在代码库中定义和保持一致的代码样式。 在你编辑代码时，Visual Studio 等各种开发 IDE 会实施这些规则。 对于 .NET 项目，还可以[在生成时强制执行](overview.md#code-style-analysis)这些规则。 你可以启用或禁用单个规则，并可通过严重性级别配置强制执行每个规则的程度。
 
 > [!TIP]
 >
-> - 在 EditorConfig 文件中定义代码样式选项时，需要配置 [代码样式分析器](overview.md#code-style-analysis) 如何分析代码。 EditorConfig 文件是适用于这些分析器的配置文件。
+> - 在 EditorConfig 文件中定义代码样式选项，就是在配置[代码样式分析器](overview.md#code-style-analysis)分析代码的方式。 EditorConfig 文件是适用于这些分析器的配置文件。
 >
-> - 还可以在 " [文本编辑器选项](/visualstudio/ide/code-styles-and-code-cleanup) " 对话框中的 Visual Studio 中设置代码样式选项。 这些是每个用户的选项，只在 Visual Studio 中进行编辑时才会考虑这些选项。 这些选项不会在生成时或其他 Ide 中遵守。 此外，如果在 Visual Studio 中打开的项目或解决方案包含 EditorConfig 文件，则 EditorConfig 文件中的选项将优先。
+> - 在 Visual Studio 中，代码样式选项还可以在[文本编辑器选项](/visualstudio/ide/code-styles-and-code-cleanup)对话框中进行设置。 这些是按用户选项，只有在 Visual Studio 中进行编辑时才会采用这些选项。 在生成时不会采用这些选项，也不会由其他 IDE 采用。 此外，如果在 Visual Studio 中打开的项目或解决方案包含 EditorConfig 文件，则优先采用 EditorConfig 文件中的选项。
 
-代码样式规则划分为以下子类别：
+代码样式规则分为以下子类别：
 
 - [语言规则](style-rules/language-rules.md)
 
@@ -32,7 +32,7 @@ ms.locfileid: "96590974"
 
 - [命名规则](style-rules/naming-rules.md)
 
-其中每个子类别都定义了其自己的指定选项的语法。 有关这些规则和相应选项的详细信息，请参阅 [代码样式规则引用](style-rules/index.md)。
+其中每个子类别都定义了各自的语法来指定选项。 有关这些规则和相应选项的详细信息，请参阅[代码样式规则引用](style-rules/index.md)。
 
 ## <a name="example-editorconfig-file"></a>EditorConfig 文件示例
 
@@ -251,11 +251,11 @@ dotnet_naming_style.begins_with_i.capitalization = pascal_case
 
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [代码样式分析规则引用](style-rules/index.md)
-- [生成时强制代码样式](overview.md#code-style-analysis)
+- [在生成时强制执行代码样式](overview.md#code-style-analysis)
 - [Visual Studio 中的快速操作](/visualstudio/ide/quick-actions)
 - [在 Visual Studio 中创建可移植的自定义编辑器选项](/visualstudio/ide/create-portable-custom-editor-options)
-- [.NET Compiler Platform“Roslyn”.editorconfig 文件](https://github.com/dotnet/roslyn/blob/master/.editorconfig)
-- [.NET Compiler Platform 运行时 .editorconfig 文件](https://github.com/dotnet/runtime/blob/master/.editorconfig)
+- [.NET Compiler Platform“Roslyn”.editorconfig 文件](https://github.com/dotnet/roslyn/blob/main/.editorconfig)
+- [.NET 运行时 .editorconfig 文件](https://github.com/dotnet/runtime/blob/main/.editorconfig)
